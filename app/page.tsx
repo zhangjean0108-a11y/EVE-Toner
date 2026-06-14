@@ -95,6 +95,7 @@ export default function Home() {
                 fill
                 sizes="(max-width: 1024px) 100vw, 62vw"
                 className="object-contain object-right-bottom drop-shadow-[0_22px_34px_rgba(15,23,42,0.16)]"
+                loading="eager"
                 priority
               />
             </div>
