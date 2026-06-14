@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://eve-toner.vercel.app"),
   title: "Compatible Copier Toner & Spare Parts Supplier | EVE Toner",
   description:
     "EVE Toner supplies compatible copier toner, copier spare parts, drum units and fuser units with OEM/ODM support, bulk supply and global delivery for B2B buyers.",
