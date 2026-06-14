@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>B2B Inquiry Form | EVE Toner</title>
+  <meta name="description" content="Send your copier toner, drum unit, fuser unit, toner powder or copier spare parts inquiry to EVE Toner.">
+  <style>
+    :root{--cyan:#0788b8;--cyan-dark:#075b7c;--magenta:#d90758;--yellow:#f5c400;--ink:#071126;--muted:#5b6472;--line:#d8e3ea;--soft:#eef9fb}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:linear-gradient(135deg,#eef9fb 0%,#fff 42%,#fff6d8 68%,#fdf1f6 100%)}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1180px,calc(100% - 36px));margin:0 auto}
+    .top{border-bottom:1px solid rgba(216,227,234,.9);background:rgba(255,255,255,.9);backdrop-filter:blur(18px)}
+    .top-inner{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .logo{width:210px;height:auto;display:block}
+    .top-links{display:flex;align-items:center;gap:18px;font-weight:800;font-size:14px;color:#172033}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:6px;border:1px solid var(--cyan);font-weight:900;font-size:14px;cursor:pointer;transition:.2s}
+    .btn.primary{background:var(--cyan);color:#fff;box-shadow:0 14px 28px rgba(7,136,184,.2)}
+    .btn.primary:hover{background:var(--cyan-dark)}
+    .btn.ghost{background:#fff;color:var(--cyan)}
+    .hero{padding:54px 0 70px}
+    .grid{display:grid;grid-template-columns:.76fr 1.24fr;gap:32px;align-items:start}
+    .panel,.form-card{position:relative;border:1px solid rgba(255,255,255,.72);background:rgba(255,255,255,.78);border-radius:12px;box-shadow:0 24px 70px rgba(7,46,64,.11);backdrop-filter:blur(18px)}
+    .panel{overflow:hidden;padding:38px}
+    .panel:before{content:"";position:absolute;right:-44px;top:-40px;width:190px;height:190px;background:rgba(245,196,0,.28);filter:blur(34px)}
+    .panel:after{content:"";position:absolute;left:-50px;bottom:-70px;width:230px;height:230px;background:rgba(7,136,184,.18);filter:blur(38px)}
+    .panel>*{position:relative}
+    .eyebrow{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.2em;color:var(--cyan)}
+    h1{margin:16px 0 0;font-size:50px;line-height:1.04;letter-spacing:0;font-weight:900}
+    .lead{margin:20px 0 0;color:var(--muted);font-size:16px;line-height:1.75;font-weight:700}
+    .cmyk{display:flex;width:178px;height:5px;margin:22px 0 0;border-radius:99px;overflow:hidden;background:#111827}
+    .cmyk i:nth-child(1){background:var(--cyan);width:45%}.cmyk i:nth-child(2){background:var(--magenta);width:23%}.cmyk i:nth-child(3){background:var(--yellow);width:18%}.cmyk i:nth-child(4){background:#111827;flex:1}
+    .trust{display:grid;gap:12px;margin-top:26px}
+    .trust div{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:800;color:#172033}
+    .trust i{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#e8f5f9;color:var(--cyan);font-style:normal}
+    .contact-box{display:grid;gap:12px;margin-top:30px;padding:18px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.82);font-size:14px;font-weight:700;color:#334155;line-height:1.55}
+    .form-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px;padding:16px 18px;border:1px solid rgba(255,255,255,.72);border-radius:12px;background:rgba(255,255,255,.72);box-shadow:0 8px 24px rgba(15,23,42,.05);font-size:14px;font-weight:800;color:#475569}
+    .form-head b{color:var(--cyan)}
+    .form-card{padding:32px}
+    .fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+    label{display:grid;gap:8px;font-size:14px;font-weight:900;color:#111827}
+    label .req{color:var(--magenta)}
+    input,textarea{width:100%;border:1px solid #cfdbe3;border-radius:6px;background:#fff;padding:0 14px;color:#111827;font-size:14px;font-weight:650;outline:none;transition:.18s}
+    input{height:48px}
+    textarea{min-height:132px;padding-top:13px;resize:vertical}
+    input:focus,textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 4px rgba(7,136,184,.12)}
+    input.invalid,textarea.invalid{border-color:#f43f5e}
+    input.invalid:focus,textarea.invalid:focus{box-shadow:0 0 0 4px rgba(244,63,94,.12)}
+    .hint{min-height:18px;font-size:12px;font-weight:800;color:#94a3b8}
+    .hint.error{color:#e11d48}
+    .full{grid-column:1/-1}
+    .honeypot{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+    .actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:24px}
+    button[disabled]{opacity:.7;cursor:not-allowed}
+    .status{display:none;margin-top:18px;border-radius:8px;border:1px solid;padding:13px 15px;font-size:14px;font-weight:800;line-height:1.5}
+    .status.show{display:block}
+    .status.success{border-color:#bbf7d0;background:#ecfdf5;color:#166534}
+    .status.error{border-color:#fecdd3;background:#fff1f2;color:#be123c}
+    .note{font-size:12px;font-weight:750;color:#64748b;line-height:1.5}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}.top-inner{height:auto;align-items:flex-start;padding:16px 0}.top-links{display:none}h1{font-size:40px}.fields{grid-template-columns:1fr}.form-card,.panel{padding:24px}}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a href="eve-toner-home-preview.html" aria-label="EVE Toner homepage"><img class="logo" src="../public/images/eve-toner-logo.png" alt="EVE Toner logo"></a>
+      <nav class="top-links">
+        <a href="eve-toner-home-preview.html">Home</a>
+        <a href="eve-toner-home-preview.html#products">Products</a>
+        <a href="eve-toner-home-preview.html#factory">Factory</a>
+        <a href="eve-toner-home-preview.html#contact">Contact</a>
+        <a class="btn primary" href="mailto:zhangjin@evecolor.net">Email Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="wrap grid">
+      <aside class="panel">
+        <p class="eyebrow">B2B Inquiry</p>
+        <h1>Tell us what you need. We will prepare a practical quote.</h1>
+        <div class="cmyk"><i></i><i></i><i></i><i></i></div>
+        <p class="lead">Share model number, quantity and destination market. EVE Toner will help with compatible copier toner, toner powder, drum units, fuser units, copier machines and spare parts.</p>
+        <div class="trust">
+          <div><i>✓</i> Source manufacturer since 2012</div>
+          <div><i>✓</i> Stable quality control before shipment</div>
+          <div><i>✓</i> Fast quotation response for distributors</div>
+        </div>
+        <div class="contact-box">
+          <a href="mailto:zhangjin@evecolor.net">Email: zhangjin@evecolor.net</a>
+          <a href="https://wa.me/8618824393154?text=Hello%2C%20I%20am%20interested%20in%20your%20products.%20Please%20send%20me%20more%20details." target="_blank" rel="noreferrer">WhatsApp: 008618824393154</a>
+          <span>Address: 4/F, Building 2, No.16 Qianjin 2nd Road, Tanzhou Town, Zhongshan City, China</span>
+        </div>
+      </aside>
+
+      <section>
+        <div class="form-head"><span>Required: name, email and phone</span><b>Anti-spam honeypot included</b></div>
+        <form id="inquiryForm" class="form-card" novalidate>
+          <div class="fields">
+            <label>Name <span class="req">*</span><input id="name" name="name" placeholder="Jean Zhang" required><span class="hint" data-error-for="name">Required field</span></label>
+            <label>Email <span class="req">*</span><input id="email" name="email" type="email" placeholder="buyer@example.com" required><span class="hint" data-error-for="email">Required field</span></label>
+            <label>Phone <span class="req">*</span><input id="phone" name="phone" type="tel" placeholder="+1 555 123 4567" required><span class="hint" data-error-for="phone">Required field</span></label>
+            <label>Company Name<input id="companyName" name="companyName" placeholder="Your company name"><span class="hint">Optional</span></label>
+            <label>Country / Region<input id="country" name="country" placeholder="United States"><span class="hint">Optional</span></label>
+            <label>Product Requirement<input id="product" name="product" placeholder="Toner cartridge / drum unit / fuser unit"><span class="hint">Optional</span></label>
+            <label class="full">Message<textarea id="message" name="message" placeholder="Please share model number, quantity, destination port and packaging requirements."></textarea><span class="hint">Optional</span></label>
+          </div>
+          <label class="honeypot">Website<input id="website" name="website" tabindex="-1" autocomplete="off"></label>
+          <div class="actions">
+            <button id="submitButton" class="btn primary" type="submit">Send Inquiry</button>
+            <span class="note">Required fields are marked with <span style="color:var(--magenta)">*</span>.</span>
+          </div>
+          <div id="status" class="status" role="status"></div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const FORM_ENDPOINT = "";
+    const form = document.getElementById("inquiryForm");
+    const statusBox = document.getElementById("status");
+    const submitButton = document.getElementById("submitButton");
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phonePattern = /^\+?[0-9\s().-]{7,20}$/;
+
+    function showError(field, message) {
+      const input = document.getElementById(field);
+      const hint = document.querySelector('[data-error-for="' + field + '"]');
+      input.classList.add("invalid");
+      hint.classList.add("error");
+      hint.textContent = message;
+    }
+
+    function clearError(field) {
+      const input = document.getElementById(field);
+      const hint = document.querySelector('[data-error-for="' + field + '"]');
+      input.classList.remove("invalid");
+      hint.classList.remove("error");
+      hint.textContent = "Required field";
+    }
+
+    function setStatus(type, message) {
+      statusBox.className = "status show " + type;
+      statusBox.textContent = message;
+    }
+
+    function validate() {
+      ["name","email","phone"].forEach(clearError);
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const phone = form.phone.value.trim();
+      let ok = true;
+
+      if (!name) { showError("name", "Please enter your name."); ok = false; }
+      if (!email) { showError("email", "Please enter your email address."); ok = false; }
+      else if (!emailPattern.test(email)) { showError("email", "Please enter a valid email address."); ok = false; }
+      if (!phone) { showError("phone", "Please enter your phone number."); ok = false; }
+      else if (!phonePattern.test(phone)) { showError("phone", "Use an international phone format, e.g. +1 555 123 4567."); ok = false; }
+
+      return ok;
+    }
+
+    form.addEventListener("submit", async function(event) {
+      event.preventDefault();
+      if (!validate()) {
+        setStatus("error", "Please complete all required fields before submitting.");
+        return;
+      }
+
+      const payload = Object.fromEntries(new FormData(form).entries());
+      submitButton.disabled = true;
+      submitButton.textContent = "Submitting...";
+
+      try {
+        if (FORM_ENDPOINT) {
+          const response = await fetch(FORM_ENDPOINT, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+          });
+          if (!response.ok) throw new Error("Submission failed");
+        }
+        form.reset();
+        setStatus("success", FORM_ENDPOINT ? "Thank you. Our sales team will contact you soon." : "Preview mode: validation passed. Set FORM_ENDPOINT to send this form automatically.");
+      } catch (error) {
+        setStatus("error", "Submission failed. Please email zhangjin@evecolor.net or try again.");
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = "Send Inquiry";
+      }
+    });
+  </script>
+</body>
+</html>
