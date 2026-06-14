@@ -59,14 +59,14 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/92 backdrop-blur">
-      <div className="container-page flex h-20 items-center justify-between gap-5">
+      <div className="container-page flex h-16 items-center justify-between gap-4 md:h-20 md:gap-5">
         <Link href="/" className="flex items-center gap-3" aria-label="EVE Toner homepage">
           <Image
             src="/images/eve-toner-logo.png"
             alt={t("header.logoAlt")}
             width={162}
             height={110}
-            className="h-auto w-[210px] object-contain"
+            className="h-12 w-[150px] object-contain md:h-16 md:w-[210px]"
             priority
           />
         </Link>
