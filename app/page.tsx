@@ -40,36 +40,36 @@ export default function Home() {
       <Header />
       <main>
         <section className="hero-surface border-b border-[#d9e7ef]">
-          <div className="hero-stage container-page grid min-h-[500px] items-start gap-7 py-8 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="hero-copy relative z-10 max-w-[590px] pt-1">
-              <h1 className="text-balance text-[42px] font-black leading-[1.03] tracking-normal text-[#071126] md:text-[56px] lg:text-[56px]">
+          <div className="hero-stage container-page grid min-h-[500px] items-start gap-4 py-5 md:gap-7 md:py-8 lg:grid-cols-[0.9fr_1.1fr]">
+            <div className="hero-copy relative z-10 max-w-[590px] pt-0 md:pt-1">
+              <h1 className="text-balance text-[34px] font-black leading-[1.04] tracking-normal text-[#071126] min-[390px]:text-[38px] md:text-[56px] lg:text-[56px]">
                 {dict.home.hero.titlePrefix}{" "}
                 <span className="text-[var(--brand-cyan)]">{dict.home.hero.titleAccent}</span>{" "}
                 {dict.home.hero.titleSuffix}
               </h1>
-              <div className="mt-4 flex h-1.5 w-[210px] overflow-hidden rounded-full bg-slate-950">
+              <div className="mt-3 flex h-1.5 w-[190px] overflow-hidden rounded-full bg-slate-950 md:mt-4 md:w-[210px]">
                 <span className="h-full w-16 bg-[var(--brand-cyan)]" />
                 <span className="h-full w-16 bg-[var(--brand-magenta)]" />
                 <span className="h-full w-12 bg-[var(--brand-yellow)]" />
                 <span className="h-full flex-1 bg-slate-950" />
               </div>
-              <p className="mt-5 max-w-[520px] text-[15px] font-semibold leading-7 text-slate-700">
+              <p className="mt-4 max-w-[520px] text-sm font-semibold leading-6 text-slate-700 md:mt-5 md:text-[15px] md:leading-7">
                 {dict.home.hero.lead}
               </p>
 
-              <div className="mt-5 grid gap-2">
+              <div className="mt-4 grid gap-1.5 md:mt-5 md:gap-2">
                 {dict.home.hero.points.map((point) => (
-                  <div key={point} className="flex items-center gap-3 text-sm font-bold text-slate-700">
-                    <CheckCircle2 className="h-5 w-5 flex-none fill-[var(--brand-cyan)] text-white" />
+                  <div key={point} className="flex items-center gap-2.5 text-[13px] font-bold text-slate-700 md:gap-3 md:text-sm">
+                    <CheckCircle2 className="h-4 w-4 flex-none fill-[var(--brand-cyan)] text-white md:h-5 md:w-5" />
                     {point}
                   </div>
                 ))}
               </div>
 
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-5 grid grid-cols-2 gap-3 sm:flex sm:flex-row md:mt-7">
                 <a
                   href="/inquiry"
-                  className="inline-flex h-12 items-center justify-center gap-3 rounded-md bg-[var(--brand-cyan)] px-7 text-sm font-black text-white shadow-[0_12px_24px_rgba(7,136,184,0.24)] transition hover:bg-[var(--brand-cyan-dark)]"
+                  className="col-span-2 inline-flex h-12 items-center justify-center gap-3 rounded-md bg-[var(--brand-cyan)] px-7 text-sm font-black text-white shadow-[0_12px_24px_rgba(7,136,184,0.24)] transition hover:bg-[var(--brand-cyan-dark)] sm:col-span-1"
                 >
                   {t("common.getQuote")} <ArrowRight size={18} />
                 </a>
@@ -81,7 +81,7 @@ export default function Home() {
                 </a>
                 <a
                   href="/images/konica-product-list.jpg"
-                  className="inline-flex h-12 items-center justify-center gap-3 rounded-md border border-[var(--brand-cyan)] bg-white px-6 text-sm font-black text-[var(--brand-cyan)] shadow-sm transition hover:bg-cyan-50"
+                  className="inline-flex h-12 items-center justify-center gap-2 rounded-md border border-[var(--brand-cyan)] bg-white px-3 text-sm font-black text-[var(--brand-cyan)] shadow-sm transition hover:bg-cyan-50 md:gap-3 md:px-6"
                 >
                   {t("common.downloadCatalog")} <Download size={17} />
                 </a>
@@ -100,18 +100,18 @@ export default function Home() {
             </div>
           </div>
           <div className="container-page relative z-10 pb-0">
-            <div className="hero-stats grid overflow-hidden border-y border-[#dce8ef] bg-white/82 md:grid-cols-4">
+            <div className="hero-stats grid grid-cols-2 overflow-hidden border-y border-[#dce8ef] bg-white/82 md:grid-cols-4">
               {dict.home.stats.map((item, index) => {
                 const StatIcon = statIcons[index];
                 return (
-                <div key={item.label} className="flex items-center gap-5 border-b border-slate-200/80 px-7 py-6 md:border-b-0 md:border-r last:md:border-r-0">
-                  <span className="flex h-14 w-14 flex-none items-center justify-center rounded-full bg-[#e8f5f9] text-[var(--brand-cyan)]">
-                    <StatIcon size={27} strokeWidth={2.25} />
+                <div key={item.label} className="flex items-center gap-3 border-b border-slate-200/80 px-3 py-4 odd:border-r md:gap-5 md:border-b-0 md:border-r md:px-7 md:py-6 last:md:border-r-0">
+                  <span className="flex h-10 w-10 flex-none items-center justify-center rounded-full bg-[#e8f5f9] text-[var(--brand-cyan)] md:h-14 md:w-14">
+                    <StatIcon className="h-5 w-5 md:h-[27px] md:w-[27px]" strokeWidth={2.25} />
                   </span>
                   <div>
-                    <div className="text-3xl font-black leading-none text-slate-950">{item.value}</div>
-                    <div className="mt-1 text-sm font-black text-slate-900">{item.label}</div>
-                    <p className="mt-1 text-xs leading-5 text-slate-500">{item.text}</p>
+                    <div className="text-2xl font-black leading-none text-slate-950 md:text-3xl">{item.value}</div>
+                    <div className="mt-1 text-xs font-black text-slate-900 md:text-sm">{item.label}</div>
+                    <p className="mt-1 hidden text-xs leading-5 text-slate-500 sm:block">{item.text}</p>
                   </div>
                 </div>
               );
@@ -120,15 +120,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="products" className="products-section bg-white pb-8 pt-7">
+        <section id="products" className="products-section bg-white pb-8 pt-8 md:pt-7">
           <div className="container-page">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-black tracking-normal text-slate-950 md:text-4xl">
+              <h2 className="text-2xl font-black tracking-normal text-slate-950 md:text-4xl">
                 {dict.home.productsTitle}
               </h2>
               <div className="mx-auto mt-3 h-1 w-14 rounded-full bg-[var(--brand-cyan)]" />
             </div>
-            <div className="mt-5 grid gap-4 md:grid-cols-3 lg:grid-cols-6">
+            <div className="mt-5 grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-6">
               {productCategories.map((product, index) => {
                 const productText = dict.home.products[index];
                 return (
@@ -140,9 +140,11 @@ export default function Home() {
                     <Image
                       src={product.image}
                       alt={productText.alt}
-                      fill
-                      sizes="(max-width: 768px) 50vw, 16vw"
-                      className={`object-contain transition duration-500 group-hover:scale-105 ${
+                      width={320}
+                      height={202}
+                      unoptimized
+                      loading="eager"
+                      className={`h-full w-full object-contain transition duration-500 group-hover:scale-105 ${
                         index === 1 || index === 4
                           ? "p-0 object-[70%_82%]"
                           : index === 2
@@ -151,9 +153,9 @@ export default function Home() {
                       }`}
                     />
                   </div>
-                  <div className="px-5 pb-6 pt-2">
-                    <h3 className="text-base font-black text-slate-950">{productText.name}</h3>
-                    <p className="mt-2 text-sm leading-6 text-slate-600">{productText.text}</p>
+                  <div className="px-3 pb-4 pt-2 md:px-5 md:pb-6">
+                    <h3 className="text-sm font-black text-slate-950 md:text-base">{productText.name}</h3>
+                    <p className="mt-1 text-xs leading-5 text-slate-600 md:mt-2 md:text-sm md:leading-6">{productText.text}</p>
                   </div>
                 </article>
               );
