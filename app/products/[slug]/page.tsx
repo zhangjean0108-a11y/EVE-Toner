@@ -230,7 +230,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               </div>
               <a
                 href={`/inquiry?product=${encodeURIComponent(product.name)}`}
-                className="mt-7 inline-flex h-12 items-center justify-center gap-2 rounded-md bg-white px-5 text-sm font-black text-slate-950 transition hover:bg-cyan-50"
+                className="mt-7 inline-flex h-12 items-center justify-center gap-2 rounded-md bg-[var(--brand-cyan)] px-5 text-sm font-black text-white shadow-[0_14px_30px_rgba(7,136,184,0.28)] transition hover:bg-[var(--brand-cyan-dark)]"
               >
                 Send Product Requirements <ArrowRight size={16} />
               </a>

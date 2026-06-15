@@ -117,7 +117,7 @@ export function ProductsPageClient({ products, categories, initialCategory = "Al
               </Link>
               <a
                 href={`/inquiry?product=${encodeURIComponent(product.name)}`}
-                className="inline-flex h-12 items-center justify-center gap-2 bg-slate-950 text-sm font-black text-white transition hover:bg-[var(--brand-cyan)]"
+                className="inline-flex h-12 items-center justify-center gap-2 bg-[var(--brand-cyan)] text-sm font-black text-white transition hover:bg-[var(--brand-cyan-dark)]"
               >
                 Inquiry <ArrowRight size={15} />
               </a>
