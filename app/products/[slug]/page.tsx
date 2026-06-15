@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ArrowRight, CheckCircle2, ExternalLink, MessageCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, MessageCircle } from "lucide-react";
 import { Header } from "@/components/Header";
 import { company } from "@/data/site";
 import { getProductBySlug, products } from "@/data/products";
@@ -138,15 +138,6 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                   <MessageCircle size={17} /> WhatsApp
                 </a>
               </div>
-
-              <a
-                href={product.alibabaUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-slate-500 transition hover:text-[var(--brand-cyan)]"
-              >
-                View original Alibaba listing <ExternalLink size={15} />
-              </a>
             </div>
           </div>
         </section>
