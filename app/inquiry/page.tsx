@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { InquiryPageClient } from "./InquiryPageClient";
 
 export const metadata: Metadata = {
@@ -8,5 +9,9 @@ export const metadata: Metadata = {
 };
 
 export default function InquiryPage() {
-  return <InquiryPageClient />;
+  return (
+    <Suspense fallback={null}>
+      <InquiryPageClient />
+    </Suspense>
+  );
 }

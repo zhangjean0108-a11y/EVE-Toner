@@ -8,7 +8,7 @@ export const ko = {
     languageSelector: "언어 선택",
     nav: [
       { key: "home", label: "홈", href: "/" },
-      { key: "products", label: "제품", href: "/#products" },
+      { key: "products", label: "제품", href: "/products" },
       { key: "applications", label: "적용 분야", href: "/#applications" },
       { key: "about", label: "회사 소개", href: "/#about" },
       { key: "factory", label: "공장", href: "/#factory" },

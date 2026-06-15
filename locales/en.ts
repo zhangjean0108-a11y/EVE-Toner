@@ -14,7 +14,7 @@ export const en = {
     languageSelector: "Language selector",
     nav: [
       { key: "home", label: "Home", href: "/" },
-      { key: "products", label: "Products", href: "/#products" },
+      { key: "products", label: "Products", href: "/products" },
       { key: "applications", label: "Applications", href: "/#applications" },
       { key: "about", label: "About", href: "/#about" },
       { key: "factory", label: "Factory", href: "/#factory" },

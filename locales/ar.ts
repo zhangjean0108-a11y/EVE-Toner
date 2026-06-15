@@ -8,7 +8,7 @@ export const ar = {
     languageSelector: "اختيار اللغة",
     nav: [
       { key: "home", label: "الرئيسية", href: "/" },
-      { key: "products", label: "المنتجات", href: "/#products" },
+      { key: "products", label: "المنتجات", href: "/products" },
       { key: "applications", label: "التطبيقات", href: "/#applications" },
       { key: "about", label: "من نحن", href: "/#about" },
       { key: "factory", label: "المصنع", href: "/#factory" },

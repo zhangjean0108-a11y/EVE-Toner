@@ -8,7 +8,7 @@ export const fr = {
     languageSelector: "Sélecteur de langue",
     nav: [
       { key: "home", label: "Accueil", href: "/" },
-      { key: "products", label: "Produits", href: "/#products" },
+      { key: "products", label: "Produits", href: "/products" },
       { key: "applications", label: "Applications", href: "/#applications" },
       { key: "about", label: "À Propos", href: "/#about" },
       { key: "factory", label: "Usine", href: "/#factory" },

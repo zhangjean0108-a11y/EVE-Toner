@@ -55,10 +55,19 @@ function validateForm(form: InquiryFormState, copy: ReturnType<typeof useTransla
   return errors;
 }
 
-export function InquiryForm({ endpoint = "/api/inquiry" }: { endpoint?: string }) {
+export function InquiryForm({
+  endpoint = "/api/inquiry",
+  initialProduct = ""
+}: {
+  endpoint?: string;
+  initialProduct?: string;
+}) {
   const { dictionary: dict } = useTranslation();
   const copy = dict.inquiry.form;
-  const [form, setForm] = useState(initialForm);
+  const [form, setForm] = useState<InquiryFormState>({
+    ...initialForm,
+    product: initialProduct
+  });
   const [touched, setTouched] = useState<Partial<Record<keyof InquiryFormState, boolean>>>({});
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [statusMessage, setStatusMessage] = useState("");
