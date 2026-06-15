@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { ProductsPageClient } from "@/components/ProductsPageClient";
-import { products } from "@/data/products";
+import { productCatalogCategories, products } from "@/data/products";
 
 export const metadata: Metadata = {
   title: "Products | Compatible Copier Toner & Spare Parts | EVE Toner",
@@ -9,7 +9,18 @@ export const metadata: Metadata = {
     "Browse EVE Toner product catalog, including toner cartridges, toner powder, drum units, developer units, copier machines and digital press ink."
 };
 
-export default function ProductsPage() {
+type ProductsPageProps = {
+  searchParams?: Promise<{
+    category?: string;
+  }>;
+};
+
+export default async function ProductsPage({ searchParams }: ProductsPageProps) {
+  const resolvedSearchParams = await searchParams;
+  const requestedCategory = resolvedSearchParams?.category;
+  const initialCategory =
+    requestedCategory && productCatalogCategories.includes(requestedCategory) ? requestedCategory : "All";
+
   return (
     <>
       <Header />
@@ -40,7 +51,11 @@ export default function ProductsPage() {
             </div>
           </div>
         </section>
-        <ProductsPageClient products={products} />
+        <ProductsPageClient
+          products={products}
+          categories={productCatalogCategories}
+          initialCategory={initialCategory}
+        />
       </main>
     </>
   );

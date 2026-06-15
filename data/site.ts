@@ -65,36 +65,42 @@ export const heroPoints = [
 export const productCategories = [
   {
     name: "Toner Cartridge",
+    category: "Toner Cartridge",
     text: "High yield, stable quality, wide compatibility",
     image: "/images/category-toner-cartridge-scene.png",
     alt: "Compatible toner cartridge"
   },
   {
     name: "Copier Spare Parts",
+    category: "Copier Spare Parts",
     text: "Complete range of parts for major copier brands",
     image: "/images/hero-product-system.png",
     alt: "Copier spare parts"
   },
   {
     name: "Copier Machine",
+    category: "Copier Machine",
     text: "Reliable performance for office and production",
     image: "/images/hero-office-copier-scene.png",
     alt: "Copier machine"
   },
   {
     name: "Drum Unit",
+    category: "Drum Unit",
     text: "Long life, high page yield, consistent output",
     image: "/images/category-drum-unit.png",
     alt: "Compatible drum unit"
   },
   {
     name: "Fuser Unit",
+    category: "Fuser Unit",
     text: "Stable fixing performance and durable quality",
     image: "/images/hero-product-system.png",
     alt: "Compatible fuser unit"
   },
   {
     name: "Toner Powder",
+    category: "Toner Powder",
     text: "Premium toner powder with consistent quality",
     image: "/images/category-toner-powder-scene.png",
     alt: "CMYK copier toner powder"

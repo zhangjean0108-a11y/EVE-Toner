@@ -6,12 +6,18 @@ import { ArrowRight, Filter, Search } from "lucide-react";
 import { useMemo, useState } from "react";
 import type { Product } from "@/data/products";
 
-export function ProductsPageClient({ products }: { products: Product[] }) {
+type ProductsPageClientProps = {
+  products: Product[];
+  categories: string[];
+  initialCategory?: string;
+};
+
+export function ProductsPageClient({ products, categories, initialCategory = "All" }: ProductsPageClientProps) {
   const [query, setQuery] = useState("");
-  const [category, setCategory] = useState("All");
+  const [category, setCategory] = useState(initialCategory);
   const [brand, setBrand] = useState("All");
 
-  const categories = useMemo(() => ["All", ...Array.from(new Set(products.map((item) => item.category)))], [products]);
+  const categoryOptions = useMemo(() => ["All", ...categories], [categories]);
   const brands = useMemo(() => ["All", ...Array.from(new Set(products.map((item) => item.brand)))], [products]);
 
   const filteredProducts = useMemo(() => {
@@ -43,7 +49,7 @@ export function ProductsPageClient({ products }: { products: Product[] }) {
               className="h-12 w-full rounded-md border border-slate-200 pl-12 pr-4 text-sm font-semibold outline-none transition focus:border-[var(--brand-cyan)] focus:ring-4 focus:ring-cyan-100"
             />
           </label>
-          <SelectFilter label="Category" value={category} options={categories} onChange={setCategory} />
+          <SelectFilter label="Category" value={category} options={categoryOptions} onChange={setCategory} />
           <SelectFilter label="Brand" value={brand} options={brands} onChange={setBrand} />
         </div>
       </div>
