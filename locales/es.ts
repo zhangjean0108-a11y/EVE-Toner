@@ -16,7 +16,7 @@ export const es = {
     languageSelector: "Selector de idioma",
     nav: [
       { key: "home", label: "Inicio", href: "/" },
-      { key: "products", label: "Productos", href: "/#products" },
+      { key: "products", label: "Productos", href: "/products" },
       { key: "applications", label: "Aplicaciones", href: "/#applications" },
       { key: "about", label: "Empresa", href: "/#about" },
       { key: "factory", label: "Fábrica", href: "/#factory" },

@@ -27,19 +27,19 @@ import { createWhatsAppHref } from "@/lib/whatsapp";
 const megaProductIcons = [
   {
     icon: Printer,
-    href: "/#products"
+    href: "/products"
   },
   {
     icon: Boxes,
-    href: "/#products"
+    href: "/products"
   },
   {
     icon: Layers3,
-    href: "/#products"
+    href: "/products"
   },
   {
     icon: Printer,
-    href: "/#products"
+    href: "/products"
   }
 ];
 
@@ -133,7 +133,7 @@ export function Header() {
                           {megaBrands.map((brand) => (
                             <Link
                               key={brand}
-                              href="/#products"
+                              href="/products"
                               className="rounded-full border border-slate-200 bg-white/80 px-3 py-2 text-xs font-bold text-slate-700 transition hover:border-[var(--brand-cyan)] hover:text-[var(--brand-cyan)]"
                             >
                               {brand}

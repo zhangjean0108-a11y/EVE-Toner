@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { ArrowRight, BadgeCheck, Clock3, Mail, MapPin, MessageCircle, ShieldCheck } from "lucide-react";
 import { Header } from "@/components/Header";
 import { InquiryForm } from "@/components/InquiryForm";
@@ -12,6 +13,8 @@ const trustIcons = [BadgeCheck, ShieldCheck, Clock3];
 
 export function InquiryPageClient() {
   const { dictionary: dict, t } = useTranslation();
+  const searchParams = useSearchParams();
+  const initialProduct = searchParams.get("product") || "";
   const whatsappHref = createWhatsAppHref(company.whatsapp);
 
   return (
@@ -81,7 +84,7 @@ export function InquiryPageClient() {
               <span>{dict.inquiry.requiredNote}</span>
               <span className="text-[var(--brand-cyan)]">{dict.inquiry.antiSpam}</span>
             </div>
-            <InquiryForm />
+            <InquiryForm initialProduct={initialProduct} />
           </div>
         </section>
       </main>

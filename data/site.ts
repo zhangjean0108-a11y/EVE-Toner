@@ -47,7 +47,7 @@ export const company = {
 
 export const navItems = [
   { label: "Home", href: "/" },
-  { label: "Products", href: "/#products" },
+  { label: "Products", href: "/products" },
   { label: "Applications", href: "/#applications" },
   { label: "About", href: "/#about" },
   { label: "Factory", href: "/#factory" },
