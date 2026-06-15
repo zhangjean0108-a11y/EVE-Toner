@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowRight,
   Building2,
@@ -133,8 +134,9 @@ export default function Home() {
               {productCategories.map((product, index) => {
                 const productText = dict.home.products[index];
                 return (
-                <article
+                <Link
                   key={productText.name}
+                  href={`/products?category=${encodeURIComponent(product.category)}`}
                   className="product-card group overflow-hidden rounded-md border border-slate-200/90 bg-white text-center shadow-[0_4px_18px_rgba(15,23,42,0.035)] transition hover:-translate-y-1 hover:border-[var(--brand-cyan)] hover:shadow-xl hover:shadow-cyan-950/10"
                 >
                   <div className="relative aspect-[1.58/1] bg-white">
@@ -158,7 +160,7 @@ export default function Home() {
                     <h3 className="text-sm font-black text-slate-950 md:text-base">{productText.name}</h3>
                     <p className="mt-1 text-xs leading-5 text-slate-600 md:mt-2 md:text-sm md:leading-6">{productText.text}</p>
                   </div>
-                </article>
+                </Link>
               );
               })}
             </div>
