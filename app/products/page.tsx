@@ -6,7 +6,7 @@ import { products } from "@/data/products";
 export const metadata: Metadata = {
   title: "Products | Compatible Copier Toner & Spare Parts | EVE Toner",
   description:
-    "Browse EVE Toner products synced from our Alibaba International store, including toner cartridges, toner powder, drum units, developer units, copier machines and digital press ink."
+    "Browse EVE Toner product catalog, including toner cartridges, toner powder, drum units, developer units, copier machines and digital press ink."
 };
 
 export default function ProductsPage() {
@@ -21,7 +21,7 @@ export default function ProductsPage() {
                 Product Center
               </p>
               <h1 className="mt-4 max-w-3xl text-4xl font-black leading-tight text-slate-950 md:text-6xl">
-                Alibaba Store Products, Ready for B2B Inquiry
+                EVE Toner Product Catalog, Ready for B2B Inquiry
               </h1>
               <div className="mt-5 flex h-1.5 w-[220px] overflow-hidden rounded-full bg-slate-950">
                 <span className="h-full w-16 bg-[var(--brand-cyan)]" />
@@ -30,7 +30,7 @@ export default function ProductsPage() {
                 <span className="h-full flex-1 bg-slate-950" />
               </div>
               <p className="mt-6 max-w-2xl text-base font-semibold leading-8 text-slate-600">
-                These products are synced from EVE Toner&apos;s Alibaba International store as a first-stage product catalog for independent-site SEO and inquiry conversion.
+                Browse compatible copier toner, toner powder, drum units, developer units, copier machines and digital press supplies for B2B procurement and inquiry conversion.
               </p>
             </div>
             <div className="grid grid-cols-3 gap-3 rounded-lg border border-white/70 bg-white/70 p-4 shadow-xl shadow-cyan-950/10 backdrop-blur">

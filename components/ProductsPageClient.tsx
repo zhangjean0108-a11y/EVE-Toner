@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ExternalLink, Filter, Search } from "lucide-react";
+import { ArrowRight, Filter, Search } from "lucide-react";
 import { useMemo, useState } from "react";
 import type { Product } from "@/data/products";
 
@@ -121,17 +121,15 @@ export function ProductsPageClient({ products }: { products: Product[] }) {
       </div>
 
       <div className="mt-10 rounded-lg border border-slate-200 bg-white p-6 text-center shadow-sm md:p-8">
-        <h2 className="text-2xl font-black text-slate-950">Need the full Alibaba product catalog?</h2>
+        <h2 className="text-2xl font-black text-slate-950">Need a product recommendation?</h2>
         <p className="mx-auto mt-3 max-w-2xl text-sm font-semibold leading-7 text-slate-600">
-          This first sync imports the visible first-page products. We can continue syncing all 36 Alibaba pages after you confirm the product page style and fields.
+          Send model numbers, quantity and destination market. EVE Toner will help match compatible toner, drum units, developer units and copier supplies.
         </p>
         <a
-          href="https://www.evetoner.cn/productlist.html"
-          target="_blank"
-          rel="noreferrer"
-          className="mt-6 inline-flex h-12 items-center justify-center gap-2 rounded-md border border-slate-300 px-5 text-sm font-black text-slate-900 transition hover:border-[var(--brand-cyan)] hover:text-[var(--brand-cyan)]"
+          href="/inquiry"
+          className="mt-6 inline-flex h-12 items-center justify-center gap-2 rounded-md bg-[var(--brand-cyan)] px-5 text-sm font-black text-white transition hover:bg-[var(--brand-cyan-dark)]"
         >
-          View Alibaba Store <ExternalLink size={16} />
+          Send Your Requirements <ArrowRight size={16} />
         </a>
       </div>
     </section>
