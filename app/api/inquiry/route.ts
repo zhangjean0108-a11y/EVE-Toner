@@ -69,7 +69,7 @@ export async function POST(request: Request) {
 
   const resendApiKey = process.env.RESEND_API_KEY;
   const toEmail = process.env.INQUIRY_TO_EMAIL || company.email;
-  const fromEmail = process.env.INQUIRY_FROM_EMAIL || "EVE Toner <onboarding@resend.dev>";
+  const fromEmail = getInquiryFromEmail(process.env.INQUIRY_FROM_EMAIL);
 
   if (!resendApiKey) {
     console.error("Inquiry email is not configured: missing RESEND_API_KEY.", {
@@ -122,6 +122,16 @@ export async function POST(request: Request) {
 
 function clean(value?: string) {
   return typeof value === "string" ? value.trim() : "";
+}
+
+function getInquiryFromEmail(value?: string) {
+  const configuredFrom = clean(value);
+
+  if (configuredFrom.includes("@")) {
+    return configuredFrom;
+  }
+
+  return "EVE Toner <inquiry@evecolor.net>";
 }
 
 function buildTextEmail(inquiry: InquiryEmail) {
