@@ -67,7 +67,7 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="mt-5 grid grid-cols-2 gap-3 sm:flex sm:flex-row md:mt-7">
+              <div className="hero-actions mt-5 grid grid-cols-2 gap-3 sm:flex sm:flex-row md:mt-7">
                 <a
                   href="/inquiry"
                   className="col-span-2 inline-flex h-12 items-center justify-center gap-3 rounded-md bg-[var(--brand-cyan)] px-7 text-sm font-black text-white shadow-[0_12px_24px_rgba(7,136,184,0.24)] transition hover:bg-[var(--brand-cyan-dark)] sm:col-span-1"
@@ -89,16 +89,17 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="hero-visual relative z-10 min-h-[455px]">
-              <Image
-                src="/images/hero-product-system.png"
-                alt={dict.home.hero.imageAlt}
-                fill
-                sizes="(max-width: 1024px) 100vw, 62vw"
-                className="object-contain object-right-bottom drop-shadow-[0_22px_34px_rgba(15,23,42,0.16)]"
-                loading="eager"
-                priority
-              />
+            <div className="hero-visual relative z-10 min-h-[455px]" aria-label={dict.home.hero.imageAlt}>
+              <div className="hero-banner-frame">
+                <Image
+                  src="/images/eve-home-banner.jpg"
+                  alt="EVE Toner copier toner, powder and spare parts supply scene"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 760px"
+                  className="object-cover object-[58%_50%]"
+                  priority
+                />
+              </div>
             </div>
           </div>
           <div className="container-page relative z-10 pb-0">
@@ -208,7 +209,7 @@ export default function Home() {
                   {dict.home.factory.cta} <ArrowRight size={17} />
                 </a>
               </div>
-              <div className="grid gap-5 md:grid-cols-3">
+              <div className="grid gap-5 sm:grid-cols-2">
                 {factoryHighlights.map((item, index) => {
                   const factoryText = dict.home.factory.highlights[index];
                   return (

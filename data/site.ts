@@ -67,42 +67,42 @@ export const productCategories = [
     name: "Toner Cartridge",
     category: "Toner Cartridge",
     text: "High yield, stable quality, wide compatibility",
-    image: "/images/category-toner-cartridge-scene.png",
+    image: "/images/category-toner-cartridge-group.jpg",
     alt: "Compatible toner cartridge"
   },
   {
     name: "Copier Spare Parts",
     category: "Copier Spare Parts",
     text: "Complete range of parts for major copier brands",
-    image: "/images/hero-product-system.png",
+    image: "/images/category-copier-spare-parts-group.png",
     alt: "Copier spare parts"
   },
   {
     name: "Copier Machine",
     category: "Copier Machine",
     text: "Reliable performance for office and production",
-    image: "/images/hero-office-copier-scene.png",
+    image: "/images/category-copier-machine-group.jpg",
     alt: "Copier machine"
   },
   {
     name: "Drum Unit",
     category: "Drum Unit",
     text: "Long life, high page yield, consistent output",
-    image: "/images/category-drum-unit.png",
+    image: "/images/category-drum-unit-group.jpg",
     alt: "Compatible drum unit"
   },
   {
     name: "Fuser Unit",
     category: "Fuser Unit",
     text: "Stable fixing performance and durable quality",
-    image: "/images/hero-product-system.png",
+    image: "/images/hero-fuser-film.webp",
     alt: "Compatible fuser unit"
   },
   {
     name: "Toner Powder",
     category: "Toner Powder",
     text: "Premium toner powder with consistent quality",
-    image: "/images/category-toner-powder-scene.png",
+    image: "/images/category-big-toner-powder.png",
     alt: "CMYK copier toner powder"
   }
 ];
@@ -134,17 +134,22 @@ export const factoryHighlights = [
   {
     title: "Warehouse",
     text: "Organized stock helps support repeated orders and urgent replenishment.",
-    image: "/images/factory-warehouse-right-only.jpg"
+    image: "/images/factory-warehouse.png"
   },
   {
     title: "Testing Room",
     text: "Compatibility and print quality checks before shipment.",
-    image: "/images/boss-profile-banner.jpg"
+    image: "/images/factory-research-room.png"
   },
   {
     title: "Production Line",
     text: "Toner filling, assembly, packing and shipment preparation in one supply chain.",
-    image: "/images/company-factory-collage.jpeg"
+    image: "/images/factory-production-line.jpg"
+  },
+  {
+    title: "Trade Show",
+    text: "Meet EVE Toner at international exhibitions and review product solutions in person.",
+    image: "/images/factory-trade-show.png"
   }
 ];
 

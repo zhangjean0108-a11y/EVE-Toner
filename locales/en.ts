@@ -88,7 +88,8 @@ export const en = {
       highlights: [
         { title: "Warehouse", text: "Organized stock helps support repeated orders and urgent replenishment." },
         { title: "Testing Room", text: "Compatibility and print quality checks before shipment." },
-        { title: "Production Line", text: "Toner filling, assembly, packing and shipment preparation in one supply chain." }
+        { title: "Production Line", text: "Toner filling, assembly, packing and shipment preparation in one supply chain." },
+        { title: "Trade Show", text: "Meet EVE Toner at international exhibitions and review product solutions in person." }
       ]
     },
     applications: {
