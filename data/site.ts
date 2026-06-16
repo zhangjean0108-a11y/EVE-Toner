@@ -67,28 +67,28 @@ export const productCategories = [
     name: "Toner Cartridge",
     category: "Toner Cartridge",
     text: "High yield, stable quality, wide compatibility",
-    image: "/images/category-toner-cartridge-group.jpg",
+    image: "/images/category-toner-cartridge-group.webp",
     alt: "Compatible toner cartridge"
   },
   {
     name: "Copier Spare Parts",
     category: "Copier Spare Parts",
     text: "Complete range of parts for major copier brands",
-    image: "/images/category-copier-spare-parts-group.png",
+    image: "/images/category-copier-spare-parts-group.webp",
     alt: "Copier spare parts"
   },
   {
     name: "Copier Machine",
     category: "Copier Machine",
     text: "Reliable performance for office and production",
-    image: "/images/category-copier-machine-group.jpg",
+    image: "/images/category-copier-machine-group.webp",
     alt: "Copier machine"
   },
   {
     name: "Drum Unit",
     category: "Drum Unit",
     text: "Long life, high page yield, consistent output",
-    image: "/images/category-drum-unit-group.jpg",
+    image: "/images/category-drum-unit-group.webp",
     alt: "Compatible drum unit"
   },
   {
@@ -102,7 +102,7 @@ export const productCategories = [
     name: "Toner Powder",
     category: "Toner Powder",
     text: "Premium toner powder with consistent quality",
-    image: "/images/category-big-toner-powder.png",
+    image: "/images/category-big-toner-powder.webp",
     alt: "CMYK copier toner powder"
   }
 ];
@@ -134,22 +134,22 @@ export const factoryHighlights = [
   {
     title: "Warehouse",
     text: "Organized stock helps support repeated orders and urgent replenishment.",
-    image: "/images/factory-warehouse.png"
+    image: "/images/factory-warehouse.webp"
   },
   {
     title: "Testing Room",
     text: "Compatibility and print quality checks before shipment.",
-    image: "/images/factory-research-room.png"
+    image: "/images/factory-research-room.webp"
   },
   {
     title: "Production Line",
     text: "Toner filling, assembly, packing and shipment preparation in one supply chain.",
-    image: "/images/factory-production-line.jpg"
+    image: "/images/factory-production-line.webp"
   },
   {
     title: "Trade Show",
     text: "Meet EVE Toner at international exhibitions and review product solutions in person.",
-    image: "/images/factory-trade-show.png"
+    image: "/images/factory-trade-show.webp"
   }
 ];
 

@@ -149,8 +149,7 @@ export default function Home() {
                       alt={productText.alt}
                       width={320}
                       height={202}
-                      unoptimized
-                      loading="eager"
+                      sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 180px"
                       className={`h-full w-full object-contain transition duration-500 group-hover:scale-105 ${
                         index === 1 || index === 4
                           ? "p-0 object-[70%_82%]"
@@ -222,7 +221,7 @@ export default function Home() {
                         src={item.image}
                         alt={`${factoryText.title} at EVE Toner`}
                         fill
-                        sizes="(max-width: 768px) 100vw, 30vw"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 360px"
                         className="object-cover"
                       />
                     </div>
