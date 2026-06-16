@@ -95,7 +95,7 @@ export const productCategories = [
     name: "Fuser Unit",
     category: "Fuser Unit",
     text: "Stable fixing performance and durable quality",
-    image: "/images/hero-fuser-film.webp",
+    image: "/images/category-fuser-unit.webp",
     alt: "Compatible fuser unit"
   },
   {
