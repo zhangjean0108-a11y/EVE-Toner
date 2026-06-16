@@ -72,12 +72,19 @@ export async function POST(request: Request) {
   const fromEmail = process.env.INQUIRY_FROM_EMAIL || "EVE Toner <onboarding@resend.dev>";
 
   if (!resendApiKey) {
-    return NextResponse.json({
-      ok: true,
-      preview: true,
-      message: "Inquiry validated. Configure RESEND_API_KEY to send emails automatically.",
+    console.error("Inquiry email is not configured: missing RESEND_API_KEY.", {
+      toEmail,
       inquiry
     });
+
+    return NextResponse.json(
+      {
+        ok: false,
+        message:
+          "Inquiry email service is not configured. Please contact us by email or WhatsApp."
+      },
+      { status: 503 }
+    );
   }
 
   const emailResponse = await fetch("https://api.resend.com/emails", {
@@ -97,6 +104,13 @@ export async function POST(request: Request) {
   });
 
   if (!emailResponse.ok) {
+    const errorText = await emailResponse.text().catch(() => "");
+    console.error("Inquiry email service failed.", {
+      status: emailResponse.status,
+      toEmail,
+      errorText
+    });
+
     return NextResponse.json(
       { ok: false, message: "Email service failed. Please try again later." },
       { status: 502 }
