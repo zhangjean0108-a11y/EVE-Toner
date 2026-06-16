@@ -42,7 +42,7 @@ export default function Home() {
       <main>
         <section className="hero-surface border-b border-[#d9e7ef]">
           <div className="hero-stage container-page grid min-h-[500px] items-start gap-4 py-5 md:gap-7 md:py-8 lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="hero-copy relative z-10 max-w-[590px] pt-0 md:pt-1">
+            <div className="hero-copy relative z-20 max-w-[590px] pt-0 md:pt-1">
               <h1 className="text-balance text-[34px] font-black leading-[1.04] tracking-normal text-[#071126] min-[390px]:text-[38px] md:text-[56px] lg:text-[56px]">
                 {dict.home.hero.titlePrefix}{" "}
                 <span className="text-[var(--brand-cyan)]">{dict.home.hero.titleAccent}</span>{" "}
@@ -89,15 +89,18 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="hero-visual relative z-10 min-h-[455px]" aria-label={dict.home.hero.imageAlt}>
+            <div className="hero-visual relative z-0 min-h-[455px]" aria-label={dict.home.hero.imageAlt}>
               <div className="hero-banner-frame">
                 <Image
-                  src="/images/eve-home-banner.jpg"
+                  src="/images/eve-home-banner-optimized.webp"
                   alt="EVE Toner copier toner, powder and spare parts supply scene"
                   fill
                   sizes="(max-width: 768px) 100vw, 760px"
                   className="object-cover object-[58%_50%]"
                   priority
+                  quality={78}
+                  placeholder="blur"
+                  blurDataURL="data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAQBACdASoYAA0APwForE6rJaQiMAgBYCAJYgCw7B9iKWQd9wKCGKkmAADhFpP3iv+SWkyY22Rjn796Xd4dt+kl+AIfnpxcIJ4Bp4QHKl/XfAcLECfwRaAxg42DfcHlhNmY/2sm0hdhNhI2DII7wGqAAAA="
                 />
               </div>
             </div>
