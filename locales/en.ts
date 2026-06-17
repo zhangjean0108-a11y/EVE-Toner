@@ -71,6 +71,13 @@ export const en = {
       { name: "Fuser Unit", text: "Stable fixing performance and durable quality", alt: "Compatible fuser unit" },
       { name: "Toner Powder", text: "Premium toner powder with consistent quality", alt: "CMYK copier toner powder" }
     ],
+    video: {
+      eyebrow: "Product Video",
+      title: "See EVE Toner Products in Real Detail",
+      text: "Watch a short product video to review the appearance, packaging and supply capability before sending your inquiry.",
+      caption: "Real product presentation for B2B buyers",
+      points: ["Real product display", "Clear packaging details", "Bulk supply ready"]
+    },
     about: {
       title: "Why Choose EVE Toner",
       text: "EVE Toner focuses on practical B2B value: stable supply, customization, quality control and fast project response."

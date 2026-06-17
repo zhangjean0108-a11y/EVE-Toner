@@ -170,6 +170,47 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="video-section border-y border-slate-200 bg-[linear-gradient(135deg,#eef9fb_0%,#ffffff_46%,#fff8df_100%)] py-14 md:py-20">
+          <div className="container-page grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.18em] text-[var(--brand-cyan)]">
+                {dict.home.video.eyebrow}
+              </p>
+              <h2 className="mt-3 text-3xl font-black tracking-normal text-slate-950 md:text-4xl">
+                {dict.home.video.title}
+              </h2>
+              <div className="mt-4 h-1 w-16 rounded-full bg-[var(--brand-cyan)]" />
+              <p className="mt-5 max-w-xl text-base leading-7 text-slate-600">
+                {dict.home.video.text}
+              </p>
+              <div className="mt-7 grid gap-3">
+                {dict.home.video.points.map((point) => (
+                  <div key={point} className="flex items-center gap-3 text-sm font-black text-slate-800">
+                    <CheckCircle2 className="h-5 w-5 flex-none fill-[var(--brand-cyan)] text-white" />
+                    {point}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="video-card">
+              <video
+                className="h-full w-full rounded-md object-cover"
+                controls
+                playsInline
+                preload="metadata"
+                poster="/images/eve-home-banner-optimized.webp"
+                aria-label={dict.home.video.caption}
+              >
+                <source src="/videos/eve-toner-home-video.mp4" type="video/mp4" />
+              </video>
+              <div className="video-caption">
+                <span className="h-2 w-2 rounded-full bg-[var(--brand-yellow)]" />
+                {dict.home.video.caption}
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="about" className="border-y border-slate-200 bg-[linear-gradient(135deg,#eaf8fb_0%,#ffffff_48%,#f8f1f6_100%)] py-20">
           <div className="container-page grid gap-12 lg:grid-cols-[0.42fr_1fr] lg:items-center">
             <div>
