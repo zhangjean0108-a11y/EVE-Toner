@@ -2,11 +2,30 @@ import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { ProductsPageClient } from "@/components/ProductsPageClient";
 import { productCatalogCategories, products } from "@/data/products";
+import { socialImage, siteUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = {
   title: "Products | Compatible Copier Toner & Spare Parts | EVE Toner",
   description:
-    "Browse EVE Toner product catalog, including toner cartridges, toner powder, drum units, developer units, copier machines and digital press ink."
+    "Browse EVE Toner product catalog, including toner cartridges, toner powder, drum units, developer units, copier machines and digital press ink.",
+  alternates: {
+    canonical: "/products"
+  },
+  openGraph: {
+    title: "Products | Compatible Copier Toner & Spare Parts | EVE Toner",
+    description:
+      "Browse compatible copier toner, toner powder, drum units, developer units, copier machines and digital press supplies for B2B procurement.",
+    url: `${siteUrl}/products`,
+    siteName: "EVE Toner",
+    images: [socialImage]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Products | Compatible Copier Toner & Spare Parts | EVE Toner",
+    description:
+      "Browse compatible copier toner, toner powder, drum units, developer units, copier machines and digital press supplies for B2B procurement.",
+    images: [socialImage]
+  }
 };
 
 type ProductsPageProps = {

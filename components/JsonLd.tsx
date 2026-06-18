@@ -1,4 +1,5 @@
 import { company, faqs } from "@/data/site";
+import { siteUrl } from "@/lib/site-url";
 
 export function JsonLd() {
   const organization = {
@@ -6,8 +7,8 @@ export function JsonLd() {
     "@type": "Organization",
     name: company.legalName,
     alternateName: company.brand,
-    url: "https://eve-toner.vercel.app/",
-    logo: "/images/eve-toner-logo.png",
+    url: siteUrl,
+    logo: `${siteUrl}/images/eve-toner-logo.png`,
     email: company.email,
     telephone: company.phone,
     address: {
@@ -22,7 +23,7 @@ export function JsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: company.brand,
-    url: "https://eve-toner.vercel.app/"
+    url: siteUrl
   };
 
   const faq = {

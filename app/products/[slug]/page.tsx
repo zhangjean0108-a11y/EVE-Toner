@@ -17,6 +17,7 @@ import { Header } from "@/components/Header";
 import { ProductGallery } from "@/components/ProductGallery";
 import { company } from "@/data/site";
 import { getProductBySlug, type Product, products } from "@/data/products";
+import { siteUrl } from "@/lib/site-url";
 import { createWhatsAppHref } from "@/lib/whatsapp";
 
 type ProductPageProps = {
@@ -44,7 +45,18 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   return {
     title: `${product.name} | EVE Toner`,
     description: `${product.summary} FOB price: ${product.price}. MOQ: ${product.moq}.`,
+    alternates: {
+      canonical: `/products/${product.slug}`
+    },
     openGraph: {
+      title: product.name,
+      description: product.summary,
+      url: `${siteUrl}/products/${product.slug}`,
+      siteName: "EVE Toner",
+      images: [product.image]
+    },
+    twitter: {
+      card: "summary_large_image",
       title: product.name,
       description: product.summary,
       images: [product.image]
@@ -71,6 +83,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     "@type": "Product",
     name: product.name,
     image: galleryImages,
+    url: `${siteUrl}/products/${product.slug}`,
     brand: {
       "@type": "Brand",
       name: product.brand
