@@ -122,6 +122,17 @@ export function InquiryForm({
           ? copy.previewSuccess
           : copy.success
       );
+      window.dispatchEvent(
+        new CustomEvent("eve:conversion", {
+          detail: {
+            eventName: "inquiry_submit_success",
+            params: {
+              product: form.product || initialProduct || "not specified",
+              country: form.country || "not specified"
+            }
+          }
+        })
+      );
       setForm(initialForm);
       setTouched({});
     } catch {

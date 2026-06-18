@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@/components/Analytics";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { I18nProvider } from "@/lib/i18n";
 import { siteUrl, socialImage } from "@/lib/site-url";
@@ -59,6 +60,7 @@ export default function RootLayout({
         <I18nProvider>
           {children}
           <WhatsAppButton />
+          <Analytics />
         </I18nProvider>
       </body>
     </html>
