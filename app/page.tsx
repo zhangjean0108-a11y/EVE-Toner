@@ -197,7 +197,7 @@ export default function Home() {
                 className="h-full w-full rounded-md object-cover"
                 controls
                 playsInline
-                preload="metadata"
+                preload="none"
                 poster="/images/eve-home-banner-optimized.webp"
                 aria-label={dict.home.video.caption}
               >
