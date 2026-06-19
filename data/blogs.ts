@@ -59,7 +59,12 @@ export const blogArticles: BlogArticle[] = [
       "To choose a reliable compatible copier toner supplier, check whether the supplier can confirm exact copier models, provide product photos or samples, explain quality testing, support export packing, and respond quickly with clear MOQ, lead time and replacement policies.",
     date: "2026-06-19",
     category: "Supplier Selection",
-    keywords: ["compatible copier toner supplier", "copier toner importer", "wholesale copier toner"],
+    keywords: [
+      "compatible copier toner supplier",
+      "compatible Xerox C2265 toner cartridge supplier",
+      "copier toner importer",
+      "wholesale copier toner"
+    ],
     productLinks: [commonLinks.toner, commonLinks.parts, commonLinks.drum],
     midCta: {
       title: "Need help checking a supplier list?",
@@ -240,7 +245,12 @@ export const blogArticles: BlogArticle[] = [
       "A toner cartridge stores and supplies toner powder, while a drum unit transfers the toner image onto paper. Some machines combine them, but many copiers use separate toner and drum units, so dealers should stock both according to service demand.",
     date: "2026-06-19",
     category: "Product Education",
-    keywords: ["drum unit vs toner cartridge", "copier drum unit", "toner cartridge difference"],
+    keywords: [
+      "drum unit vs toner cartridge",
+      "drum unit supplier for copier dealers",
+      "copier drum unit",
+      "toner cartridge difference"
+    ],
     productLinks: [commonLinks.drum, commonLinks.toner, commonLinks.parts],
     midCta: {
       title: "Need drum and toner matching help?",
@@ -720,7 +730,12 @@ export const blogArticles: BlogArticle[] = [
       "Dealers in Africa and the Middle East should import copier toner by focusing on popular local machine models, durable packing, clear labels, practical MOQ, stable compatible quality, and supplier support for model matching and shipment preparation.",
     date: "2026-06-19",
     category: "Import Guide",
-    keywords: ["copier toner import Africa", "copier toner Middle East", "toner dealer import guide"],
+    keywords: [
+      "copier toner import Africa",
+      "bulk copier toner supplier for Africa",
+      "copier toner Middle East",
+      "toner dealer import guide"
+    ],
     productLinks: [commonLinks.toner, commonLinks.powder, commonLinks.parts, commonLinks.drum],
     midCta: {
       title: "Importing toner for Africa or Middle East?",

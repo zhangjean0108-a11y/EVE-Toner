@@ -170,6 +170,53 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="border-y border-slate-200 bg-[linear-gradient(135deg,#eef9fb_0%,#ffffff_52%,#fff8df_100%)] py-12 md:py-16">
+          <div className="container-page grid gap-7 lg:grid-cols-[0.46fr_1fr] lg:items-center">
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.22em] text-[var(--brand-cyan)]">
+                Long-tail Buyer Searches
+              </p>
+              <h2 className="mt-3 text-3xl font-black text-slate-950 md:text-4xl">
+                Procurement Topics for Google Buyers
+              </h2>
+              <p className="mt-4 text-sm font-semibold leading-7 text-slate-600">
+                These pages answer specific search queries from importers, distributors and copier parts dealers instead of only targeting broad competitive keywords.
+              </p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-3">
+              {[
+                {
+                  query: "compatible Xerox C2265 toner cartridge supplier",
+                  text: "Find compatible Xerox toner cartridge options and supplier checks before bulk purchase.",
+                  href: "/blog/how-to-choose-reliable-compatible-copier-toner-supplier"
+                },
+                {
+                  query: "bulk copier toner supplier for Africa",
+                  text: "Plan copier toner imports for Africa with model selection, packing and shipment support.",
+                  href: "/blog/copier-toner-import-guide-africa-middle-east-dealers"
+                },
+                {
+                  query: "drum unit supplier for copier dealers",
+                  text: "Compare drum units, toner cartridges and common spare parts for dealer stock planning.",
+                  href: "/blog/drum-unit-vs-toner-cartridge-difference"
+                }
+              ].map((item) => (
+                <Link
+                  key={item.query}
+                  href={item.href}
+                  className="rounded-lg border border-slate-200 bg-white/86 p-5 shadow-sm transition hover:-translate-y-1 hover:border-[var(--brand-cyan)] hover:shadow-xl hover:shadow-cyan-950/10"
+                >
+                  <h3 className="text-base font-black leading-6 text-slate-950">{item.query}</h3>
+                  <p className="mt-3 text-sm font-semibold leading-7 text-slate-600">{item.text}</p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-sm font-black text-[var(--brand-cyan)]">
+                    Read guide <ArrowRight size={16} />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="video-section border-y border-slate-200 bg-[linear-gradient(135deg,#eef9fb_0%,#ffffff_46%,#fff8df_100%)] py-14 md:py-20">
           <div className="container-page grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
             <div>
