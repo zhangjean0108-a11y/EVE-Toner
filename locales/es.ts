@@ -20,7 +20,7 @@ export const es = {
       { key: "applications", label: "Aplicaciones", href: "/#applications" },
       { key: "about", label: "Empresa", href: "/#about" },
       { key: "factory", label: "Fábrica", href: "/#factory" },
-      { key: "blog", label: "Blog", href: "/#faq" },
+      { key: "blog", label: "Blog", href: "/blog" },
       { key: "contact", label: "Contacto", href: "/#contact" }
     ],
     mega: {

@@ -18,7 +18,7 @@ export const en = {
       { key: "applications", label: "Applications", href: "/#applications" },
       { key: "about", label: "About", href: "/#about" },
       { key: "factory", label: "Factory", href: "/#factory" },
-      { key: "blog", label: "Blog", href: "/#faq" },
+      { key: "blog", label: "Blog", href: "/blog" },
       { key: "contact", label: "Contact", href: "/#contact" }
     ],
     mega: {

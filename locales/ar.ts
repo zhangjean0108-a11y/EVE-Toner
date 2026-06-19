@@ -12,7 +12,7 @@ export const ar = {
       { key: "applications", label: "التطبيقات", href: "/#applications" },
       { key: "about", label: "من نحن", href: "/#about" },
       { key: "factory", label: "المصنع", href: "/#factory" },
-      { key: "blog", label: "المدونة", href: "/#faq" },
+      { key: "blog", label: "المدونة", href: "/blog" },
       { key: "contact", label: "اتصل بنا", href: "/#contact" }
     ],
     mega: {

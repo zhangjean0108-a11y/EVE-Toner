@@ -51,7 +51,7 @@ export const navItems = [
   { label: "Applications", href: "/#applications" },
   { label: "About", href: "/#about" },
   { label: "Factory", href: "/#factory" },
-  { label: "Blog", href: "/#faq" },
+  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/#contact" }
 ];
 

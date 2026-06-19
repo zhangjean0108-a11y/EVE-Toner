@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { blogArticles } from "@/data/blogs";
 import { products } from "@/data/products";
 import { getProductCanonicalSlug } from "@/lib/product-seo";
 import { siteUrl } from "@/lib/site-url";
@@ -19,6 +20,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9
     },
     {
+      url: `${siteUrl}/blog`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.8
+    },
+    {
       url: `${siteUrl}/inquiry`,
       lastModified: now,
       changeFrequency: "monthly",
@@ -33,5 +40,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.65
   }));
 
-  return [...staticRoutes, ...productRoutes];
+  const blogRoutes: MetadataRoute.Sitemap = blogArticles.map((article) => ({
+    url: `${siteUrl}/blog/${article.slug}`,
+    lastModified: new Date(article.date),
+    changeFrequency: "monthly",
+    priority: 0.72
+  }));
+
+  return [...staticRoutes, ...productRoutes, ...blogRoutes];
 }

@@ -12,7 +12,7 @@ export const pt = {
       { key: "applications", label: "Aplicações", href: "/#applications" },
       { key: "about", label: "Sobre", href: "/#about" },
       { key: "factory", label: "Fábrica", href: "/#factory" },
-      { key: "blog", label: "Blog", href: "/#faq" },
+      { key: "blog", label: "Blog", href: "/blog" },
       { key: "contact", label: "Contato", href: "/#contact" }
     ],
     mega: {

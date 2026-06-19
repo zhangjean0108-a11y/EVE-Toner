@@ -12,7 +12,7 @@ export const ko = {
       { key: "applications", label: "적용 분야", href: "/#applications" },
       { key: "about", label: "회사 소개", href: "/#about" },
       { key: "factory", label: "공장", href: "/#factory" },
-      { key: "blog", label: "블로그", href: "/#faq" },
+      { key: "blog", label: "블로그", href: "/blog" },
       { key: "contact", label: "연락처", href: "/#contact" }
     ],
     mega: {

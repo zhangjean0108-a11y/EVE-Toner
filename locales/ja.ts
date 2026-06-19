@@ -12,7 +12,7 @@ export const ja = {
       { key: "applications", label: "用途", href: "/#applications" },
       { key: "about", label: "会社情報", href: "/#about" },
       { key: "factory", label: "工場", href: "/#factory" },
-      { key: "blog", label: "ブログ", href: "/#faq" },
+      { key: "blog", label: "ブログ", href: "/blog" },
       { key: "contact", label: "連絡先", href: "/#contact" }
     ],
     mega: {
