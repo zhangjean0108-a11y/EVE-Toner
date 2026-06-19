@@ -14,9 +14,9 @@ export function WhatsAppButton() {
       target="_blank"
       rel="noreferrer"
       aria-label={t("home.faq.chat")}
-      className="fixed bottom-4 right-4 z-[60] inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#10a66a] text-white shadow-[0_18px_45px_rgba(6,95,70,0.28)] ring-4 ring-[#f5c400]/20 transition duration-200 hover:scale-105 hover:bg-[#0b8b59] hover:shadow-[0_24px_60px_rgba(6,95,70,0.34)] hover:ring-[#f5c400]/30 focus:outline-none focus-visible:ring-4 focus-visible:ring-[#f5c400]/55 sm:bottom-6 sm:right-6 sm:h-14 sm:w-14"
+      className="fixed bottom-3 right-3 z-[60] inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#10a66a] text-white shadow-[0_18px_45px_rgba(6,95,70,0.28)] ring-[3px] ring-[#f5c400]/20 transition duration-200 hover:scale-105 hover:bg-[#0b8b59] hover:shadow-[0_24px_60px_rgba(6,95,70,0.34)] hover:ring-[#f5c400]/30 focus:outline-none focus-visible:ring-4 focus-visible:ring-[#f5c400]/55 sm:bottom-6 sm:right-6 sm:h-14 sm:w-14 sm:ring-4"
     >
-      <MessageCircle className="h-6 w-6 sm:h-[27px] sm:w-[27px]" strokeWidth={2.4} />
+      <MessageCircle className="h-[22px] w-[22px] sm:h-[27px] sm:w-[27px]" strokeWidth={2.4} />
       <span className="sr-only">{t("common.whatsapp")}</span>
     </a>
   );
