@@ -14,16 +14,21 @@ import {
   type LucideIcon
 } from "lucide-react";
 import { Header } from "@/components/Header";
+import { InquiryForm } from "@/components/InquiryForm";
 import { ProductGallery } from "@/components/ProductGallery";
 import { company } from "@/data/site";
 import { type Product, products } from "@/data/products";
 import {
   findProductByRouteSlug,
   getProductCanonicalSlug,
+  getProductCompatibleModels,
+  getProductFaqs,
   getProductImageAlt,
   getProductLongDescription,
   getProductMetaDescription,
-  getProductSeoTitle
+  getProductPackageSummary,
+  getProductSeoTitle,
+  getProductTypeText
 } from "@/lib/product-seo";
 import { siteUrl } from "@/lib/site-url";
 import { createWhatsAppHref } from "@/lib/whatsapp";
@@ -97,6 +102,10 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   const productDetail = getProductDetail(product);
   const productDescription = getProductLongDescription(product);
   const productImageAlt = getProductImageAlt(product);
+  const productType = getProductTypeText(product);
+  const compatibleModels = getProductCompatibleModels(product);
+  const packageSummary = getProductPackageSummary(product);
+  const faqs = getProductFaqs(product);
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -119,6 +128,18 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
       }
     }
   };
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer
+      }
+    }))
+  };
 
   return (
     <>
@@ -127,6 +148,10 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
         <section className="container-page py-8 md:py-12">
           <Link href="/products" className="inline-flex items-center gap-2 text-sm font-black text-slate-600 hover:text-[var(--brand-cyan)]">
@@ -195,27 +220,37 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 Product Details
               </p>
               <h2 className="mt-3 text-3xl font-black text-slate-950 md:text-4xl">
-                Professional Supply Information
+                Text Details for Procurement
               </h2>
               <p className="mt-4 text-sm font-semibold leading-7 text-slate-600">
-                This detail page is built for B2B buyers who need clear application, compatibility, packing and inspection information before sending an RFQ.
+                Google and overseas buyers need readable product information, so every EVE Toner product page includes compatibility, product type, packing, inspection and shipment notes.
               </p>
             </div>
 
             <div className="grid gap-4 md:grid-cols-2">
               <DetailCard
+                icon={ClipboardCheck}
+                title="Compatible Models"
+                text={`Reference model keywords: ${compatibleModels}. Please confirm exact machine model, regional version and part code before bulk ordering.`}
+              />
+              <DetailCard
                 icon={Factory}
+                title="Product Type"
+                text={`Product type: ${productType}. This item belongs to the ${product.category} category and is supplied for ${product.brand} compatible applications.`}
+              />
+              <DetailCard
+                icon={Factory}
+                title="Color / Yield / Package"
+                text={packageSummary}
+              />
+              <DetailCard
+                icon={ShieldCheck}
                 title="Application"
                 text={productDetail.application}
               />
               <DetailCard
-                icon={ShieldCheck}
-                title="Compatibility & Matching"
-                text={productDetail.compatibility}
-              />
-              <DetailCard
                 icon={ClipboardCheck}
-                title="Quality Control"
+                title="Quality Inspection"
                 text={productDetail.quality}
               />
               <DetailCard
@@ -233,10 +268,16 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               <h2 className="text-2xl font-black text-slate-950">Product Specification</h2>
               <div className="mt-6 overflow-hidden rounded-lg border border-slate-200">
                 <SpecRow label="Product Name" value={product.name} />
+                <SpecRow label="Compatible Models" value={compatibleModels} />
+                <SpecRow label="Product Type" value={productType} />
+                <SpecRow label="Color / Yield / Package" value={packageSummary} />
                 <SpecRow label="Category" value={product.category} />
                 <SpecRow label="Brand / Compatible Brand" value={product.brand} />
                 <SpecRow label="MOQ" value={product.moq} />
                 <SpecRow label="Reference FOB Price" value={product.price} />
+                <SpecRow label="Application" value={productDetail.application} />
+                <SpecRow label="Quality Inspection" value={productDetail.quality} />
+                <SpecRow label="Packing & Shipment" value={productDetail.packing} />
                 <SpecRow label="Supply Type" value="Compatible replacement supply for B2B procurement" />
                 <SpecRow label="Recommended Inquiry Info" value="Model number, quantity, destination country and packing request" />
               </div>
@@ -266,6 +307,37 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               >
                 Send Product Requirements <ArrowRight size={16} />
               </a>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-t border-slate-200 bg-white py-12 md:py-16">
+          <div className="container-page grid gap-8 lg:grid-cols-[0.82fr_1.18fr]">
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.22em] text-[var(--brand-cyan)]">
+                FAQ & Inquiry Form
+              </p>
+              <h2 className="mt-3 text-3xl font-black text-slate-950 md:text-4xl">
+                Questions Before Ordering
+              </h2>
+              <div className="mt-6 grid gap-4">
+                {faqs.map((faq) => (
+                  <article key={faq.question} className="rounded-lg border border-slate-200 bg-slate-50 p-5">
+                    <h3 className="text-base font-black text-slate-950">{faq.question}</h3>
+                    <p className="mt-2 text-sm font-semibold leading-7 text-slate-600">{faq.answer}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-black text-slate-950">Send Inquiry for This Product</h2>
+              <p className="mt-3 text-sm font-semibold leading-7 text-slate-600">
+                Fill in your contact details, product requirement and destination country. EVE Toner will reply with compatibility confirmation, quotation and packing suggestions.
+              </p>
+              <div className="mt-5">
+                <InquiryForm initialProduct={product.name} />
+              </div>
             </div>
           </div>
         </section>
