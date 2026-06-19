@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ArrowRight, Filter, Search } from "lucide-react";
 import { useMemo, useState } from "react";
 import type { Product } from "@/data/products";
+import { getProductCanonicalSlug, getProductImageAlt } from "@/lib/product-seo";
 
 type ProductsPageClientProps = {
   products: Product[];
@@ -68,16 +69,18 @@ export function ProductsPageClient({ products, categories, initialCategory = "Al
       </div>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {filteredProducts.map((product) => (
+        {filteredProducts.map((product) => {
+          const productHref = `/products/${getProductCanonicalSlug(product)}`;
+          return (
           <article
             key={product.id}
             className="group overflow-hidden rounded-lg border border-slate-200 bg-white shadow-[0_8px_24px_rgba(15,23,42,0.045)] transition hover:-translate-y-1 hover:border-[var(--brand-cyan)] hover:shadow-xl hover:shadow-cyan-950/10"
           >
-            <Link href={`/products/${product.slug}`} className="block">
+            <Link href={productHref} className="block">
               <div className="aspect-square bg-white p-4">
                 <Image
                   src={product.image}
-                  alt={product.name}
+                  alt={getProductImageAlt(product)}
                   width={350}
                   height={350}
                   className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
@@ -110,7 +113,7 @@ export function ProductsPageClient({ products, categories, initialCategory = "Al
             </Link>
             <div className="grid grid-cols-2 border-t border-slate-100">
               <Link
-                href={`/products/${product.slug}`}
+                href={productHref}
                 className="inline-flex h-12 items-center justify-center text-sm font-black text-slate-900 transition hover:bg-slate-50 hover:text-[var(--brand-cyan)]"
               >
                 Details
@@ -123,7 +126,8 @@ export function ProductsPageClient({ products, categories, initialCategory = "Al
               </a>
             </div>
           </article>
-        ))}
+          );
+        })}
       </div>
 
       <div className="mt-10 rounded-lg border border-slate-200 bg-white p-6 text-center shadow-sm md:p-8">

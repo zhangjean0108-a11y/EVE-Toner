@@ -7,14 +7,16 @@ import { useMemo, useState } from "react";
 type ProductGalleryProps = {
   productName: string;
   images: string[];
+  altBase?: string;
 };
 
-export function ProductGallery({ productName, images }: ProductGalleryProps) {
+export function ProductGallery({ productName, images, altBase }: ProductGalleryProps) {
   const galleryImages = useMemo(() => images.filter(Boolean), [images]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
   const activeImage = galleryImages[activeIndex] ?? galleryImages[0];
+  const imageAlt = (altBase ?? productName).replace(/\.$/, "");
 
   const goToImage = (direction: -1 | 1) => {
     setActiveIndex((current) => (current + direction + galleryImages.length) % galleryImages.length);
@@ -34,7 +36,7 @@ export function ProductGallery({ productName, images }: ProductGalleryProps) {
       >
         <Image
           src={activeImage}
-          alt={productName}
+          alt={`${imageAlt}.`}
           width={760}
           height={760}
           className="h-full w-full object-contain transition duration-500 group-hover:scale-[1.03]"
@@ -58,7 +60,7 @@ export function ProductGallery({ productName, images }: ProductGalleryProps) {
           >
             <Image
               src={image}
-              alt={`${productName} product view ${index + 1}`}
+              alt={`${imageAlt} product view ${index + 1}.`}
               width={160}
               height={160}
               className="h-full w-full object-contain"
@@ -102,7 +104,7 @@ export function ProductGallery({ productName, images }: ProductGalleryProps) {
             <div className="relative aspect-square max-h-[78vh] w-full">
               <Image
                 src={activeImage}
-                alt={`${productName} enlarged product view`}
+                alt={`${imageAlt} enlarged product view.`}
                 fill
                 sizes="100vw"
                 className="object-contain"

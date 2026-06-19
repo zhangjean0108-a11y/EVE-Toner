@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import {
   ArrowLeft,
   ArrowRight,
@@ -16,7 +16,15 @@ import {
 import { Header } from "@/components/Header";
 import { ProductGallery } from "@/components/ProductGallery";
 import { company } from "@/data/site";
-import { getProductBySlug, type Product, products } from "@/data/products";
+import { type Product, products } from "@/data/products";
+import {
+  findProductByRouteSlug,
+  getProductCanonicalSlug,
+  getProductImageAlt,
+  getProductLongDescription,
+  getProductMetaDescription,
+  getProductSeoTitle
+} from "@/lib/product-seo";
 import { siteUrl } from "@/lib/site-url";
 import { createWhatsAppHref } from "@/lib/whatsapp";
 
@@ -28,13 +36,13 @@ type ProductPageProps = {
 
 export function generateStaticParams() {
   return products.map((product) => ({
-    slug: product.slug
+    slug: getProductCanonicalSlug(product)
   }));
 }
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = findProductByRouteSlug(slug, products);
 
   if (!product) {
     return {
@@ -42,23 +50,27 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     };
   }
 
+  const canonicalSlug = getProductCanonicalSlug(product);
+  const seoTitle = getProductSeoTitle(product);
+  const seoDescription = getProductMetaDescription(product);
+
   return {
-    title: `${product.name} | EVE Toner`,
-    description: `${product.summary} FOB price: ${product.price}. MOQ: ${product.moq}.`,
+    title: seoTitle,
+    description: seoDescription,
     alternates: {
-      canonical: `/products/${product.slug}`
+      canonical: `/products/${canonicalSlug}`
     },
     openGraph: {
-      title: product.name,
-      description: product.summary,
-      url: `${siteUrl}/products/${product.slug}`,
+      title: seoTitle,
+      description: seoDescription,
+      url: `${siteUrl}/products/${canonicalSlug}`,
       siteName: "EVE Toner",
       images: [product.image]
     },
     twitter: {
       card: "summary_large_image",
-      title: product.name,
-      description: product.summary,
+      title: seoTitle,
+      description: seoDescription,
       images: [product.image]
     }
   };
@@ -66,10 +78,15 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
 export default async function ProductDetailPage({ params }: ProductPageProps) {
   const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = findProductByRouteSlug(slug, products);
 
   if (!product) {
     notFound();
+  }
+
+  const canonicalSlug = getProductCanonicalSlug(product);
+  if (slug !== canonicalSlug) {
+    permanentRedirect(`/products/${canonicalSlug}`);
   }
 
   const whatsappHref = createWhatsAppHref(
@@ -78,18 +95,20 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   );
   const galleryImages = [product.image, ...product.gallery];
   const productDetail = getProductDetail(product);
+  const productDescription = getProductLongDescription(product);
+  const productImageAlt = getProductImageAlt(product);
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.name,
     image: galleryImages,
-    url: `${siteUrl}/products/${product.slug}`,
+    url: `${siteUrl}/products/${canonicalSlug}`,
     brand: {
       "@type": "Brand",
       name: product.brand
     },
     category: product.category,
-    description: productDetail.overview,
+    description: productDescription,
     offers: {
       "@type": "Offer",
       priceCurrency: "USD",
@@ -115,7 +134,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           </Link>
 
           <div className="mt-6 grid gap-8 lg:grid-cols-[0.92fr_1.08fr]">
-            <ProductGallery productName={product.name} images={galleryImages} />
+            <ProductGallery productName={product.name} images={galleryImages} altBase={productImageAlt} />
 
             <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-xl shadow-cyan-950/10 md:p-8">
               <div className="flex flex-wrap gap-2">
@@ -130,7 +149,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                 {product.name}
               </h1>
               <p className="mt-5 text-base font-semibold leading-8 text-slate-600">{product.summary}</p>
-              <p className="mt-4 text-sm leading-7 text-slate-600">{productDetail.overview}</p>
+              <p className="mt-4 text-sm leading-7 text-slate-600">{productDescription}</p>
 
               <div className="mt-7 grid grid-cols-2 gap-4">
                 <Spec label="FOB Price" value={product.price} accent />

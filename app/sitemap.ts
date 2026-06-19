@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { products } from "@/data/products";
+import { getProductCanonicalSlug } from "@/lib/product-seo";
 import { siteUrl } from "@/lib/site-url";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -26,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const productRoutes: MetadataRoute.Sitemap = products.map((product) => ({
-    url: `${siteUrl}/products/${product.slug}`,
+    url: `${siteUrl}/products/${getProductCanonicalSlug(product)}`,
     lastModified: now,
     changeFrequency: "monthly",
     priority: 0.65
