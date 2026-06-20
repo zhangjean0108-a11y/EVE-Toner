@@ -48,7 +48,8 @@ export const ko = {
       { name: "복사기", text: "사무 및 생산용 안정 성능", alt: en.home.products[2].alt },
       { name: "드럼 유닛", text: "긴 수명과 일관된 출력", alt: en.home.products[3].alt },
       { name: "정착 유닛", text: "안정적인 정착 성능과 내구성", alt: en.home.products[4].alt },
-      { name: "토너 파우더", text: "일관된 품질의 프리미엄 토너", alt: en.home.products[5].alt }
+      { name: "토너 파우더", text: "일관된 품질의 프리미엄 토너", alt: en.home.products[5].alt },
+      { name: "HP Indigo 디지털 잉크", text: "디지털 프레스 구매자를 위한 호환 ElectroInk", alt: en.home.products[6].alt }
     ],
     about: { title: "EVE Toner를 선택하는 이유", text: "EVE Toner는 안정 공급, 맞춤 제작, 품질 관리, 빠른 대응이라는 실질적인 B2B 가치를 중시합니다." },
     factory: { ...en.home.factory, title: "공장 및 품질 관리", cta: "공장 보기" },

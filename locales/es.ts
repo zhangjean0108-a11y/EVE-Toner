@@ -63,7 +63,8 @@ export const es = {
       { name: "Copiadora", text: "Rendimiento fiable para oficina y producción", alt: en.home.products[2].alt },
       { name: "Unidad de Tambor", text: "Larga vida útil y salida constante", alt: en.home.products[3].alt },
       { name: "Unidad Fusora", text: "Fijación estable y calidad duradera", alt: en.home.products[4].alt },
-      { name: "Polvo de Tóner", text: "Polvo premium con calidad consistente", alt: en.home.products[5].alt }
+      { name: "Polvo de Tóner", text: "Polvo premium con calidad consistente", alt: en.home.products[5].alt },
+      { name: "Tinta Digital HP Indigo", text: "ElectroInk compatible para compradores de impresión digital", alt: en.home.products[6].alt }
     ],
     about: { title: "Por Qué Elegir EVE Toner", text: "EVE Toner se centra en valor B2B práctico: suministro estable, personalización, control de calidad y respuesta rápida." },
     factory: { ...en.home.factory, title: "Fábrica y Control de Calidad", cta: "Ver Fábrica" },

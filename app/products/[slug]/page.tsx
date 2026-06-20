@@ -18,6 +18,7 @@ import { InquiryForm } from "@/components/InquiryForm";
 import { ProductGallery } from "@/components/ProductGallery";
 import { company } from "@/data/site";
 import { type Product, products } from "@/data/products";
+import { findSeoLandingPage, seoLandingPages, type SeoLandingPage } from "@/data/seo-landing-pages";
 import {
   findProductByRouteSlug,
   getProductCanonicalSlug,
@@ -40,13 +41,43 @@ type ProductPageProps = {
 };
 
 export function generateStaticParams() {
-  return products.map((product) => ({
-    slug: getProductCanonicalSlug(product)
-  }));
+  return [
+    ...seoLandingPages.map((page) => ({
+      slug: page.slug
+    })),
+    ...products.map((product) => ({
+      slug: getProductCanonicalSlug(product)
+    }))
+  ];
 }
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
   const { slug } = await params;
+  const seoPage = findSeoLandingPage(slug);
+
+  if (seoPage) {
+    return {
+      title: seoPage.title,
+      description: seoPage.description,
+      alternates: {
+        canonical: `/products/${seoPage.slug}`
+      },
+      openGraph: {
+        title: seoPage.title,
+        description: seoPage.description,
+        url: `${siteUrl}/products/${seoPage.slug}`,
+        siteName: "EVE Toner",
+        images: ["/images/company-factory-collage.jpeg"]
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: seoPage.title,
+        description: seoPage.description,
+        images: ["/images/company-factory-collage.jpeg"]
+      }
+    };
+  }
+
   const product = findProductByRouteSlug(slug, products);
 
   if (!product) {
@@ -83,6 +114,12 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
 export default async function ProductDetailPage({ params }: ProductPageProps) {
   const { slug } = await params;
+  const seoPage = findSeoLandingPage(slug);
+
+  if (seoPage) {
+    return <SeoLandingPageView page={seoPage} />;
+  }
+
   const product = findProductByRouteSlug(slug, products);
 
   if (!product) {
@@ -344,6 +381,282 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
       </main>
     </>
   );
+}
+
+function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
+  const relatedProducts = getSeoLandingProducts(page);
+  const whatsappHref = createWhatsAppHref(
+    company.whatsapp,
+    `Hello, I am looking for ${page.keyword}. Please send me product details and quotation.`
+  );
+  const pageUrl = `${siteUrl}/products/${page.slug}`;
+  const collectionJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: page.h1,
+    url: pageUrl,
+    description: page.description,
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: relatedProducts.slice(0, 6).map((product, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `${siteUrl}/products/${getProductCanonicalSlug(product)}`,
+        name: product.name
+      }))
+    }
+  };
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: page.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer
+      }
+    }))
+  };
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Products",
+        item: `${siteUrl}/products`
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: page.h1,
+        item: pageUrl
+      }
+    ]
+  };
+
+  return (
+    <>
+      <Header />
+      <main className="bg-[linear-gradient(135deg,#f6fbfd_0%,#ffffff_48%,#fff8ea_100%)]">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        />
+
+        <section className="border-b border-slate-200 py-12 md:py-16">
+          <div className="container-page grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+            <div>
+              <Link href="/products" className="inline-flex items-center gap-2 text-sm font-black text-slate-600 hover:text-[var(--brand-cyan)]">
+                <ArrowLeft size={16} /> Product Center
+              </Link>
+              <p className="mt-8 text-xs font-black uppercase tracking-[0.24em] text-[var(--brand-cyan)]">
+                {page.eyebrow}
+              </p>
+              <h1 className="mt-4 max-w-4xl text-4xl font-black leading-tight text-slate-950 md:text-6xl">
+                {page.h1}
+              </h1>
+              <p className="mt-6 max-w-3xl text-base font-semibold leading-8 text-slate-600">
+                {page.intro}
+              </p>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                <a
+                  href={`/inquiry?product=${encodeURIComponent(page.keyword)}`}
+                  className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-[var(--brand-cyan)] px-6 text-sm font-black text-white transition hover:bg-[var(--brand-cyan-dark)]"
+                >
+                  Request {page.keyword} Quote <ArrowRight size={16} />
+                </a>
+                <a
+                  href={whatsappHref}
+                  className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-[#10a66a] px-6 text-sm font-black text-white transition hover:bg-[#0b8b59]"
+                >
+                  <MessageCircle size={17} /> WhatsApp
+                </a>
+              </div>
+            </div>
+
+            <div className="rounded-xl border border-white/70 bg-white/78 p-6 shadow-xl shadow-cyan-950/10 backdrop-blur">
+              <h2 className="text-xl font-black text-slate-950">Procurement Focus</h2>
+              <div className="mt-5 grid gap-4">
+                <SeoInfo label="Target Keyword" value={page.keyword} />
+                <SeoInfo label="Buyer Types" value={page.buyerTypes.join(", ")} />
+                <SeoInfo label="Related Brands" value={page.relatedBrands.join(", ")} />
+                <SeoInfo label="Model Examples" value={page.modelExamples.join(", ")} />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="container-page py-12 md:py-16">
+          <div className="grid gap-6 lg:grid-cols-[0.78fr_1.22fr]">
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.22em] text-[var(--brand-cyan)]">
+                B2B sourcing guide
+              </p>
+              <h2 className="mt-3 text-3xl font-black text-slate-950 md:text-4xl">
+                How EVE Toner Helps Buyers Source This Category
+              </h2>
+              <p className="mt-4 text-sm font-semibold leading-7 text-slate-600">
+                This landing page is written for Google searches with commercial intent. It gives importers and dealers a clear path from product matching to quotation.
+              </p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-2">
+              {page.sections.map((section) => (
+                <article key={section.title} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--soft-cyan)] text-[var(--brand-cyan)]">
+                    <ClipboardCheck className="h-6 w-6" />
+                  </div>
+                  <h3 className="mt-5 text-lg font-black text-slate-950">{section.title}</h3>
+                  <p className="mt-3 text-sm font-semibold leading-7 text-slate-600">{section.text}</p>
+                </article>
+              ))}
+              <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--soft-cyan)] text-[var(--brand-cyan)]">
+                  <Factory className="h-6 w-6" />
+                </div>
+                <h3 className="mt-5 text-lg font-black text-slate-950">Factory-backed response</h3>
+                <p className="mt-3 text-sm font-semibold leading-7 text-slate-600">
+                  EVE Toner can reply with model confirmation, sample or photo details, packing suggestions and shipment planning for qualified B2B inquiries.
+                </p>
+              </article>
+              <article className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--soft-cyan)] text-[var(--brand-cyan)]">
+                  <ShieldCheck className="h-6 w-6" />
+                </div>
+                <h3 className="mt-5 text-lg font-black text-slate-950">Quality and packing checks</h3>
+                <p className="mt-3 text-sm font-semibold leading-7 text-slate-600">
+                  Buyers can discuss print testing, appearance checks, carton packing, label options and inspection support before shipment.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section className="border-y border-slate-200 bg-white py-12 md:py-16">
+          <div className="container-page">
+            <div className="max-w-3xl">
+              <p className="text-xs font-black uppercase tracking-[0.22em] text-[var(--brand-cyan)]">
+                Related products
+              </p>
+              <h2 className="mt-3 text-3xl font-black text-slate-950 md:text-4xl">
+                Products Related to {page.keyword}
+              </h2>
+              <p className="mt-4 text-sm font-semibold leading-7 text-slate-600">
+                These product links build topical relevance between the sourcing page and detailed model pages.
+              </p>
+            </div>
+            <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {relatedProducts.map((product) => (
+                <Link
+                  key={product.id}
+                  href={`/products/${getProductCanonicalSlug(product)}`}
+                  className="group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:border-[var(--brand-cyan)] hover:shadow-xl hover:shadow-cyan-950/10"
+                >
+                  <img
+                    src={product.image}
+                    alt={getProductImageAlt(product)}
+                    className="h-48 w-full bg-white object-contain p-4"
+                  />
+                  <div className="border-t border-slate-200 p-5">
+                    <div className="flex flex-wrap gap-2">
+                      <span className="rounded-full bg-[var(--soft-cyan)] px-3 py-1 text-xs font-black text-[var(--brand-cyan)]">
+                        {product.category}
+                      </span>
+                      <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-black text-slate-700">
+                        {product.brand}
+                      </span>
+                    </div>
+                    <h3 className="mt-4 line-clamp-3 text-base font-black leading-6 text-slate-950 group-hover:text-[var(--brand-cyan)]">
+                      {product.name}
+                    </h3>
+                    <p className="mt-3 text-sm font-semibold text-slate-500">MOQ: {product.moq}</p>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="container-page py-12 md:py-16">
+          <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr]">
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.22em] text-[var(--brand-cyan)]">
+                FAQ
+              </p>
+              <h2 className="mt-3 text-3xl font-black text-slate-950 md:text-4xl">
+                Questions Buyers Ask Before Ordering
+              </h2>
+              <div className="mt-6 grid gap-4">
+                {page.faqs.map((faq) => (
+                  <article key={faq.question} className="rounded-lg border border-slate-200 bg-white p-5">
+                    <h3 className="text-base font-black text-slate-950">{faq.question}</h3>
+                    <p className="mt-2 text-sm font-semibold leading-7 text-slate-600">{faq.answer}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-2xl font-black text-slate-950">Send Your Model List</h2>
+              <p className="mt-3 text-sm font-semibold leading-7 text-slate-600">
+                Tell us the model number, quantity, destination country and packing request. EVE Toner will reply with quotation details.
+              </p>
+              <div className="mt-5">
+                <InquiryForm initialProduct={page.keyword} />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
+  );
+}
+
+function SeoInfo({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="rounded-md border border-slate-200 bg-slate-50 p-4">
+      <div className="text-xs font-black uppercase tracking-wide text-slate-500">{label}</div>
+      <div className="mt-2 text-sm font-bold leading-6 text-slate-800">{value}</div>
+    </div>
+  );
+}
+
+function getSeoLandingProducts(page: SeoLandingPage) {
+  const sparePartCategories = new Set(["Drum Unit", "Fuser Unit", "Developer Unit"]);
+  const relatedProducts = products.filter((product) => {
+    const brandMatches = page.brand ? product.brand === page.brand : false;
+    const categoryMatches =
+      page.category === "Copier Spare Parts"
+        ? sparePartCategories.has(product.category)
+        : page.category
+          ? product.category === page.category
+          : false;
+
+    return brandMatches || categoryMatches;
+  });
+
+  const fallbackProducts = relatedProducts.length ? relatedProducts : products;
+
+  return fallbackProducts
+    .slice()
+    .sort((a, b) => b.sold180 - a.sold180)
+    .slice(0, 6);
 }
 
 function Spec({ label, value, accent = false }: { label: string; value: string; accent?: boolean }) {

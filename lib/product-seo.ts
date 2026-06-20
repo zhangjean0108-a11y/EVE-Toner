@@ -47,13 +47,17 @@ const CATEGORY_SLUGS: Record<string, string> = {
 
 const CATEGORY_ALT_NAMES: Record<string, string> = {
   "Copier Machine": "copier machine",
-  "Digital Press Ink": "digital press ink",
+  "Digital Press Ink": "HP Indigo digital press ink",
   "Developer Unit": "developer unit",
   "Drum Unit": "drum unit",
   "Fuser Unit": "fuser unit",
   "Toner Cartridge": "toner cartridge",
   "Toner Powder": "toner powder"
 };
+
+function isHpIndigoInk(product: Product) {
+  return product.category === "Digital Press Ink" && /hp\s*indigo|electro\s*ink|electroink/i.test(`${product.brand} ${product.name}`);
+}
 
 function slugify(value: string) {
   return value
@@ -171,11 +175,21 @@ export function findProductByRouteSlug(slug: string, products: Product[]) {
 }
 
 export function getProductSeoTitle(product: Product) {
+  if (isHpIndigoInk(product)) {
+    const modelText = getProductModelText(product);
+    return `${modelText} Compatible HP Indigo ElectroInk Supplier | EVE Toner`;
+  }
+
   const modelText = getProductModelText(product);
   return `${modelText} Compatible ${product.category} for ${product.brand} | EVE Toner`;
 }
 
 export function getProductMetaDescription(product: Product) {
+  if (isHpIndigoInk(product)) {
+    const modelText = getProductModelText(product);
+    return `Bulk supply of compatible ${modelText} HP Indigo ElectroInk for digital press buyers. Export packing, model confirmation, OEM/ODM support and fast inquiry response from EVE Toner.`;
+  }
+
   const modelText = getProductModelText(product);
   const productType = getProductTypeText(product);
 
@@ -183,6 +197,12 @@ export function getProductMetaDescription(product: Product) {
 }
 
 export function getProductLongDescription(product: Product) {
+  if (isHpIndigoInk(product)) {
+    const modelText = getProductModelText(product);
+
+    return `This compatible ${modelText} HP Indigo ElectroInk is supplied by EVE Toner for digital press buyers, print service providers, distributors and importers that need practical ink matching and export-ready supply. HP Indigo ink purchasing should be checked by press model, color, ink code, production requirement and storage condition before bulk ordering. EVE Toner can help buyers confirm suitable models for selected HP Indigo digital press series, review packing needs, prepare product photos and support shipment inspection before delivery. For dealers and print shops, stable communication is important because ink compatibility, batch condition and packaging protection affect production continuity. Send your HP Indigo press model, required color, ink code, quantity and destination market to receive a practical quotation, lead time and packing suggestion.`;
+  }
+
   const modelText = getProductModelText(product);
   const category = getProductTypeText(product);
 
@@ -192,6 +212,11 @@ export function getProductLongDescription(product: Product) {
 export function getProductImageAlt(product: Product, imageIndex?: number) {
   const modelText = getProductModelText(product);
   const category = getProductTypeText(product);
+  if (isHpIndigoInk(product)) {
+    const suffix = imageIndex ? ` image ${imageIndex}` : "";
+    return `Compatible ${modelText} HP Indigo ElectroInk digital press ink${suffix}.`;
+  }
+
   const colorSet = /cmyk|cyan|magenta|yellow|black|colour|color/i.test(product.name) ? " CMYK set" : "";
   const suffix = imageIndex ? ` image ${imageIndex}` : "";
 

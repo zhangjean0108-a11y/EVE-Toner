@@ -48,7 +48,8 @@ export const ja = {
       { name: "複合機", text: "オフィスと生産現場に信頼性のある性能", alt: en.home.products[2].alt },
       { name: "ドラムユニット", text: "長寿命で安定した出力", alt: en.home.products[3].alt },
       { name: "定着ユニット", text: "安定した定着性能と耐久品質", alt: en.home.products[4].alt },
-      { name: "トナー粉", text: "安定品質のプレミアムトナー粉", alt: en.home.products[5].alt }
+      { name: "トナー粉", text: "安定品質のプレミアムトナー粉", alt: en.home.products[5].alt },
+      { name: "HP Indigo デジタルインク", text: "デジタル印刷向け互換 ElectroInk", alt: en.home.products[6].alt }
     ],
     about: { title: "EVE Tonerが選ばれる理由", text: "安定供給、カスタマイズ、品質管理、迅速対応という実用的なB2B価値を重視しています。" },
     factory: { ...en.home.factory, title: "工場と品質管理", cta: "工場を見る" },

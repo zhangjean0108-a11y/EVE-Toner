@@ -104,6 +104,13 @@ export const productCategories = [
     text: "Premium toner powder with consistent quality",
     image: "/images/category-big-toner-powder.webp",
     alt: "CMYK copier toner powder"
+  },
+  {
+    name: "Digital Press Ink",
+    category: "Digital Press Ink",
+    text: "Compatible HP Indigo ElectroInk for digital press buyers",
+    image: "https://sc04.alicdn.com/kf/H36ecfc4d258e4764a5ff7dc158cf0d16O/Compatible-for-HP-Indigo-ElectroInk-Ink-Q4132D.jpg_350x350.jpg",
+    alt: "Compatible HP Indigo ElectroInk digital press ink"
   }
 ];
 

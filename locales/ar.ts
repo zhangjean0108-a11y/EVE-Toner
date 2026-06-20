@@ -48,7 +48,8 @@ export const ar = {
       { name: "آلة نسخ", text: "أداء موثوق للمكاتب والإنتاج", alt: en.home.products[2].alt },
       { name: "وحدة درام", text: "عمر طويل وإخراج ثابت", alt: en.home.products[3].alt },
       { name: "وحدة فيوزر", text: "تثبيت مستقر وجودة متينة", alt: en.home.products[4].alt },
-      { name: "مسحوق تونر", text: "مسحوق تونر ممتاز بجودة ثابتة", alt: en.home.products[5].alt }
+      { name: "مسحوق تونر", text: "مسحوق تونر ممتاز بجودة ثابتة", alt: en.home.products[5].alt },
+      { name: "حبر HP Indigo الرقمي", text: "ElectroInk متوافق لمشتري الطباعة الرقمية", alt: en.home.products[6].alt }
     ],
     about: { title: "لماذا تختار EVE Toner", text: "تركز EVE Toner على قيمة B2B عملية: توريد مستقر، تخصيص، رقابة جودة واستجابة سريعة." },
     factory: { ...en.home.factory, title: "المصنع ورقابة الجودة", cta: "عرض جولة المصنع" },

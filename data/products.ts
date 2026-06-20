@@ -59,13 +59,13 @@ export const products = [
       "https://sc04.alicdn.com/kf/H1ba8245efa5e4c08a484f32409a33707A/Compatible-for-HP-Indigo-ElectroInk-Ink-Q4132D.png_350x350.png"
     ],
     "unit": "box",
-    "summary": "B2B supply item from EVE Toner for HP Indigo compatible copier and printing applications. Send model, quantity and destination market for a practical quotation.",
-    "features": [
-      "Compatible replacement supply for B2B buyers",
-      "Bulk order support with practical MOQ",
-      "Pre-shipment inspection and export packing support",
-      "WhatsApp and email quotation support"
-    ]
+      "summary": "Compatible HP Indigo ElectroInk Q4132D for digital press 6000, W7200, 7000, 7900, 8000, 6K, 7K and 8K series. Built for B2B buyers who need model confirmation, export packing and fast quotation support.",
+      "features": [
+        "Compatible HP Indigo ElectroInk supply for digital press buyers",
+        "Model confirmation for 6000, W7200, 7000, 7900, 8000, 6K, 7K and 8K series",
+        "Packing seal, color identification and shipment inspection support",
+        "Bulk quotation support for distributors, print shops and importers"
+      ]
   },
   {
     "id": "1601827592845",
@@ -85,13 +85,13 @@ export const products = [
       "https://sc04.alicdn.com/kf/H991d75ef02ba40438a317e6ecd5b3b3f2/Compatible-Indigo-Electro-Ink-for-HP-Digital.jpg_350x350.jpg"
     ],
     "unit": "piece",
-    "summary": "B2B supply item from EVE Toner for HP Indigo compatible copier and printing applications. Send model, quantity and destination market for a practical quotation.",
-    "features": [
-      "Compatible replacement supply for B2B buyers",
-      "Bulk order support with practical MOQ",
-      "Pre-shipment inspection and export packing support",
-      "WhatsApp and email quotation support"
-    ]
+      "summary": "Compatible HP Indigo Electro Ink for digital press 3000, 3050, 3500, 3550, 4000, 4050, 4500, 4600, 5000, 5500, 5600 and 5900 Series 2 buyers. Send model, color and quantity for a practical quotation.",
+      "features": [
+        "Compatible Electro Ink supply for selected HP Indigo digital press series",
+        "Support for model, color and code confirmation before bulk order",
+        "Export packing, batch condition and shipment preparation support",
+        "Fast inquiry response for dealers, print shops and trade buyers"
+      ]
   },
   {
     "id": "1601818935604",
@@ -14556,12 +14556,12 @@ export const products = [
 const preferredProductCategoryOrder = [
   "Toner Cartridge",
   "Toner Powder",
+  "Digital Press Ink",
   "Drum Unit",
   "Fuser Unit",
   "Developer Unit",
   "Copier Machine",
-  "Copier Spare Parts",
-  "Digital Press Ink"
+  "Copier Spare Parts"
 ];
 
 export const productCatalogCategories = preferredProductCategoryOrder.filter((category) =>

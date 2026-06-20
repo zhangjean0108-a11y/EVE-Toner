@@ -48,7 +48,8 @@ export const de = {
       { name: "Kopierer", text: "Zuverlässige Leistung für Büro und Produktion", alt: en.home.products[2].alt },
       { name: "Trommeleinheit", text: "Lange Lebensdauer und konstante Ausgabe", alt: en.home.products[3].alt },
       { name: "Fixiereinheit", text: "Stabile Fixierung und langlebige Qualität", alt: en.home.products[4].alt },
-      { name: "Tonerpulver", text: "Premium-Pulver mit konstanter Qualität", alt: en.home.products[5].alt }
+      { name: "Tonerpulver", text: "Premium-Pulver mit konstanter Qualität", alt: en.home.products[5].alt },
+      { name: "HP Indigo Digitaldruckfarbe", text: "Kompatible ElectroInk für Digitaldruck-Käufer", alt: en.home.products[6].alt }
     ],
     about: { title: "Warum EVE Toner", text: "EVE Toner konzentriert sich auf echten B2B-Wert: stabile Lieferung, Anpassung, Qualitätskontrolle und schnelle Reaktion." },
     factory: { ...en.home.factory, title: "Fabrik und Qualitätskontrolle", cta: "Fabrik Ansehen" },

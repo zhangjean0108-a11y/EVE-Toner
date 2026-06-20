@@ -134,7 +134,7 @@ export default function Home() {
               </h2>
               <div className="mx-auto mt-3 h-1 w-14 rounded-full bg-[var(--brand-cyan)]" />
             </div>
-            <div className="mt-5 grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-6">
+            <div className="mt-5 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4 lg:grid-cols-7">
               {productCategories.map((product, index) => {
                 const productText = dict.home.products[index];
                 return (

@@ -4,35 +4,51 @@ import { ProductsPageClient } from "@/components/ProductsPageClient";
 import { productCatalogCategories, products } from "@/data/products";
 import { socialImage, siteUrl } from "@/lib/site-url";
 
-export const metadata: Metadata = {
-  title: "Products | Compatible Copier Toner & Spare Parts | EVE Toner",
-  description:
-    "Browse EVE Toner product catalog, including toner cartridges, toner powder, drum units, developer units, copier machines and digital press ink.",
-  alternates: {
-    canonical: "/products"
-  },
-  openGraph: {
-    title: "Products | Compatible Copier Toner & Spare Parts | EVE Toner",
-    description:
-      "Browse compatible copier toner, toner powder, drum units, developer units, copier machines and digital press supplies for B2B procurement.",
-    url: `${siteUrl}/products`,
-    siteName: "EVE Toner",
-    images: [socialImage]
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Products | Compatible Copier Toner & Spare Parts | EVE Toner",
-    description:
-      "Browse compatible copier toner, toner powder, drum units, developer units, copier machines and digital press supplies for B2B procurement.",
-    images: [socialImage]
-  }
-};
-
 type ProductsPageProps = {
   searchParams?: Promise<{
     category?: string;
   }>;
 };
+
+export async function generateMetadata({ searchParams }: ProductsPageProps): Promise<Metadata> {
+  const resolvedSearchParams = await searchParams;
+  const requestedCategory = resolvedSearchParams?.category;
+  const category =
+    requestedCategory && productCatalogCategories.includes(requestedCategory) ? requestedCategory : undefined;
+  const isDigitalPressInk = category === "Digital Press Ink";
+  const title = isDigitalPressInk
+    ? "HP Indigo ElectroInk & Digital Press Ink Supplier | EVE Toner"
+    : category
+      ? `${category} Supplier for B2B Buyers | EVE Toner`
+      : "Products | Compatible Copier Toner & Spare Parts | EVE Toner";
+  const description = isDigitalPressInk
+    ? "Browse compatible HP Indigo ElectroInk and digital press ink products for B2B buyers. Model confirmation, export packing, OEM/ODM support and fast quotation from EVE Toner."
+    : category
+      ? `Browse EVE Toner ${category} products for B2B procurement, bulk supply, export packing and fast inquiry response.`
+      : "Browse EVE Toner product catalog, including toner cartridges, toner powder, drum units, developer units, copier machines and digital press ink.";
+  const url = category ? `${siteUrl}/products?category=${encodeURIComponent(category)}` : `${siteUrl}/products`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: category ? `/products?category=${encodeURIComponent(category)}` : "/products"
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: "EVE Toner",
+      images: [socialImage]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [socialImage]
+    }
+  };
+}
 
 export default async function ProductsPage({ searchParams }: ProductsPageProps) {
   const resolvedSearchParams = await searchParams;
