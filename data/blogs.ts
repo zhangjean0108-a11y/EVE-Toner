@@ -47,11 +47,11 @@ const commonLinks = {
   digitalInk: { label: "HP Indigo ElectroInk", href: "/products?category=Digital%20Press%20Ink" },
   hpIndigoQ4132D: {
     label: "HP Indigo ElectroInk Q4132D",
-    href: "/products/hp-indigo-q4132d-6000-w7200-7000-digital-press-ink-1601829082310"
+    href: "/products/hp-indigo-q4132d-6000-8000-series-digital-press-ink-1601829082310"
   },
   hpIndigoSeries2: {
     label: "HP Indigo Series 2 Electro Ink",
-    href: "/products/hp-indigo-3000-3050-3500-3550-digital-press-ink-1601827592845"
+    href: "/products/hp-indigo-3000-5900-series2-digital-press-ink-1601827592845"
   }
 };
 
