@@ -16,6 +16,12 @@ import {
 import { Header } from "@/components/Header";
 import { InquiryForm } from "@/components/InquiryForm";
 import { ProductGallery } from "@/components/ProductGallery";
+import {
+  getProductGuideLinks,
+  getProductPageSeoLinks,
+  getSeoLandingGuideLinks,
+  type InternalSeoLink
+} from "@/data/seo-internal-links";
 import { company } from "@/data/site";
 import { type Product, products } from "@/data/products";
 import { findSeoLandingPage, seoLandingPages, type SeoLandingPage } from "@/data/seo-landing-pages";
@@ -143,6 +149,8 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   const compatibleModels = getProductCompatibleModels(product);
   const packageSummary = getProductPackageSummary(product);
   const faqs = getProductFaqs(product);
+  const productSeoLinks = getProductPageSeoLinks(product.category, product.brand);
+  const productGuideLinks = getProductGuideLinks(product.category, product.brand);
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -348,6 +356,16 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           </div>
         </section>
 
+        <InternalLinkSection
+          eyebrow="Procurement resources"
+          title="Helpful Buying Guides and Search Pages"
+          intro="These pages help buyers compare product types, check quality points and find model-based sourcing pages for Google searches."
+          groups={[
+            { title: "Buyer search pages", links: productSeoLinks },
+            { title: "Procurement guides", links: productGuideLinks }
+          ]}
+        />
+
         <section className="border-t border-slate-200 bg-white py-12 md:py-16">
           <div className="container-page grid gap-8 lg:grid-cols-[0.82fr_1.18fr]">
             <div>
@@ -385,6 +403,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
 function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
   const relatedProducts = getSeoLandingProducts(page);
+  const guideLinks = getSeoLandingGuideLinks(page.slug, page.keyword, page.category);
   const whatsappHref = createWhatsAppHref(
     company.whatsapp,
     `Hello, I am looking for ${page.keyword}. Please send me product details and quotation.`
@@ -593,6 +612,13 @@ function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
           </div>
         </section>
 
+        <InternalLinkSection
+          eyebrow="Related buying guides"
+          title="Guides That Support This Buyer Search"
+          intro="These articles answer common procurement questions and strengthen topical relevance around this product category."
+          groups={[{ title: "Procurement guides", links: guideLinks }]}
+        />
+
         <section className="container-page py-12 md:py-16">
           <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr]">
             <div>
@@ -634,6 +660,60 @@ function SeoInfo({ label, value }: { label: string; value: string }) {
       <div className="text-xs font-black uppercase tracking-wide text-slate-500">{label}</div>
       <div className="mt-2 text-sm font-bold leading-6 text-slate-800">{value}</div>
     </div>
+  );
+}
+
+function InternalLinkSection({
+  eyebrow,
+  title,
+  intro,
+  groups
+}: {
+  eyebrow: string;
+  title: string;
+  intro: string;
+  groups: Array<{ title: string; links: InternalSeoLink[] }>;
+}) {
+  const visibleGroups = groups.filter((group) => group.links.length);
+
+  if (!visibleGroups.length) {
+    return null;
+  }
+
+  return (
+    <section className="border-t border-slate-200 bg-[linear-gradient(135deg,#f5fbfd_0%,#ffffff_55%,#fff9ec_100%)] py-12 md:py-16">
+      <div className="container-page">
+        <div className="max-w-3xl">
+          <p className="text-xs font-black uppercase tracking-[0.22em] text-[var(--brand-cyan)]">{eyebrow}</p>
+          <h2 className="mt-3 text-3xl font-black text-slate-950 md:text-4xl">{title}</h2>
+          <p className="mt-4 text-sm font-semibold leading-7 text-slate-600">{intro}</p>
+        </div>
+        <div className="mt-8 grid gap-5 lg:grid-cols-2">
+          {visibleGroups.map((group) => (
+            <div key={group.title} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-black text-slate-950">{group.title}</h3>
+              <div className="mt-5 grid gap-3">
+                {group.links.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="group rounded-lg border border-slate-200 bg-slate-50 p-4 transition hover:border-[var(--brand-cyan)] hover:bg-white hover:shadow-lg hover:shadow-cyan-950/10"
+                  >
+                    <span className="flex items-center justify-between gap-4 text-sm font-black text-slate-950 group-hover:text-[var(--brand-cyan)]">
+                      {link.label}
+                      <ArrowRight className="h-4 w-4 flex-none" />
+                    </span>
+                    <span className="mt-2 block text-sm font-semibold leading-6 text-slate-600">
+                      {link.description}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 

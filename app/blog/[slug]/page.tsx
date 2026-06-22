@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, CheckCircle2, HelpCircle, MessageCircle } from "lucide-react";
 import { Header } from "@/components/Header";
 import { blogArticles, getBlogArticle } from "@/data/blogs";
+import { getPrioritySeoLinksForBlog } from "@/data/seo-internal-links";
 import { company } from "@/data/site";
 import { siteUrl } from "@/lib/site-url";
 import { createWhatsAppHref } from "@/lib/whatsapp";
@@ -62,6 +63,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
     company.whatsapp,
     `Hello, I read your article "${article.title}" and want to ask about copier toner products.`
   );
+  const buyerSearchLinks = getPrioritySeoLinksForBlog(article.slug, article.keywords);
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -130,6 +132,29 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
                       </Link>
                     ))}
                   </div>
+                  {buyerSearchLinks.length ? (
+                    <div className="mt-6 border-t border-slate-200 pt-5">
+                      <h2 className="text-sm font-black uppercase tracking-wide text-slate-500">
+                        Buyer search pages
+                      </h2>
+                      <div className="mt-4 grid gap-3">
+                        {buyerSearchLinks.map((link) => (
+                          <Link
+                            key={link.href}
+                            href={link.href}
+                            className="rounded-md border border-cyan-100 bg-cyan-50/60 px-3 py-3 transition hover:border-[var(--brand-cyan)] hover:bg-white"
+                          >
+                            <span className="block text-sm font-black leading-5 text-slate-900">
+                              {link.label}
+                            </span>
+                            <span className="mt-1 block text-xs font-semibold leading-5 text-slate-600">
+                              {link.description}
+                            </span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ) : null}
                 </aside>
               </div>
             </div>
