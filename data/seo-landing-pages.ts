@@ -139,6 +139,53 @@ export const seoLandingPages: SeoLandingPage[] = [
     ]
   },
   {
+    slug: "compatible-xerox-c2265-toner-cartridge-supplier",
+    keyword: "compatible Xerox C2265 toner cartridge supplier",
+    title: "Compatible Xerox C2265 Toner Cartridge Supplier | EVE Toner",
+    description:
+      "Source compatible Xerox C2265 toner cartridges for B2B bulk orders, model matching, export packing and fast inquiry support from EVE Toner.",
+    h1: "Compatible Xerox C2265 Toner Cartridge Supplier",
+    eyebrow: "Xerox C2265 toner sourcing",
+    intro:
+      "EVE Toner helps importers, copier dealers and repair shops source compatible Xerox C2265 toner cartridges and related Xerox copier consumables with practical model confirmation before quotation.",
+    brand: "Xerox",
+    category: "Toner Cartridge",
+    relatedBrands: ["Xerox", "Fuji Xerox", "DocuCentre", "ApeosPort"],
+    buyerTypes: ["Importers", "Copier dealers", "Office equipment distributors", "Repair shops"],
+    modelExamples: ["Xerox C2265", "DocuCentre C2265", "ApeosPort C2265", "CMYK toner set"],
+    sections: [
+      {
+        title: "Model-based Xerox C2265 quotation",
+        text:
+          "Buyers searching for Xerox C2265 toner should confirm machine version, color requirement, cartridge code, order quantity and destination country before bulk purchase."
+      },
+      {
+        title: "B2B packing and shipment preparation",
+        text:
+          "For dealer and distributor orders, EVE Toner can discuss carton labels, export packing, photo confirmation and shipment preparation to reduce after-sales risk."
+      },
+      {
+        title: "For copier service channels",
+        text:
+          "The page is designed for buyers who resell or service Xerox copier consumables and need repeated supply rather than a single retail cartridge."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can EVE Toner quote compatible Xerox C2265 toner by color?",
+        answer: "Yes. Send black, cyan, magenta or yellow requirements with quantity and destination country so our team can confirm suitable supply."
+      },
+      {
+        question: "Do you support bulk orders for Xerox C2265 toner cartridges?",
+        answer: "Yes. EVE Toner supports B2B bulk supply, export packing and fast quotation response for Xerox-compatible toner buyers."
+      },
+      {
+        question: "What details should I send before ordering Xerox C2265 toner?",
+        answer: "Please send the copier model, toner code, color, target quantity, packing request and destination market."
+      }
+    ]
+  },
+  {
     slug: "konica-minolta-compatible-toner-supplier",
     keyword: "Konica Minolta compatible toner supplier",
     title: "Konica Minolta Compatible Toner Supplier | EVE Toner",
@@ -173,6 +220,52 @@ export const seoLandingPages: SeoLandingPage[] = [
       {
         question: "Do you support Konica Minolta developer unit sourcing?",
         answer: "Yes. Selected developer units and drum units are available for B2B inquiry."
+      }
+    ]
+  },
+  {
+    slug: "drum-unit-supplier-for-copier-dealers",
+    keyword: "drum unit supplier for copier dealers",
+    title: "Drum Unit Supplier for Copier Dealers | EVE Toner",
+    description:
+      "Compatible copier drum unit supply for dealers, repair shops and parts distributors with model checking, packing support and B2B quotation.",
+    h1: "Drum Unit Supplier for Copier Dealers",
+    eyebrow: "Dealer drum unit supply",
+    intro:
+      "Copier dealers need drum units that match machine series, color position and part code. EVE Toner supports B2B sourcing for drum units, imaging units and related copier spare parts.",
+    category: "Drum Unit",
+    relatedBrands: ["Xerox", "Konica Minolta", "Ricoh", "Canon", "Sharp"],
+    buyerTypes: ["Copier dealers", "Repair shops", "Parts distributors", "Importers"],
+    modelExamples: ["Xerox drum cartridge", "Konica Minolta drum unit", "Ricoh drum unit", "CMYK imaging unit"],
+    sections: [
+      {
+        title: "Check part code before bulk purchase",
+        text:
+          "Drum unit procurement should confirm copier model, drum part number, color position, machine region and expected order volume before quotation."
+      },
+      {
+        title: "Reduce installation complaints",
+        text:
+          "Dealers should review product photos, surface condition, gear condition and packing method before shipment, especially for long-distance export orders."
+      },
+      {
+        title: "Build dealer stock by demand",
+        text:
+          "For service companies, drum units should be stocked according to popular local copier models and repair frequency rather than a very broad slow-moving list."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can EVE Toner supply drum units for copier repair shops?",
+        answer: "Yes. We can quote selected compatible drum units and imaging units for repair shops, dealers and importers."
+      },
+      {
+        question: "How do I confirm the correct drum unit?",
+        answer: "Send machine model, part number, color position, quantity and product photos if available."
+      },
+      {
+        question: "Can drum units be shipped with toner cartridges?",
+        answer: "Yes. Mixed B2B orders can be discussed according to product availability, packing requirements and destination market."
       }
     ]
   },
@@ -214,6 +307,52 @@ export const seoLandingPages: SeoLandingPage[] = [
     ]
   },
   {
+    slug: "bulk-copier-toner-supplier-africa",
+    keyword: "bulk copier toner supplier for Africa",
+    title: "Bulk Copier Toner Supplier for Africa | EVE Toner",
+    description:
+      "Bulk compatible copier toner supply for African dealers and importers, including model selection, export packing, OEM/ODM support and shipment preparation.",
+    h1: "Bulk Copier Toner Supplier for Africa",
+    eyebrow: "Africa toner import supply",
+    intro:
+      "EVE Toner supports African copier dealers, office equipment resellers and importers with compatible copier toner, toner powder and spare parts for bulk procurement.",
+    category: "Toner Cartridge",
+    relatedBrands: ["Xerox", "Ricoh", "Canon", "Konica Minolta", "Sharp", "Kyocera"],
+    buyerTypes: ["African importers", "Copier dealers", "Office equipment resellers", "Repair shops"],
+    modelExamples: ["Xerox C2265", "Ricoh IM series", "Konica Minolta bizhub", "Canon imageRUNNER"],
+    sections: [
+      {
+        title: "Choose fast-moving local copier models",
+        text:
+          "African buyers should start with copier models that already have local service demand, then build repeat orders around toner cartridges, drum units and fuser parts."
+      },
+      {
+        title: "Packing matters for long transit",
+        text:
+          "Export shipments to Africa may face long transit time and multiple handling points. Carton strength, labels, moisture control and pallet planning should be confirmed before shipment."
+      },
+      {
+        title: "Support for dealers and importers",
+        text:
+          "EVE Toner can help with model list checking, mixed category quotation, OEM/ODM packing discussion and WhatsApp response for urgent procurement questions."
+      }
+    ],
+    faqs: [
+      {
+        question: "Which copier toner models should African dealers import first?",
+        answer: "Start with models that are popular in your local market and have regular service demand, then add parts based on customer requests."
+      },
+      {
+        question: "Can EVE Toner support mixed toner and spare parts orders?",
+        answer: "Yes. Buyers can send model lists for toner cartridges, toner powder, drum units and fuser units for a combined quotation."
+      },
+      {
+        question: "Do you support OEM packaging for African distributors?",
+        answer: "OEM/ODM packaging can be discussed for qualified B2B orders according to quantity and local resale needs."
+      }
+    ]
+  },
+  {
     slug: "copier-drum-unit-supplier",
     keyword: "copier drum unit supplier",
     title: "Copier Drum Unit Supplier | EVE Toner",
@@ -247,6 +386,100 @@ export const seoLandingPages: SeoLandingPage[] = [
       {
         question: "Are drum units suitable for bulk export?",
         answer: "Yes. Export packing can be discussed according to model, quantity and destination market."
+      }
+    ]
+  },
+  {
+    slug: "hp-indigo-ink-supplier",
+    keyword: "HP Indigo ink supplier",
+    title: "HP Indigo Ink Supplier for Digital Press Buyers | EVE Toner",
+    description:
+      "Compatible HP Indigo ink and ElectroInk sourcing for digital press buyers, including Q4132D, Series 2 applications, model confirmation and export support.",
+    h1: "HP Indigo Ink Supplier for Digital Press Buyers",
+    eyebrow: "HP Indigo ink sourcing",
+    intro:
+      "EVE Toner supplies compatible HP Indigo ink and ElectroInk products for overseas print shops, distributors and importers that need model-based quotation and shipment preparation.",
+    brand: "HP Indigo",
+    category: "Digital Press Ink",
+    relatedBrands: ["HP Indigo", "ElectroInk", "Digital Press"],
+    buyerTypes: ["Digital print shops", "Ink distributors", "Importers", "Printing consumables dealers"],
+    modelExamples: ["Q4132D", "HP Indigo 3000", "HP Indigo 5900", "HP Indigo 6000", "HP Indigo 7900", "HP Indigo 8000"],
+    sections: [
+      {
+        title: "Confirm the exact HP Indigo press series",
+        text:
+          "HP Indigo ink sourcing should confirm whether the request is for Series 2, 6000/7000/7900/8000 series or another digital press application before quotation."
+      },
+      {
+        title: "Separate digital press ink from copier toner",
+        text:
+          "HP Indigo ElectroInk is different from copier toner powder. Buyers should send press model, ink code, color requirement and quantity to avoid mismatch."
+      },
+      {
+        title: "Shipment and storage preparation",
+        text:
+          "Before export, buyers can discuss product photos, sealing condition, label details, carton packing and shipping arrangement for digital press consumables."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can EVE Toner quote compatible HP Indigo ink?",
+        answer: "Yes. Send the HP Indigo press model, ink code, color requirement, quantity and destination country."
+      },
+      {
+        question: "Is HP Indigo ElectroInk the same as copier toner powder?",
+        answer: "No. HP Indigo ElectroInk is used for selected digital press applications and should be sourced by exact press model and ink code."
+      },
+      {
+        question: "Do you supply HP Indigo ink for bulk orders?",
+        answer: "Yes. EVE Toner supports B2B quotation for print shops, distributors and importers."
+      }
+    ]
+  },
+  {
+    slug: "hp-indigo-q4132d-electroink-supplier",
+    keyword: "HP Indigo Q4132D ElectroInk supplier",
+    title: "HP Indigo Q4132D ElectroInk Supplier | EVE Toner",
+    description:
+      "Compatible HP Indigo Q4132D ElectroInk supply for 6000, 7000, 7900, 8000, 6K, 7K and 8K digital press series with B2B quotation support.",
+    h1: "HP Indigo Q4132D ElectroInk Supplier",
+    eyebrow: "Q4132D ElectroInk supply",
+    intro:
+      "This page is for buyers searching specifically for compatible HP Indigo Q4132D ElectroInk for selected digital press 6000, 7000, 7900, 8000, 6K, 7K and 8K series applications.",
+    brand: "HP Indigo",
+    category: "Digital Press Ink",
+    relatedBrands: ["HP Indigo", "ElectroInk", "Digital Press"],
+    buyerTypes: ["Digital press owners", "Printing consumables distributors", "Importers", "Trade buyers"],
+    modelExamples: ["Q4132D", "6000 series", "7000 series", "7900", "8000", "6K", "7K", "8K"],
+    sections: [
+      {
+        title: "Q4132D model confirmation",
+        text:
+          "Before bulk purchase, confirm the exact HP Indigo press model, required ink code, color, quantity and application scenario."
+      },
+      {
+        title: "What buyers should request",
+        text:
+          "Ask for current product photos, packing details, batch condition and lead time before confirming a digital press ink order."
+      },
+      {
+        title: "B2B quotation path",
+        text:
+          "EVE Toner can respond through email or WhatsApp with model confirmation, packing discussion and export shipment preparation."
+      }
+    ],
+    faqs: [
+      {
+        question: "What HP Indigo series can Q4132D be used for?",
+        answer: "Buyers should confirm the exact press model. Common inquiry terms include 6000, 7000, 7900, 8000, 6K, 7K and 8K series."
+      },
+      {
+        question: "What should I send for a Q4132D quotation?",
+        answer: "Send press model, ink code, color, quantity, destination country and packing request."
+      },
+      {
+        question: "Can EVE Toner support digital press ink distributors?",
+        answer: "Yes. We support B2B inquiry response for distributors, importers and print shop buyers."
       }
     ]
   },

@@ -183,22 +183,27 @@ export default function Home() {
                 These pages answer specific search queries from importers, distributors and copier parts dealers instead of only targeting broad competitive keywords.
               </p>
             </div>
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
               {[
                 {
                   query: "compatible Xerox C2265 toner cartridge supplier",
                   text: "Find compatible Xerox toner cartridge options and supplier checks before bulk purchase.",
-                  href: "/blog/how-to-choose-reliable-compatible-copier-toner-supplier"
+                  href: "/products/compatible-xerox-c2265-toner-cartridge-supplier"
                 },
                 {
                   query: "bulk copier toner supplier for Africa",
                   text: "Plan copier toner imports for Africa with model selection, packing and shipment support.",
-                  href: "/blog/copier-toner-import-guide-africa-middle-east-dealers"
+                  href: "/products/bulk-copier-toner-supplier-africa"
+                },
+                {
+                  query: "HP Indigo ink supplier",
+                  text: "Source compatible HP Indigo ElectroInk by press series, ink code and shipment requirement.",
+                  href: "/products/hp-indigo-ink-supplier"
                 },
                 {
                   query: "drum unit supplier for copier dealers",
                   text: "Compare drum units, toner cartridges and common spare parts for dealer stock planning.",
-                  href: "/blog/drum-unit-vs-toner-cartridge-difference"
+                  href: "/products/drum-unit-supplier-for-copier-dealers"
                 }
               ].map((item) => (
                 <Link
