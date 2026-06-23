@@ -173,6 +173,36 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
       }
     }
   };
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Products",
+        item: `${siteUrl}/products`
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: product.category,
+        item: `${siteUrl}/products?category=${encodeURIComponent(product.category)}`
+      },
+      {
+        "@type": "ListItem",
+        position: 4,
+        name: product.name,
+        item: `${siteUrl}/products/${canonicalSlug}`
+      }
+    ]
+  };
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -193,6 +223,10 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
         />
         <script
           type="application/ld+json"

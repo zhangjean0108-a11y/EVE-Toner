@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { ProductsPageClient } from "@/components/ProductsPageClient";
 import { productCatalogCategories, products } from "@/data/products";
+import { getProductCanonicalSlug } from "@/lib/product-seo";
 import { socialImage, siteUrl } from "@/lib/site-url";
 
 type ProductsPageProps = {
@@ -55,11 +56,37 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
   const requestedCategory = resolvedSearchParams?.category;
   const initialCategory =
     requestedCategory && productCatalogCategories.includes(requestedCategory) ? requestedCategory : "All";
+  const catalogProducts =
+    initialCategory === "All" ? products : products.filter((product) => product.category === initialCategory);
+  const pageUrl =
+    initialCategory === "All"
+      ? `${siteUrl}/products`
+      : `${siteUrl}/products?category=${encodeURIComponent(initialCategory)}`;
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name:
+      initialCategory === "All"
+        ? "EVE Toner Product Catalog"
+        : `${initialCategory} Supplier Product Catalog`,
+    url: pageUrl,
+    numberOfItems: catalogProducts.length,
+    itemListElement: catalogProducts.slice(0, 48).map((product, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: product.name,
+      url: `${siteUrl}/products/${getProductCanonicalSlug(product)}`
+    }))
+  };
 
   return (
     <>
       <Header />
       <main className="bg-[linear-gradient(135deg,#f5fbfd_0%,#ffffff_45%,#fff7e8_100%)]">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+        />
         <section className="border-b border-slate-200 pt-12 md:pt-16">
           <div className="container-page grid gap-8 pb-10 md:grid-cols-[0.95fr_1.05fr] md:items-end">
             <div>
