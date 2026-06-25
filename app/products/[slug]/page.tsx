@@ -446,6 +446,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
   const relatedProducts = getSeoLandingProducts(page);
   const guideLinks = getSeoLandingGuideLinks(page.slug, page.keyword, page.category);
+  const procurementBrief = getSeoLandingProcurementBrief(page);
   const whatsappHref = createWhatsAppHref(
     company.whatsapp,
     `Hello, I am looking for ${page.keyword}. Please send me product details and quotation.`
@@ -609,6 +610,8 @@ function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
           </div>
         </section>
 
+        <ProcurementChecklistSection brief={procurementBrief} />
+
         <section className="border-y border-slate-200 bg-white py-12 md:py-16">
           <div className="container-page">
             <div className="max-w-3xl">
@@ -705,6 +708,58 @@ function SeoInfo({ label, value }: { label: string; value: string }) {
   );
 }
 
+function ProcurementChecklistSection({
+  brief
+}: {
+  brief: {
+    shortAnswer: string;
+    quoteChecklist: string[];
+    inspectionChecklist: string[];
+    shipmentChecklist: string[];
+  };
+}) {
+  return (
+    <section className="border-y border-slate-200 bg-[linear-gradient(135deg,#061425_0%,#07364b_58%,#0a6f86_100%)] py-12 text-white md:py-16">
+      <div className="container-page grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+        <div>
+          <p className="text-xs font-black uppercase tracking-[0.22em] text-cyan-200">
+            Buyer checklist
+          </p>
+          <h2 className="mt-3 text-3xl font-black md:text-4xl">
+            What Buyers Should Confirm Before Ordering
+          </h2>
+          <div className="mt-6 rounded-xl border border-white/15 bg-white/10 p-5 shadow-xl shadow-slate-950/20 backdrop-blur">
+            <h3 className="text-base font-black text-cyan-100">Short answer</h3>
+            <p className="mt-3 text-sm font-semibold leading-7 text-cyan-50/90">{brief.shortAnswer}</p>
+          </div>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-3">
+          <ChecklistCard title="For quotation" items={brief.quoteChecklist} />
+          <ChecklistCard title="Quality checks" items={brief.inspectionChecklist} />
+          <ChecklistCard title="Packing & shipment" items={brief.shipmentChecklist} />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ChecklistCard({ title, items }: { title: string; items: string[] }) {
+  return (
+    <article className="rounded-xl border border-white/15 bg-white p-5 text-slate-900 shadow-lg shadow-slate-950/15">
+      <h3 className="text-lg font-black text-slate-950">{title}</h3>
+      <div className="mt-5 grid gap-3">
+        {items.map((item) => (
+          <div key={item} className="flex gap-3 text-sm font-semibold leading-6 text-slate-700">
+            <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none fill-[var(--brand-cyan)] text-white" />
+            <span>{item}</span>
+          </div>
+        ))}
+      </div>
+    </article>
+  );
+}
+
 function InternalLinkSection({
   eyebrow,
   title,
@@ -757,6 +812,131 @@ function InternalLinkSection({
       </div>
     </section>
   );
+}
+
+function getSeoLandingProcurementBrief(page: SeoLandingPage) {
+  if (page.slug.includes("hp-indigo") || page.category === "Digital Press Ink") {
+    return {
+      shortAnswer:
+        "Before buying compatible HP Indigo ink or ElectroInk in bulk, confirm the exact press series, ink code, color, batch condition, packing seal and storage requirement. Digital press ink should not be purchased only by a generic product name.",
+      quoteChecklist: [
+        "HP Indigo press model and series",
+        "Ink code, color and expected quantity",
+        "Destination country and preferred shipping method",
+        "Sample, product photo or packing request"
+      ],
+      inspectionChecklist: [
+        "Packing seal and label condition",
+        "Color identification and batch consistency",
+        "Storage condition before shipment",
+        "Product photos before dispatch"
+      ],
+      shipmentChecklist: [
+        "Export carton strength",
+        "Moisture and handling protection",
+        "Clear carton marks for customs",
+        "Lead time and shipment document plan"
+      ]
+    };
+  }
+
+  if (page.slug.includes("africa")) {
+    return {
+      shortAnswer:
+        "African toner importers should start with fast-moving local copier models, confirm mixed toner and spare parts demand, and plan stronger export packing because shipments may face long transit and repeated handling.",
+      quoteChecklist: [
+        "Fast-moving copier model list",
+        "Monthly demand by color or part number",
+        "Mixed toner, drum and fuser requirements",
+        "Target port and preferred packing style"
+      ],
+      inspectionChecklist: [
+        "Model and color matching before order",
+        "Carton label and quantity check",
+        "Product photos for mixed orders",
+        "Sample or repeat-order feedback review"
+      ],
+      shipmentChecklist: [
+        "Reinforced cartons for long transit",
+        "Moisture control and pallet planning",
+        "Clear marks for distributor stock",
+        "Packing list matched to customer model list"
+      ]
+    };
+  }
+
+  if (page.category === "Drum Unit") {
+    return {
+      shortAnswer:
+        "For copier drum units, buyers should confirm machine model, drum part number, color position, gear condition and packing protection before bulk purchase. A wrong drum code can cause installation complaints.",
+      quoteChecklist: [
+        "Machine model and drum part number",
+        "Color position or imaging unit version",
+        "Required quantity by model",
+        "Old part photo when available"
+      ],
+      inspectionChecklist: [
+        "Drum surface and protective cover",
+        "Gear assembly and rotation condition",
+        "Electrical contact and chip position",
+        "Packing protection against impact"
+      ],
+      shipmentChecklist: [
+        "Individual protective wrapping",
+        "Carton strength for fragile parts",
+        "Model labels for service teams",
+        "Photo confirmation before shipment"
+      ]
+    };
+  }
+
+  if (page.slug.includes("xerox-c2265")) {
+    return {
+      shortAnswer:
+        "For compatible Xerox C2265 toner cartridges, buyers should confirm DocuCentre or ApeosPort machine version, CMYK color demand, cartridge code, chip requirement and packing style before placing a bulk order.",
+      quoteChecklist: [
+        "Xerox C2265 machine version",
+        "Black, cyan, magenta and yellow quantity",
+        "Cartridge code or current label photo",
+        "OEM/ODM label and carton request"
+      ],
+      inspectionChecklist: [
+        "Cartridge appearance and sealing",
+        "Chip matching where applicable",
+        "Print density and background cleanliness",
+        "Color set and carton quantity check"
+      ],
+      shipmentChecklist: [
+        "Export carton and inner protection",
+        "Model labels for warehouse sorting",
+        "Packing photos before loading",
+        "Lead time and repeat supply plan"
+      ]
+    };
+  }
+
+  return {
+    shortAnswer:
+      `Before ordering ${page.keyword}, buyers should confirm model number, part code, category, quantity, packing request and destination country so the supplier can quote the correct compatible product version.`,
+    quoteChecklist: [
+      "Exact copier model or part number",
+      "Product category and required quantity",
+      "Destination country and target market",
+      "OEM/ODM packing or label request"
+    ],
+    inspectionChecklist: [
+      "Model matching before quotation",
+      "Appearance and function check",
+      "Photo confirmation when needed",
+      "Carton quantity and label review"
+    ],
+    shipmentChecklist: [
+      "Export carton packing",
+      "Moisture and impact protection",
+      "Packing list and carton marks",
+      "Lead time and shipping arrangement"
+    ]
+  };
 }
 
 function RelatedProductSection({
