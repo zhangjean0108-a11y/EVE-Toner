@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
 import {
@@ -151,6 +152,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   const faqs = getProductFaqs(product);
   const productSeoLinks = getProductPageSeoLinks(product.category, product.brand);
   const productGuideLinks = getProductGuideLinks(product.category, product.brand);
+  const relatedProducts = getRelatedProducts(product);
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -398,6 +400,12 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             { title: "Buyer search pages", links: productSeoLinks },
             { title: "Procurement guides", links: productGuideLinks }
           ]}
+        />
+
+        <RelatedProductSection
+          title={`Related ${product.category} Products`}
+          intro={`Browse more ${product.brand} and ${product.category} products for B2B model matching, bulk quotation and export supply.`}
+          products={relatedProducts}
         />
 
         <section className="border-t border-slate-200 bg-white py-12 md:py-16">
@@ -749,6 +757,90 @@ function InternalLinkSection({
       </div>
     </section>
   );
+}
+
+function RelatedProductSection({
+  title,
+  intro,
+  products
+}: {
+  title: string;
+  intro: string;
+  products: Product[];
+}) {
+  if (!products.length) {
+    return null;
+  }
+
+  return (
+    <section className="border-t border-slate-200 bg-white py-12 md:py-16">
+      <div className="container-page">
+        <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+          <div className="max-w-3xl">
+            <p className="text-xs font-black uppercase tracking-[0.22em] text-[var(--brand-cyan)]">
+              Related products
+            </p>
+            <h2 className="mt-3 text-3xl font-black text-slate-950 md:text-4xl">{title}</h2>
+            <p className="mt-4 text-sm font-semibold leading-7 text-slate-600">{intro}</p>
+          </div>
+          <Link
+            href="/products"
+            className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-[var(--brand-cyan)] px-4 text-sm font-black text-[var(--brand-cyan)] transition hover:bg-[var(--brand-cyan)] hover:text-white"
+          >
+            View All Products <ArrowRight size={16} />
+          </Link>
+        </div>
+
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {products.map((product) => (
+            <Link
+              key={product.id}
+              href={`/products/${getProductCanonicalSlug(product)}`}
+              className="group overflow-hidden rounded-xl border border-slate-200 bg-slate-50 transition hover:-translate-y-1 hover:border-[var(--brand-cyan)] hover:bg-white hover:shadow-xl hover:shadow-cyan-950/10"
+            >
+              <div className="aspect-square bg-white p-4">
+                <Image
+                  src={product.image}
+                  alt={getProductImageAlt(product)}
+                  width={350}
+                  height={350}
+                  className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="border-t border-slate-100 p-4">
+                <div className="flex flex-wrap gap-2">
+                  <span className="rounded-full bg-[var(--soft-cyan)] px-2.5 py-1 text-[11px] font-black text-[var(--brand-cyan)]">
+                    {product.category}
+                  </span>
+                  <span className="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-black text-slate-600">
+                    {product.brand}
+                  </span>
+                </div>
+                <h3 className="mt-3 line-clamp-3 min-h-[72px] text-sm font-black leading-6 text-slate-950 group-hover:text-[var(--brand-cyan)]">
+                  {product.name}
+                </h3>
+                <p className="mt-3 text-xs font-bold text-slate-500">MOQ: {product.moq}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function getRelatedProducts(product: Product) {
+  const sameBrandAndCategory = products.filter(
+    (item) => item.id !== product.id && item.brand === product.brand && item.category === product.category
+  );
+  const sameCategory = products.filter(
+    (item) => item.id !== product.id && item.brand !== product.brand && item.category === product.category
+  );
+
+  return [...sameBrandAndCategory, ...sameCategory]
+    .sort((a, b) => b.sold180 - a.sold180)
+    .slice(0, 4);
 }
 
 function getSeoLandingProducts(page: SeoLandingPage) {
