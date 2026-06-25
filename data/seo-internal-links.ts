@@ -35,6 +35,66 @@ export const prioritySeoPages: InternalSeoLink[] = [
     href: "/products/hp-indigo-q4132d-electroink-supplier",
     description: "Model-specific page for buyers searching HP Indigo Q4132D ElectroInk supply.",
     tags: ["hp indigo", "q4132d", "electroink", "digital press ink"]
+  },
+  {
+    label: "Konica Minolta TN622 Toner Supplier",
+    href: "/products/konica-minolta-tn622-toner-supplier",
+    description: "Model-specific page for buyers sourcing TN622 toner for Konica Minolta production print channels.",
+    tags: ["konica minolta", "tn622", "toner cartridge", "bizhub"]
+  },
+  {
+    label: "Konica Minolta C1060 C1070 Toner Cartridge Supplier",
+    href: "/products/konica-minolta-c1060-c1070-toner-cartridge-supplier",
+    description: "Long-tail sourcing page for C1060 and C1070 compatible toner buyers.",
+    tags: ["konica minolta", "c1060", "c1070", "toner cartridge"]
+  },
+  {
+    label: "Konica Minolta C224 C284 C364 C454 Toner Supplier",
+    href: "/products/konica-minolta-c224-c284-c364-c454-toner-supplier",
+    description: "Office copier toner sourcing page for popular Konica Minolta bizhub models.",
+    tags: ["konica minolta", "c224", "c284", "c364", "c454", "toner cartridge"]
+  },
+  {
+    label: "Ricoh IM C2500 Toner Cartridge Supplier",
+    href: "/products/ricoh-im-c2500-toner-cartridge-supplier",
+    description: "Model-specific Ricoh IM C2500 toner sourcing page for B2B buyers.",
+    tags: ["ricoh", "im c2500", "toner cartridge", "office copier"]
+  },
+  {
+    label: "Ricoh IM C3000 Toner Supplier",
+    href: "/products/ricoh-im-c3000-toner-supplier",
+    description: "Ricoh IM C3000 compatible toner page for copier dealers and importers.",
+    tags: ["ricoh", "im c3000", "toner cartridge", "office copier"]
+  },
+  {
+    label: "Ricoh MP C3003 Toner Supplier",
+    href: "/products/ricoh-mp-c3003-toner-supplier",
+    description: "Ricoh MP C3003 and MP C series toner sourcing page for service channels.",
+    tags: ["ricoh", "mp c3003", "toner cartridge", "mp c series"]
+  },
+  {
+    label: "Xerox C60 C70 Toner Supplier",
+    href: "/products/xerox-c60-c70-toner-supplier",
+    description: "Xerox C60 C70 CMYK toner sourcing page for print shops and dealers.",
+    tags: ["xerox", "c60", "c70", "toner cartridge"]
+  },
+  {
+    label: "Canon NPG-67 Toner Cartridge Supplier",
+    href: "/products/canon-npg-67-toner-cartridge-supplier",
+    description: "Canon NPG-67 toner sourcing page for imageRUNNER ADVANCE dealers.",
+    tags: ["canon", "npg-67", "toner cartridge", "imagerunner"]
+  },
+  {
+    label: "Canon GPR-53 Toner Cartridge Supplier",
+    href: "/products/canon-gpr-53-toner-cartridge-supplier",
+    description: "Canon GPR-53 compatible toner page for B2B copier consumables buyers.",
+    tags: ["canon", "gpr-53", "toner cartridge", "imagerunner"]
+  },
+  {
+    label: "Kyocera TASKalfa Toner Cartridge Supplier",
+    href: "/products/kyocera-taskalfa-toner-cartridge-supplier",
+    description: "Kyocera TASKalfa and TK series toner sourcing page for dealers.",
+    tags: ["kyocera", "taskalfa", "tk series", "toner cartridge"]
   }
 ];
 

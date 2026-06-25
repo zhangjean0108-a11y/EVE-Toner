@@ -556,6 +556,476 @@ export const seoLandingPages: SeoLandingPage[] = [
         answer: "OEM/ODM packaging can be discussed for qualified B2B orders."
       }
     ]
+  },
+  {
+    slug: "konica-minolta-tn622-toner-supplier",
+    keyword: "Konica Minolta TN622 toner supplier",
+    title: "Konica Minolta TN622 Toner Supplier | EVE Toner",
+    description:
+      "Source compatible Konica Minolta TN622 toner for bizhub PRESS and AccurioPress buyers with model checking, CMYK supply and export packing support.",
+    h1: "Konica Minolta TN622 Toner Supplier",
+    eyebrow: "TN622 toner sourcing",
+    intro:
+      "EVE Toner supports overseas dealers, print shops and importers sourcing compatible Konica Minolta TN622 toner for production copier and digital press channels.",
+    brand: "Konica Minolta",
+    category: "Toner Cartridge",
+    relatedBrands: ["Konica Minolta", "bizhub PRESS", "AccurioPress"],
+    buyerTypes: ["Print shops", "Copier dealers", "Importers", "Printing consumables distributors"],
+    modelExamples: ["TN622", "C1085", "C1100", "bizhub PRESS C1060", "bizhub PRESS C1070"],
+    sections: [
+      {
+        title: "Confirm TN622 color and machine version",
+        text:
+          "Buyers should confirm whether the inquiry is for black, cyan, magenta or yellow TN622 toner and share the exact Konica Minolta machine model before quotation."
+      },
+      {
+        title: "For production print channels",
+        text:
+          "TN622 orders are often repeat purchases for print shops and distributors, so color consistency, carton labels and batch communication should be reviewed before shipment."
+      },
+      {
+        title: "Export packing and OEM discussion",
+        text:
+          "EVE Toner can discuss product photos, export carton packing, label requirements and OEM/ODM options for qualified B2B orders."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can EVE Toner quote Konica Minolta TN622 toner by color?",
+        answer: "Yes. Send the required color, machine model, quantity, destination country and packing request."
+      },
+      {
+        question: "Is TN622 suitable for production printing buyers?",
+        answer: "TN622 is commonly searched by production print channels. Buyers should confirm the exact machine model and color before bulk order."
+      },
+      {
+        question: "Can you support mixed Konica Minolta toner orders?",
+        answer: "Yes. Send a model list for TN622 and other Konica Minolta toner or spare parts so we can check supply options."
+      }
+    ]
+  },
+  {
+    slug: "konica-minolta-c1060-c1070-toner-cartridge-supplier",
+    keyword: "Konica Minolta C1060 C1070 toner cartridge supplier",
+    title: "Konica Minolta C1060 C1070 Toner Cartridge Supplier | EVE Toner",
+    description:
+      "Compatible Konica Minolta C1060 C1070 toner cartridge sourcing for B2B buyers, including model confirmation, color matching and shipment support.",
+    h1: "Konica Minolta C1060 C1070 Toner Cartridge Supplier",
+    eyebrow: "C1060 C1070 toner supply",
+    intro:
+      "This page is built for buyers searching compatible Konica Minolta C1060 and C1070 toner cartridge supply for print shops, dealers and importers.",
+    brand: "Konica Minolta",
+    category: "Toner Cartridge",
+    relatedBrands: ["Konica Minolta", "bizhub PRESS", "AccurioPress"],
+    buyerTypes: ["Print shops", "Dealers", "Importers", "Production printer service teams"],
+    modelExamples: ["C1060", "C1070", "TN622", "C1060L", "C1070P"],
+    sections: [
+      {
+        title: "C1060 and C1070 model matching",
+        text:
+          "Before buying in bulk, confirm the machine model, toner code, color requirement and monthly consumption so the correct compatible toner version can be quoted."
+      },
+      {
+        title: "Quality focus for print shops",
+        text:
+          "Production users should pay attention to density, color consistency, fixing condition and repeat-order stability, not only the first quoted price."
+      },
+      {
+        title: "Practical B2B inquiry path",
+        text:
+          "Send machine model, color, quantity, destination country and packing requirement. EVE Toner can reply with model confirmation and quotation details."
+      }
+    ],
+    faqs: [
+      {
+        question: "What details are needed for C1060 C1070 toner quotation?",
+        answer: "Please provide C1060 or C1070 machine model, toner code, color, quantity, destination country and packing request."
+      },
+      {
+        question: "Can C1060 and C1070 toner be ordered as CMYK sets?",
+        answer: "CMYK set quotation can be discussed according to quantity and product availability."
+      },
+      {
+        question: "Do you support export packing for production toner?",
+        answer: "Yes. Export carton packing, labels and shipment preparation can be discussed before order confirmation."
+      }
+    ]
+  },
+  {
+    slug: "konica-minolta-c224-c284-c364-c454-toner-supplier",
+    keyword: "Konica Minolta C224 C284 C364 C454 toner supplier",
+    title: "Konica Minolta C224 C284 C364 C454 Toner Supplier | EVE Toner",
+    description:
+      "Source compatible Konica Minolta C224, C284, C364 and C454 toner cartridges for copier dealers, importers and service channels.",
+    h1: "Konica Minolta C224 C284 C364 C454 Toner Supplier",
+    eyebrow: "bizhub office toner",
+    intro:
+      "EVE Toner helps B2B buyers source compatible toner cartridges for popular Konica Minolta bizhub office copier models including C224, C284, C364 and C454.",
+    brand: "Konica Minolta",
+    category: "Toner Cartridge",
+    relatedBrands: ["Konica Minolta", "bizhub"],
+    buyerTypes: ["Office equipment dealers", "Copy shops", "Repair shops", "Importers"],
+    modelExamples: ["C224", "C284", "C364", "C454", "C554", "TN321", "TN512"],
+    sections: [
+      {
+        title: "Popular bizhub office copier demand",
+        text:
+          "C224, C284, C364 and C454 series are common inquiry terms for dealers stocking toner for office copier service demand."
+      },
+      {
+        title: "Check toner code and color",
+        text:
+          "Buyers should confirm the toner code, color, copier region and quantity because similar bizhub model names may use different consumable versions."
+      },
+      {
+        title: "Dealer stock planning",
+        text:
+          "For repeat orders, dealers can build stock by fast-moving colors and add drum, developer or fuser parts according to local service requests."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can you quote toner for Konica Minolta C224 C284 C364 C454?",
+        answer: "Yes. Send the machine model, toner code, color and quantity so EVE Toner can check suitable compatible supply."
+      },
+      {
+        question: "Can these models be supplied for copier dealers?",
+        answer: "Yes. These pages target dealer, repair and importer procurement rather than retail one-piece purchases."
+      },
+      {
+        question: "Can EVE Toner support OEM packaging?",
+        answer: "OEM/ODM packing can be discussed for qualified B2B orders according to quantity and local resale needs."
+      }
+    ]
+  },
+  {
+    slug: "ricoh-im-c2500-toner-cartridge-supplier",
+    keyword: "Ricoh IM C2500 toner cartridge supplier",
+    title: "Ricoh IM C2500 Toner Cartridge Supplier | EVE Toner",
+    description:
+      "Compatible Ricoh IM C2500 toner cartridge sourcing for dealers and importers, with model confirmation, CMYK options and export packing support.",
+    h1: "Ricoh IM C2500 Toner Cartridge Supplier",
+    eyebrow: "Ricoh IM C2500 toner",
+    intro:
+      "EVE Toner supplies compatible Ricoh IM C2500 toner cartridge options for overseas copier dealers, repair shops and B2B importers.",
+    brand: "Ricoh",
+    category: "Toner Cartridge",
+    relatedBrands: ["Ricoh", "IM series"],
+    buyerTypes: ["Copier dealers", "Office equipment resellers", "Importers", "Repair shops"],
+    modelExamples: ["IM C2500", "IM C2000", "IM C3000", "IM C3500", "CMYK toner set"],
+    sections: [
+      {
+        title: "IM C2500 model confirmation",
+        text:
+          "Ricoh IM series toner should be checked by machine model, region, toner code, color and expected order quantity before quotation."
+      },
+      {
+        title: "For modern office copier service",
+        text:
+          "IM C2500 toner demand usually comes from office equipment dealers and repair teams that need stable repeat supply for local customers."
+      },
+      {
+        title: "Bulk order preparation",
+        text:
+          "Buyers can request product photos, carton packing details, OEM label discussion and shipment planning before confirming a bulk order."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can EVE Toner quote compatible Ricoh IM C2500 toner?",
+        answer: "Yes. Send model, toner code, color, quantity and destination country for a practical B2B quotation."
+      },
+      {
+        question: "Can IM C2500 toner be ordered with other Ricoh IM series models?",
+        answer: "Mixed Ricoh IM series model lists can be checked according to availability and packing requirements."
+      },
+      {
+        question: "What information should I send before ordering?",
+        answer: "Please send machine model, toner code, color requirement, quantity, target country and packing request."
+      }
+    ]
+  },
+  {
+    slug: "ricoh-im-c3000-toner-supplier",
+    keyword: "Ricoh IM C3000 toner supplier",
+    title: "Ricoh IM C3000 Toner Supplier | EVE Toner",
+    description:
+      "Source compatible Ricoh IM C3000 toner for B2B bulk supply, office copier dealers, repair shops and export-ready orders.",
+    h1: "Ricoh IM C3000 Toner Supplier",
+    eyebrow: "Ricoh IM C3000 toner",
+    intro:
+      "This page supports buyers searching for compatible Ricoh IM C3000 toner supply with model matching, color confirmation and B2B quotation support.",
+    brand: "Ricoh",
+    category: "Toner Cartridge",
+    relatedBrands: ["Ricoh", "IM series"],
+    buyerTypes: ["Copier dealers", "Importers", "Office equipment resellers", "Repair shops"],
+    modelExamples: ["IM C3000", "IM C2500", "IM C3500", "IM C4500", "IM C5500"],
+    sections: [
+      {
+        title: "Confirm Ricoh IM C3000 toner version",
+        text:
+          "Buyers should provide machine model, toner code, color, quantity and destination market so the correct compatible version can be checked."
+      },
+      {
+        title: "Stable supply for repair channels",
+        text:
+          "Ricoh IM C3000 toner is suitable for dealers and service companies that handle repeat office copier maintenance demand."
+      },
+      {
+        title: "Quotation and shipment support",
+        text:
+          "EVE Toner can discuss packing, carton labels, product photos and shipment preparation for bulk B2B orders."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can you quote Ricoh IM C3000 compatible toner by color?",
+        answer: "Yes. Send black, cyan, magenta or yellow requirements with quantity and destination country."
+      },
+      {
+        question: "Can I request mixed Ricoh IM series models?",
+        answer: "Yes. A mixed model list can be checked for availability, MOQ, packing and shipment planning."
+      },
+      {
+        question: "Do you support distributor packaging?",
+        answer: "Label and carton requirements can be discussed for qualified B2B orders."
+      }
+    ]
+  },
+  {
+    slug: "ricoh-mp-c3003-toner-supplier",
+    keyword: "Ricoh MP C3003 toner supplier",
+    title: "Ricoh MP C3003 Toner Supplier | EVE Toner",
+    description:
+      "Compatible Ricoh MP C3003 toner cartridge supply for dealers and importers, including model checking, packing and bulk inquiry support.",
+    h1: "Ricoh MP C3003 Toner Supplier",
+    eyebrow: "Ricoh MP series toner",
+    intro:
+      "EVE Toner helps overseas buyers source compatible Ricoh MP C3003 toner and related MP C series consumables for copier service channels.",
+    brand: "Ricoh",
+    category: "Toner Cartridge",
+    relatedBrands: ["Ricoh", "MP C series"],
+    buyerTypes: ["Copier dealers", "Copy centers", "Repair shops", "Importers"],
+    modelExamples: ["MP C3003", "MP C3503", "MP C4503", "MP C5503", "MP C6003"],
+    sections: [
+      {
+        title: "MP C3003 and related MP C models",
+        text:
+          "MP C3003 buyers often ask for mixed MP C series toner. Send the model list and color requirements before quotation."
+      },
+      {
+        title: "Service channel supply",
+        text:
+          "This page is built for dealers and repair shops stocking toner for installed Ricoh MP C series copier bases."
+      },
+      {
+        title: "Packing and repeat orders",
+        text:
+          "For repeat business, buyers should confirm carton marks, OEM label requirements and order frequency with the supplier."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can EVE Toner supply Ricoh MP C3003 compatible toner?",
+        answer: "Yes. Send toner code, color, quantity and destination market so we can check suitable supply."
+      },
+      {
+        question: "Can MP C3003 be quoted together with MP C3503 or MP C4503?",
+        answer: "Yes. Mixed Ricoh MP C series model lists can be reviewed for B2B quotation."
+      },
+      {
+        question: "What should dealers confirm before bulk order?",
+        answer: "Confirm model, color, quantity, local packaging need, shipping method and any sample request."
+      }
+    ]
+  },
+  {
+    slug: "xerox-c60-c70-toner-supplier",
+    keyword: "Xerox C60 C70 toner supplier",
+    title: "Xerox C60 C70 Toner Supplier | EVE Toner",
+    description:
+      "Compatible Xerox C60 C70 toner supply for dealers, print shops and importers with CMYK model matching and export packing support.",
+    h1: "Xerox C60 C70 Toner Supplier",
+    eyebrow: "Xerox C60 C70 toner",
+    intro:
+      "EVE Toner supports B2B buyers sourcing compatible Xerox C60 and C70 toner cartridges for print shops, copier dealers and distributor channels.",
+    brand: "Xerox",
+    category: "Toner Cartridge",
+    relatedBrands: ["Xerox", "DocuColor", "Color C60", "Color C70"],
+    buyerTypes: ["Print shops", "Copier dealers", "Importers", "Office equipment distributors"],
+    modelExamples: ["Xerox C60", "Xerox C70", "DocuColor C60", "DocuColor C70", "CMYK toner set"],
+    sections: [
+      {
+        title: "C60 C70 color toner matching",
+        text:
+          "Buyers should confirm the Xerox C60 or C70 machine version, color requirement, cartridge code and expected quantity before order confirmation."
+      },
+      {
+        title: "For print shops and service dealers",
+        text:
+          "C60 and C70 toner demand often comes from production print or graphic service environments where output consistency matters."
+      },
+      {
+        title: "Export-ready quotation",
+        text:
+          "EVE Toner can discuss CMYK sets, packing photos, carton labels and shipment planning for qualified B2B orders."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can EVE Toner quote compatible Xerox C60 C70 toner?",
+        answer: "Yes. Send model, toner code, color, quantity and destination country for quotation."
+      },
+      {
+        question: "Can Xerox C60 C70 toner be ordered as a CMYK set?",
+        answer: "CMYK set quotation can be discussed according to availability and order quantity."
+      },
+      {
+        question: "Do you support print shop buyers?",
+        answer: "Yes. EVE Toner supports print shops, dealers, distributors and importers with B2B supply."
+      }
+    ]
+  },
+  {
+    slug: "canon-npg-67-toner-cartridge-supplier",
+    keyword: "Canon NPG-67 toner cartridge supplier",
+    title: "Canon NPG-67 Toner Cartridge Supplier | EVE Toner",
+    description:
+      "Source compatible Canon NPG-67 toner cartridges for imageRUNNER ADVANCE copier dealers and importers with B2B quotation support.",
+    h1: "Canon NPG-67 Toner Cartridge Supplier",
+    eyebrow: "Canon NPG-67 toner",
+    intro:
+      "EVE Toner supplies compatible Canon NPG-67 toner cartridge options for overseas office equipment dealers, copier repair shops and importers.",
+    brand: "Canon",
+    category: "Toner Cartridge",
+    relatedBrands: ["Canon", "imageRUNNER ADVANCE", "NPG series"],
+    buyerTypes: ["Copier dealers", "Repair shops", "Office equipment resellers", "Importers"],
+    modelExamples: ["NPG-67", "C3320", "C3325", "C3330", "imageRUNNER ADVANCE"],
+    sections: [
+      {
+        title: "NPG-67 model and region confirmation",
+        text:
+          "Canon NPG toner requirements can vary by market. Buyers should confirm exact copier model, color, cartridge code and region before bulk ordering."
+      },
+      {
+        title: "For office copier channels",
+        text:
+          "NPG-67 toner is a useful long-tail term for dealers serving Canon imageRUNNER ADVANCE office copier users."
+      },
+      {
+        title: "B2B packing support",
+        text:
+          "EVE Toner can discuss export carton packing, OEM/ODM label options and mixed Canon model quotation."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can EVE Toner quote compatible Canon NPG-67 toner?",
+        answer: "Yes. Send copier model, toner code, color, quantity and destination country."
+      },
+      {
+        question: "Can NPG-67 toner be supplied for distributors?",
+        answer: "Yes. B2B distributor and dealer orders can be discussed according to MOQ and packing request."
+      },
+      {
+        question: "What should I confirm before ordering Canon NPG toner?",
+        answer: "Confirm copier model, region version, color, quantity and carton or label requirements."
+      }
+    ]
+  },
+  {
+    slug: "canon-gpr-53-toner-cartridge-supplier",
+    keyword: "Canon GPR-53 toner cartridge supplier",
+    title: "Canon GPR-53 Toner Cartridge Supplier | EVE Toner",
+    description:
+      "Compatible Canon GPR-53 toner cartridge sourcing for B2B buyers, including model checking, CMYK quotation and export packing.",
+    h1: "Canon GPR-53 Toner Cartridge Supplier",
+    eyebrow: "Canon GPR-53 toner",
+    intro:
+      "This page is for overseas buyers searching compatible Canon GPR-53 toner cartridge supply for copier dealer and distributor channels.",
+    brand: "Canon",
+    category: "Toner Cartridge",
+    relatedBrands: ["Canon", "GPR series", "imageRUNNER ADVANCE"],
+    buyerTypes: ["Office equipment dealers", "Importers", "Repair shops", "Distributors"],
+    modelExamples: ["GPR-53", "C3325", "C3330", "Canon color copier toner"],
+    sections: [
+      {
+        title: "GPR-53 quotation details",
+        text:
+          "Send machine model, GPR code, color requirement and order quantity so the correct compatible toner version can be checked."
+      },
+      {
+        title: "Canon color toner supply",
+        text:
+          "Buyers can request black, cyan, magenta and yellow supply depending on local demand and copier installation base."
+      },
+      {
+        title: "Export order preparation",
+        text:
+          "For distributor orders, carton marks, label options and shipment photo confirmation can be discussed before dispatch."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can EVE Toner quote Canon GPR-53 compatible toner?",
+        answer: "Yes. Please provide model, color, quantity, destination market and packing request."
+      },
+      {
+        question: "Can GPR-53 be ordered with other Canon toner models?",
+        answer: "Yes. Send the full Canon model list and our team can check mixed order options."
+      },
+      {
+        question: "Do you support OEM label requests?",
+        answer: "OEM/ODM label requests can be discussed for qualified B2B order quantities."
+      }
+    ]
+  },
+  {
+    slug: "kyocera-taskalfa-toner-cartridge-supplier",
+    keyword: "Kyocera TASKalfa toner cartridge supplier",
+    title: "Kyocera TASKalfa Toner Cartridge Supplier | EVE Toner",
+    description:
+      "Compatible Kyocera TASKalfa toner cartridge supply for dealers and importers, including TK model matching and export packing support.",
+    h1: "Kyocera TASKalfa Toner Cartridge Supplier",
+    eyebrow: "Kyocera TASKalfa toner",
+    intro:
+      "EVE Toner helps B2B buyers source compatible Kyocera TASKalfa toner cartridges and selected TK series supplies for copier service channels.",
+    brand: "Kyocera",
+    category: "Toner Cartridge",
+    relatedBrands: ["Kyocera", "TASKalfa", "TK series"],
+    buyerTypes: ["Copier dealers", "Importers", "Repair shops", "Office equipment resellers"],
+    modelExamples: ["TASKalfa", "TK-8525", "TK-8335", "TK-8345", "TK color toner"],
+    sections: [
+      {
+        title: "Match TASKalfa machine and TK code",
+        text:
+          "Kyocera toner procurement should confirm TASKalfa machine model, TK cartridge code, color, chip requirement and destination market."
+      },
+      {
+        title: "Dealer stock planning",
+        text:
+          "Dealers can build Kyocera stock around fast-moving TASKalfa models and add drum or maintenance parts according to local repair demand."
+      },
+      {
+        title: "Bulk quotation support",
+        text:
+          "EVE Toner can discuss mixed TK model quotation, carton labels, export packing and shipping preparation for B2B buyers."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can EVE Toner quote Kyocera TASKalfa toner cartridges?",
+        answer: "Yes. Send TASKalfa model, TK code, color, quantity and destination country."
+      },
+      {
+        question: "Can Kyocera TK series toner be ordered in mixed models?",
+        answer: "Yes. Mixed Kyocera TK model lists can be checked for availability and packing options."
+      },
+      {
+        question: "What information should Kyocera dealers send?",
+        answer: "Send machine model, TK code, color, quantity, chip or packing requirement and target market."
+      }
+    ]
   }
 ];
 
