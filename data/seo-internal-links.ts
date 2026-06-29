@@ -95,6 +95,84 @@ export const prioritySeoPages: InternalSeoLink[] = [
     href: "/products/kyocera-taskalfa-toner-cartridge-supplier",
     description: "Kyocera TASKalfa and TK series toner sourcing page for dealers.",
     tags: ["kyocera", "taskalfa", "tk series", "toner cartridge"]
+  },
+  {
+    label: "Ricoh IM C4500 C5500 Toner Supplier",
+    href: "/products/ricoh-im-c4500-c5500-toner-supplier",
+    description: "Model-specific Ricoh IM C4500 and IM C5500 toner sourcing page.",
+    tags: ["ricoh", "im c4500", "im c5500", "toner cartridge", "office copier"]
+  },
+  {
+    label: "Ricoh MP C4504 C5504 Toner Supplier",
+    href: "/products/ricoh-mp-c4504-c5504-toner-supplier",
+    description: "Ricoh MP C4504 and MP C5504 toner sourcing page for copier service channels.",
+    tags: ["ricoh", "mp c4504", "mp c5504", "toner cartridge", "mp c series"]
+  },
+  {
+    label: "Xerox AltaLink C8030 C8035 C8045 Toner Supplier",
+    href: "/products/xerox-altalink-c8030-c8035-c8045-toner-supplier",
+    description: "Xerox AltaLink C8030, C8035 and C8045 toner sourcing page for B2B buyers.",
+    tags: ["xerox", "altalink", "c8030", "c8035", "c8045", "toner cartridge"]
+  },
+  {
+    label: "Xerox VersaLink C7020 C7025 C7030 Toner Supplier",
+    href: "/products/xerox-versalink-c7020-c7025-c7030-toner-supplier",
+    description: "Xerox VersaLink C7020, C7025 and C7030 toner page for dealers and importers.",
+    tags: ["xerox", "versalink", "c7020", "c7025", "c7030", "toner cartridge"]
+  },
+  {
+    label: "Canon NPG-71 Toner Cartridge Supplier",
+    href: "/products/canon-npg-71-toner-cartridge-supplier",
+    description: "Canon NPG-71 toner cartridge sourcing page for imageRUNNER ADVANCE buyers.",
+    tags: ["canon", "npg-71", "toner cartridge", "imagerunner"]
+  },
+  {
+    label: "Canon NPG-76 Toner Cartridge Supplier",
+    href: "/products/canon-npg-76-toner-cartridge-supplier",
+    description: "Canon NPG-76 compatible toner cartridge page for copier dealers.",
+    tags: ["canon", "npg-76", "toner cartridge", "imagerunner"]
+  },
+  {
+    label: "Konica Minolta TN324 TN512 Toner Supplier",
+    href: "/products/konica-minolta-tn324-tn512-toner-supplier",
+    description: "Konica Minolta TN324 and TN512 toner sourcing page for bizhub copier channels.",
+    tags: ["konica minolta", "tn324", "tn512", "toner cartridge", "bizhub"]
+  },
+  {
+    label: "Konica Minolta TN613 TN619 Toner Supplier",
+    href: "/products/konica-minolta-tn613-tn619-toner-supplier",
+    description: "Konica Minolta TN613 and TN619 toner page for print and copier service buyers.",
+    tags: ["konica minolta", "tn613", "tn619", "toner cartridge", "bizhub"]
+  },
+  {
+    label: "Toshiba T-FC505 T-FC415 Toner Supplier",
+    href: "/products/toshiba-t-fc505-t-fc415-toner-supplier",
+    description: "Toshiba T-FC505 and T-FC415 toner sourcing page for e-STUDIO copier dealers.",
+    tags: ["toshiba", "t-fc505", "t-fc415", "toner cartridge", "e-studio"]
+  },
+  {
+    label: "Sharp MX-61GT MX-60GT Toner Supplier",
+    href: "/products/sharp-mx-61gt-mx-60gt-toner-supplier",
+    description: "Sharp MX-61GT and MX-60GT toner sourcing page for office copier dealers.",
+    tags: ["sharp", "mx-61gt", "mx-60gt", "toner cartridge", "mx series"]
+  },
+  {
+    label: "Kyocera TK-8525 TK-8335 Toner Supplier",
+    href: "/products/kyocera-tk-8525-tk-8335-toner-supplier",
+    description: "Kyocera TK-8525 and TK-8335 toner sourcing page for TASKalfa dealers.",
+    tags: ["kyocera", "tk-8525", "tk-8335", "taskalfa", "toner cartridge"]
+  },
+  {
+    label: "HP Indigo 7000 7900 8000 ElectroInk Supplier",
+    href: "/products/hp-indigo-7000-7900-8000-electroink-supplier",
+    description: "HP Indigo 7000, 7900 and 8000 ElectroInk sourcing page for digital press buyers.",
+    tags: ["hp indigo", "7000", "7900", "8000", "electroink", "digital press ink"]
+  },
+  {
+    label: "HP Indigo 3000 5000 Series ElectroInk Supplier",
+    href: "/products/hp-indigo-3000-5000-series-electroink-supplier",
+    description: "HP Indigo 3000 and 5000 series ElectroInk sourcing page for print shops.",
+    tags: ["hp indigo", "3000", "5000", "electroink", "digital press ink"]
   }
 ];
 

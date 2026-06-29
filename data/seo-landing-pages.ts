@@ -23,6 +23,213 @@ export type SeoLandingPage = {
 
 const sharedBuyerTypes = ["Importers", "Dealers", "Distributors", "Copier repair shops", "Office equipment resellers"];
 
+type ModelSeoPageInput = {
+  slug: string;
+  brand: string;
+  modelKeyword: string;
+  productType?: string;
+  category?: string;
+  eyebrow?: string;
+  relatedBrands?: string[];
+  buyerTypes?: string[];
+  modelExamples: string[];
+  applicationNote: string;
+  quotationNote?: string;
+};
+
+function createModelSeoPage({
+  slug,
+  brand,
+  modelKeyword,
+  productType = "toner cartridge",
+  category = "Toner Cartridge",
+  eyebrow,
+  relatedBrands,
+  buyerTypes = sharedBuyerTypes,
+  modelExamples,
+  applicationNote,
+  quotationNote
+}: ModelSeoPageInput): SeoLandingPage {
+  const normalizedProductType = productType.toLowerCase();
+  const titleProductType = productType
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+  const keyword = `${brand} ${modelKeyword} ${normalizedProductType} supplier`;
+
+  return {
+    slug,
+    keyword,
+    title: `${brand} ${modelKeyword} ${titleProductType} Supplier | EVE Toner`,
+    description: `Source compatible ${brand} ${modelKeyword} ${normalizedProductType} for B2B buyers. EVE Toner supports model confirmation, export packing, OEM/ODM discussion and fast quotation.`,
+    h1: `${brand} ${modelKeyword} ${titleProductType} Supplier`,
+    eyebrow: eyebrow ?? `${brand} ${modelKeyword} sourcing`,
+    intro: `EVE Toner helps overseas dealers, importers and copier service teams source compatible ${brand} ${modelKeyword} ${normalizedProductType} with practical model checking and export-ready quotation support.`,
+    brand,
+    category,
+    relatedBrands: relatedBrands ?? [brand, `${brand} compatible consumables`, category],
+    buyerTypes,
+    modelExamples,
+    sections: [
+      {
+        title: `Confirm ${modelKeyword} compatibility before quotation`,
+        text:
+          quotationNote ??
+          `Buyers should send exact machine model, consumable code, color requirement, quantity, destination country and packing request before ordering ${brand} ${modelKeyword} ${normalizedProductType}.`
+      },
+      {
+        title: "Built for B2B reseller and service demand",
+        text: applicationNote
+      },
+      {
+        title: "Export packing and shipment preparation",
+        text:
+          "For qualified B2B orders, EVE Toner can discuss product photos, carton labels, OEM/ODM packing, mixed model lists and shipment inspection before delivery."
+      }
+    ],
+    faqs: [
+      {
+        question: `Can EVE Toner quote compatible ${brand} ${modelKeyword} ${normalizedProductType}?`,
+        answer: `Yes. Send the machine model, part or toner code, color, quantity, destination country and packing requirement for a practical quotation.`
+      },
+      {
+        question: `Is ${modelKeyword} suitable for dealer stock?`,
+        answer:
+          "It can be suitable when the model has local installed machines and repeated service demand. Dealers should confirm local usage and fast-moving colors before bulk purchase."
+      },
+      {
+        question: "Can this item be ordered with other copier consumables?",
+        answer:
+          "Yes. Mixed toner cartridge, drum unit, fuser unit, developer unit or spare parts lists can be checked according to availability, MOQ and packing requirements."
+      }
+    ]
+  };
+}
+
+const modelSeoLandingPages: SeoLandingPage[] = [
+  createModelSeoPage({
+    slug: "ricoh-im-c4500-c5500-toner-supplier",
+    brand: "Ricoh",
+    modelKeyword: "IM C4500 C5500",
+    modelExamples: ["IM C4500", "IM C5500", "IM C6000", "IM C series", "CMYK toner set"],
+    applicationNote:
+      "Ricoh IM C4500 and IM C5500 toner demand often comes from modern office copier fleets, rental service companies and dealers that need stable repeat supply for installed machines."
+  }),
+  createModelSeoPage({
+    slug: "ricoh-mp-c4504-c5504-toner-supplier",
+    brand: "Ricoh",
+    modelKeyword: "MP C4504 C5504",
+    modelExamples: ["MP C4504", "MP C5504", "MP C6004", "MP C series", "color copier toner"],
+    applicationNote:
+      "MP C4504 and MP C5504 are practical long-tail targets for service teams and office equipment dealers stocking toner for medium and high-volume color copier users."
+  }),
+  createModelSeoPage({
+    slug: "xerox-altalink-c8030-c8035-c8045-toner-supplier",
+    brand: "Xerox",
+    modelKeyword: "AltaLink C8030 C8035 C8045",
+    relatedBrands: ["Xerox", "AltaLink", "VersaLink", "WorkCentre"],
+    modelExamples: ["AltaLink C8030", "AltaLink C8035", "AltaLink C8045", "AltaLink C8055", "AltaLink C8070"],
+    applicationNote:
+      "Xerox AltaLink toner pages target buyers serving office fleets, leasing channels and copier maintenance accounts where model matching and chip version should be checked carefully."
+  }),
+  createModelSeoPage({
+    slug: "xerox-versalink-c7020-c7025-c7030-toner-supplier",
+    brand: "Xerox",
+    modelKeyword: "VersaLink C7020 C7025 C7030",
+    relatedBrands: ["Xerox", "VersaLink", "AltaLink"],
+    modelExamples: ["VersaLink C7020", "VersaLink C7025", "VersaLink C7030", "CMYK toner set"],
+    applicationNote:
+      "VersaLink C7020, C7025 and C7030 toner demand is useful for office equipment resellers, repair shops and importers building Xerox-compatible consumables stock."
+  }),
+  createModelSeoPage({
+    slug: "canon-npg-71-toner-cartridge-supplier",
+    brand: "Canon",
+    modelKeyword: "NPG-71",
+    relatedBrands: ["Canon", "imageRUNNER ADVANCE", "NPG series"],
+    modelExamples: ["NPG-71", "C5535", "C5540", "C5550", "C5560", "imageRUNNER ADVANCE"],
+    applicationNote:
+      "Canon NPG-71 toner is searched by buyers supporting imageRUNNER ADVANCE color copier users and should be confirmed by machine model, region and color before quotation."
+  }),
+  createModelSeoPage({
+    slug: "canon-npg-76-toner-cartridge-supplier",
+    brand: "Canon",
+    modelKeyword: "NPG-76",
+    relatedBrands: ["Canon", "imageRUNNER ADVANCE", "NPG series"],
+    modelExamples: ["NPG-76", "C3520", "C3525", "C3530", "imageRUNNER ADVANCE"],
+    applicationNote:
+      "Canon NPG-76 toner pages support dealer and repair channel searches where region version, color, packing and chip requirement should be checked before bulk order."
+  }),
+  createModelSeoPage({
+    slug: "konica-minolta-tn324-tn512-toner-supplier",
+    brand: "Konica Minolta",
+    modelKeyword: "TN324 TN512",
+    relatedBrands: ["Konica Minolta", "bizhub", "TN series"],
+    modelExamples: ["TN324", "TN512", "bizhub C258", "bizhub C308", "bizhub C368", "bizhub C454"],
+    applicationNote:
+      "TN324 and TN512 are useful long-tail terms for dealers stocking Konica Minolta bizhub office copier toner across common service accounts."
+  }),
+  createModelSeoPage({
+    slug: "konica-minolta-tn613-tn619-toner-supplier",
+    brand: "Konica Minolta",
+    modelKeyword: "TN613 TN619",
+    relatedBrands: ["Konica Minolta", "bizhub PRESS", "AccurioPress"],
+    modelExamples: ["TN613", "TN619", "C452", "C552", "C652", "production color toner"],
+    applicationNote:
+      "Konica Minolta TN613 and TN619 searches usually come from buyers needing reliable color toner for print service or copier service channels."
+  }),
+  createModelSeoPage({
+    slug: "toshiba-t-fc505-t-fc415-toner-supplier",
+    brand: "Toshiba",
+    modelKeyword: "T-FC505 T-FC415",
+    relatedBrands: ["Toshiba", "e-STUDIO", "T-FC series"],
+    modelExamples: ["T-FC505", "T-FC415", "e-STUDIO 2515AC", "e-STUDIO 3015AC", "e-STUDIO 5015AC"],
+    applicationNote:
+      "Toshiba T-FC toner keywords help reach dealers supporting e-STUDIO color copier users who need model-based confirmation and export packing."
+  }),
+  createModelSeoPage({
+    slug: "sharp-mx-61gt-mx-60gt-toner-supplier",
+    brand: "Sharp",
+    modelKeyword: "MX-61GT MX-60GT",
+    relatedBrands: ["Sharp", "MX series", "color copier toner"],
+    modelExamples: ["MX-61GT", "MX-60GT", "MX-2651", "MX-3051", "MX-4071"],
+    applicationNote:
+      "Sharp MX-61GT and MX-60GT searches are useful for copier dealers and office equipment resellers building color toner supply for Sharp MX series machines."
+  }),
+  createModelSeoPage({
+    slug: "kyocera-tk-8525-tk-8335-toner-supplier",
+    brand: "Kyocera",
+    modelKeyword: "TK-8525 TK-8335",
+    relatedBrands: ["Kyocera", "TASKalfa", "TK series"],
+    modelExamples: ["TK-8525", "TK-8335", "TASKalfa 4052ci", "TASKalfa 3252ci", "TK color toner"],
+    applicationNote:
+      "Kyocera TK-8525 and TK-8335 toner demand is commonly linked to TASKalfa service accounts where dealers need color, chip and packaging confirmation."
+  }),
+  createModelSeoPage({
+    slug: "hp-indigo-7000-7900-8000-electroink-supplier",
+    brand: "HP Indigo",
+    modelKeyword: "7000 7900 8000",
+    productType: "ElectroInk",
+    category: "Digital Press Ink",
+    relatedBrands: ["HP Indigo", "ElectroInk", "Digital Press"],
+    buyerTypes: ["Digital print shops", "Ink distributors", "Importers", "Printing consumables dealers"],
+    modelExamples: ["HP Indigo 7000", "HP Indigo 7900", "HP Indigo 8000", "6K", "7K", "8K", "Q4132D"],
+    applicationNote:
+      "HP Indigo 7000, 7900 and 8000 ElectroInk pages target digital press buyers who need exact press model, ink code, color and storage condition confirmation."
+  }),
+  createModelSeoPage({
+    slug: "hp-indigo-3000-5000-series-electroink-supplier",
+    brand: "HP Indigo",
+    modelKeyword: "3000 5000 Series",
+    productType: "ElectroInk",
+    category: "Digital Press Ink",
+    relatedBrands: ["HP Indigo", "ElectroInk", "Digital Press"],
+    buyerTypes: ["Digital print shops", "Ink distributors", "Importers", "Printing consumables dealers"],
+    modelExamples: ["HP Indigo 3000", "HP Indigo 3050", "HP Indigo 5000", "HP Indigo 5500", "Series 2"],
+    applicationNote:
+      "HP Indigo 3000 and 5000 series ElectroInk searches often come from print shops and distributors comparing compatible ink supply by press series and color."
+  })
+];
+
 export const seoLandingPages: SeoLandingPage[] = [
   {
     slug: "ricoh-compatible-toner-supplier",
@@ -1026,7 +1233,8 @@ export const seoLandingPages: SeoLandingPage[] = [
         answer: "Send machine model, TK code, color, quantity, chip or packing requirement and target market."
       }
     ]
-  }
+  },
+  ...modelSeoLandingPages
 ];
 
 export function findSeoLandingPage(slug: string) {
