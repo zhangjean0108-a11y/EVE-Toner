@@ -10,6 +10,10 @@ const urlList = [
   `https://${host}/quality-control`,
   `https://${host}/products`,
   `https://${host}/blog`,
+  `https://${host}/blog/inside-eve-toner-copier-consumables-supply-base`,
+  `https://${host}/blog/eve-toner-quality-control-process-for-b2b-orders`,
+  `https://${host}/blog/oem-packaging-support-for-copier-toner-distributors`,
+  `https://${host}/blog/how-to-verify-a-china-copier-consumables-supplier-online`,
   `https://${host}/sitemap.xml`
 ];
 

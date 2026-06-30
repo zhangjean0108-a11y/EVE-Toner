@@ -45,6 +45,9 @@ const commonLinks = {
   parts: { label: "Copier spare parts", href: "/products?category=Copier%20Spare%20Parts" },
   machines: { label: "Copier machines", href: "/products?category=Copier%20Machine" },
   digitalInk: { label: "HP Indigo ElectroInk", href: "/products?category=Digital%20Press%20Ink" },
+  about: { label: "About EVE Toner", href: "/about" },
+  factoryTour: { label: "Factory tour", href: "/factory-tour" },
+  qualityControl: { label: "Quality control", href: "/quality-control" },
   hpIndigoQ4132D: {
     label: "HP Indigo ElectroInk Q4132D",
     href: "/products/hp-indigo-q4132d-6000-8000-series-digital-press-ink-1601829082310"
@@ -56,6 +59,266 @@ const commonLinks = {
 };
 
 export const blogArticles: BlogArticle[] = [
+  {
+    slug: "inside-eve-toner-copier-consumables-supply-base",
+    title: "Inside EVE Toner Copier Consumables Supply Base",
+    seoTitle: "Inside EVE Toner Copier Consumables Supply Base | Factory Tour",
+    metaDescription:
+      "See how EVE Toner supports global B2B buyers with copier consumables supply, warehouse preparation, packing checks and shipment coordination.",
+    excerpt:
+      "A transparent factory and supply-base overview for buyers checking whether EVE Toner is a practical copier consumables partner.",
+    answer:
+      "EVE Toner supports overseas B2B buyers through model confirmation, organized warehouse preparation, product checking, OEM/ODM packing discussion and export shipment coordination from the China copier consumables supply chain.",
+    date: "2026-06-30",
+    category: "Factory Tour",
+    keywords: [
+      "EVE Toner factory tour",
+      "copier consumables supply base",
+      "compatible copier toner supplier China",
+      "Zhuhai Eve Technology Co., Ltd."
+    ],
+    productLinks: [commonLinks.factoryTour, commonLinks.about, commonLinks.toner, commonLinks.parts],
+    midCta: {
+      title: "Need to verify supplier capability?",
+      text: "Send your model list and target market. EVE Toner can share practical product, packing and supply details for your order."
+    },
+    finalCta: {
+      title: "Discuss your copier consumables supply plan",
+      text: "Ask EVE Toner for model matching, product photos, packing options and bulk quotation support."
+    },
+    sections: [
+      {
+        heading: "Why Buyers Ask for a Factory Tour",
+        paragraphs: [
+          "Overseas importers often need more than a product price. They want to know whether a supplier can support repeated orders, correct model matching, export packing and clear communication after shipment.",
+          "A factory or supply-base page helps buyers understand the supplier's daily workflow: product preparation, warehouse organization, quality checks and packing discussion. It also gives search engines clearer evidence that the company is connected to real products and B2B supply."
+        ]
+      },
+      {
+        heading: "What EVE Toner Shows Buyers",
+        paragraphs: [
+          "EVE Toner focuses on compatible copier toner cartridges, toner powder, drum units, fuser units, developer units, waste toner boxes and copier spare parts. The supply base is organized around model confirmation, stock preparation, checking and export order support.",
+          "Buyers can review warehouse scenes, testing room information, production or packing preparation and trade show photos on the factory tour page. These details help importers evaluate whether the supplier can support long-term procurement rather than only one-time small orders."
+        ]
+      },
+      {
+        heading: "How This Reduces Procurement Risk",
+        paragraphs: [
+          "A transparent supplier should clearly explain what can be checked before shipment and what depends on buyer sample approval. EVE Toner does not rely on exaggerated promises. Instead, the focus is practical: correct models, stable packing, shipment photos when needed and responsive communication.",
+          "For distributors and office equipment service companies, this approach helps reduce common problems such as wrong part codes, unclear cartons, unsuitable packaging or slow response during repeated purchasing."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Can buyers see EVE Toner's factory and warehouse information online?",
+        answer: "Yes. Buyers can review the Factory Tour page for warehouse, testing, production and packing support information."
+      },
+      {
+        question: "What should I send before asking for supply capability?",
+        answer: "Send copier models, product category, quantity, destination country and packing requirements."
+      },
+      {
+        question: "Does EVE Toner support long-term distributor orders?",
+        answer: "Yes. EVE Toner focuses on B2B buyers such as importers, distributors, dealers and office equipment service companies."
+      }
+    ]
+  },
+  {
+    slug: "eve-toner-quality-control-process-for-b2b-orders",
+    title: "EVE Toner Quality Control Process for B2B Orders",
+    seoTitle: "EVE Toner Quality Control Process for Copier Consumables",
+    metaDescription:
+      "Learn how EVE Toner checks copier consumables B2B orders through model confirmation, product checks, packing review and shipment preparation.",
+    excerpt:
+      "A practical quality-control overview for buyers sourcing compatible copier toner cartridges and spare parts.",
+    answer:
+      "EVE Toner quality control starts with model and specification confirmation, then product appearance or functional checks, packing review, quantity confirmation and shipment preparation according to product type and buyer requirements.",
+    date: "2026-06-30",
+    category: "Quality Control",
+    keywords: [
+      "EVE Toner quality control",
+      "copier consumables inspection",
+      "toner cartridge pre-shipment inspection",
+      "compatible copier toner QC"
+    ],
+    productLinks: [commonLinks.qualityControl, commonLinks.toner, commonLinks.drum, commonLinks.fuser],
+    midCta: {
+      title: "Need pre-shipment checking support?",
+      text: "Send your order list and inspection concerns. EVE Toner can discuss practical checking points before shipment."
+    },
+    finalCta: {
+      title: "Ask for quality-control details",
+      text: "Share product models, quantity and packing needs to receive suitable checking and quotation support."
+    },
+    sections: [
+      {
+        heading: "Start With Correct Model Information",
+        paragraphs: [
+          "Most quality problems in copier consumables sourcing begin before production or shipment. Wrong model codes, wrong color positions, unclear region versions or missing part numbers can all create after-sales problems.",
+          "EVE Toner asks buyers to provide copier model, consumable code, color, quantity, destination market and packing request. This first step reduces avoidable mistakes and makes later inspection more meaningful."
+        ]
+      },
+      {
+        heading: "Check Product and Packing Details",
+        paragraphs: [
+          "Depending on the product category, checks may include cartridge appearance, seals, chip matching, drum surface, fuser condition, roller or gear movement, carton label and quantity. Not every product needs the same inspection, so the process should match the order type.",
+          "For distributor orders, packing is part of quality control. Clear carton labels, strong outer cartons and correct OEM/ODM artwork can prevent warehouse confusion and customer complaints."
+        ]
+      },
+      {
+        heading: "Use Photos and Records for Communication",
+        paragraphs: [
+          "When buyers need extra confirmation, product photos or packing photos can be discussed before shipment. This is especially useful for new models, private label orders or mixed shipments.",
+          "Quality control should not be presented as a vague slogan. A practical supplier explains what is checked, what still needs buyer approval and how feedback will be handled after delivery."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Does EVE Toner inspect every product in the same way?",
+        answer: "No. Inspection points depend on product category, model risk, order quantity and buyer requirements."
+      },
+      {
+        question: "Can buyers request packing photos before shipment?",
+        answer: "Yes. Product and packing photos can be discussed for qualified B2B orders."
+      },
+      {
+        question: "Why is model confirmation part of quality control?",
+        answer: "Correct model matching prevents many issues before products are packed or shipped."
+      }
+    ]
+  },
+  {
+    slug: "oem-packaging-support-for-copier-toner-distributors",
+    title: "OEM Packaging Support for Copier Toner Distributors",
+    seoTitle: "OEM Packaging Support for Copier Toner Distributors | EVE Toner",
+    metaDescription:
+      "Learn how copier toner distributors can plan OEM packaging, private labels, carton marks and packing checks for compatible copier consumables.",
+    excerpt:
+      "A practical OEM/ODM packaging guide for distributors building their own copier toner brand.",
+    answer:
+      "For copier toner distributors, OEM packaging should include confirmed product model, private label design, carton marks, color box or neutral packing choice, quantity requirements and pre-shipment artwork or packing approval.",
+    date: "2026-06-30",
+    category: "OEM Packaging",
+    keywords: [
+      "OEM copier toner packaging",
+      "private label copier toner",
+      "ODM toner cartridge packaging",
+      "copier toner distributor brand"
+    ],
+    productLinks: [commonLinks.toner, commonLinks.parts, commonLinks.about, commonLinks.factoryTour],
+    midCta: {
+      title: "Planning private label toner packaging?",
+      text: "Send your logo, model list and target market. EVE Toner can discuss OEM/ODM packing options for B2B orders."
+    },
+    finalCta: {
+      title: "Request OEM packaging support",
+      text: "Ask EVE Toner for compatible toner models, packing suggestions and quotation details."
+    },
+    sections: [
+      {
+        heading: "Why OEM Packaging Matters",
+        paragraphs: [
+          "For distributors, packaging is not only decoration. It affects local brand recognition, warehouse management, dealer confidence and customer repeat purchases.",
+          "A clear private label package can help a distributor separate product lines by model, color, category and market positioning. But it must be built on correct model matching and stable product supply."
+        ]
+      },
+      {
+        heading: "What to Confirm Before Printing",
+        paragraphs: [
+          "Before mass packaging, buyers should confirm product model, cartridge code, color, quantity, artwork size, label position, carton marks and whether neutral packaging or color box packaging is needed.",
+          "It is better to approve artwork and packing samples before production. Small mistakes in model codes or color marks can create costly problems for distributor warehouses."
+        ]
+      },
+      {
+        heading: "How EVE Toner Supports OEM/ODM Buyers",
+        paragraphs: [
+          "EVE Toner can discuss logo, label, color box and selected product configuration requests according to order quantity and product category.",
+          "For long-term buyers, packaging communication becomes part of the supply system. Keeping consistent carton marks, product naming and model lists makes repeat orders faster and safer."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "Can EVE Toner support private label toner packaging?",
+        answer: "Yes. OEM/ODM packaging can be discussed according to model, order quantity and packing requirements."
+      },
+      {
+        question: "What files should buyers prepare for OEM packaging?",
+        answer: "Prepare logo files, artwork requirements, model list, carton marks and target packing style."
+      },
+      {
+        question: "Should buyers approve packaging before mass production?",
+        answer: "Yes. Artwork and label confirmation are important before bulk packing."
+      }
+    ]
+  },
+  {
+    slug: "how-to-verify-a-china-copier-consumables-supplier-online",
+    title: "How to Verify a China Copier Consumables Supplier Online",
+    seoTitle: "How to Verify a China Copier Consumables Supplier Online",
+    metaDescription:
+      "A practical online verification checklist for importers checking China copier consumables suppliers, company profiles, factory pages, product data and search results.",
+    excerpt:
+      "A verification checklist for buyers searching company names before placing copier consumables orders.",
+    answer:
+      "To verify a China copier consumables supplier online, check whether the company name, brand, address, website, B2B platform profiles, product categories, factory photos, quality-control pages and contact information are consistent across search results.",
+    date: "2026-06-30",
+    category: "Supplier Verification",
+    keywords: [
+      "verify China copier consumables supplier",
+      "Zhuhai Eve Technology Co., Ltd.",
+      "EVE Toner supplier verification",
+      "China copier toner supplier"
+    ],
+    productLinks: [commonLinks.about, commonLinks.factoryTour, commonLinks.qualityControl, commonLinks.toner],
+    midCta: {
+      title: "Verifying EVE Toner before purchase?",
+      text: "Review our About, Factory Tour and Quality Control pages, then send your model list for practical quotation support."
+    },
+    finalCta: {
+      title: "Ask EVE Toner for company and product details",
+      text: "Send your purchasing questions and our team will reply with model, packing and supply information."
+    },
+    sections: [
+      {
+        heading: "Search the Company Name and Brand",
+        paragraphs: [
+          "Before placing an order, buyers often search the supplier's company name and brand. Consistent search results can help buyers understand whether the supplier is real, active and connected to the products being offered.",
+          "For EVE Toner, the standard company name is Zhuhai Eve Technology Co., Ltd. and the brand name is EVE Toner. The company was established in 2020, while the team and supply chain have served the copier consumables industry since 2012."
+        ]
+      },
+      {
+        heading: "Check Website Pages That Show Evidence",
+        paragraphs: [
+          "A supplier website should not only show product cards. Buyers should look for an About page, factory or warehouse page, quality-control explanation, product categories and clear contact information.",
+          "These pages help buyers understand whether the supplier can support compatible copier toner cartridges, toner powder, drum units, fuser units and copier spare parts in a practical B2B workflow."
+        ]
+      },
+      {
+        heading: "Compare Information Across Platforms",
+        paragraphs: [
+          "Check whether the same company name, brand, product range and contact details appear across the official website, Alibaba, Made-in-China, LinkedIn, YouTube and other public profiles.",
+          "If years, addresses or company names conflict across platforms, ask the supplier to clarify. A reliable supplier should be able to explain registered company information, office or warehouse location and industry experience without using exaggerated claims."
+        ]
+      }
+    ],
+    faqs: [
+      {
+        question: "What is the standard English company name for EVE Toner?",
+        answer: "The standard English company name is Zhuhai Eve Technology Co., Ltd."
+      },
+      {
+        question: "Why should buyers compare supplier information across platforms?",
+        answer: "Consistent public information helps reduce uncertainty and makes the supplier easier to verify."
+      },
+      {
+        question: "What pages should a copier consumables supplier website include?",
+        answer: "Useful pages include About, Factory Tour, Quality Control, Products, Blog and Contact."
+      }
+    ]
+  },
   {
     slug: "how-to-choose-reliable-compatible-copier-toner-supplier",
     title: "How to Choose a Reliable Compatible Copier Toner Supplier",
