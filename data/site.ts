@@ -29,9 +29,7 @@ export const company = {
   email: "zhangjin@evecolor.net",
   phone: "+86 188 2439 3154",
   whatsapp: "008618824393154",
-  facebookUrl:
-    process.env.NEXT_PUBLIC_FACEBOOK_URL ||
-    "https://www.facebook.com/search/top?q=zhangjin%40evecolor.net",
+  facebookUrl: process.env.NEXT_PUBLIC_FACEBOOK_URL || "https://www.facebook.com/jean.zhang.577196",
   registeredLocation: "Zhuhai, Guangdong, China",
   officeWarehouseAddress:
     "4/F, Building 2, No.16 Qianjin 2nd Road, Tanzhou Town, Zhongshan City, Guangdong, China",
