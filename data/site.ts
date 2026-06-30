@@ -20,15 +20,19 @@ import { createWhatsAppHref } from "@/lib/whatsapp";
 
 export const company = {
   brand: "EVE Toner",
-  legalName: "Zhuhai Eve Technology Co.,LTD",
-  founded: "2012",
+  legalName: "Zhuhai Eve Technology Co., Ltd.",
+  established: "2020",
+  industrySince: "2012",
   factoryArea: "6,000+ m²",
   team: "40+ elite team members",
   contact: "Jean Zhang",
   email: "zhangjin@evecolor.net",
-  phone: "008618824393154",
+  phone: "+86 188 2439 3154",
   whatsapp: "008618824393154",
-  address: "4/F, Building 2, No.16 Qianjin 2nd Road, Tanzhou Town, Zhongshan City, China",
+  registeredLocation: "Zhuhai, Guangdong, China",
+  officeWarehouseAddress:
+    "4/F, Building 2, No.16 Qianjin 2nd Road, Tanzhou Town, Zhongshan City, Guangdong, China",
+  address: "4/F, Building 2, No.16 Qianjin 2nd Road, Tanzhou Town, Zhongshan City, Guangdong, China",
   mapEmbedUrl:
     "https://www.openstreetmap.org/export/embed.html?bbox=113.4350%2C22.2200%2C113.5150%2C22.2900&layer=mapnik&marker=22.2550%2C113.4750",
   mapLink:
@@ -49,14 +53,14 @@ export const navItems = [
   { label: "Home", href: "/" },
   { label: "Products", href: "/products" },
   { label: "Applications", href: "/#applications" },
-  { label: "About", href: "/#about" },
-  { label: "Factory", href: "/#factory" },
+  { label: "About", href: "/about" },
+  { label: "Factory", href: "/factory-tour" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/#contact" }
 ];
 
 export const heroPoints = [
-  "Source manufacturer since 2012",
+  "Industry experience since 2012",
   "OEM/ODM customization",
   "Industrial-grade quality control",
   "Fast delivery and project support"
@@ -117,8 +121,8 @@ export const productCategories = [
 export const advantages = [
   {
     icon: Factory,
-    title: "Source Manufacturer",
-    text: "Founded in 2012 with a 6,000+ m² factory and practical export experience."
+    title: "Supply Chain Since 2012",
+    text: "Established in 2020, with team and supply chain experience in copier consumables since 2012."
   },
   {
     icon: Settings,

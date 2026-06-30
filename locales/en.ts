@@ -16,8 +16,8 @@ export const en = {
       { key: "home", label: "Home", href: "/" },
       { key: "products", label: "Products", href: "/products" },
       { key: "applications", label: "Applications", href: "/#applications" },
-      { key: "about", label: "About", href: "/#about" },
-      { key: "factory", label: "Factory", href: "/#factory" },
+      { key: "about", label: "About", href: "/about" },
+      { key: "factory", label: "Factory", href: "/factory-tour" },
       { key: "blog", label: "Blog", href: "/blog" },
       { key: "contact", label: "Contact", href: "/#contact" }
     ],
@@ -35,7 +35,7 @@ export const en = {
         { title: "Copier Machine", text: "Reliable recycled copier machines for dealers." }
       ],
       advantages: [
-        "Source manufacturer since 2012",
+        "Industry experience since 2012",
         "OEM/ODM packaging support",
         "Industrial-grade quality control",
         "Fast delivery and project support"
@@ -46,21 +46,21 @@ export const en = {
     hero: {
       titlePrefix: "Compatible Copier Toner &",
       titleAccent: "Spare Parts",
-      titleSuffix: "Supplier",
-      lead: "Reliable compatible toner cartridges, copier spare parts and solutions with stable quality, fast delivery and professional support for distributors and importers worldwide.",
+      titleSuffix: "Supplier Since 2012",
+      lead: "EVE Toner supports global distributors, importers and office equipment service companies with compatible copier toner cartridges, toner powder, drum units, fuser units and copier spare parts.",
       imageAlt: "Compatible copier toner and spare parts product system",
       points: [
-        "Source manufacturer since 2012",
+        "Industry experience since 2012",
         "OEM/ODM customization",
         "Industrial-grade quality control",
         "Fast delivery and project support"
       ]
     },
     stats: [
-      { label: "Founded", value: "2012", text: "Over a decade of industry experience" },
-      { label: "Factory Area", value: "6,000+ m²", text: "Modern production base in Zhuhai" },
+      { label: "Experience", value: "2012", text: "Team and supply chain industry experience" },
+      { label: "Company", value: "2020", text: "Established in Zhuhai, Guangdong, China" },
       { label: "Team Members", value: "40+", text: "Experienced & dedicated team" },
-      { label: "Support", value: "OEM/ODM", text: "Your brand, our manufacturing" }
+      { label: "Support", value: "OEM/ODM", text: "Packaging and bulk order support" }
     ],
     productsTitle: "Product Categories",
     products: [
@@ -81,10 +81,10 @@ export const en = {
     },
     about: {
       title: "Why Choose EVE Toner",
-      text: "EVE Toner focuses on practical B2B value: stable supply, customization, quality control and fast project response."
+      text: "EVE Toner is operated by Zhuhai Eve Technology Co., Ltd. The company was established in 2020, while our team and supply chain have served the copier consumables industry since 2012."
     },
     advantages: [
-      { title: "Source Manufacturer", text: "Founded in 2012 with a 6,000+ m² factory and practical export experience." },
+      { title: "Supply Chain Since 2012", text: "Established in 2020, with team and supply chain experience in copier consumables since 2012." },
       { title: "OEM/ODM Customization", text: "Support logo, packaging, color box and product configuration requests." },
       { title: "Quality You Can Trust", text: "Strict inspection process helps protect page yield, color stability and compatibility." },
       { title: "Fast Delivery & Support", text: "Stock preparation, shipping coordination and project support for global buyers." }
@@ -160,12 +160,12 @@ export const en = {
       whatsappTitle: "Contact Us on WhatsApp",
       whatsappText: "Quick response for quotes, catalogs and support.",
       mapTitle: "Visit EVE Toner",
-      mapText: "Find our office and factory support team in Tanzhou Town, Zhongshan City.",
+      mapText: "Zhuhai Eve Technology Co., Ltd. is registered in Zhuhai, with office and warehouse support in Tanzhou Town, Zhongshan City.",
       addressLabel: "Company Address",
       openMap: "Open in OpenStreetMap"
     },
     footer: {
-      intro: "Zhuhai Eve Technology Co.,LTD is a source manufacturer of copier toner cartridge, toner powder, copier machine and spare parts. We provide OEM/ODM solution and reliable products to global B2B buyers.",
+      intro: "Zhuhai Eve Technology Co., Ltd. operates EVE Toner, supplying compatible copier toner cartridges, toner powder, drum units, fuser units and copier spare parts for global B2B buyers. Industry experience since 2012.",
       products: "Products",
       company: "Company",
       contact: "Contact",
@@ -181,7 +181,7 @@ export const en = {
     title: "Tell us what you need. We will prepare a practical quote.",
     text: "Share model number, quantity and destination market. EVE Toner will help with compatible copier toner, toner powder, drum units, fuser units, copier machines and spare parts.",
     trust: [
-      "Source manufacturer since 2012",
+      "Industry experience since 2012",
       "Stable quality control before shipment",
       "Fast quotation response for distributors"
     ],

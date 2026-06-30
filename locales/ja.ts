@@ -10,8 +10,8 @@ export const ja = {
       { key: "home", label: "ホーム", href: "/" },
       { key: "products", label: "製品", href: "/products" },
       { key: "applications", label: "用途", href: "/#applications" },
-      { key: "about", label: "会社情報", href: "/#about" },
-      { key: "factory", label: "工場", href: "/#factory" },
+      { key: "about", label: "会社情報", href: "/about" },
+      { key: "factory", label: "工場", href: "/factory-tour" },
       { key: "blog", label: "ブログ", href: "/blog" },
       { key: "contact", label: "連絡先", href: "/#contact" }
     ],

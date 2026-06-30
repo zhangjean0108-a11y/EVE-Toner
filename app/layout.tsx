@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Compatible Copier Toner & Spare Parts Supplier | EVE Toner",
   description:
-    "EVE Toner supplies compatible copier toner, copier spare parts, drum units and fuser units with OEM/ODM support, bulk supply and global delivery for B2B buyers.",
+    "EVE Toner, operated by Zhuhai Eve Technology Co., Ltd., supplies compatible copier toner cartridges, toner powder, drum units, fuser units and copier spare parts for global B2B buyers. Industry experience since 2012.",
   keywords: [
     "copier toner supplier",
     "compatible copier toner",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Compatible Copier Toner & Spare Parts Supplier | EVE Toner",
     description:
-      "Compatible copier toner cartridges and spare parts for importers, dealers, distributors and printing shops.",
+      "Compatible copier toner cartridges, toner powder and copier spare parts for importers, dealers, distributors and office equipment service companies.",
     url: siteUrl,
     siteName: "EVE Toner",
     type: "website",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Compatible Copier Toner & Spare Parts Supplier | EVE Toner",
     description:
-      "Compatible copier toner cartridges and spare parts for importers, dealers, distributors and printing shops.",
+      "Compatible copier toner cartridges, toner powder and copier spare parts for importers, dealers, distributors and office equipment service companies.",
     images: [socialImage]
   }
 };

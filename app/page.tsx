@@ -298,7 +298,7 @@ export default function Home() {
                   text={dict.home.factory.text}
                 />
                 <a
-                  href="#contact"
+                  href="/factory-tour"
                   className="mt-8 inline-flex h-12 items-center justify-center gap-3 rounded-md bg-[var(--brand-cyan)] px-6 text-sm font-black text-white transition hover:bg-[var(--brand-cyan-dark)]"
                 >
                   {dict.home.factory.cta} <ArrowRight size={17} />
@@ -468,9 +468,15 @@ export default function Home() {
                 </p>
                 <div className="mt-6 rounded-md border border-slate-200 bg-white/85 p-5 shadow-sm">
                   <p className="text-xs font-black uppercase tracking-[0.16em] text-[var(--brand-cyan)]">
-                    {dict.home.contact.addressLabel}
+                    Registered Company
                   </p>
-                  <p className="mt-3 text-base font-bold leading-7 text-slate-900">{company.address}</p>
+                  <p className="mt-3 text-base font-bold leading-7 text-slate-900">{company.legalName}</p>
+                  <p className="mt-2 text-sm font-semibold leading-6 text-slate-600">
+                    Registered Location: {company.registeredLocation}
+                  </p>
+                  <p className="mt-2 text-sm font-semibold leading-6 text-slate-600">
+                    Office / Warehouse: {company.officeWarehouseAddress}
+                  </p>
                 </div>
                 <a
                   href={company.mapLink}
@@ -587,13 +593,24 @@ function Footer() {
   );
 }
 
+const footerHrefByLabel: Record<string, string> = {
+  "Toner Cartridge": "/products?category=Toner%20Cartridge",
+  "Copier Spare Parts": "/products?category=Copier%20Spare%20Parts",
+  "Copier Machine": "/products?category=Copier%20Machine",
+  "Drum Unit / Fuser Unit": "/products?category=Drum%20Unit",
+  "About Us": "/about",
+  "Factory": "/factory-tour",
+  "Quality Control": "/quality-control",
+  "Blog": "/blog"
+};
+
 function FooterColumn({ title, links }: { title: string; links: readonly string[] }) {
   return (
     <div>
       <h3 className="text-sm font-black uppercase tracking-wide text-white">{title}</h3>
       <div className="mt-5 grid gap-3 text-sm text-slate-300">
         {links.map((link) => (
-          <a key={link} href="#products" className="hover:text-white">
+          <a key={link} href={footerHrefByLabel[link] ?? "/products"} className="hover:text-white">
             {link}
           </a>
         ))}

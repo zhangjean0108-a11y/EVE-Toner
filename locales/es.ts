@@ -18,8 +18,8 @@ export const es = {
       { key: "home", label: "Inicio", href: "/" },
       { key: "products", label: "Productos", href: "/products" },
       { key: "applications", label: "Aplicaciones", href: "/#applications" },
-      { key: "about", label: "Empresa", href: "/#about" },
-      { key: "factory", label: "Fábrica", href: "/#factory" },
+      { key: "about", label: "Empresa", href: "/about" },
+      { key: "factory", label: "Fábrica", href: "/factory-tour" },
       { key: "blog", label: "Blog", href: "/blog" },
       { key: "contact", label: "Contacto", href: "/#contact" }
     ],

@@ -13,10 +13,12 @@ export function JsonLd() {
     telephone: company.phone,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Zhongshan",
+      addressLocality: "Zhuhai",
       addressRegion: "Guangdong",
       addressCountry: "CN"
-    }
+    },
+    description:
+      "Zhuhai Eve Technology Co., Ltd. operates the EVE Toner brand, supplying compatible copier toner cartridges, toner powder, drum units, fuser units and copier spare parts for global B2B buyers."
   };
 
   const website = {

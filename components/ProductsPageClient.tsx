@@ -3,12 +3,24 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Filter, Search } from "lucide-react";
-import { useMemo, useState } from "react";
-import type { Product } from "@/data/products";
-import { getProductCanonicalSlug, getProductImageAlt } from "@/lib/product-seo";
+import { useEffect, useMemo, useState } from "react";
+
+export type CatalogProductCard = {
+  id: string;
+  name: string;
+  category: string;
+  brand: string;
+  price: string;
+  moq: string;
+  image: string;
+  canonicalSlug: string;
+  imageAlt: string;
+};
+
+const PAGE_SIZE = 48;
 
 type ProductsPageClientProps = {
-  products: Product[];
+  products: CatalogProductCard[];
   categories: string[];
   initialCategory?: string;
 };
@@ -17,6 +29,7 @@ export function ProductsPageClient({ products, categories, initialCategory = "Al
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState(initialCategory);
   const [brand, setBrand] = useState("All");
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const categoryOptions = useMemo(() => ["All", ...categories], [categories]);
   const brands = useMemo(() => ["All", ...Array.from(new Set(products.map((item) => item.brand)))], [products]);
@@ -36,6 +49,11 @@ export function ProductsPageClient({ products, categories, initialCategory = "Al
       return matchesQuery && matchesCategory && matchesBrand;
     });
   }, [brand, category, products, query]);
+  const visibleProducts = filteredProducts.slice(0, visibleCount);
+
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [brand, category, query]);
 
   return (
     <section className="container-page py-10 md:py-14">
@@ -69,8 +87,8 @@ export function ProductsPageClient({ products, categories, initialCategory = "Al
       </div>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {filteredProducts.map((product) => {
-          const productHref = `/products/${getProductCanonicalSlug(product)}`;
+        {visibleProducts.map((product) => {
+          const productHref = `/products/${product.canonicalSlug}`;
           return (
           <article
             key={product.id}
@@ -80,7 +98,7 @@ export function ProductsPageClient({ products, categories, initialCategory = "Al
               <div className="aspect-square bg-white p-4">
                 <Image
                   src={product.image}
-                  alt={getProductImageAlt(product)}
+                  alt={product.imageAlt}
                   width={350}
                   height={350}
                   className="h-full w-full object-contain transition duration-500 group-hover:scale-105"
@@ -129,6 +147,18 @@ export function ProductsPageClient({ products, categories, initialCategory = "Al
           );
         })}
       </div>
+
+      {visibleProducts.length < filteredProducts.length ? (
+        <div className="mt-8 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}
+            className="inline-flex h-12 items-center justify-center gap-2 rounded-md border border-[var(--brand-cyan)] bg-white px-6 text-sm font-black text-[var(--brand-cyan)] transition hover:bg-cyan-50"
+          >
+            Show more products <ArrowRight size={16} />
+          </button>
+        </div>
+      ) : null}
 
       <div className="mt-10 rounded-lg border border-slate-200 bg-white p-6 text-center shadow-sm md:p-8">
         <h2 className="text-2xl font-black text-slate-950">Need a product recommendation?</h2>

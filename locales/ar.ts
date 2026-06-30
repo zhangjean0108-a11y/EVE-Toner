@@ -10,8 +10,8 @@ export const ar = {
       { key: "home", label: "الرئيسية", href: "/" },
       { key: "products", label: "المنتجات", href: "/products" },
       { key: "applications", label: "التطبيقات", href: "/#applications" },
-      { key: "about", label: "من نحن", href: "/#about" },
-      { key: "factory", label: "المصنع", href: "/#factory" },
+      { key: "about", label: "من نحن", href: "/about" },
+      { key: "factory", label: "المصنع", href: "/factory-tour" },
       { key: "blog", label: "المدونة", href: "/blog" },
       { key: "contact", label: "اتصل بنا", href: "/#contact" }
     ],

@@ -10,8 +10,8 @@ export const ko = {
       { key: "home", label: "홈", href: "/" },
       { key: "products", label: "제품", href: "/products" },
       { key: "applications", label: "적용 분야", href: "/#applications" },
-      { key: "about", label: "회사 소개", href: "/#about" },
-      { key: "factory", label: "공장", href: "/#factory" },
+      { key: "about", label: "회사 소개", href: "/about" },
+      { key: "factory", label: "공장", href: "/factory-tour" },
       { key: "blog", label: "블로그", href: "/blog" },
       { key: "contact", label: "연락처", href: "/#contact" }
     ],

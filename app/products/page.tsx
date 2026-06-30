@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { ProductsPageClient } from "@/components/ProductsPageClient";
 import { productCatalogCategories, products } from "@/data/products";
-import { getProductCanonicalSlug } from "@/lib/product-seo";
+import { getProductCanonicalSlug, getProductImageAlt } from "@/lib/product-seo";
 import { socialImage, siteUrl } from "@/lib/site-url";
 
 type ProductsPageProps = {
@@ -11,22 +11,61 @@ type ProductsPageProps = {
   }>;
 };
 
+const categorySeoCopy: Record<string, { title: string; description: string }> = {
+  "Toner Cartridge": {
+    title: "Compatible Toner Cartridge Supplier for Dealers | EVE Toner",
+    description:
+      "Browse compatible toner cartridge supply for copier dealers, importers and Africa or Middle East distributors. Model matching, export packing, OEM/ODM support and fast B2B quotation."
+  },
+  "Toner Powder": {
+    title: "Copier Toner Powder Supplier for Refilling Buyers | EVE Toner",
+    description:
+      "Source copier toner powder for refilling businesses, distributors and service channels. Confirm model use, color, packing, MOQ and export-ready quotation with EVE Toner."
+  },
+  "Drum Unit": {
+    title: "Copier Drum Unit Supplier for Repair Dealers | EVE Toner",
+    description:
+      "Browse compatible copier drum units for dealers, repair shops and spare parts importers. Confirm part codes, machine models, packing and bulk supply details before quotation."
+  },
+  "Developer Unit": {
+    title: "Copier Developer Unit Supplier for Service Dealers | EVE Toner",
+    description:
+      "Source copier developer units for repair dealers, maintenance teams and spare parts importers. Confirm model compatibility, part codes, packing and mixed order quotation."
+  },
+  "Fuser Unit": {
+    title: "Copier Fuser Unit Supplier for Spare Parts Dealers | EVE Toner",
+    description:
+      "Source copier fuser units for B2B spare parts dealers and service teams. Check voltage, model version, packing needs, MOQ and shipment preparation with EVE Toner."
+  },
+  "Copier Spare Parts": {
+    title: "Copier Spare Parts Supplier for Importers | EVE Toner",
+    description:
+      "Browse copier spare parts for dealers and importers, including drums, fuser units, rollers, chips and maintenance parts. Export packing and mixed model quotation support."
+  },
+  "Digital Press Ink": {
+    title: "HP Indigo Ink Supplier for Digital Press Buyers | EVE Toner",
+    description:
+      "Browse compatible HP Indigo ElectroInk and digital press ink products for print shops, ink distributors and importers. Confirm press series, ink code, color and export packing."
+  },
+  "Copier Machine": {
+    title: "Refurbished Copier Machine Supplier for Dealers | EVE Toner",
+    description:
+      "Browse copier machine supply for office equipment dealers and importers. Confirm model configuration, accessories, condition, packing and export quotation details."
+  }
+};
+
 export async function generateMetadata({ searchParams }: ProductsPageProps): Promise<Metadata> {
   const resolvedSearchParams = await searchParams;
   const requestedCategory = resolvedSearchParams?.category;
   const category =
     requestedCategory && productCatalogCategories.includes(requestedCategory) ? requestedCategory : undefined;
-  const isDigitalPressInk = category === "Digital Press Ink";
-  const title = isDigitalPressInk
-    ? "HP Indigo ElectroInk & Digital Press Ink Supplier | EVE Toner"
-    : category
-      ? `${category} Supplier for B2B Buyers | EVE Toner`
-      : "Products | Compatible Copier Toner & Spare Parts | EVE Toner";
-  const description = isDigitalPressInk
-    ? "Browse compatible HP Indigo ElectroInk and digital press ink products for B2B buyers. Model confirmation, export packing, OEM/ODM support and fast quotation from EVE Toner."
-    : category
-      ? `Browse EVE Toner ${category} products for B2B procurement, bulk supply, export packing and fast inquiry response.`
-      : "Browse EVE Toner product catalog, including toner cartridges, toner powder, drum units, developer units, copier machines and digital press ink.";
+  const categoryCopy = category ? categorySeoCopy[category] : undefined;
+  const title =
+    categoryCopy?.title ??
+    "Copier Toner & Spare Parts Supplier for Dealers | EVE Toner";
+  const description =
+    categoryCopy?.description ??
+    "Browse EVE Toner products for B2B procurement, including compatible toner cartridges, drum units, fuser units, copier spare parts, toner powder and HP Indigo Ink for global dealers.";
   const url = category ? `${siteUrl}/products?category=${encodeURIComponent(category)}` : `${siteUrl}/products`;
 
   return {
@@ -78,6 +117,17 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
       url: `${siteUrl}/products/${getProductCanonicalSlug(product)}`
     }))
   };
+  const catalogProductCards = products.map((product) => ({
+    id: product.id,
+    name: product.name,
+    category: product.category,
+    brand: product.brand,
+    price: product.price,
+    moq: product.moq,
+    image: product.image,
+    canonicalSlug: getProductCanonicalSlug(product),
+    imageAlt: getProductImageAlt(product)
+  }));
 
   return (
     <>
@@ -114,7 +164,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
           </div>
         </section>
         <ProductsPageClient
-          products={products}
+          products={catalogProductCards}
           categories={productCatalogCategories}
           initialCategory={initialCategory}
         />

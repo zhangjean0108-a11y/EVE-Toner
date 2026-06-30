@@ -10,8 +10,8 @@ export const de = {
       { key: "home", label: "Startseite", href: "/" },
       { key: "products", label: "Produkte", href: "/products" },
       { key: "applications", label: "Anwendungen", href: "/#applications" },
-      { key: "about", label: "Über Uns", href: "/#about" },
-      { key: "factory", label: "Fabrik", href: "/#factory" },
+      { key: "about", label: "Über Uns", href: "/about" },
+      { key: "factory", label: "Fabrik", href: "/factory-tour" },
       { key: "blog", label: "Blog", href: "/blog" },
       { key: "contact", label: "Kontakt", href: "/#contact" }
     ],

@@ -10,8 +10,8 @@ export const fr = {
       { key: "home", label: "Accueil", href: "/" },
       { key: "products", label: "Produits", href: "/products" },
       { key: "applications", label: "Applications", href: "/#applications" },
-      { key: "about", label: "À Propos", href: "/#about" },
-      { key: "factory", label: "Usine", href: "/#factory" },
+      { key: "about", label: "À Propos", href: "/about" },
+      { key: "factory", label: "Usine", href: "/factory-tour" },
       { key: "blog", label: "Blog", href: "/blog" },
       { key: "contact", label: "Contact", href: "/#contact" }
     ],
