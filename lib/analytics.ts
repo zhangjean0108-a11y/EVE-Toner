@@ -2,6 +2,7 @@ export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G
 
 export type ConversionEventName =
   | "whatsapp_click"
+  | "facebook_click"
   | "email_click"
   | "inquiry_click"
   | "inquiry_submit_success";

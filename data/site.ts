@@ -29,6 +29,9 @@ export const company = {
   email: "zhangjin@evecolor.net",
   phone: "+86 188 2439 3154",
   whatsapp: "008618824393154",
+  facebookUrl:
+    process.env.NEXT_PUBLIC_FACEBOOK_URL ||
+    "https://www.facebook.com/search/top?q=zhangjin%40evecolor.net",
   registeredLocation: "Zhuhai, Guangdong, China",
   officeWarehouseAddress:
     "4/F, Building 2, No.16 Qianjin 2nd Road, Tanzhou Town, Zhongshan City, Guangdong, China",
@@ -228,6 +231,7 @@ export const quoteBenefits = [
 
 export const contactLinks = [
   { icon: MessageCircle, label: "WhatsApp", value: company.whatsapp, href: createWhatsAppHref(company.whatsapp) },
+  { icon: Globe2, label: "Facebook", value: "Facebook", href: company.facebookUrl },
   { icon: Mail, label: "Email", value: company.email, href: `mailto:${company.email}` },
   { icon: MapPin, label: "Address", value: company.address, href: "#contact" },
   { icon: Download, label: "Catalog", value: "Download product catalog", href: "/images/konica-product-list.jpg" },

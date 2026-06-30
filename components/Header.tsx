@@ -51,6 +51,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const { dictionary: dict, t } = useTranslation();
   const whatsappHref = createWhatsAppHref(company.whatsapp);
+  const facebookHref = company.facebookUrl;
   const navItems = dict.header.nav;
   const megaProducts = dict.header.mega.products.map((product, index) => ({
     ...product,
@@ -204,6 +205,17 @@ export function Header() {
             <MessageCircle className="h-5 w-5 text-[#10a66a]" />
             {t("common.whatsapp")}
           </a>
+          <a
+            href={facebookHref}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-black text-slate-800 transition hover:text-[#1877f2]"
+          >
+            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#1877f2] text-sm font-black leading-none text-white">
+              f
+            </span>
+            Facebook
+          </a>
           <LanguageSwitcher />
         </div>
 
@@ -252,6 +264,15 @@ export function Header() {
               onClick={() => setOpen(false)}
             >
               {t("common.getQuote")}
+            </a>
+            <a
+              href={facebookHref}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-md border border-[#1877f2]/25 bg-[#1877f2]/8 px-4 py-3 text-center font-bold text-[#1877f2]"
+              onClick={() => setOpen(false)}
+            >
+              Facebook
             </a>
             <LanguageSwitcher compact />
           </nav>

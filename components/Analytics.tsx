@@ -24,6 +24,10 @@ function getTrackedClick(target: Element) {
     return { eventName: "whatsapp_click" as const, label, href };
   }
 
+  if (href.includes("facebook.com")) {
+    return { eventName: "facebook_click" as const, label, href };
+  }
+
   if (href.startsWith("mailto:")) {
     return { eventName: "email_click" as const, label, href };
   }
