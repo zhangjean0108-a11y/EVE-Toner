@@ -2,7 +2,12 @@
 
 import Script from "next/script";
 import { useEffect } from "react";
-import { GA_MEASUREMENT_ID, trackConversion, type ConversionEventName } from "@/lib/analytics";
+import {
+  GA_MEASUREMENT_ID,
+  GOOGLE_ADS_ID,
+  trackConversion,
+  type ConversionEventName
+} from "@/lib/analytics";
 
 type ConversionDetail = {
   eventName: ConversionEventName;
@@ -79,20 +84,23 @@ export function Analytics() {
     };
   }, []);
 
-  if (!GA_MEASUREMENT_ID) {
+  const gtagSourceId = GA_MEASUREMENT_ID || GOOGLE_ADS_ID;
+
+  if (!gtagSourceId) {
     return null;
   }
 
   return (
     <>
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} strategy="afterInteractive" />
+      <Script src={`https://www.googletagmanager.com/gtag/js?id=${gtagSourceId}`} strategy="afterInteractive" />
       <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           window.gtag = gtag;
           gtag('js', new Date());
-          gtag('config', '${GA_MEASUREMENT_ID}', { page_path: window.location.pathname });
+          ${GA_MEASUREMENT_ID ? `gtag('config', '${GA_MEASUREMENT_ID}', { page_path: window.location.pathname });` : ""}
+          ${GOOGLE_ADS_ID ? `gtag('config', '${GOOGLE_ADS_ID}');` : ""}
         `}
       </Script>
     </>
