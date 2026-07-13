@@ -1,5 +1,7 @@
 export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-NWB7CG4QTC";
-export const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "";
+export const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "AW-18285989362";
+const DEFAULT_GOOGLE_ADS_CONVERSION_LABEL =
+  process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL || "3tddCN6C_MccEPKbuI9E";
 
 export type ConversionEventName =
   | "whatsapp_click"
@@ -11,10 +13,12 @@ export type ConversionEventName =
 type ConversionEventParams = Record<string, string | number | boolean | undefined>;
 
 const googleAdsLabels: Partial<Record<ConversionEventName, string>> = {
-  inquiry_submit_success: process.env.NEXT_PUBLIC_GOOGLE_ADS_INQUIRY_SUBMIT_LABEL || "",
-  whatsapp_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_WHATSAPP_LABEL || "",
-  email_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_EMAIL_LABEL || "",
-  facebook_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_FACEBOOK_LABEL || ""
+  inquiry_submit_success:
+    process.env.NEXT_PUBLIC_GOOGLE_ADS_INQUIRY_SUBMIT_LABEL || DEFAULT_GOOGLE_ADS_CONVERSION_LABEL,
+  whatsapp_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_WHATSAPP_LABEL || DEFAULT_GOOGLE_ADS_CONVERSION_LABEL,
+  email_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_EMAIL_LABEL || DEFAULT_GOOGLE_ADS_CONVERSION_LABEL,
+  facebook_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_FACEBOOK_LABEL || DEFAULT_GOOGLE_ADS_CONVERSION_LABEL,
+  inquiry_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_INQUIRY_CLICK_LABEL || DEFAULT_GOOGLE_ADS_CONVERSION_LABEL
 };
 
 const ga4LeadEventNames: Partial<Record<ConversionEventName, string>> = {
