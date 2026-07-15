@@ -560,6 +560,101 @@ export const seoLandingPages: SeoLandingPage[] = [
     ]
   },
   {
+    slug: "copier-spare-parts-supplier-africa-dealers",
+    keyword: "copier spare parts supplier for Africa dealers",
+    title: "Copier Spare Parts Supplier for Africa Dealers | EVE Toner",
+    description:
+      "Source copier spare parts for Africa dealers and repair shops, including drum units, fuser units, developer units, rollers, chips and mixed export orders.",
+    h1: "Copier Spare Parts Supplier for Africa Dealers",
+    eyebrow: "Africa copier parts supply",
+    intro:
+      "EVE Toner helps Africa copier dealers, repair shops and importers source practical copier spare parts for local service demand, mixed shipments and repeat B2B stock planning.",
+    category: "Copier Spare Parts",
+    relatedBrands: ["Ricoh", "Canon", "Xerox", "Konica Minolta", "Sharp", "Toshiba"],
+    buyerTypes: ["Africa copier dealers", "Repair shops", "Office equipment resellers", "Importers"],
+    modelExamples: ["drum unit", "fuser unit", "developer unit", "feed roller", "waste toner box", "copier chip"],
+    sections: [
+      {
+        title: "Build spare parts lists from local service demand",
+        text:
+          "Africa dealers should prioritize copier spare parts for installed machines and repeated repair requests instead of importing a very broad slow-moving parts list."
+      },
+      {
+        title: "Confirm part numbers before quotation",
+        text:
+          "Send machine model, part number, photo if available, quantity, destination country and packing request so EVE Toner can check suitable drum units, fuser units, rollers, chips or related parts."
+      },
+      {
+        title: "Plan mixed toner and parts export orders",
+        text:
+          "Many Africa buyers combine toner cartridges, drum units, fuser units and selected spare parts in one shipment. Carton strength, marks and model labels should be confirmed before delivery."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can EVE Toner quote copier spare parts for Africa dealers?",
+        answer:
+          "Yes. Send copier model, part number, quantity, destination country and packing requirement for a practical B2B quotation."
+      },
+      {
+        question: "Which copier spare parts should Africa repair shops stock first?",
+        answer:
+          "Start with parts linked to common local machines and repeated service demand, such as drum units, fuser units, rollers, chips and waste toner boxes."
+      },
+      {
+        question: "Can spare parts ship together with toner cartridges?",
+        answer:
+          "Yes. Mixed toner cartridge and copier spare parts orders can be checked according to availability, MOQ and export packing requirements."
+      }
+    ]
+  },
+  {
+    slug: "copier-toner-supplier-middle-east-dealers",
+    keyword: "copier toner supplier for Middle East dealers",
+    title: "Copier Toner Supplier for Middle East Dealers | EVE Toner",
+    description:
+      "Compatible copier toner supply for Middle East dealers, with model selection, label discussion, export packing and mixed order quotation.",
+    h1: "Copier Toner Supplier for Middle East Dealers",
+    eyebrow: "Middle East dealer supply",
+    intro:
+      "EVE Toner helps Middle East copier dealers, office equipment resellers and importers source compatible copier toner cartridges, toner powder, drum units and fuser units for repeat B2B orders.",
+    category: "Toner Cartridge",
+    relatedBrands: ["Ricoh", "Canon", "Xerox", "Konica Minolta", "Kyocera", "Toshiba"],
+    buyerTypes: ["Middle East importers", "Copier dealers", "Office equipment resellers", "Repair shops"],
+    modelExamples: ["Ricoh IM series", "Canon imageRUNNER", "Xerox AltaLink", "Konica Minolta bizhub", "Kyocera TASKalfa"],
+    sections: [
+      {
+        title: "Match local copier fleets before ordering",
+        text:
+          "Middle East dealers should build purchase lists around installed copier models, fast-moving colors and service demand from local office equipment customers."
+      },
+      {
+        title: "Prepare labels, cartons and shipment details",
+        text:
+          "For export orders, buyers can discuss neutral packing, OEM/ODM labels, Arabic or English carton marks, moisture protection and mixed model packing before shipment."
+      },
+      {
+        title: "Support mixed consumables and spare parts inquiries",
+        text:
+          "EVE Toner can check toner cartridges, toner powder, drum units, fuser units and copier spare parts together so dealers can plan practical stock replenishment."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can EVE Toner quote copier toner for Middle East dealers?",
+        answer: "Yes. Send copier models, toner codes, color requirements, quantity, destination country and packing request for a practical B2B quotation."
+      },
+      {
+        question: "Can toner cartridges be ordered with drum units or fuser units?",
+        answer: "Yes. Mixed copier toner and spare parts orders can be checked according to availability, MOQ and packing requirements."
+      },
+      {
+        question: "Do you support private label packing for Middle East distributors?",
+        answer: "OEM/ODM or neutral packing can be discussed for qualified B2B orders according to product category, quantity and artwork requirements."
+      }
+    ]
+  },
+  {
     slug: "copier-drum-unit-supplier",
     keyword: "copier drum unit supplier",
     title: "Copier Drum Unit Supplier | EVE Toner",
@@ -692,38 +787,47 @@ export const seoLandingPages: SeoLandingPage[] = [
   },
   {
     slug: "copier-fuser-unit-supplier",
-    keyword: "copier fuser unit supplier",
-    title: "Copier Fuser Unit Supplier | EVE Toner",
+    keyword: "copier fuser unit supplier for parts dealers",
+    title: "Copier Fuser Unit Supplier for Parts Dealers | EVE Toner",
     description:
-      "Source compatible copier fuser units and fixing assemblies for repair, refurbishment and maintenance supply channels.",
-    h1: "Copier Fuser Unit Supplier",
+      "Source compatible copier fuser units and fixing assemblies for parts dealers, repair shops and maintenance supply channels.",
+    h1: "Copier Fuser Unit Supplier for Parts Dealers",
     eyebrow: "Fuser unit sourcing",
     intro:
-      "EVE Toner supports B2B buyers sourcing copier fuser units and fixing assemblies for repair and maintenance projects.",
+      "EVE Toner supports B2B buyers sourcing copier fuser units and fixing assemblies for repair shops, parts dealers and maintenance projects.",
     category: "Fuser Unit",
-    relatedBrands: ["Ricoh", "Canon", "Xerox", "Konica Minolta"],
-    buyerTypes: sharedBuyerTypes,
-    modelExamples: ["Fixing assembly", "Fuser film", "Fuser unit", "110V / 220V versions"],
+    relatedBrands: ["Ricoh", "Canon", "Xerox", "Konica Minolta", "Sharp", "Toshiba"],
+    buyerTypes: ["Copier parts dealers", "Repair shops", "Maintenance companies", "Importers"],
+    modelExamples: ["Fixing assembly", "Fuser film", "Fuser unit", "Pressure roller", "110V / 220V versions"],
     sections: [
       {
         title: "Confirm voltage and machine version",
         text:
-          "Fuser unit procurement should confirm copier model, voltage, region version and part number to avoid mismatch."
+          "Fuser unit procurement should confirm copier model, voltage, region version, part number and old unit photos to avoid mismatch before bulk purchase."
       },
       {
-        title: "Repair channel supply",
+        title: "Repair channel and dealer supply",
         text:
-          "These pages are written for service companies and parts dealers that need practical replacement supply."
+          "This page is written for service companies and copier parts dealers that need practical replacement supply for repeat repair demand."
+      },
+      {
+        title: "Pack fuser units for export handling",
+        text:
+          "Fuser units and fixing assemblies need stronger packing than ordinary toner cartridges. Buyers can discuss inner protection, carton marks and mixed spare parts shipment before quotation."
       }
     ],
     faqs: [
       {
         question: "What details are needed before ordering fuser units?",
-        answer: "Please provide machine model, part number, voltage, quantity and destination market."
+        answer: "Please provide machine model, part number, voltage, quantity, destination market and old unit photos if available."
       },
       {
         question: "Can EVE Toner help check fuser compatibility?",
         answer: "Yes. Our team can review the model and part code before quotation."
+      },
+      {
+        question: "Can fuser units be ordered with toner or drum units?",
+        answer: "Yes. Mixed copier spare parts orders can be checked according to model availability, MOQ and packing requirements."
       }
     ]
   },

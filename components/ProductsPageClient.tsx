@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Filter, Search } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 export type CatalogProductCard = {
   id: string;
@@ -51,9 +51,9 @@ export function ProductsPageClient({ products, categories, initialCategory = "Al
   }, [brand, category, products, query]);
   const visibleProducts = filteredProducts.slice(0, visibleCount);
 
-  useEffect(() => {
+  const resetVisibleCount = () => {
     setVisibleCount(PAGE_SIZE);
-  }, [brand, category, query]);
+  };
 
   return (
     <section className="container-page py-10 md:py-14">
@@ -63,13 +63,32 @@ export function ProductsPageClient({ products, categories, initialCategory = "Al
             <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" />
             <input
               value={query}
-              onChange={(event) => setQuery(event.target.value)}
+              onChange={(event) => {
+                setQuery(event.target.value);
+                resetVisibleCount();
+              }}
               placeholder="Search model, brand or product keyword"
               className="h-12 w-full rounded-md border border-slate-200 pl-12 pr-4 text-sm font-semibold outline-none transition focus:border-[var(--brand-cyan)] focus:ring-4 focus:ring-cyan-100"
             />
           </label>
-          <SelectFilter label="Category" value={category} options={categoryOptions} onChange={setCategory} />
-          <SelectFilter label="Brand" value={brand} options={brands} onChange={setBrand} />
+          <SelectFilter
+            label="Category"
+            value={category}
+            options={categoryOptions}
+            onChange={(value) => {
+              setCategory(value);
+              resetVisibleCount();
+            }}
+          />
+          <SelectFilter
+            label="Brand"
+            value={brand}
+            options={brands}
+            onChange={(value) => {
+              setBrand(value);
+              resetVisibleCount();
+            }}
+          />
         </div>
       </div>
 

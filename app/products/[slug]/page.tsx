@@ -38,7 +38,7 @@ import {
   getProductSeoTitle,
   getProductTypeText
 } from "@/lib/product-seo";
-import { siteUrl } from "@/lib/site-url";
+import { absoluteUrl, siteUrl, socialImageUrl } from "@/lib/site-url";
 import { createWhatsAppHref } from "@/lib/whatsapp";
 
 type ProductPageProps = {
@@ -74,13 +74,13 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
         description: seoPage.description,
         url: `${siteUrl}/products/${seoPage.slug}`,
         siteName: "EVE Toner",
-        images: ["/images/company-factory-collage.jpeg"]
+        images: [socialImageUrl]
       },
       twitter: {
         card: "summary_large_image",
         title: seoPage.title,
         description: seoPage.description,
-        images: ["/images/company-factory-collage.jpeg"]
+        images: [socialImageUrl]
       }
     };
   }
@@ -108,13 +108,13 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
       description: seoDescription,
       url: `${siteUrl}/products/${canonicalSlug}`,
       siteName: "EVE Toner",
-      images: [product.image]
+      images: [absoluteUrl(product.image)]
     },
     twitter: {
       card: "summary_large_image",
       title: seoTitle,
       description: seoDescription,
-      images: [product.image]
+      images: [absoluteUrl(product.image)]
     }
   };
 }
@@ -157,7 +157,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.name,
-    image: galleryImages,
+    image: galleryImages.map(absoluteUrl),
     url: `${siteUrl}/products/${canonicalSlug}`,
     brand: {
       "@type": "Brand",
@@ -458,6 +458,25 @@ function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
     name: page.h1,
     url: pageUrl,
     description: page.description,
+    image: socialImageUrl,
+    inLanguage: "en",
+    keywords: [page.keyword, page.category, ...page.relatedBrands, ...page.modelExamples].filter(Boolean).join(", "),
+    isPartOf: {
+      "@type": "WebSite",
+      name: "EVE Toner",
+      url: siteUrl
+    },
+    about: [
+      page.keyword,
+      page.category,
+      ...page.relatedBrands.slice(0, 4),
+      ...page.modelExamples.slice(0, 4)
+    ]
+      .filter(Boolean)
+      .map((name) => ({
+        "@type": "Thing",
+        name
+      })),
     mainEntity: {
       "@type": "ItemList",
       itemListElement: relatedProducts.slice(0, 6).map((product, index) => ({
@@ -632,9 +651,12 @@ function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
                   href={`/products/${getProductCanonicalSlug(product)}`}
                   className="group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:border-[var(--brand-cyan)] hover:shadow-xl hover:shadow-cyan-950/10"
                 >
-                  <img
+                  <Image
                     src={product.image}
                     alt={getProductImageAlt(product)}
+                    width={350}
+                    height={220}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="h-48 w-full bg-white object-contain p-4"
                   />
                   <div className="border-t border-slate-200 p-5">

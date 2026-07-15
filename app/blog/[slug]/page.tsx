@@ -6,7 +6,7 @@ import { Header } from "@/components/Header";
 import { blogArticles, getBlogArticle } from "@/data/blogs";
 import { getPrioritySeoLinksForBlog } from "@/data/seo-internal-links";
 import { company } from "@/data/site";
-import { siteUrl } from "@/lib/site-url";
+import { siteUrl, socialImageUrl } from "@/lib/site-url";
 import { createWhatsAppHref } from "@/lib/whatsapp";
 
 type BlogArticlePageProps = {
@@ -41,12 +41,14 @@ export async function generateMetadata({ params }: BlogArticlePageProps): Promis
       title: article.seoTitle,
       description: article.metaDescription,
       url: `${siteUrl}/blog/${article.slug}`,
-      siteName: "EVE Toner"
+      siteName: "EVE Toner",
+      images: [socialImageUrl]
     },
     twitter: {
       card: "summary_large_image",
       title: article.seoTitle,
-      description: article.metaDescription
+      description: article.metaDescription,
+      images: [socialImageUrl]
     }
   };
 }
@@ -69,17 +71,55 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
     "@type": "Article",
     headline: article.title,
     description: article.metaDescription,
+    image: [socialImageUrl],
+    keywords: article.keywords.join(", "),
+    articleSection: article.category,
     datePublished: article.date,
     dateModified: article.date,
-    mainEntityOfPage: `${siteUrl}/blog/${article.slug}`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/blog/${article.slug}`
+    },
+    about: article.keywords.map((keyword) => ({
+      "@type": "Thing",
+      name: keyword
+    })),
     author: {
       "@type": "Organization",
       name: company.legalName
     },
     publisher: {
       "@type": "Organization",
-      name: company.brand
+      name: company.brand,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/images/eve-toner-logo.png`
+      }
     }
+  };
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `${siteUrl}/blog`
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: article.title,
+        item: `${siteUrl}/blog/${article.slug}`
+      }
+    ]
   };
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -100,6 +140,7 @@ export default async function BlogArticlePage({ params }: BlogArticlePageProps) 
       <main className="bg-[linear-gradient(135deg,#f5fbfd_0%,#ffffff_48%,#fff8ea_100%)]">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
         <article>
           <section className="border-b border-slate-200 py-8 md:py-12">

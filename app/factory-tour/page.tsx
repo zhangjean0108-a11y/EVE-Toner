@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Header } from "@/components/Header";
 import { company, factoryHighlights } from "@/data/site";
-import { siteUrl } from "@/lib/site-url";
+import { siteUrl, socialImageUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = {
   title: "Factory Tour | EVE Toner Copier Consumables Supply",
@@ -18,7 +18,15 @@ export const metadata: Metadata = {
     description:
       "Factory and warehouse highlights for B2B buyers checking EVE Toner copier consumables supply capability.",
     url: `${siteUrl}/factory-tour`,
-    siteName: "EVE Toner"
+    siteName: "EVE Toner",
+    images: [socialImageUrl]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Factory Tour | EVE Toner Copier Consumables Supply",
+    description:
+      "Factory and warehouse highlights for B2B buyers checking EVE Toner copier consumables supply capability.",
+    images: [socialImageUrl]
   }
 };
 

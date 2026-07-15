@@ -19,10 +19,28 @@ export const prioritySeoPages: InternalSeoLink[] = [
     tags: ["africa", "bulk toner", "toner cartridge", "import guide"]
   },
   {
+    label: "Copier Spare Parts Supplier for Africa Dealers",
+    href: "/products/copier-spare-parts-supplier-africa-dealers",
+    description: "Export-focused spare parts page for African copier dealers and repair shops.",
+    tags: ["africa", "copier spare parts", "dealer", "repair shop", "drum unit", "fuser unit"]
+  },
+  {
+    label: "Copier Toner Supplier for Middle East Dealers",
+    href: "/products/copier-toner-supplier-middle-east-dealers",
+    description: "Export-focused page for Middle East dealers sourcing toner cartridges and copier spare parts.",
+    tags: ["middle east", "dealer", "toner cartridge", "copier spare parts", "import guide"]
+  },
+  {
     label: "Drum Unit Supplier for Copier Dealers",
     href: "/products/drum-unit-supplier-for-copier-dealers",
     description: "Commercial page for copier dealers buying drum units and imaging parts.",
     tags: ["drum unit", "copier spare parts", "dealer", "imaging unit"]
+  },
+  {
+    label: "Copier Fuser Unit Supplier for Parts Dealers",
+    href: "/products/copier-fuser-unit-supplier",
+    description: "Commercial page for copier parts dealers buying fuser units and fixing assemblies.",
+    tags: ["fuser unit", "copier spare parts", "dealer", "fixing assembly"]
   },
   {
     label: "HP Indigo Ink Supplier",

@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ClipboardCheck, PackageCheck, SearchCheck, ShieldCheck } from "lucide-react";
 import { Header } from "@/components/Header";
-import { siteUrl } from "@/lib/site-url";
+import { siteUrl, socialImageUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = {
   title: "Quality Control | Compatible Copier Toner & Parts | EVE Toner",
   description:
-    "Review EVE Toner quality control focus for compatible copier toner, drum units, fuser units and spare parts: model matching, sample checks, packing and shipment preparation.",
+    "Review EVE Toner quality control for compatible copier toner and parts: model matching, sample checks, packing and shipment preparation.",
   alternates: {
     canonical: "/quality-control"
   },
@@ -16,7 +16,15 @@ export const metadata: Metadata = {
     description:
       "Practical quality control process for B2B compatible copier toner and spare parts buyers.",
     url: `${siteUrl}/quality-control`,
-    siteName: "EVE Toner"
+    siteName: "EVE Toner",
+    images: [socialImageUrl]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Quality Control | Compatible Copier Toner & Parts | EVE Toner",
+    description:
+      "Practical quality control process for B2B compatible copier toner and spare parts buyers.",
+    images: [socialImageUrl]
   }
 };
 

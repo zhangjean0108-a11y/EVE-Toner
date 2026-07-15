@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, Building2, CalendarDays, Globe2, UsersRound } from "lucide-react";
 import { Header } from "@/components/Header";
-import { advantages, applications, company, productCategories } from "@/data/site";
-import { siteUrl } from "@/lib/site-url";
+import { advantages, company, productCategories } from "@/data/site";
+import { siteUrl, socialImageUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = {
   title: "About EVE Toner | Copier Toner Supplier for B2B Buyers",
   description:
-    "Learn about EVE Toner, operated by Zhuhai Eve Technology Co., Ltd., supplying compatible copier toner, drum units, fuser units and copier spare parts for global B2B buyers.",
+    "Learn about EVE Toner, a B2B supplier of compatible copier toner, drum units, fuser units and copier spare parts for global dealers.",
   alternates: {
     canonical: "/about"
   },
@@ -17,7 +17,15 @@ export const metadata: Metadata = {
     description:
       "Company profile for EVE Toner, a compatible copier toner and spare parts supplier serving importers, dealers and distributors.",
     url: `${siteUrl}/about`,
-    siteName: "EVE Toner"
+    siteName: "EVE Toner",
+    images: [socialImageUrl]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About EVE Toner | Copier Toner Supplier for B2B Buyers",
+    description:
+      "Company profile for EVE Toner, a compatible copier toner and spare parts supplier serving importers, dealers and distributors.",
+    images: [socialImageUrl]
   }
 };
 

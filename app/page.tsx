@@ -196,6 +196,16 @@ export default function Home() {
                   href: "/products/bulk-copier-toner-supplier-africa"
                 },
                 {
+                  query: "copier spare parts supplier for Africa dealers",
+                  text: "Source drum units, fuser units, rollers and copier chips for Africa repair demand.",
+                  href: "/products/copier-spare-parts-supplier-africa-dealers"
+                },
+                {
+                  query: "copier toner supplier for Middle East dealers",
+                  text: "Build dealer stock for Middle East markets with toner, drum units and export packing notes.",
+                  href: "/products/copier-toner-supplier-middle-east-dealers"
+                },
+                {
                   query: "HP Indigo ink supplier",
                   text: "Source compatible HP Indigo ElectroInk by press series, ink code and shipment requirement.",
                   href: "/products/hp-indigo-ink-supplier"
@@ -204,6 +214,11 @@ export default function Home() {
                   query: "drum unit supplier for copier dealers",
                   text: "Compare drum units, toner cartridges and common spare parts for dealer stock planning.",
                   href: "/products/drum-unit-supplier-for-copier-dealers"
+                },
+                {
+                  query: "copier fuser unit supplier for parts dealers",
+                  text: "Check voltage, part number and export packing before ordering fuser units.",
+                  href: "/products/copier-fuser-unit-supplier"
                 }
               ].map((item) => (
                 <Link

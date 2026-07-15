@@ -9,6 +9,7 @@ const urlList = [
   `https://${host}/factory-tour`,
   `https://${host}/quality-control`,
   `https://${host}/products`,
+  `https://${host}/products/copier-spare-parts-supplier-africa-dealers`,
   `https://${host}/blog`,
   `https://${host}/blog/inside-eve-toner-copier-consumables-supply-base`,
   `https://${host}/blog/eve-toner-quality-control-process-for-b2b-orders`,

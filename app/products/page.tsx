@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { ProductsPageClient } from "@/components/ProductsPageClient";
 import { productCatalogCategories, products } from "@/data/products";
 import { getProductCanonicalSlug, getProductImageAlt } from "@/lib/product-seo";
-import { socialImage, siteUrl } from "@/lib/site-url";
+import { absoluteUrl, socialImageUrl, siteUrl } from "@/lib/site-url";
 
 type ProductsPageProps = {
   searchParams?: Promise<{
@@ -79,13 +79,13 @@ export async function generateMetadata({ searchParams }: ProductsPageProps): Pro
       description,
       url,
       siteName: "EVE Toner",
-      images: [socialImage]
+      images: [socialImageUrl]
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [socialImage]
+      images: [socialImageUrl]
     }
   };
 }
@@ -101,21 +101,78 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
     initialCategory === "All"
       ? `${siteUrl}/products`
       : `${siteUrl}/products?category=${encodeURIComponent(initialCategory)}`;
-  const itemListJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name:
-      initialCategory === "All"
-        ? "EVE Toner Product Catalog"
-        : `${initialCategory} Supplier Product Catalog`,
-    url: pageUrl,
-    numberOfItems: catalogProducts.length,
-    itemListElement: catalogProducts.slice(0, 48).map((product, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
+  const pageTitle =
+    initialCategory === "All"
+      ? "EVE Toner Product Catalog"
+      : `${initialCategory} Supplier Product Catalog`;
+  const pageDescription =
+    initialCategory === "All"
+      ? "Compatible copier toner cartridges, toner powder, drum units, fuser units, copier spare parts and HP Indigo Ink for global B2B buyers."
+      : `Browse ${initialCategory.toLowerCase()} products from EVE Toner for copier dealers, importers and repair supply channels.`;
+  const itemListElement = catalogProducts.slice(0, 48).map((product, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    url: `${siteUrl}/products/${getProductCanonicalSlug(product)}`,
+    item: {
+      "@type": "Product",
       name: product.name,
+      image: absoluteUrl(product.image),
+      brand: {
+        "@type": "Brand",
+        name: product.brand
+      },
+      category: product.category,
       url: `${siteUrl}/products/${getProductCanonicalSlug(product)}`
-    }))
+    }
+  }));
+  const collectionPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: pageTitle,
+    url: pageUrl,
+    description: pageDescription,
+    image: socialImageUrl,
+    inLanguage: "en",
+    isPartOf: {
+      "@type": "WebSite",
+      name: "EVE Toner",
+      url: siteUrl
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      name: pageTitle,
+      url: pageUrl,
+      numberOfItems: catalogProducts.length,
+      itemListElement
+    }
+  };
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Products",
+        item: `${siteUrl}/products`
+      },
+      ...(initialCategory === "All"
+        ? []
+        : [
+            {
+              "@type": "ListItem",
+              position: 3,
+              name: initialCategory,
+              item: pageUrl
+            }
+          ])
+    ]
   };
   const catalogProductCards = products.map((product) => ({
     id: product.id,
@@ -135,7 +192,11 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
       <main className="bg-[linear-gradient(135deg,#f5fbfd_0%,#ffffff_45%,#fff7e8_100%)]">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
         />
         <section className="border-b border-slate-200 pt-12 md:pt-16">
           <div className="container-page grid gap-8 pb-10 md:grid-cols-[0.95fr_1.05fr] md:items-end">

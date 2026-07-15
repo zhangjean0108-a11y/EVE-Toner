@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight, BookOpen, SearchCheck } from "lucide-react";
 import { Header } from "@/components/Header";
 import { blogArticles } from "@/data/blogs";
-import { socialImage, siteUrl } from "@/lib/site-url";
+import { socialImageUrl, siteUrl } from "@/lib/site-url";
 
 export const metadata: Metadata = {
   title: "Copier Toner Buying Guides & Importer Blog | EVE Toner",
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
       "Practical B2B articles about compatible copier toner, copier spare parts, quality checks, bulk purchase and import planning.",
     url: `${siteUrl}/blog`,
     siteName: "EVE Toner",
-    images: [socialImage]
+    images: [socialImageUrl]
   },
   twitter: {
     card: "summary_large_image",
     title: "Copier Toner Buying Guides & Importer Blog | EVE Toner",
     description:
       "Practical B2B articles about compatible copier toner, copier spare parts, quality checks, bulk purchase and import planning.",
-    images: [socialImage]
+    images: [socialImageUrl]
   }
 };
 

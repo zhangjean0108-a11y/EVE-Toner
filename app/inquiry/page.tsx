@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { socialImage, siteUrl } from "@/lib/site-url";
+import { socialImageUrl, siteUrl } from "@/lib/site-url";
 import { InquiryPageClient } from "./InquiryPageClient";
 
 export const metadata: Metadata = {
@@ -16,14 +16,14 @@ export const metadata: Metadata = {
       "Send your copier toner, drum unit, fuser unit, toner powder or copier spare parts inquiry to EVE Toner.",
     url: `${siteUrl}/inquiry`,
     siteName: "EVE Toner",
-    images: [socialImage]
+    images: [socialImageUrl]
   },
   twitter: {
     card: "summary_large_image",
     title: "B2B Inquiry Form | EVE Toner",
     description:
       "Send your copier toner, drum unit, fuser unit, toner powder or copier spare parts inquiry to EVE Toner.",
-    images: [socialImage]
+    images: [socialImageUrl]
   }
 };
 
