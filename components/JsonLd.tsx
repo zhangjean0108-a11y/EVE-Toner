@@ -17,6 +17,7 @@ export function JsonLd() {
       addressRegion: "Guangdong",
       addressCountry: "CN"
     },
+    sameAs: [company.alibabaUrl, company.facebookUrl],
     description:
       "Zhuhai Eve Technology Co., Ltd. operates the EVE Toner brand, supplying compatible copier toner cartridges, toner powder, drum units, fuser units and copier spare parts for global B2B buyers."
   };

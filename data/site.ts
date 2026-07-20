@@ -29,6 +29,7 @@ export const company = {
   email: "zhangjin@evecolor.net",
   phone: "+86 188 2439 3154",
   whatsapp: "008618824393154",
+  alibabaUrl: "https://www.evetoner.cn/",
   facebookUrl: process.env.NEXT_PUBLIC_FACEBOOK_URL || "https://www.facebook.com/jean.zhang.577196",
   registeredLocation: "Zhuhai, Guangdong, China",
   officeWarehouseAddress:
