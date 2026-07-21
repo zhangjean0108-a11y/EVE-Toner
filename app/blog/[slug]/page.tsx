@@ -27,7 +27,11 @@ export async function generateMetadata({ params }: BlogArticlePageProps): Promis
 
   if (!article) {
     return {
-      title: "Blog Article Not Found | EVE Toner"
+      title: "Blog Article Not Found | EVE Toner",
+      robots: {
+        index: false,
+        follow: false
+      }
     };
   }
 

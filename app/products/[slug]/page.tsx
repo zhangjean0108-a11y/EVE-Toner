@@ -89,7 +89,11 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
 
   if (!product) {
     return {
-      title: "Product Not Found | EVE Toner"
+      title: "Product Not Found | EVE Toner",
+      robots: {
+        index: false,
+        follow: false
+      }
     };
   }
 
@@ -150,6 +154,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   const compatibleModels = getProductCompatibleModels(product);
   const packageSummary = getProductPackageSummary(product);
   const faqs = getProductFaqs(product);
+  const priceRange = getPriceRange(product.price);
   const productSeoLinks = getProductPageSeoLinks(product.category, product.brand);
   const productGuideLinks = getProductGuideLinks(product.category, product.brand);
   const relatedProducts = getRelatedProducts(product);
@@ -165,15 +170,19 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
     },
     category: product.category,
     description: productDescription,
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      seller: {
-        "@type": "Organization",
-        name: company.legalName
+    ...(priceRange && {
+      offers: {
+        "@type": "AggregateOffer",
+        priceCurrency: "USD",
+        lowPrice: priceRange.lowPrice,
+        highPrice: priceRange.highPrice,
+        offerCount: 1,
+        seller: {
+          "@type": "Organization",
+          name: company.legalName
+        }
       }
-    }
+    })
   };
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -441,6 +450,19 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
       </main>
     </>
   );
+}
+
+function getPriceRange(price: string) {
+  const values = price.match(/\d+(?:\.\d+)?/g)?.map(Number);
+
+  if (!values?.length || values.some((value) => !Number.isFinite(value))) {
+    return null;
+  }
+
+  return {
+    lowPrice: Math.min(...values),
+    highPrice: Math.max(...values)
+  };
 }
 
 function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
