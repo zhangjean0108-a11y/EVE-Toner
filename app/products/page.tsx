@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
 import { ProductsPageClient } from "@/components/ProductsPageClient";
 import { productCatalogCategories, products } from "@/data/products";
@@ -8,8 +9,13 @@ import { absoluteUrl, socialImageUrl, siteUrl } from "@/lib/site-url";
 type ProductsPageProps = {
   searchParams?: Promise<{
     category?: string;
+    brand?: string;
+    q?: string;
+    page?: string;
   }>;
 };
+
+const PAGE_SIZE = 24;
 
 const categorySeoCopy: Record<string, { title: string; description: string }> = {
   "Toner Cartridge": {
@@ -57,23 +63,34 @@ const categorySeoCopy: Record<string, { title: string; description: string }> = 
 export async function generateMetadata({ searchParams }: ProductsPageProps): Promise<Metadata> {
   const resolvedSearchParams = await searchParams;
   const requestedCategory = resolvedSearchParams?.category;
+  const requestedBrand = resolvedSearchParams?.brand;
+  const query = resolvedSearchParams?.q?.trim();
+  const page = Math.max(1, Number.parseInt(resolvedSearchParams?.page ?? "1", 10) || 1);
   const category =
     requestedCategory && productCatalogCategories.includes(requestedCategory) ? requestedCategory : undefined;
   const categoryCopy = category ? categorySeoCopy[category] : undefined;
-  const title =
+  const baseTitle =
     categoryCopy?.title ??
     "Copier Toner & Spare Parts Supplier for Dealers | EVE Toner";
+  const title = page > 1 ? `${baseTitle.replace(" | EVE Toner", "")} - Page ${page} | EVE Toner` : baseTitle;
   const description =
     categoryCopy?.description ??
     "Browse EVE Toner products for B2B procurement, including compatible toner cartridges, drum units, fuser units, copier spare parts, toner powder and HP Indigo Ink for global dealers.";
-  const url = category ? `${siteUrl}/products?category=${encodeURIComponent(category)}` : `${siteUrl}/products`;
+  const canonicalParams = new URLSearchParams();
+  if (category) canonicalParams.set("category", category);
+  if (page > 1 && !query && !requestedBrand) canonicalParams.set("page", String(page));
+  const canonicalSearch = canonicalParams.toString();
+  const canonicalPath = canonicalSearch ? `/products?${canonicalSearch}` : "/products";
+  const url = `${siteUrl}${canonicalPath}`;
+  const isFacetedResult = Boolean(query || requestedBrand);
 
   return {
     title,
     description,
     alternates: {
-      canonical: category ? `/products?category=${encodeURIComponent(category)}` : "/products"
+      canonical: canonicalPath
     },
+    robots: isFacetedResult ? { index: false, follow: true } : undefined,
     openGraph: {
       title,
       description,
@@ -93,10 +110,23 @@ export async function generateMetadata({ searchParams }: ProductsPageProps): Pro
 export default async function ProductsPage({ searchParams }: ProductsPageProps) {
   const resolvedSearchParams = await searchParams;
   const requestedCategory = resolvedSearchParams?.category;
+  const requestedBrand = resolvedSearchParams?.brand;
+  const query = resolvedSearchParams?.q?.trim() ?? "";
+  const requestedPage = Math.max(1, Number.parseInt(resolvedSearchParams?.page ?? "1", 10) || 1);
   const initialCategory =
     requestedCategory && productCatalogCategories.includes(requestedCategory) ? requestedCategory : "All";
-  const catalogProducts =
-    initialCategory === "All" ? products : products.filter((product) => product.category === initialCategory);
+  const allBrands = Array.from(new Set(products.map((product) => product.brand))).sort();
+  const initialBrand = requestedBrand && allBrands.includes(requestedBrand) ? requestedBrand : "All";
+  const normalizedQuery = query.toLowerCase();
+  const catalogProducts = products.filter((product) => {
+    const matchesCategory = initialCategory === "All" || product.category === initialCategory;
+    const matchesBrand = initialBrand === "All" || product.brand === initialBrand;
+    const matchesQuery = !normalizedQuery || `${product.name} ${product.brand} ${product.category}`.toLowerCase().includes(normalizedQuery);
+    return matchesCategory && matchesBrand && matchesQuery;
+  });
+  const totalPages = Math.max(1, Math.ceil(catalogProducts.length / PAGE_SIZE));
+  if (requestedPage > totalPages && catalogProducts.length > 0) notFound();
+  const pageProducts = catalogProducts.slice((requestedPage - 1) * PAGE_SIZE, requestedPage * PAGE_SIZE);
   const pageUrl =
     initialCategory === "All"
       ? `${siteUrl}/products`
@@ -109,9 +139,9 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
     initialCategory === "All"
       ? "Compatible copier toner cartridges, toner powder, drum units, fuser units, copier spare parts and HP Indigo Ink for global B2B buyers."
       : `Browse ${initialCategory.toLowerCase()} products from EVE Toner for copier dealers, importers and repair supply channels.`;
-  const itemListElement = catalogProducts.slice(0, 48).map((product, index) => ({
+  const itemListElement = pageProducts.map((product, index) => ({
     "@type": "ListItem",
-    position: index + 1,
+    position: (requestedPage - 1) * PAGE_SIZE + index + 1,
     url: `${siteUrl}/products/${getProductCanonicalSlug(product)}`,
     item: {
       "@type": "Product",
@@ -174,7 +204,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
           ])
     ]
   };
-  const catalogProductCards = products.map((product) => ({
+  const catalogProductCards = pageProducts.map((product) => ({
     id: product.id,
     name: product.name,
     category: product.category,
@@ -227,7 +257,13 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
         <ProductsPageClient
           products={catalogProductCards}
           categories={productCatalogCategories}
-          initialCategory={initialCategory}
+          brands={allBrands}
+          selectedCategory={initialCategory}
+          selectedBrand={initialBrand}
+          query={query}
+          currentPage={requestedPage}
+          totalPages={totalPages}
+          totalProducts={catalogProducts.length}
         />
       </main>
     </>
