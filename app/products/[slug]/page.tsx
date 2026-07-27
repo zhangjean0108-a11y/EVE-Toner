@@ -154,35 +154,25 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
   const compatibleModels = getProductCompatibleModels(product);
   const packageSummary = getProductPackageSummary(product);
   const faqs = getProductFaqs(product);
-  const priceRange = getPriceRange(product.price);
   const productSeoLinks = getProductPageSeoLinks(product.category, product.brand);
   const productGuideLinks = getProductGuideLinks(product.category, product.brand);
   const relatedProducts = getRelatedProducts(product);
+  const productUrl = `${siteUrl}/products/${canonicalSlug}`;
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
+    "@id": `${productUrl}#product`,
     name: product.name,
     image: galleryImages.map(absoluteUrl),
-    url: `${siteUrl}/products/${canonicalSlug}`,
+    url: productUrl,
+    sku: product.id,
     brand: {
       "@type": "Brand",
       name: product.brand
     },
     category: product.category,
     description: productDescription,
-    ...(priceRange && {
-      offers: {
-        "@type": "AggregateOffer",
-        priceCurrency: "USD",
-        lowPrice: priceRange.lowPrice,
-        highPrice: priceRange.highPrice,
-        offerCount: 1,
-        seller: {
-          "@type": "Organization",
-          name: company.legalName
-        }
-      }
-    })
+    offers: buildProductOffer(product, productUrl)
   };
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -453,7 +443,10 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 }
 
 function getPriceRange(price: string) {
-  const values = price.match(/\d+(?:\.\d+)?/g)?.map(Number);
+  const values = price
+    .replace(/,/g, "")
+    .match(/\d+(?:\.\d+)?/g)
+    ?.map(Number);
 
   if (!values?.length || values.some((value) => !Number.isFinite(value))) {
     return null;
@@ -462,6 +455,55 @@ function getPriceRange(price: string) {
   return {
     lowPrice: Math.min(...values),
     highPrice: Math.max(...values)
+  };
+}
+
+function buildProductOffer(product: Product, productUrl: string) {
+  const priceRange = getPriceRange(product.price);
+  const baseOffer = {
+    priceCurrency: "USD",
+    availability: "https://schema.org/InStock",
+    itemCondition: "https://schema.org/NewCondition",
+    url: productUrl,
+    seller: {
+      "@type": "Organization",
+      name: company.legalName,
+      url: siteUrl
+    }
+  };
+
+  if (priceRange) {
+    return {
+      "@type": "AggregateOffer",
+      ...baseOffer,
+      lowPrice: priceRange.lowPrice,
+      highPrice: priceRange.highPrice,
+      offerCount: 1
+    };
+  }
+
+  return {
+    "@type": "Offer",
+    ...baseOffer
+  };
+}
+
+function buildProductJsonLd(product: Product, productUrl: string, description = getProductMetaDescription(product)) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": `${productUrl}#product`,
+    name: product.name,
+    image: [product.image, ...product.gallery].filter(Boolean).map(absoluteUrl),
+    url: productUrl,
+    sku: product.id,
+    brand: {
+      "@type": "Brand",
+      name: product.brand
+    },
+    category: product.category,
+    description,
+    offers: buildProductOffer(product, productUrl)
   };
 }
 
@@ -504,8 +546,7 @@ function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
       itemListElement: relatedProducts.slice(0, 6).map((product, index) => ({
         "@type": "ListItem",
         position: index + 1,
-        url: `${siteUrl}/products/${getProductCanonicalSlug(product)}`,
-        name: product.name
+        item: buildProductJsonLd(product, `${siteUrl}/products/${getProductCanonicalSlug(product)}`)
       }))
     }
   };
