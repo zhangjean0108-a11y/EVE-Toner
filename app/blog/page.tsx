@@ -30,10 +30,62 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
+  const collectionPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Copier Toner Buying Guides for Importers",
+    url: `${siteUrl}/blog`,
+    description:
+      "Practical copier toner, drum unit, fuser unit and copier spare parts buying guides for importers, distributors and office equipment dealers.",
+    inLanguage: "en",
+    isPartOf: {
+      "@type": "WebSite",
+      name: "EVE Toner",
+      url: siteUrl
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      name: "EVE Toner B2B Buying Guides",
+      numberOfItems: blogArticles.length,
+      itemListElement: blogArticles.map((article, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: article.title,
+        url: `${siteUrl}/blog/${article.slug}`
+      }))
+    }
+  };
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `${siteUrl}/blog`
+      }
+    ]
+  };
+
   return (
     <>
       <Header />
       <main className="bg-[linear-gradient(135deg,#f5fbfd_0%,#ffffff_48%,#fff7e8_100%)]">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        />
         <section className="border-b border-slate-200 py-12 md:py-16">
           <div className="container-page grid gap-8 md:grid-cols-[0.92fr_1.08fr] md:items-end">
             <div>

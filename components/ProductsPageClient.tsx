@@ -158,8 +158,8 @@ function SelectFilter({ label, name, value, options }: { label: string; name: st
   return (
     <label className="grid gap-1">
       <span className="text-xs font-black uppercase tracking-wide text-slate-500">{label}</span>
-      <select name={name} defaultValue={value} className="h-12 rounded-md border border-slate-200 bg-white px-4 text-sm font-black text-slate-800 outline-none transition focus:border-[var(--brand-cyan)] focus:ring-4 focus:ring-cyan-100">
-        {options.map((option) => <option key={option} value={option}>{option}</option>)}
+      <select name={name} defaultValue={value === "All" ? "" : value} className="h-12 rounded-md border border-slate-200 bg-white px-4 text-sm font-black text-slate-800 outline-none transition focus:border-[var(--brand-cyan)] focus:ring-4 focus:ring-cyan-100">
+        {options.map((option) => <option key={option} value={option === "All" ? "" : option}>{option}</option>)}
       </select>
     </label>
   );

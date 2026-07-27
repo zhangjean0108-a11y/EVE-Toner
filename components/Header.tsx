@@ -27,23 +27,31 @@ import { createWhatsAppHref } from "@/lib/whatsapp";
 const megaProductIcons = [
   {
     icon: Printer,
-    href: "/products"
+    href: "/products?category=Toner%20Cartridge"
   },
   {
     icon: Boxes,
-    href: "/products"
+    href: "/products?category=Copier%20Spare%20Parts"
   },
   {
     icon: Layers3,
-    href: "/products"
+    href: "/products?category=Drum%20Unit"
   },
   {
     icon: Printer,
-    href: "/products"
+    href: "/products?category=Copier%20Machine"
   }
 ];
 
-const megaBrands = ["Ricoh", "Canon", "Xerox", "Konica Minolta", "Sharp", "Toshiba", "Kyocera"];
+const megaBrands = [
+  { name: "Ricoh", href: "/products/ricoh-compatible-toner-supplier" },
+  { name: "Canon", href: "/products/canon-compatible-toner-cartridge-supplier" },
+  { name: "Xerox", href: "/products/xerox-compatible-toner-supplier" },
+  { name: "Konica Minolta", href: "/products/konica-minolta-compatible-toner-supplier" },
+  { name: "Sharp", href: "/products/sharp-mx-61gt-mx-60gt-toner-supplier" },
+  { name: "Toshiba", href: "/products/toshiba-t-fc505-t-fc415-toner-supplier" },
+  { name: "Kyocera", href: "/products/kyocera-taskalfa-toner-cartridge-supplier" }
+];
 
 const megaAdvantageIcons = [Factory, Settings, ShieldCheck, Truck];
 
@@ -133,11 +141,11 @@ export function Header() {
                         <div className="mt-4 flex flex-wrap gap-2">
                           {megaBrands.map((brand) => (
                             <Link
-                              key={brand}
-                              href="/products"
+                              key={brand.name}
+                              href={brand.href}
                               className="rounded-full border border-slate-200 bg-white/80 px-3 py-2 text-xs font-bold text-slate-700 transition hover:border-[var(--brand-cyan)] hover:text-[var(--brand-cyan)]"
                             >
-                              {brand}
+                              {brand.name}
                             </Link>
                           ))}
                         </div>
