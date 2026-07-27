@@ -265,7 +265,7 @@ export default function Home() {
                 controls
                 playsInline
                 preload="none"
-                poster="/images/eve-home-banner-optimized.webp"
+                poster="/images/eve-home-video-poster.webp"
                 aria-label={dict.home.video.caption}
               >
                 <source src="/videos/eve-toner-home-video.mp4" type="video/mp4" />
