@@ -177,48 +177,53 @@ export default function Home() {
                 Long-tail Buyer Searches
               </p>
               <h2 className="mt-3 text-3xl font-black text-slate-950 md:text-4xl">
-                Procurement Topics for Google Buyers
+                Copier Brands & HP Indigo Ink We Supply
               </h2>
               <p className="mt-4 text-sm font-semibold leading-7 text-slate-600">
-                These pages answer specific search queries from importers, distributors and copier parts dealers instead of only targeting broad competitive keywords.
+                Browse our core supply range by copier brand and product type. These pages are intended for importers, distributors, copier dealers and service companies buying in bulk.
               </p>
             </div>
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
               {[
                 {
-                  query: "compatible Xerox C2265 toner cartridge supplier",
-                  text: "Find compatible Xerox toner cartridge options and supplier checks before bulk purchase.",
-                  href: "/products/compatible-xerox-c2265-toner-cartridge-supplier"
+                  query: "Xerox copier toner supplier",
+                  text: "Compatible Xerox toner cartridges, drum units and selected copier spare parts.",
+                  href: "/products/xerox-compatible-toner-supplier"
                 },
                 {
-                  query: "bulk copier toner supplier for Africa",
-                  text: "Plan copier toner imports for Africa with model selection, packing and shipment support.",
-                  href: "/products/bulk-copier-toner-supplier-africa"
+                  query: "Konica Minolta toner supplier",
+                  text: "Compatible toner, developer units and drum units for bizhub and production models.",
+                  href: "/products/konica-minolta-compatible-toner-supplier"
                 },
                 {
-                  query: "copier spare parts supplier for Africa dealers",
-                  text: "Source drum units, fuser units, rollers and copier chips for Africa repair demand.",
-                  href: "/products/copier-spare-parts-supplier-africa-dealers"
+                  query: "Canon copier toner cartridge supplier",
+                  text: "Compatible Canon copier toner cartridges for distributors and service channels.",
+                  href: "/products/canon-compatible-toner-cartridge-supplier"
                 },
                 {
-                  query: "copier toner supplier for Middle East dealers",
-                  text: "Build dealer stock for Middle East markets with toner, drum units and export packing notes.",
-                  href: "/products/copier-toner-supplier-middle-east-dealers"
+                  query: "Ricoh copier toner supplier",
+                  text: "Compatible Ricoh toner cartridges, toner powder and selected replacement parts.",
+                  href: "/products/ricoh-compatible-toner-supplier"
                 },
                 {
-                  query: "HP Indigo ink supplier",
-                  text: "Source compatible HP Indigo ElectroInk by press series, ink code and shipment requirement.",
+                  query: "Kyocera TASKalfa toner supplier",
+                  text: "Compatible Kyocera TK-series toner cartridges for TASKalfa copier dealers.",
+                  href: "/products/kyocera-taskalfa-toner-cartridge-supplier"
+                },
+                {
+                  query: "Sharp copier toner supplier",
+                  text: "Compatible Sharp MX-series toner cartridges for office copier supply channels.",
+                  href: "/products/sharp-mx-61gt-mx-60gt-toner-supplier"
+                },
+                {
+                  query: "Toshiba copier toner supplier",
+                  text: "Compatible Toshiba T-FC toner for e-STUDIO copier dealers and importers.",
+                  href: "/products/toshiba-t-fc505-t-fc415-toner-supplier"
+                },
+                {
+                  query: "HP Indigo ElectroInk supplier",
+                  text: "Compatible HP Indigo ElectroInk by press series, ink code, color and packing need.",
                   href: "/products/hp-indigo-ink-supplier"
-                },
-                {
-                  query: "drum unit supplier for copier dealers",
-                  text: "Compare drum units, toner cartridges and common spare parts for dealer stock planning.",
-                  href: "/products/drum-unit-supplier-for-copier-dealers"
-                },
-                {
-                  query: "copier fuser unit supplier for parts dealers",
-                  text: "Check voltage, part number and export packing before ordering fuser units.",
-                  href: "/products/copier-fuser-unit-supplier"
                 }
               ].map((item) => (
                 <Link

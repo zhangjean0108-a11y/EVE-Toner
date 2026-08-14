@@ -72,11 +72,11 @@ export async function generateMetadata({ searchParams }: ProductsPageProps): Pro
   const categoryCopy = category ? categorySeoCopy[category] : undefined;
   const baseTitle =
     categoryCopy?.title ??
-    "Copier Toner & Spare Parts Supplier for Dealers | EVE Toner";
+    "Copier Toner Cartridges & Parts by Brand | EVE Toner";
   const title = page > 1 ? `${baseTitle.replace(" | EVE Toner", "")} - Page ${page} | EVE Toner` : baseTitle;
   const description =
     categoryCopy?.description ??
-    "Browse EVE Toner products for B2B procurement, including compatible toner cartridges, drum units, fuser units, copier spare parts, toner powder and HP Indigo Ink for global dealers.";
+    "Source copier toner cartridges and parts for Xerox, Konica Minolta, Canon, Ricoh, Kyocera, Sharp and Toshiba, plus compatible HP Indigo ElectroInk.";
   const canonicalParams = new URLSearchParams();
   if (category) canonicalParams.set("category", category);
   if (page > 1 && !query && !requestedBrand) canonicalParams.set("page", String(page));
@@ -319,8 +319,10 @@ function buildProductOffer(product: Product, productUrl: string) {
   const priceRange = getPriceRange(product.price);
   const baseOffer = {
     priceCurrency: "USD",
-    availability: "https://schema.org/InStock",
-    itemCondition: "https://schema.org/NewCondition",
+    itemCondition:
+      product.category === "Copier Machine"
+        ? "https://schema.org/UsedCondition"
+        : "https://schema.org/NewCondition",
     url: productUrl,
     seller: {
       "@type": "Organization",

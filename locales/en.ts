@@ -47,7 +47,7 @@ export const en = {
       titlePrefix: "Compatible Copier Toner &",
       titleAccent: "Spare Parts",
       titleSuffix: "Supplier Since 2012",
-      lead: "EVE Toner supports global distributors, importers and office equipment service companies with compatible copier toner cartridges, toner powder, drum units, fuser units and copier spare parts.",
+      lead: "EVE Toner supplies compatible copier toner cartridges, machines and spare parts for Xerox, Konica Minolta, Canon, Ricoh, Kyocera, Sharp and Toshiba, plus HP Indigo ElectroInk for B2B buyers.",
       imageAlt: "Compatible copier toner and spare parts product system",
       points: [
         "Industry experience since 2012",

@@ -462,8 +462,10 @@ function buildProductOffer(product: Product, productUrl: string) {
   const priceRange = getPriceRange(product.price);
   const baseOffer = {
     priceCurrency: "USD",
-    availability: "https://schema.org/InStock",
-    itemCondition: "https://schema.org/NewCondition",
+    itemCondition:
+      product.category === "Copier Machine"
+        ? "https://schema.org/UsedCondition"
+        : "https://schema.org/NewCondition",
     url: productUrl,
     seller: {
       "@type": "Organization",

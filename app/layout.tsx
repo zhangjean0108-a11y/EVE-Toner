@@ -7,23 +7,31 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Compatible Copier Toner & Spare Parts Supplier | EVE Toner",
+  title: "Copier Toner Cartridge & HP Indigo Ink Supplier | EVE Toner",
   description:
-    "EVE Toner supplies compatible copier toner cartridges, toner powder, drum units, fuser units and spare parts for global B2B buyers.",
+    "B2B supplier of compatible copier toner cartridges and parts for Xerox, Konica Minolta, Canon, Ricoh, Kyocera, Sharp and Toshiba, plus HP Indigo ElectroInk.",
   keywords: [
     "copier toner supplier",
     "compatible copier toner",
     "wholesale copier toner",
     "copier spare parts supplier",
-    "drum unit and fuser unit supplier"
+    "drum unit and fuser unit supplier",
+    "Xerox copier toner supplier",
+    "Konica Minolta toner supplier",
+    "Canon copier toner cartridge",
+    "Ricoh copier toner supplier",
+    "Kyocera toner cartridge supplier",
+    "Sharp copier toner supplier",
+    "Toshiba copier toner supplier",
+    "HP Indigo ElectroInk supplier"
   ],
   alternates: {
     canonical: "/"
   },
   openGraph: {
-    title: "Compatible Copier Toner & Spare Parts Supplier | EVE Toner",
+    title: "Copier Toner Cartridge & HP Indigo Ink Supplier | EVE Toner",
     description:
-      "Compatible copier toner cartridges, toner powder and copier spare parts for importers, dealers, distributors and office equipment service companies.",
+      "Compatible copier toner cartridges and parts for Xerox, Konica Minolta, Canon, Ricoh, Kyocera, Sharp and Toshiba, plus HP Indigo ElectroInk.",
     url: siteUrl,
     siteName: "EVE Toner",
     type: "website",
@@ -31,9 +39,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Compatible Copier Toner & Spare Parts Supplier | EVE Toner",
+    title: "Copier Toner Cartridge & HP Indigo Ink Supplier | EVE Toner",
     description:
-      "Compatible copier toner cartridges, toner powder and copier spare parts for importers, dealers, distributors and office equipment service companies.",
+      "Compatible copier toner cartridges and parts for Xerox, Konica Minolta, Canon, Ricoh, Kyocera, Sharp and Toshiba, plus HP Indigo ElectroInk.",
     images: [socialImageUrl]
   }
 };
