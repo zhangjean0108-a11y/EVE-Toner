@@ -239,6 +239,37 @@ export default function Home() {
                 </Link>
               ))}
             </div>
+            <div className="lg:col-span-2">
+              <h3 className="text-sm font-black uppercase tracking-[0.14em] text-slate-950">
+                Popular copier toner model searches
+              </h3>
+              <p className="mt-2 max-w-3xl text-sm font-semibold leading-6 text-slate-600">
+                Go directly to model-specific sourcing pages for compatibility checks, mixed-model quotations and bulk export packing.
+              </p>
+              <nav className="mt-4 flex flex-wrap gap-2" aria-label="Popular copier toner model sourcing pages">
+                {[
+                  ["Xerox VersaLink C7020 / C7025 / C7030", "/products/xerox-versalink-c7020-c7025-c7030-toner-supplier"],
+                  ["Konica Minolta TN324 / TN512", "/products/konica-minolta-tn324-tn512-toner-supplier"],
+                  ["Konica Minolta TN622", "/products/konica-minolta-tn622-toner-supplier"],
+                  ["Canon NPG-67", "/products/canon-npg-67-toner-cartridge-supplier"],
+                  ["Canon NPG-71 / NPG-76", "/products/canon-npg-71-toner-cartridge-supplier"],
+                  ["Ricoh IM C2500 / IM C3000", "/products/ricoh-im-c2500-toner-cartridge-supplier"],
+                  ["Ricoh MP C3003 / MP C3503", "/products/ricoh-mp-c3003-toner-supplier"],
+                  ["Kyocera TK-8525 / TK-8335", "/products/kyocera-tk-8525-tk-8335-toner-supplier"],
+                  ["Sharp MX-61GT / MX-60GT", "/products/sharp-mx-61gt-mx-60gt-toner-supplier"],
+                  ["Toshiba T-FC505 / T-FC415", "/products/toshiba-t-fc505-t-fc415-toner-supplier"],
+                  ["HP Indigo Q4132D ElectroInk", "/products/hp-indigo-q4132d-electroink-supplier"]
+                ].map(([label, href]) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    className="rounded-full border border-cyan-200 bg-white px-4 py-2 text-sm font-bold text-slate-800 transition hover:border-[var(--brand-cyan)] hover:text-[var(--brand-cyan)]"
+                  >
+                    {label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
           </div>
         </section>
 

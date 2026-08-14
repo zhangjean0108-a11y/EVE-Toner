@@ -24,9 +24,20 @@ const PRIORITY_LANDING_PAGE_SLUGS = new Set([
   "hp-indigo-7000-7900-8000-electroink-supplier",
   "hp-indigo-3000-5000-series-electroink-supplier",
   "xerox-c60-c70-toner-supplier",
+  "xerox-altalink-c8030-c8035-c8045-toner-supplier",
   "xerox-versalink-c7020-c7025-c7030-toner-supplier",
   "canon-npg-67-toner-cartridge-supplier",
-  "kyocera-taskalfa-toner-cartridge-supplier"
+  "canon-npg-71-toner-cartridge-supplier",
+  "canon-npg-76-toner-cartridge-supplier",
+  "konica-minolta-tn324-tn512-toner-supplier",
+  "konica-minolta-tn622-toner-supplier",
+  "ricoh-im-c2500-toner-cartridge-supplier",
+  "ricoh-im-c3000-toner-supplier",
+  "ricoh-mp-c3003-toner-supplier",
+  "kyocera-taskalfa-toner-cartridge-supplier",
+  "kyocera-tk-8525-tk-8335-toner-supplier",
+  "sharp-mx-61gt-mx-60gt-toner-supplier",
+  "toshiba-t-fc505-t-fc415-toner-supplier"
 ]);
 
 const PRIORITY_PRODUCT_LIMIT = 30;
