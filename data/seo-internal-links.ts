@@ -19,6 +19,24 @@ export const prioritySeoPages: InternalSeoLink[] = [
     tags: ["africa", "bulk toner", "toner cartridge", "import guide"]
   },
   {
+    label: "Copier Toner Supplier for Kenya Dealers",
+    href: "/products/copier-toner-supplier-kenya",
+    description: "B2B toner, drum unit and spare-parts sourcing page for Kenya copier dealers and importers.",
+    tags: ["kenya", "africa", "toner cartridge", "copier spare parts", "dealer", "import guide"]
+  },
+  {
+    label: "Copier Toner Supplier for Brazil Dealers",
+    href: "/products/copier-toner-supplier-brazil",
+    description: "B2B toner, drum unit and spare-parts sourcing page for Brazil copier dealers and importers.",
+    tags: ["brazil", "south america", "toner cartridge", "copier spare parts", "dealer", "import guide"]
+  },
+  {
+    label: "HP Indigo Ink Supplier for Brazil",
+    href: "/products/hp-indigo-ink-supplier-brazil",
+    description: "Commercial ElectroInk sourcing page for Brazil digital print shops, distributors and importers.",
+    tags: ["brazil", "south america", "hp indigo", "electroink", "digital press ink", "ink supplier"]
+  },
+  {
     label: "Copier Spare Parts Supplier for Africa Dealers",
     href: "/products/copier-spare-parts-supplier-africa-dealers",
     description: "Export-focused spare parts page for African copier dealers and repair shops.",

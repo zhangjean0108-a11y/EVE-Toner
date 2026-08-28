@@ -560,6 +560,145 @@ export const seoLandingPages: SeoLandingPage[] = [
     ]
   },
   {
+    slug: "copier-toner-supplier-kenya",
+    keyword: "copier toner supplier Kenya",
+    title: "Copier Toner Supplier for Kenya Dealers | EVE Toner",
+    description:
+      "Source compatible copier toner, drum units and spare parts for Kenya dealers and importers. Confirm popular models, export packing and mixed-order quotations with EVE Toner.",
+    h1: "Copier Toner Supplier for Kenya Dealers",
+    eyebrow: "Kenya copier consumables supply",
+    intro:
+      "EVE Toner helps Kenya copier dealers, office equipment resellers and importers source compatible toner cartridges, drum units, fuser units and selected spare parts for repeat B2B purchasing.",
+    category: "Toner Cartridge",
+    relatedBrands: ["Xerox", "Ricoh", "Canon", "Konica Minolta", "Kyocera", "Sharp"],
+    buyerTypes: ["Kenya importers", "Copier dealers", "Office equipment resellers", "Repair shops"],
+    modelExamples: ["Xerox VersaLink", "Ricoh IM series", "Konica Minolta bizhub", "Canon imageRUNNER", "Kyocera TASKalfa"],
+    sections: [
+      {
+        title: "Build Kenya stock around installed copier models",
+        text:
+          "For Kenya dealer supply, start with machine models that customers and service technicians already request regularly. A focused toner list, then drum units and maintenance parts for the same installed base, is more practical than a broad slow-moving assortment."
+      },
+      {
+        title: "Prepare a clear mixed-order quotation",
+        text:
+          "Send the copier model, toner or part code, color, quantity and destination details. EVE Toner can help organize a mixed toner cartridge, drum unit, fuser unit and spare-parts quotation for procurement review."
+      },
+      {
+        title: "Confirm packing before export shipment",
+        text:
+          "Carton labels, item counts, product photos and packing requirements should be confirmed before shipment so Kenya importers can receive and identify stock more efficiently. OEM or private-label packing can be discussed for suitable B2B quantities."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can EVE Toner quote compatible copier toner for Kenya dealers?",
+        answer: "Yes. Send the machine model, toner code, color, quantity and packing request for a practical B2B quotation."
+      },
+      {
+        question: "Can Kenya buyers combine toner cartridges and copier spare parts?",
+        answer: "Yes. Mixed orders can be checked for available toner cartridges, drum units, fuser units and selected copier spare parts."
+      },
+      {
+        question: "What should a Kenya copier importer confirm before ordering?",
+        answer: "Confirm the local machine model, product code, color, quantity, packing needs and destination details before the quotation is finalized."
+      }
+    ]
+  },
+  {
+    slug: "copier-toner-supplier-brazil",
+    keyword: "copier toner supplier Brazil",
+    title: "Copier Toner Supplier for Brazil Dealers | EVE Toner",
+    description:
+      "Compatible copier toner, drum units and spare parts for Brazil dealers and importers. Request model confirmation, clear carton marking and mixed-order export quotations from EVE Toner.",
+    h1: "Copier Toner Supplier for Brazil Dealers",
+    eyebrow: "Brazil copier consumables supply",
+    intro:
+      "EVE Toner supports Brazil copier dealers, office equipment resellers and importers with compatible toner cartridges, drum units, fuser units and selected copier spare parts for planned B2B procurement.",
+    category: "Toner Cartridge",
+    relatedBrands: ["Konica Minolta", "Ricoh", "Xerox", "Canon", "Sharp", "Kyocera"],
+    buyerTypes: ["Brazil importers", "Copier dealers", "Office equipment resellers", "Repair shops"],
+    modelExamples: ["Konica Minolta bizhub C224 C284 C364", "Ricoh IM series", "Xerox AltaLink", "Canon imageRUNNER", "Sharp MX series"],
+    sections: [
+      {
+        title: "Check compatibility and color requirements first",
+        text:
+          "Brazil buyers should match the exact copier series, consumable code, color and regional version before purchasing compatible toner. This helps avoid incorrect stock and supports more reliable quotation comparison."
+      },
+      {
+        title: "Plan toner, drum unit and parts demand together",
+        text:
+          "Copier dealers can build a procurement list around repeat toner demand and add drum units, fuser units or replacement parts for the same machine families. EVE Toner can review mixed model lists before quotation."
+      },
+      {
+        title: "Agree on export packing and carton information",
+        text:
+          "Before shipment, buyers can confirm carton marks, product names, quantities and any applicable private-label packing requirements. Clear information supports warehouse receiving and resale planning for qualified B2B orders."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can EVE Toner supply compatible copier toner for Brazil?",
+        answer: "Yes. Brazil buyers can send copier model, toner code, color, quantity and packing requirement for a B2B quotation."
+      },
+      {
+        question: "Can Brazil dealers request drum units and fuser units with toner?",
+        answer: "Yes. Mixed toner, drum unit, fuser unit and selected spare-parts lists can be checked according to availability and packing needs."
+      },
+      {
+        question: "What details help confirm a compatible toner quotation?",
+        answer: "The copier model, cartridge or part code, color, quantity, destination and packing request help confirm suitable options."
+      }
+    ]
+  },
+  {
+    slug: "hp-indigo-ink-supplier-brazil",
+    keyword: "HP Indigo ink supplier Brazil",
+    title: "HP Indigo Ink Supplier for Brazil | EVE Toner",
+    description:
+      "Source compatible HP Indigo ElectroInk for Brazil print shops, distributors and importers. Confirm press series, ink code, color, packing and B2B export quotation with EVE Toner.",
+    h1: "HP Indigo Ink Supplier for Brazil Buyers",
+    eyebrow: "Brazil HP Indigo ElectroInk supply",
+    intro:
+      "EVE Toner helps Brazil digital print shops, ink distributors and importers source compatible HP Indigo ElectroInk by exact press series, ink code, color and planned purchase quantity.",
+    brand: "HP Indigo",
+    category: "Digital Press Ink",
+    relatedBrands: ["HP Indigo", "ElectroInk", "Digital Press", "Q4132D"],
+    buyerTypes: ["Brazil digital print shops", "Printing consumables distributors", "Importers", "Trade buyers"],
+    modelExamples: ["Q4132D", "HP Indigo 3000", "HP Indigo 5900", "HP Indigo 6000", "HP Indigo 7900", "HP Indigo 8000"],
+    sections: [
+      {
+        title: "Confirm the Brazil buyer's exact HP Indigo press",
+        text:
+          "HP Indigo ElectroInk is press-specific. Before quotation, Brazil buyers should provide the press model or series, required ink code, color and application details so the proposed compatible ink can be checked correctly."
+      },
+      {
+        title: "Keep ElectroInk sourcing separate from copier toner",
+        text:
+          "HP Indigo ElectroInk is a digital press consumable, not copier toner powder. Separating these requirements in the inquiry helps print shops and distributors receive a more accurate product and packing discussion."
+      },
+      {
+        title: "Plan packing information for B2B procurement",
+        text:
+          "For a Brazil HP Indigo ink inquiry, send the press model, ink code, color, quantity, destination and any carton or private-label request. Product photos, sealing condition and packing details can be discussed before shipment."
+      }
+    ],
+    faqs: [
+      {
+        question: "Can EVE Toner quote compatible HP Indigo ink for Brazil?",
+        answer: "Yes. Send the HP Indigo press model, required ink code, color, quantity and destination details for a B2B quotation."
+      },
+      {
+        question: "Which HP Indigo information should Brazil buyers provide?",
+        answer: "Provide the press series, ink code, color, planned quantity and packaging requirement so compatibility can be checked before quotation."
+      },
+      {
+        question: "Can HP Indigo ElectroInk be discussed with other printing consumables?",
+        answer: "Yes. Send a complete requirement list and EVE Toner can review compatible HP Indigo ink options and packing needs for the order."
+      }
+    ]
+  },
+  {
     slug: "copier-spare-parts-supplier-africa-dealers",
     keyword: "copier spare parts supplier for Africa dealers",
     title: "Copier Spare Parts Supplier for Africa Dealers | EVE Toner",

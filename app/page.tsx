@@ -224,6 +224,21 @@ export default function Home() {
                   query: "HP Indigo ElectroInk supplier",
                   text: "Compatible HP Indigo ElectroInk by press series, ink code, color and packing need.",
                   href: "/products/hp-indigo-ink-supplier"
+                },
+                {
+                  query: "Copier toner supplier for Kenya dealers",
+                  text: "Compatible toner, drum units and spare parts for Kenya dealer and importer stock planning.",
+                  href: "/products/copier-toner-supplier-kenya"
+                },
+                {
+                  query: "Copier toner supplier for Brazil dealers",
+                  text: "Compatible toner, drum units and spare parts for Brazil dealer and importer procurement.",
+                  href: "/products/copier-toner-supplier-brazil"
+                },
+                {
+                  query: "HP Indigo ink supplier for Brazil",
+                  text: "Compatible HP Indigo ElectroInk for Brazil digital print shops, distributors and importers.",
+                  href: "/products/hp-indigo-ink-supplier-brazil"
                 }
               ].map((item) => (
                 <Link
@@ -528,6 +543,19 @@ export default function Home() {
                   <p className="mt-2 text-sm font-semibold leading-6 text-slate-600">
                     Office / Warehouse: {company.officeWarehouseAddress}
                   </p>
+                  <div className="mt-5 border-t border-slate-200 pt-5">
+                    <p className="text-xs font-black uppercase tracking-[0.16em] text-[var(--brand-cyan)]">
+                      Two Production Bases
+                    </p>
+                    <p className="mt-3 text-sm font-semibold leading-6 text-slate-700">
+                      <span className="font-black text-slate-900">Copier Toner & Spare Parts:</span>{" "}
+                      {company.copierProductionAddress}
+                    </p>
+                    <p className="mt-3 text-sm font-semibold leading-6 text-slate-700">
+                      <span className="font-black text-slate-900">HP Indigo Ink:</span>{" "}
+                      {company.hpIndigoProductionAddress}
+                    </p>
+                  </div>
                 </div>
                 <a
                   href={company.mapLink}

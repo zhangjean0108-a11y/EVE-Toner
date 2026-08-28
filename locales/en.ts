@@ -90,8 +90,8 @@ export const en = {
       { title: "Fast Delivery & Support", text: "Stock preparation, shipping coordination and project support for global buyers." }
     ],
     factory: {
-      title: "Factory & Quality Control",
-      text: "Advanced equipment, clean production environment and strict testing procedures help every product meet practical export requirements.",
+      title: "Two Production Bases & Quality Control",
+      text: "Our copier toner and spare parts base in Zhongshan and HP Indigo Ink production base in Xiamen support specialized production, testing, packing and export supply.",
       cta: "View Factory Tour",
       highlights: [
         { title: "Warehouse", text: "Organized stock helps support repeated orders and urgent replenishment." },
@@ -160,7 +160,7 @@ export const en = {
       whatsappTitle: "Contact Us on WhatsApp",
       whatsappText: "Quick response for quotes, catalogs and support.",
       mapTitle: "Visit EVE Toner",
-      mapText: "Zhuhai Eve Technology Co., Ltd. is registered in Zhuhai, with office and warehouse support in Tanzhou Town, Zhongshan City.",
+      mapText: "Zhuhai Eve Technology Co., Ltd. is registered in Zhuhai and operates separate production bases for copier toner and spare parts in Zhongshan and HP Indigo Ink in Xiamen.",
       addressLabel: "Company Address",
       openMap: "Open in OpenStreetMap"
     },

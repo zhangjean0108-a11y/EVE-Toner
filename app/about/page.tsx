@@ -65,6 +65,8 @@ export default function AboutPage() {
                 <p>Registered company: {company.legalName}</p>
                 <p>Registered location: {company.registeredLocation}</p>
                 <p>Office and warehouse: {company.officeWarehouseAddress}</p>
+                <p>Copier toner and spare parts production base: {company.copierProductionAddress}</p>
+                <p>HP Indigo Ink production base: {company.hpIndigoProductionAddress}</p>
                 <p>
                   Main buyers include importers, dealers, distributors, office equipment service companies and
                   printing shops in markets such as {company.markets.join(", ")}.

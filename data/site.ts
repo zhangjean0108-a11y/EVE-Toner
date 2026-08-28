@@ -34,11 +34,17 @@ export const company = {
   registeredLocation: "Zhuhai, Guangdong, China",
   officeWarehouseAddress:
     "4/F, Building 2, No.16 Qianjin 2nd Road, Tanzhou Town, Zhongshan City, Guangdong, China",
+  copierProductionAddress:
+    "4/F, Building 2, No.16 Qianjin 2nd Road, Tanzhou Town, Zhongshan City, Guangdong, China",
+  hpIndigoProductionAddress:
+    "No. 79, Huli Industrial Park, Tong'an District, Xiamen, Fujian, China",
   address: "4/F, Building 2, No.16 Qianjin 2nd Road, Tanzhou Town, Zhongshan City, Guangdong, China",
   mapEmbedUrl:
     "https://www.openstreetmap.org/export/embed.html?bbox=113.4350%2C22.2200%2C113.5150%2C22.2900&layer=mapnik&marker=22.2550%2C113.4750",
   mapLink:
     "https://www.openstreetmap.org/search?query=4%2FF%2C%20Building%202%2C%20No.16%20Qianjin%202nd%20Road%2C%20Tanzhou%20Town%2C%20Zhongshan%20City%2C%20China",
+  hpIndigoMapLink:
+    "https://www.openstreetmap.org/search?query=No.%2079%2C%20Huli%20Industrial%20Park%2C%20Tong%27an%20District%2C%20Xiamen%2C%20Fujian%2C%20China",
   markets: [
     "Middle East",
     "Africa",
