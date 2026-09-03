@@ -16,21 +16,21 @@ export type Product = {
 
 export const products = [
   {
-    "id": "eve-hp-330-plotter-ink-cartridge-300ml",
-    "slug": "hp-330-compatible-plotter-ink-cartridge-300ml",
-    "name": "HP 330 Compatible Plotter Ink Cartridge 300ML for DesignJet Printers",
+    "id": "eve-hp-730-plotter-ink-cartridge-300ml",
+    "slug": "hp-730-compatible-plotter-ink-cartridge-300ml",
+    "name": "HP 730 Compatible Plotter Ink Cartridge 300ML for DesignJet Printers",
     "category": "Plotter Ink Cartridge",
     "brand": "HP",
     "price": "Contact for quote",
     "moq": "Contact sales",
     "sold180": 0,
-    "image": "/images/products/hp-330-plotter-ink-cartridge-set.jpg",
+    "image": "/images/products/hp-730-plotter-ink-cartridge-set.jpg",
     "gallery": [
-      "/images/products/hp-330-plotter-ink-cartridge-set.jpg",
-      "/images/products/hp-330-plotter-ink-cartridge-boxes.jpg"
+      "/images/products/hp-730-plotter-ink-cartridge-set.jpg",
+      "/images/products/hp-730-plotter-ink-cartridge-boxes.jpg"
     ],
     "unit": "piece",
-    "summary": "Compatible HP 330 plotter ink cartridge supply for DesignJet printing projects. Available for B2B buyers who need color matching, export packing and fast quotation support without a public unit price.",
+    "summary": "Compatible HP 730 plotter ink cartridge supply for DesignJet printing projects. Available for B2B buyers who need color matching, export packing and fast quotation support without a public unit price.",
     "features": [
       "Compatible plotter ink cartridge supply for HP DesignJet applications",
       "Color options can be confirmed by printer model, ink code and buyer requirement",
