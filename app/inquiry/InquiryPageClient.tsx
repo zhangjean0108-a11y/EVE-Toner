@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { ArrowRight, BadgeCheck, Clock3, Mail, MapPin, MessageCircle, ShieldCheck } from "lucide-react";
+import { ArrowRight, BadgeCheck, Clock3, Mail, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import { Header } from "@/components/Header";
 import { InquiryForm } from "@/components/InquiryForm";
 import { company } from "@/data/site";
@@ -58,6 +58,10 @@ export function InquiryPageClient() {
                 <a className="flex items-start gap-3 hover:text-[#10a66a]" href={whatsappHref}>
                   <MessageCircle className="mt-0.5 h-4 w-4 flex-none text-[#10a66a]" />
                   {t("common.whatsapp")} {company.whatsapp}
+                </a>
+                <a className="flex items-start gap-3 hover:text-[var(--brand-cyan)]" href={company.phoneHref}>
+                  <Phone className="mt-0.5 h-4 w-4 flex-none text-[var(--brand-cyan)]" />
+                  Phone {company.phone}
                 </a>
                 <a
                   className="flex items-start gap-3 hover:text-[var(--brand-cyan)]"

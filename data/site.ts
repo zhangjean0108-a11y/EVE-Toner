@@ -10,6 +10,7 @@ import {
   MapPin,
   MessageCircle,
   PackageCheck,
+  Phone,
   Printer,
   Send,
   Settings,
@@ -28,6 +29,7 @@ export const company = {
   contact: "Jean Zhang",
   email: "zhangjin@evecolor.net",
   phone: "+86 188 2439 3154",
+  phoneHref: "tel:+8618824393154",
   whatsapp: "+86 188 2439 3154",
   alibabaUrl: "https://www.evetoner.cn/",
   facebookUrl: process.env.NEXT_PUBLIC_FACEBOOK_URL || "https://www.facebook.com/jean.zhang.577196",
@@ -236,6 +238,7 @@ export const quoteBenefits = [
 
 export const contactLinks = [
   { icon: MessageCircle, label: "WhatsApp", value: company.whatsapp, href: createWhatsAppHref(company.whatsapp) },
+  { icon: Phone, label: "Phone", value: company.phone, href: company.phoneHref },
   { icon: Globe2, label: "Facebook", value: "Facebook", href: company.facebookUrl },
   { icon: Mail, label: "Email", value: company.email, href: `mailto:${company.email}` },
   { icon: MapPin, label: "Address", value: company.address, href: "#contact" },

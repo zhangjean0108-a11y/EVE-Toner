@@ -7,6 +7,7 @@ export type ConversionEventName =
   | "whatsapp_click"
   | "facebook_click"
   | "email_click"
+  | "phone_click"
   | "inquiry_click"
   | "inquiry_submit_success";
 
@@ -17,6 +18,7 @@ const googleAdsLabels: Partial<Record<ConversionEventName, string>> = {
     process.env.NEXT_PUBLIC_GOOGLE_ADS_INQUIRY_SUBMIT_LABEL || DEFAULT_GOOGLE_ADS_CONVERSION_LABEL,
   whatsapp_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_WHATSAPP_LABEL || DEFAULT_GOOGLE_ADS_CONVERSION_LABEL,
   email_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_EMAIL_LABEL || DEFAULT_GOOGLE_ADS_CONVERSION_LABEL,
+  phone_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_PHONE_LABEL || DEFAULT_GOOGLE_ADS_CONVERSION_LABEL,
   facebook_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_FACEBOOK_LABEL || DEFAULT_GOOGLE_ADS_CONVERSION_LABEL,
   inquiry_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_INQUIRY_CLICK_LABEL || DEFAULT_GOOGLE_ADS_CONVERSION_LABEL
 };
@@ -25,6 +27,7 @@ const ga4LeadEventNames: Partial<Record<ConversionEventName, string>> = {
   inquiry_submit_success: "generate_lead",
   whatsapp_click: "contact_whatsapp",
   email_click: "contact_email",
+  phone_click: "contact_phone",
   facebook_click: "contact_facebook",
   inquiry_click: "inquiry_click"
 };

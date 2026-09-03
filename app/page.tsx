@@ -11,6 +11,7 @@ import {
   Mail,
   MapPin,
   MessageCircle,
+  Phone,
   Send,
   Sparkles,
   UsersRound,
@@ -519,6 +520,13 @@ export default function Home() {
                   <a className="flex items-start gap-3 text-slate-700 hover:text-[var(--brand-cyan)]" href={whatsappHref}>
                     <MessageCircle className="mt-0.5 h-4 w-4 flex-none" /> {company.whatsapp}
                   </a>
+                  <a
+                    className="flex items-start gap-3 text-slate-700 hover:text-[var(--brand-cyan)]"
+                    href={company.phoneHref}
+                    aria-label={`Call EVE Toner at ${company.phone}`}
+                  >
+                    <Phone className="mt-0.5 h-4 w-4 flex-none" /> {company.phone}
+                  </a>
                 </div>
               </aside>
             </div>
@@ -656,12 +664,18 @@ function Footer() {
         <div>
           <h3 className="text-sm font-black uppercase tracking-wide text-white">{dict.home.footer.contact}</h3>
           <div className="mt-5 grid gap-3 text-sm text-slate-300">
-            {contactLinks.slice(0, 3).map((link) => (
+            {contactLinks.slice(0, 4).map((link) => (
               <a key={link.label} href={link.href} className="flex gap-3 hover:text-white">
                 <link.icon className="mt-0.5 h-4 w-4 flex-none text-[var(--brand-yellow)]" />
                 <span>{link.value}</span>
               </a>
             ))}
+            <p className="text-xs leading-5 text-slate-400">
+              Official phone for Google Ads verification: <br />
+              <a href={company.phoneHref} className="font-bold text-slate-200 hover:text-white">
+                {company.phone}
+              </a>
+            </p>
           </div>
         </div>
       </div>

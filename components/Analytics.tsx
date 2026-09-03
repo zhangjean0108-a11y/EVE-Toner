@@ -37,6 +37,10 @@ function getTrackedClick(target: Element) {
     return { eventName: "email_click" as const, label, href };
   }
 
+  if (href.startsWith("tel:")) {
+    return { eventName: "phone_click" as const, label, href };
+  }
+
   if (path === "/inquiry" || /quote|inquiry|rfq|requirements/i.test(label)) {
     return { eventName: "inquiry_click" as const, label, href };
   }

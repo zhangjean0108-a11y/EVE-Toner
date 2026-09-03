@@ -11,6 +11,7 @@ import {
   Layers3,
   Menu,
   MessageCircle,
+  Phone,
   Printer,
   Settings,
   ShieldCheck,
@@ -214,6 +215,14 @@ export function Header() {
             {t("common.whatsapp")}
           </a>
           <a
+            href={company.phoneHref}
+            className="hidden items-center gap-2 text-sm font-black text-slate-800 transition hover:text-[var(--brand-cyan)] xl:inline-flex"
+            aria-label={`Call EVE Toner at ${company.phone}`}
+          >
+            <Phone className="h-5 w-5 text-[var(--brand-cyan)]" />
+            <span>{company.phone}</span>
+          </a>
+          <a
             href={facebookHref}
             target="_blank"
             rel="noreferrer"
@@ -281,6 +290,13 @@ export function Header() {
               onClick={() => setOpen(false)}
             >
               Facebook
+            </a>
+            <a
+              href={company.phoneHref}
+              className="rounded-md border border-[var(--brand-cyan)]/25 bg-[var(--soft-cyan)] px-4 py-3 text-center font-bold text-[var(--brand-cyan)]"
+              onClick={() => setOpen(false)}
+            >
+              Call {company.phone}
             </a>
             <LanguageSwitcher compact />
           </nav>
