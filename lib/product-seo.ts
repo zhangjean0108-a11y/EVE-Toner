@@ -41,6 +41,7 @@ const CATEGORY_SLUGS: Record<string, string> = {
   "Developer Unit": "developer-unit",
   "Drum Unit": "drum-unit",
   "Fuser Unit": "fuser-unit",
+  "Plotter Ink Cartridge": "plotter-ink-cartridge",
   "Toner Cartridge": "toner-cartridge",
   "Toner Powder": "toner-powder"
 };
@@ -51,6 +52,7 @@ const CATEGORY_ALT_NAMES: Record<string, string> = {
   "Developer Unit": "developer unit",
   "Drum Unit": "drum unit",
   "Fuser Unit": "fuser unit",
+  "Plotter Ink Cartridge": "plotter ink cartridge",
   "Toner Cartridge": "toner cartridge",
   "Toner Powder": "toner powder"
 };
@@ -174,6 +176,10 @@ export function getProductPackageSummary(product: Product) {
 }
 
 export function getProductCanonicalSlug(product: Product) {
+  if (product.id.startsWith("eve-")) {
+    return product.slug;
+  }
+
   if (product.id === "1601829082310") {
     return `hp-indigo-q4132d-6000-8000-series-digital-press-ink-${product.id}`;
   }
@@ -212,8 +218,9 @@ export function getProductMetaDescription(product: Product) {
 
   const modelText = getProductModelText(product);
   const productType = getProductTypeText(product);
+  const application = product.category === "Plotter Ink Cartridge" ? "plotter and wide-format printing applications" : `${product.brand} copiers`;
 
-  return `Bulk supply of compatible ${modelText} ${productType} for ${product.brand} copiers. Stable quality, export packaging, OEM/ODM support and fast inquiry response from EVE Toner.`;
+  return `Bulk supply of compatible ${modelText} ${productType} for ${application}. Stable quality, export packaging, OEM/ODM support and fast inquiry response from EVE Toner.`;
 }
 
 export function getProductLongDescription(product: Product) {
@@ -225,6 +232,10 @@ export function getProductLongDescription(product: Product) {
 
   const modelText = getProductModelText(product);
   const category = getProductTypeText(product);
+
+  if (product.category === "Plotter Ink Cartridge") {
+    return `This compatible ${modelText} ${category} is supplied by EVE Toner for plotter, DesignJet and wide-format printing buyers who need stable ink supply, practical MOQ and export-ready packing. Before quotation, our team can help confirm printer model, ink color, cartridge capacity, packaging method and order quantity. For bulk orders, customers can request product photos, sample confirmation, packing review and shipment inspection support. Share your plotter model, required color list, target market and expected quantity to receive a practical quotation, lead time and packing suggestion. This page helps overseas buyers quickly understand product application, matching points and inquiry information before purchasing.`;
+  }
 
   return `This compatible ${modelText} ${category} is supplied by EVE Toner for ${product.brand} copier and printing applications. It is prepared for B2B buyers, copier dealers, service teams and importers who need stable supply, practical MOQ and export-ready packing. Before quotation, our team can help confirm model compatibility, color or part number requirements, packaging method and order quantity. For bulk orders, customers can request product photos, sample confirmation, factory testing information or shipment inspection support. Share your copier model, target market and expected quantity to receive a practical quotation, lead time and packing suggestion. This page is written to help overseas buyers quickly understand the product category, application, matching points and inquiry information needed before purchasing.`;
 }
