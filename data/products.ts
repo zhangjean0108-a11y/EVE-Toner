@@ -16,6 +16,30 @@ export type Product = {
 
 export const products = [
   {
+    "id": "eve-hp-330-plotter-ink-cartridge-300ml",
+    "slug": "hp-330-compatible-plotter-ink-cartridge-300ml",
+    "name": "HP 330 Compatible Plotter Ink Cartridge 300ML for DesignJet Printers",
+    "category": "Plotter Ink Cartridge",
+    "brand": "HP",
+    "price": "Contact for quote",
+    "moq": "Contact sales",
+    "sold180": 0,
+    "image": "/images/products/hp-330-plotter-ink-cartridge-set.jpg",
+    "gallery": [
+      "/images/products/hp-330-plotter-ink-cartridge-set.jpg",
+      "/images/products/hp-330-plotter-ink-cartridge-boxes.jpg"
+    ],
+    "unit": "piece",
+    "summary": "Compatible HP 330 plotter ink cartridge supply for DesignJet printing projects. Available for B2B buyers who need color matching, export packing and fast quotation support without a public unit price.",
+    "features": [
+      "Compatible plotter ink cartridge supply for HP DesignJet applications",
+      "Color options can be confirmed by printer model, ink code and buyer requirement",
+      "300ML cartridge packaging shown in product photos for reference",
+      "Bulk order support with export packing and shipment inspection",
+      "Fast WhatsApp and email quotation support for dealers and print service buyers"
+    ]
+  },
+  {
     "id": "1601020762463",
     "slug": "african-compatible-xerox-dcc560-c560-dcc-560-dcc-560-toner-cartridge-for-dc-c550-560-5-1601020762463",
     "name": "African Compatible Xerox DCC560 C560 DCC 560 DCC-560 Toner Cartridge for DC-C550 560 570 C570 C60 C70 Printer",
