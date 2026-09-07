@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { socialImageUrl, siteUrl } from "@/lib/site-url";
 import { InquiryPageClient } from "./InquiryPageClient";
 
@@ -27,10 +26,26 @@ export const metadata: Metadata = {
   }
 };
 
-export default function InquiryPage() {
+type InquiryPageProps = {
+  searchParams: Promise<{ product?: string | string[] }>;
+};
+
+export default async function InquiryPage({ searchParams }: InquiryPageProps) {
+  const productParam = (await searchParams).product;
+  const initialProduct = Array.isArray(productParam) ? productParam[0] ?? "" : productParam ?? "";
+  const pageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "EVE Toner B2B Inquiry Form",
+    url: `${siteUrl}/inquiry`,
+    description: metadata.description,
+    isPartOf: { "@type": "WebSite", name: "EVE Toner", url: siteUrl }
+  };
+
   return (
-    <Suspense fallback={null}>
-      <InquiryPageClient />
-    </Suspense>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }} />
+      <InquiryPageClient initialProduct={initialProduct} />
+    </>
   );
 }

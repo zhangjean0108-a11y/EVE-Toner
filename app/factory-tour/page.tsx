@@ -31,10 +31,21 @@ export const metadata: Metadata = {
 };
 
 export default function FactoryTourPage() {
+  const pageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "EVE Toner Factory Tour",
+    url: `${siteUrl}/factory-tour`,
+    description: metadata.description,
+    isPartOf: { "@type": "WebSite", name: "EVE Toner", url: siteUrl },
+    about: { "@type": "Organization", name: company.legalName, url: siteUrl }
+  };
+
   return (
     <>
       <Header />
       <main className="bg-[linear-gradient(135deg,#f5fbfd_0%,#ffffff_50%,#fff8ea_100%)]">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }} />
         <section className="border-b border-slate-200 py-12 md:py-16">
           <div className="container-page">
             <p className="text-xs font-black uppercase tracking-[0.24em] text-[var(--brand-cyan)]">Factory Tour</p>

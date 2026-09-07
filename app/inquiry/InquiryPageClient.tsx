@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { ArrowRight, BadgeCheck, Clock3, Mail, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import { Header } from "@/components/Header";
 import { InquiryForm } from "@/components/InquiryForm";
@@ -11,10 +10,12 @@ import { createWhatsAppHref } from "@/lib/whatsapp";
 
 const trustIcons = [BadgeCheck, ShieldCheck, Clock3];
 
-export function InquiryPageClient() {
+type InquiryPageClientProps = {
+  initialProduct: string;
+};
+
+export function InquiryPageClient({ initialProduct }: InquiryPageClientProps) {
   const { dictionary: dict, t } = useTranslation();
-  const searchParams = useSearchParams();
-  const initialProduct = searchParams.get("product") || "";
   const whatsappHref = createWhatsAppHref(company.whatsapp);
 
   return (

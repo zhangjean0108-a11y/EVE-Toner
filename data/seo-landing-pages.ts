@@ -564,7 +564,7 @@ export const seoLandingPages: SeoLandingPage[] = [
     keyword: "copier toner supplier Kenya",
     title: "Copier Toner Supplier for Kenya Dealers | EVE Toner",
     description:
-      "Source compatible copier toner, drum units and spare parts for Kenya dealers and importers. Confirm popular models, export packing and mixed-order quotations with EVE Toner.",
+      "Source compatible copier toner, drum units and spare parts for Kenya dealers. Confirm models, export packing and mixed-order quotations with EVE Toner.",
     h1: "Copier Toner Supplier for Kenya Dealers",
     eyebrow: "Kenya copier consumables supply",
     intro:
@@ -610,7 +610,7 @@ export const seoLandingPages: SeoLandingPage[] = [
     keyword: "copier toner supplier Brazil",
     title: "Copier Toner Supplier for Brazil Dealers | EVE Toner",
     description:
-      "Compatible copier toner, drum units and spare parts for Brazil dealers and importers. Request model confirmation, clear carton marking and mixed-order export quotations from EVE Toner.",
+      "Source compatible copier toner, drum units and spare parts for Brazil dealers. Confirm models, carton marking and mixed-order quotations with EVE Toner.",
     h1: "Copier Toner Supplier for Brazil Dealers",
     eyebrow: "Brazil copier consumables supply",
     intro:
@@ -656,7 +656,7 @@ export const seoLandingPages: SeoLandingPage[] = [
     keyword: "HP Indigo ink supplier Brazil",
     title: "HP Indigo Ink Supplier for Brazil | EVE Toner",
     description:
-      "Source compatible HP Indigo ElectroInk for Brazil print shops, distributors and importers. Confirm press series, ink code, color, packing and B2B export quotation with EVE Toner.",
+      "Source compatible HP Indigo ElectroInk for Brazil print shops and distributors. Confirm press series, ink code, color, packing and quotation with EVE Toner.",
     h1: "HP Indigo Ink Supplier for Brazil Buyers",
     eyebrow: "Brazil HP Indigo ElectroInk supply",
     intro:
