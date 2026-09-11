@@ -70,7 +70,7 @@ export const en = {
       { name: "Drum Unit", text: "Long life, high page yield, consistent output", alt: "Compatible drum unit" },
       { name: "Fuser Unit", text: "Stable fixing performance and durable quality", alt: "Compatible fuser unit" },
       { name: "Toner Powder", text: "Premium toner powder with consistent quality", alt: "CMYK copier toner powder" },
-      { name: "Digital Press Ink", text: "Compatible HP Indigo ElectroInk for digital press buyers", alt: "Compatible HP Indigo ElectroInk digital press ink" }
+      { name: "Hp Indigo Ink And Spare Parts", text: "HP Indigo ink and spare parts for digital press buyers", alt: "HP Indigo ink and spare parts CMYK digital press ink" }
     ],
     video: {
       eyebrow: "Product Video",
