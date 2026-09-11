@@ -123,7 +123,7 @@ export const productCategories = [
     name: "Hp Indigo Ink And Spare Parts",
     category: "Digital Press Ink",
     text: "HP Indigo ink and spare parts for digital press buyers",
-    image: "/images/category-hp-indigo-ink-spare-parts.webp",
+    image: "/images/category-hp-indigo-ink-spare-parts-20260911.webp",
     alt: "HP Indigo ink and spare parts CMYK digital press ink"
   }
 ];
