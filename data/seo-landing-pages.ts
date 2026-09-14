@@ -654,13 +654,13 @@ export const seoLandingPages: SeoLandingPage[] = [
   {
     slug: "hp-indigo-ink-supplier-brazil",
     keyword: "HP Indigo ink supplier Brazil",
-    title: "HP Indigo Ink Supplier for Brazil | EVE Toner",
+    title: "HP Indigo Ink & Spare Parts for Brazil | MOQ 1 | EVE Toner",
     description:
-      "Source compatible HP Indigo ElectroInk for Brazil print shops and distributors. Confirm press series, ink code, color, packing and quotation with EVE Toner.",
-    h1: "HP Indigo Ink Supplier for Brazil Buyers",
+      "Compatible HP Indigo ink and spare parts for Brazil buyers. Order from 1 unit with professional technical support and press-specific compatibility checks.",
+    h1: "HP Indigo Ink & Spare Parts for Brazil Buyers",
     eyebrow: "Brazil HP Indigo ElectroInk supply",
     intro:
-      "EVE Toner helps Brazil digital print shops, ink distributors and importers source compatible HP Indigo ElectroInk by exact press series, ink code, color and planned purchase quantity.",
+      "EVE Toner supplies compatible HP Indigo ink and spare parts for Brazil print shops, distributors and importers. Start from 1 unit, combine ink and parts in one inquiry, and work with our professional technical team on product matching and setup guidance.",
     brand: "HP Indigo",
     category: "Digital Press Ink",
     relatedBrands: ["HP Indigo", "ElectroInk", "Digital Press", "Q4132D"],
@@ -668,35 +668,56 @@ export const seoLandingPages: SeoLandingPage[] = [
     modelExamples: ["Q4132D", "HP Indigo 3000", "HP Indigo 5900", "HP Indigo 6000", "HP Indigo 7900", "HP Indigo 8000"],
     sections: [
       {
-        title: "Confirm the Brazil buyer's exact HP Indigo press",
-        text:
-          "HP Indigo ElectroInk is press-specific. Before quotation, Brazil buyers should provide the press model or series, required ink code, color and application details so the proposed compatible ink can be checked correctly."
+            "title": "Start with 1 unit",
+            "text": "The minimum order quantity is 1 unit. Ink is ordered in its listed sales pack, such as 1 box. Start with a small order to evaluate the selected compatible product on your press before planning repeat purchases."
       },
       {
-        title: "Keep ElectroInk sourcing separate from copier toner",
-        text:
-          "HP Indigo ElectroInk is a digital press consumable, not copier toner powder. Separating these requirements in the inquiry helps print shops and distributors receive a more accurate product and packing discussion."
+            "title": "Compatible ink with professional technical support",
+            "text": "EVE Toner supplies compatible alternatives for selected HP Indigo press applications. Our professional technical team helps review press model, ink code, color and machine configuration, and provides guidance on setup and product use. Confirm the required preparation with our team before installation."
       },
       {
-        title: "Plan packing information for B2B procurement",
-        text:
-          "For a Brazil HP Indigo ink inquiry, send the press model, ink code, color, quantity, destination and any carton or private-label request. Product photos, sealing condition and packing details can be discussed before shipment."
+            "title": "Order HP Indigo ink and spare parts together",
+            "text": "HP Indigo spare parts can be quoted alongside ink. Send the part number, machine model and clear photos of the existing part so our team can check the matching item and availability. Combine your ink and parts requirements in one inquiry."
+      },
+      {
+            "title": "Evaluate print quality against your current original ink",
+            "text": "Our focus is print quality comparable to original ink for the matched application. Begin with a 1-unit order and compare output on your own press, substrate and production job. Share the results and any operating issues with our technical team for support."
+      },
+      {
+            "title": "What to send for a precise quotation",
+            "text": "Send your press model, ink code and color, quantity, any spare-part numbers or photos, destination city and postal code. Include relevant machine configuration details or error messages if you need technical assistance. We will confirm product matching, packing and delivery arrangements with you."
+      },
+      {
+            "title": "Para compradores no Brasil: tinta e peças HP Indigo",
+            "text": "Fornecemos tinta compatível e peças para HP Indigo, com pedido mínimo de 1 unidade na embalagem de venda indicada. Nossa equipe técnica oferece orientação sobre compatibilidade, configuração e uso. Envie o modelo da máquina, código da tinta, cor, quantidade, códigos ou fotos das peças e CEP de destino para solicitar uma cotação."
       }
-    ],
+],
     faqs: [
       {
-        question: "Can EVE Toner quote compatible HP Indigo ink for Brazil?",
-        answer: "Yes. Send the HP Indigo press model, required ink code, color, quantity and destination details for a B2B quotation."
+            "question": "What is the minimum order for compatible HP Indigo ink?",
+            "answer": "The minimum order is 1 unit in the product's listed sales pack, for example 1 box of ink. You can begin with a small order before repeat purchasing."
       },
       {
-        question: "Which HP Indigo information should Brazil buyers provide?",
-        answer: "Provide the press series, ink code, color, planned quantity and packaging requirement so compatibility can be checked before quotation."
+            "question": "Can I use the ink directly on my HP Indigo press?",
+            "answer": "The product is intended for use on the matched press. Send your press model, ink code and machine configuration first; our technical team will confirm compatibility and whether setup or other preparation is required before use."
       },
       {
-        question: "Can HP Indigo ElectroInk be discussed with other printing consumables?",
-        answer: "Yes. Send a complete requirement list and EVE Toner can review compatible HP Indigo ink options and packing needs for the order."
+            "question": "Can I buy HP Indigo spare parts with the ink?",
+            "answer": "Yes. EVE Toner supplies HP Indigo ink and spare parts together. Send part numbers and photos so we can confirm suitable items and availability."
+      },
+      {
+            "question": "Do you provide technical support?",
+            "answer": "Yes. Our professional technical team supports product matching, setup guidance and troubleshooting for the supplied products. Share your machine details and the issue you need help with."
+      },
+      {
+            "question": "Are these original HP products?",
+            "answer": "These ink products are compatible alternatives supplied by EVE Toner, not original HP ink. Compatibility must be confirmed for the specific press and product. HP and HP Indigo are trademarks of their respective owner."
+      },
+      {
+            "question": "Posso comprar apenas 1 unidade e incluir peças?",
+            "answer": "Sim. O pedido mínimo é de 1 unidade na embalagem de venda do produto. Você pode solicitar tinta e peças na mesma cotação. Informe o modelo da máquina e os códigos necessários para confirmar a compatibilidade e a disponibilidade."
       }
-    ]
+]
   },
   {
     slug: "copier-spare-parts-supplier-africa-dealers",
@@ -833,13 +854,13 @@ export const seoLandingPages: SeoLandingPage[] = [
   {
     slug: "hp-indigo-ink-supplier",
     keyword: "HP Indigo ink supplier",
-    title: "HP Indigo Ink Supplier for Digital Press Buyers | EVE Toner",
+    title: "HP Indigo Ink & Spare Parts | MOQ 1 | EVE Toner",
     description:
-      "Compatible HP Indigo ink and ElectroInk sourcing for digital press buyers, including Q4132D, Series 2 applications, model confirmation and export support.",
-    h1: "HP Indigo Ink Supplier for Digital Press Buyers",
+      "Compatible HP Indigo ink and spare parts. Order from 1 unit with professional technical support and press-specific compatibility checks.",
+    h1: "HP Indigo Ink & Spare Parts with Technical Support",
     eyebrow: "HP Indigo ink sourcing",
     intro:
-      "EVE Toner supplies compatible HP Indigo ink and ElectroInk products for overseas print shops, distributors and importers that need model-based quotation and shipment preparation.",
+      "EVE Toner supplies compatible HP Indigo ink and spare parts for digital print shops, distributors and importers. Start from 1 unit, combine ink and parts in one inquiry, and work with our professional technical team on product matching and setup guidance.",
     brand: "HP Indigo",
     category: "Digital Press Ink",
     relatedBrands: ["HP Indigo", "ElectroInk", "Digital Press"],
@@ -847,35 +868,48 @@ export const seoLandingPages: SeoLandingPage[] = [
     modelExamples: ["Q4132D", "HP Indigo 3000", "HP Indigo 5900", "HP Indigo 6000", "HP Indigo 7900", "HP Indigo 8000"],
     sections: [
       {
-        title: "Confirm the exact HP Indigo press series",
-        text:
-          "HP Indigo ink sourcing should confirm whether the request is for Series 2, 6000/7000/7900/8000 series or another digital press application before quotation."
+            "title": "Start with 1 unit",
+            "text": "The minimum order quantity is 1 unit. Ink is ordered in its listed sales pack, such as 1 box. Start with a small order to evaluate the selected compatible product on your press before planning repeat purchases."
       },
       {
-        title: "Separate digital press ink from copier toner",
-        text:
-          "HP Indigo ElectroInk is different from copier toner powder. Buyers should send press model, ink code, color requirement and quantity to avoid mismatch."
+            "title": "Compatible ink with professional technical support",
+            "text": "EVE Toner supplies compatible alternatives for selected HP Indigo press applications. Our professional technical team helps review press model, ink code, color and machine configuration, and provides guidance on setup and product use. Confirm the required preparation with our team before installation."
       },
       {
-        title: "Shipment and storage preparation",
-        text:
-          "Before export, buyers can discuss product photos, sealing condition, label details, carton packing and shipping arrangement for digital press consumables."
+            "title": "Order HP Indigo ink and spare parts together",
+            "text": "HP Indigo spare parts can be quoted alongside ink. Send the part number, machine model and clear photos of the existing part so our team can check the matching item and availability. Combine your ink and parts requirements in one inquiry."
+      },
+      {
+            "title": "Evaluate print quality against your current original ink",
+            "text": "Our focus is print quality comparable to original ink for the matched application. Begin with a 1-unit order and compare output on your own press, substrate and production job. Share the results and any operating issues with our technical team for support."
+      },
+      {
+            "title": "What to send for a precise quotation",
+            "text": "Send your press model, ink code and color, quantity, any spare-part numbers or photos, destination city and postal code. Include relevant machine configuration details or error messages if you need technical assistance. We will confirm product matching, packing and delivery arrangements with you."
       }
-    ],
+],
     faqs: [
       {
-        question: "Can EVE Toner quote compatible HP Indigo ink?",
-        answer: "Yes. Send the HP Indigo press model, ink code, color requirement, quantity and destination country."
+            "question": "What is the minimum order for compatible HP Indigo ink?",
+            "answer": "The minimum order is 1 unit in the product's listed sales pack, for example 1 box of ink. You can begin with a small order before repeat purchasing."
       },
       {
-        question: "Is HP Indigo ElectroInk the same as copier toner powder?",
-        answer: "No. HP Indigo ElectroInk is used for selected digital press applications and should be sourced by exact press model and ink code."
+            "question": "Can I use the ink directly on my HP Indigo press?",
+            "answer": "The product is intended for use on the matched press. Send your press model, ink code and machine configuration first; our technical team will confirm compatibility and whether setup or other preparation is required before use."
       },
       {
-        question: "Do you supply HP Indigo ink for bulk orders?",
-        answer: "Yes. EVE Toner supports B2B quotation for print shops, distributors and importers."
+            "question": "Can I buy HP Indigo spare parts with the ink?",
+            "answer": "Yes. EVE Toner supplies HP Indigo ink and spare parts together. Send part numbers and photos so we can confirm suitable items and availability."
+      },
+      {
+            "question": "Do you provide technical support?",
+            "answer": "Yes. Our professional technical team supports product matching, setup guidance and troubleshooting for the supplied products. Share your machine details and the issue you need help with."
+      },
+      {
+            "question": "Are these original HP products?",
+            "answer": "These ink products are compatible alternatives supplied by EVE Toner, not original HP ink. Compatibility must be confirmed for the specific press and product. HP and HP Indigo are trademarks of their respective owner."
       }
-    ]
+]
   },
   {
     slug: "hp-indigo-q4132d-electroink-supplier",

@@ -640,7 +640,7 @@ function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
             <div className="rounded-xl border border-white/70 bg-white/78 p-6 shadow-xl shadow-cyan-950/10 backdrop-blur">
               <h2 className="text-xl font-black text-slate-950">Procurement Focus</h2>
               <div className="mt-5 grid gap-4">
-                <SeoInfo label="Target Keyword" value={page.keyword} />
+                <SeoInfo label="Product Focus" value={page.keyword} />
                 <SeoInfo label="Buyer Types" value={page.buyerTypes.join(", ")} />
                 <SeoInfo label="Related Brands" value={page.relatedBrands.join(", ")} />
                 <SeoInfo label="Model Examples" value={page.modelExamples.join(", ")} />
