@@ -553,15 +553,11 @@ export default function Home() {
                   </p>
                   <div className="mt-5 border-t border-slate-200 pt-5">
                     <p className="text-xs font-black uppercase tracking-[0.16em] text-[var(--brand-cyan)]">
-                      Two Production Bases
+                      Production Base
                     </p>
                     <p className="mt-3 text-sm font-semibold leading-6 text-slate-700">
                       <span className="font-black text-slate-900">Copier Toner & Spare Parts:</span>{" "}
                       {company.copierProductionAddress}
-                    </p>
-                    <p className="mt-3 text-sm font-semibold leading-6 text-slate-700">
-                      <span className="font-black text-slate-900">HP Indigo Ink:</span>{" "}
-                      {company.hpIndigoProductionAddress}
                     </p>
                   </div>
                 </div>

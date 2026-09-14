@@ -28,22 +28,12 @@ export function JsonLd() {
           addressRegion: "Guangdong",
           addressCountry: "CN"
         }
-      },
-      {
-        "@type": "Place",
-        name: "EVE Toner HP Indigo Ink Production Base",
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "No. 79, Huli Industrial Park, Tong'an District",
-          addressLocality: "Xiamen",
-          addressRegion: "Fujian",
-          addressCountry: "CN"
-        }
+
       }
     ],
     sameAs: [company.alibabaUrl, company.facebookUrl],
     description:
-      "Zhuhai Eve Technology Co., Ltd. operates the EVE Toner brand with separate production bases for compatible copier toner and spare parts, and HP Indigo ElectroInk supply."
+      "Zhuhai Eve Technology Co., Ltd. operates the EVE Toner brand, supplying compatible copier toner, spare parts, and HP Indigo ElectroInk."
   };
 
   const website = {
