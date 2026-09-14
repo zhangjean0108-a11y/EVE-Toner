@@ -112,7 +112,7 @@ export function InquiryForm({
       });
       const result = await response.json().catch(() => ({}));
 
-      if (!response.ok || result.ok === false) {
+      if (!response.ok || result.ok !== true) {
         throw new Error(result.message || "Submission failed.");
       }
 
@@ -122,7 +122,7 @@ export function InquiryForm({
           ? copy.previewSuccess
           : copy.success
       );
-      window.dispatchEvent(
+      if (!result.preview && !form.website) window.dispatchEvent(
         new CustomEvent("eve:conversion", {
           detail: {
             eventName: "inquiry_submit_success",

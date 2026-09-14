@@ -1,7 +1,7 @@
 export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-NWB7CG4QTC";
 export const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || "AW-18285989362";
-const DEFAULT_GOOGLE_ADS_CONVERSION_LABEL =
-  process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL || "3tddCN6C_MccEPKbuI9E";
+// Dedicated lead action; never reuse the legacy mixed-click conversion label.
+const INQUIRY_SUBMIT_LABEL = "91ggCKyUj_ccEPKbuI9E";
 
 export type ConversionEventName =
   | "whatsapp_click"
@@ -15,12 +15,7 @@ type ConversionEventParams = Record<string, string | number | boolean | undefine
 
 const googleAdsLabels: Partial<Record<ConversionEventName, string>> = {
   inquiry_submit_success:
-    process.env.NEXT_PUBLIC_GOOGLE_ADS_INQUIRY_SUBMIT_LABEL || DEFAULT_GOOGLE_ADS_CONVERSION_LABEL,
-  whatsapp_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_WHATSAPP_LABEL || DEFAULT_GOOGLE_ADS_CONVERSION_LABEL,
-  email_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_EMAIL_LABEL || DEFAULT_GOOGLE_ADS_CONVERSION_LABEL,
-  phone_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_PHONE_LABEL || DEFAULT_GOOGLE_ADS_CONVERSION_LABEL,
-  facebook_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_FACEBOOK_LABEL || DEFAULT_GOOGLE_ADS_CONVERSION_LABEL,
-  inquiry_click: process.env.NEXT_PUBLIC_GOOGLE_ADS_INQUIRY_CLICK_LABEL || DEFAULT_GOOGLE_ADS_CONVERSION_LABEL
+    INQUIRY_SUBMIT_LABEL
 };
 
 const ga4LeadEventNames: Partial<Record<ConversionEventName, string>> = {
@@ -69,8 +64,6 @@ export function trackConversion(eventName: ConversionEventName, params: Conversi
   if (GOOGLE_ADS_ID && googleAdsLabel) {
     window.gtag("event", "conversion", {
       send_to: `${GOOGLE_ADS_ID}/${googleAdsLabel}`,
-      value: eventName === "inquiry_submit_success" ? 1 : 0.2,
-      currency: "USD",
       ...eventParams
     });
   }
