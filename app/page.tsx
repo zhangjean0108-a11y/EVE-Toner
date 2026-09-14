@@ -240,7 +240,11 @@ export default function Home() {
                   query: "HP Indigo ink supplier for Brazil",
                   text: "Compatible HP Indigo ElectroInk for Brazil digital print shops, distributors and importers.",
                   href: "/products/hp-indigo-ink-supplier-brazil"
-                }
+                },
+                {"query": "HP Indigo ink & spare parts for Ireland", "text": "Order from 1 unit with press-specific matching and professional technical support.", "href": "/products/hp-indigo-ink-supplier-ireland"},
+                {"query": "HP Indigo ink & spare parts for México", "text": "Order from 1 unit with press-specific matching and professional technical support.", "href": "/products/hp-indigo-ink-supplier-mexico"},
+                {"query": "HP Indigo ink & spare parts for Chile", "text": "Order from 1 unit with press-specific matching and professional technical support.", "href": "/products/hp-indigo-ink-supplier-chile"},
+                {"query": "HP Indigo ink & spare parts for Ecuador", "text": "Order from 1 unit with press-specific matching and professional technical support.", "href": "/products/hp-indigo-ink-supplier-ecuador"}
               ].map((item) => (
                 <Link
                   key={item.query}

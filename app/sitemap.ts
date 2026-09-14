@@ -17,6 +17,11 @@ const PRIORITY_LANDING_PAGE_SLUGS = new Set([
   "copier-toner-supplier-kenya",
   "copier-toner-supplier-brazil",
   "hp-indigo-ink-supplier-brazil",
+  "hp-indigo-ink-supplier-ireland",
+  "hp-indigo-ink-supplier-mexico",
+  "hp-indigo-ink-supplier-chile",
+  "hp-indigo-ink-supplier-ecuador",
+
   "copier-spare-parts-supplier-africa-dealers",
   "copier-toner-supplier-middle-east-dealers",
   "copier-drum-unit-supplier",

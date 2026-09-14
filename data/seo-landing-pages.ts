@@ -1,5 +1,8 @@
+import { hpIndigoMarketPages } from "./hp-indigo-markets";
+
 export type SeoLandingPage = {
   slug: string;
+  language?: string;
   keyword: string;
   title: string;
   description: string;
@@ -1511,6 +1514,7 @@ export const seoLandingPages: SeoLandingPage[] = [
       }
     ]
   },
+  ...hpIndigoMarketPages,
   ...modelSeoLandingPages
 ];
 

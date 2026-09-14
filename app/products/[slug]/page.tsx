@@ -525,7 +525,7 @@ function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
     url: pageUrl,
     description: page.description,
     image: socialImageUrl,
-    inLanguage: "en",
+    inLanguage: page.language || "en",
     keywords: [page.keyword, page.category, ...page.relatedBrands, ...page.modelExamples].filter(Boolean).join(", "),
     isPartOf: {
       "@type": "WebSite",
@@ -592,7 +592,7 @@ function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
   return (
     <>
       <Header />
-      <main className="bg-[linear-gradient(135deg,#f6fbfd_0%,#ffffff_48%,#fff8ea_100%)]">
+      <main lang={page.language || "en"} className="bg-[linear-gradient(135deg,#f6fbfd_0%,#ffffff_48%,#fff8ea_100%)]">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
