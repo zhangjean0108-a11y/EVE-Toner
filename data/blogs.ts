@@ -60,6 +60,38 @@ const commonLinks = {
 
 export const blogArticles: BlogArticle[] = [
   {
+    slug: "hp-indigo-press-startup-customer-support-case",
+    title: "Helping a Customer Through an HP Indigo Press Startup Problem",
+    seoTitle: "HP Indigo Press Startup Support: Customer Story | EVE Toner",
+    metaDescription: "Read how EVE Toner assisted an HP Indigo customer with troubleshooting communication before the customer identified a blown fuse and restored the press.",
+    excerpt: "An anonymized customer story about practical support, technical coordination and following through when a press would not start.",
+    answer: "When a customer's HP Indigo press would not start, EVE Toner helped discuss the symptoms and consulted a technician. The customer later identified a blown fuse, resolved the fault and confirmed that the press was running again.",
+    date: "2026-09-19",
+    category: "Customer Support Story",
+    keywords: ["HP Indigo customer support", "HP Indigo press startup problem", "compatible HP Indigo ink supplier"],
+    productLinks: [commonLinks.digitalInk, commonLinks.hpIndigoQ4132D, commonLinks.hpIndigoSeries2],
+    sections: [
+      {
+        heading: "A Customer Reached Out When Their Press Would Not Start",
+        paragraphs: ["A customer contacted EVE Toner about an HP Indigo press startup problem. We stayed in touch, discussed the reported symptoms and consulted a technician to assist with troubleshooting communication.", "Our role was to help exchange information and coordinate available technical input. We could not inspect the equipment on site, so we were clear about the limits of what we could determine from the conversation."]
+      },
+      {
+        heading: "The Customer Found the Fault and Restored the Press",
+        paragraphs: ["The customer continued checking the equipment and identified a blown fuse. After resolving the fault, they confirmed that the press was up and running again and thanked us for our time and assistance.", "The customer carried out the final diagnosis and repair. This account describes the outcome of one support conversation, rather than a repair procedure for other machines."]
+      },
+      {
+        heading: "Support Beyond the Supply Inquiry",
+        paragraphs: ["This experience reflects how we approach customer relationships: listen carefully, communicate honestly and offer practical help within our capabilities. A customer's concern deserves attention, even when the conversation goes beyond selecting ink or confirming an order.", "For compatible HP Indigo ink sourcing, we start with the press model, ink code, color and quantity so that the supply discussion is based on the buyer's actual requirements.", "Customer identifying details have been omitted. This story is summarized by EVE Toner and does not reproduce a customer testimonial verbatim."]
+      }
+    ],
+    faqs: [
+      { question: "Did EVE Toner perform the repair?", answer: "EVE Toner assisted with troubleshooting communication and consulted a technician. The customer identified the blown fuse and resolved the fault." },
+      { question: "What should I send for a compatible HP Indigo ink inquiry?", answer: "Share your press model, ink code, required colors, order quantity and destination market so we can discuss the relevant products and quotation." }
+    ],
+    midCta: { title: "Explore compatible ink for your HP Indigo press", text: "Browse our digital press ink range and confirm the press series and ink code before ordering." },
+    finalCta: { title: "Discuss your HP Indigo ink requirements", text: "Send your press model, ink code, colors and quantity to EVE Toner for a product and quotation discussion." }
+  },
+  {
     slug: "inside-eve-toner-copier-consumables-supply-base",
     title: "Inside EVE Toner Copier Consumables Supply Base",
     seoTitle: "Inside EVE Toner Copier Consumables Supply Base | Factory Tour",

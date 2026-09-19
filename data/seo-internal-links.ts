@@ -214,6 +214,12 @@ export const prioritySeoPages: InternalSeoLink[] = [
 
 export const procurementGuides: InternalSeoLink[] = [
   {
+    label: "HP Indigo Customer Support Story",
+    href: "/blog/hp-indigo-press-startup-customer-support-case",
+    description: "How we assisted with troubleshooting communication before a customer restored their press.",
+    tags: ["hp indigo", "digital press ink", "electroink", "ink supplier"]
+  },
+  {
     label: "How to Choose a Reliable Compatible Copier Toner Supplier",
     href: "/blog/how-to-choose-reliable-compatible-copier-toner-supplier",
     description: "Supplier selection checklist for importers and distributors.",

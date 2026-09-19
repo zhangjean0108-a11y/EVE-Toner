@@ -293,6 +293,15 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="container-page py-10 md:py-14" aria-labelledby="customer-support-story">
+          <div className="rounded-xl border border-cyan-200 bg-cyan-50/60 p-6 md:p-9">
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-[var(--brand-cyan)]">Customer support story</p>
+            <h2 id="customer-support-story" className="mt-3 text-2xl font-black text-slate-950 md:text-3xl">Support when an HP Indigo press would not start</h2>
+            <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">We helped a customer discuss the symptoms and consulted a technician. The customer later found a blown fuse, resolved the fault and confirmed that the press was running again.</p>
+            <Link href="/blog/hp-indigo-press-startup-customer-support-case" className="mt-5 inline-flex items-center gap-2 font-bold text-[var(--brand-cyan)]">Read the customer support story <ArrowRight size={18} /></Link>
+          </div>
+        </section>
+
         <section className="video-section border-y border-slate-200 bg-[linear-gradient(135deg,#eef9fb_0%,#ffffff_46%,#fff8df_100%)] py-14 md:py-20">
           <div className="container-page grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-center">
             <div>
