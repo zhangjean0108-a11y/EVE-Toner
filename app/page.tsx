@@ -232,6 +232,11 @@ export default function Home() {
                   href: "/products/copier-toner-supplier-kenya"
                 },
                 {
+                  query: "Ink, toner & drum units for the Americas",
+                  text: "Brazil and Latin America buying guides, plus model-based sourcing for US and Canadian dealers.",
+                  href: "/americas"
+                },
+                {
                   query: "Copier toner supplier for Brazil dealers",
                   text: "Compatible toner, drum units and spare parts for Brazil dealer and importer procurement.",
                   href: "/products/copier-toner-supplier-brazil"

@@ -606,6 +606,12 @@ function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
         />
 
+        {["copier-toner-supplier-brazil", "hp-indigo-ink-supplier-brazil", "hp-indigo-ink-supplier-mexico", "hp-indigo-ink-supplier-chile", "hp-indigo-ink-supplier-ecuador"].includes(page.slug) ? (
+          <nav className="container-page pt-6" aria-label="Americas buying guides">
+            <Link href="/americas" className="font-bold text-cyan-700 underline underline-offset-4">Americas sourcing guides · Brasil · América Latina</Link>
+          </nav>
+        ) : null}
+
         <section className="border-b border-slate-200 py-12 md:py-16">
           <div className="container-page grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <div>
@@ -664,7 +670,7 @@ function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
             </div>
             <div className="grid gap-4 md:grid-cols-2">
               {page.sections.map((section) => (
-                <article key={section.title} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+                <article key={section.title} lang={section.language} className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
                   <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--soft-cyan)] text-[var(--brand-cyan)]">
                     <ClipboardCheck className="h-6 w-6" />
                   </div>

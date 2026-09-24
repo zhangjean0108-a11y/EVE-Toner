@@ -73,6 +73,7 @@ function getProductSitemapScore(product: (typeof products)[number]) {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
+    { url: `${siteUrl}/americas`, changeFrequency: "weekly", priority: 0.85 },
     {
       url: siteUrl,
       changeFrequency: "weekly",

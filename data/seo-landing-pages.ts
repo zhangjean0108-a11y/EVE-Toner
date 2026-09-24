@@ -15,6 +15,7 @@ export type SeoLandingPage = {
   buyerTypes: string[];
   modelExamples: string[];
   sections: {
+    language?: string;
     title: string;
     text: string;
   }[];
@@ -624,6 +625,16 @@ export const seoLandingPages: SeoLandingPage[] = [
     modelExamples: ["Konica Minolta bizhub C224 C284 C364", "Ricoh IM series", "Xerox AltaLink", "Canon imageRUNNER", "Sharp MX series"],
     sections: [
       {
+        language: "pt-BR",
+        title: "Toner e unidades de cilindro para revendedores no Brasil",
+        text: "Solicite uma cotação de toner compatível e unidades de cilindro para o seu estoque. Informe o modelo completo da copiadora, código do cartucho ou da peça, cor, quantidade e fotos das etiquetas. Separe toner, unidade de cilindro completa e componentes individuais na lista para confirmar o produto correto."
+      },
+      {
+        language: "pt-BR",
+        title: "Compare o pedido e o transporte até o seu destino",
+        text: "Envie cidade e CEP de destino, quantidades por modelo e requisitos de embalagem. Peça a confirmação da disponibilidade, pedido mínimo, preço dos produtos, custo de transporte e prazo previsto. O fornecimento é organizado a partir da China; confirme as condições e os documentos de cada pedido antes do pagamento."
+      },
+      {
         title: "Check compatibility and color requirements first",
         text:
           "Brazil buyers should match the exact copier series, consumable code, color and regional version before purchasing compatible toner. This helps avoid incorrect stock and supports more reliable quotation comparison."
@@ -670,6 +681,11 @@ export const seoLandingPages: SeoLandingPage[] = [
     buyerTypes: ["Brazil digital print shops", "Printing consumables distributors", "Importers", "Trade buyers"],
     modelExamples: ["Q4132D", "HP Indigo 3000", "HP Indigo 5900", "HP Indigo 6000", "HP Indigo 7900", "HP Indigo 8000"],
     sections: [
+      {
+        language: "pt-BR",
+        title: "Prepare sua lista de tinta HP Indigo e peças",
+        text: "Para reposição, informe separadamente o modelo da prensa, código da tinta, cores e quantidade por cor. Para peças, inclua o código e fotos da etiqueta e do componente. Confirme a compatibilidade com a equipe técnica e avalie o produto na sua aplicação antes de planejar compras recorrentes. Inclua cidade e CEP para revisar as opções de envio."
+      },
       {
             "title": "Start with 1 unit",
             "text": "The minimum order quantity is 1 unit. Ink is ordered in its listed sales pack, such as 1 box. Start with a small order to evaluate the selected compatible product on your press before planning repeat purchases."
