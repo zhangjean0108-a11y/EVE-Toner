@@ -209,6 +209,18 @@ export const prioritySeoPages: InternalSeoLink[] = [
     href: "/products/hp-indigo-3000-5000-series-electroink-supplier",
     description: "HP Indigo 3000 and 5000 series ElectroInk sourcing page for print shops.",
     tags: ["hp indigo", "3000", "5000", "electroink", "digital press ink"]
+  },
+  {
+    label: "HP Indigo ElectroInk Q4132D Product Details",
+    href: "/products/hp-indigo-q4132d-6000-8000-series-digital-press-ink-1601829082310",
+    description: "Product details and inquiry page for compatible Q4132D ElectroInk buyers.",
+    tags: ["hp indigo", "q4132d", "electroink", "digital press ink", "product"]
+  },
+  {
+    label: "HP Indigo Series 2 ElectroInk Product Details",
+    href: "/products/hp-indigo-3000-5900-series2-digital-press-ink-1601827592845",
+    description: "Product details and inquiry page for compatible Series 2 ElectroInk buyers.",
+    tags: ["hp indigo", "series 2", "3000", "5900", "electroink", "product"]
   }
 ];
 

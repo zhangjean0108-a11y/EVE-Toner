@@ -283,7 +283,9 @@ export default function Home() {
                   ["Kyocera TK-8525 / TK-8335", "/products/kyocera-tk-8525-tk-8335-toner-supplier"],
                   ["Sharp MX-61GT / MX-60GT", "/products/sharp-mx-61gt-mx-60gt-toner-supplier"],
                   ["Toshiba T-FC505 / T-FC415", "/products/toshiba-t-fc505-t-fc415-toner-supplier"],
-                  ["HP Indigo Q4132D ElectroInk", "/products/hp-indigo-q4132d-electroink-supplier"]
+                  ["HP Indigo Q4132D ElectroInk", "/products/hp-indigo-q4132d-electroink-supplier"],
+                  ["HP Indigo 3000–5900 Series 2 ElectroInk", "/products/hp-indigo-3000-5000-series-electroink-supplier"],
+                  ["HP Indigo 7000 / 7900 / 8000 ElectroInk", "/products/hp-indigo-7000-7900-8000-electroink-supplier"]
                 ].map(([label, href]) => (
                   <Link
                     key={href}

@@ -511,6 +511,12 @@ function buildProductJsonLd(product: Product, productUrl: string, description = 
 
 function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
   const relatedProducts = getSeoLandingProducts(page);
+  const hpIndigoPages = page.brand === "HP Indigo" ? [
+    { label: "Q4132D ElectroInk — 6000 / 7000 / 7900 / 8000 Series", href: "/products/hp-indigo-q4132d-electroink-supplier" },
+    { label: "Series 2 ElectroInk — 3000 to 5900 Series", href: "/products/hp-indigo-3000-5000-series-electroink-supplier" },
+    { label: "7000 / 7900 / 8000 ElectroInk", href: "/products/hp-indigo-7000-7900-8000-electroink-supplier" },
+    { label: "HP Indigo compatible ElectroInk buying guide", href: "/blog/how-to-choose-compatible-hp-indigo-electroink-supplier" }
+  ] : [];
   const guideLinks = getSeoLandingGuideLinks(page.slug, page.keyword, page.category);
   const procurementBrief = getSeoLandingProcurementBrief(page);
   const whatsappHref = createWhatsAppHref(
@@ -701,6 +707,28 @@ function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
         </section>
 
         <ProcurementChecklistSection brief={procurementBrief} />
+
+        {hpIndigoPages.length > 0 && (
+          <section className="container-page py-8 md:py-10">
+            <div className="rounded-xl border border-cyan-200 bg-cyan-50/70 p-6 md:p-8">
+              <p className="text-xs font-black uppercase tracking-[0.2em] text-[var(--brand-cyan)]">HP Indigo model finder</p>
+              <h2 className="mt-2 text-2xl font-black text-slate-950">Choose a press series to check compatible ink</h2>
+              <p className="mt-3 max-w-3xl text-sm font-semibold leading-7 text-slate-600">
+                Send your exact press model, ink code, color and quantity. Our team will confirm the matching option, packing and quotation before you order.
+              </p>
+              <nav className="mt-5 flex flex-wrap gap-3" aria-label="HP Indigo ink model and buying guide pages">
+                {hpIndigoPages.map((item) => (
+                  <Link key={item.href} href={item.href} className="rounded-md border border-cyan-200 bg-white px-4 py-3 text-sm font-bold text-slate-800 transition hover:border-[var(--brand-cyan)] hover:text-[var(--brand-cyan)]">
+                    {item.label}
+                  </Link>
+                ))}
+                <a href={`/inquiry?product=${encodeURIComponent("HP Indigo ElectroInk — specify press model and ink code")}`} className="rounded-md bg-[var(--brand-cyan)] px-4 py-3 text-sm font-black text-white transition hover:bg-[var(--brand-cyan-dark)]">
+                  Request a model-matched quote
+                </a>
+              </nav>
+            </div>
+          </section>
+        )}
 
         <section className="border-y border-slate-200 bg-white py-12 md:py-16">
           <div className="container-page">
