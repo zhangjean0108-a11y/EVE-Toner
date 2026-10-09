@@ -118,7 +118,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const productRoutes: MetadataRoute.Sitemap = priorityProducts.map((product) => ({
     url: `${siteUrl}/products/${getProductCanonicalSlug(product)}`,
     changeFrequency: "monthly",
-    priority: product.sold180 > 0 ? 0.72 : 0.65
+    priority: product.id.startsWith("eve-") ? 0.78 : product.sold180 > 0 ? 0.72 : 0.65
   }));
 
   const seoLandingRoutes: MetadataRoute.Sitemap = seoLandingPages

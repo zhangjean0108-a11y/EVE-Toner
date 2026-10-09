@@ -16,6 +16,72 @@ export type Product = {
 
 export const products = [
   {
+    id: "eve-ricoh-im2510-im4510-toner-cartridge",
+    slug: "ricoh-im2510-im4510-compatible-toner-cartridge",
+    name: "Compatible Ricoh IM2510 IM4510 Black Toner Cartridge with Chip",
+    category: "Toner Cartridge",
+    brand: "Ricoh",
+    price: "Contact for quote",
+    moq: "Contact sales",
+    sold180: 0,
+    image: "/images/product-ricoh-toner-cartridge.jpg",
+    gallery: ["/images/product-ricoh-toner-cartridge.jpg"],
+    unit: "piece",
+    summary: "Compatible black toner cartridges with chip for Ricoh IM series copiers. IM2510 yield: approximately 30,100 pages; IM4510 yield: approximately 42,900 pages. Contact EVE Toner to confirm exact model, regional version, availability and quotation.",
+    features: [
+      "Models listed: IM2510 and IM4510",
+      "Compatible copier models listed in source sheet: IM2510, IM3010, IM3510, IM4510, IM5510 and IM6010; confirm exact match before ordering",
+      "Black (BK), chip included",
+      "Approximate yield: 30,100 pages (IM2510) / 42,900 pages (IM4510)",
+      "Request a quotation with model, quantity and destination market"
+    ]
+  },
+  {
+    id: "eve-pantum-tl8000-toner-cartridge",
+    slug: "pantum-tl8000-compatible-toner-cartridge",
+    name: "Compatible Pantum TL8000 Black Toner Cartridge with Chip",
+    category: "Toner Cartridge",
+    brand: "Pantum",
+    price: "Contact for quote",
+    moq: "Contact sales",
+    sold180: 0,
+    image: "/images/product-ricoh-toner-cartridge.jpg",
+    gallery: ["/images/product-ricoh-toner-cartridge.jpg"],
+    unit: "piece",
+    summary: "Compatible Pantum TL8000 black toner cartridge with chip, approximately 7,500-page yield. Source sheet lists BP8000DN / BP7800DN; confirm the exact printer version before ordering.",
+    features: ["Model: TL8000", "Black (BK), chip included", "Approximate yield: 7,500 pages", "Source-listed printer models: BP8000DN / BP7800DN; confirm compatibility before ordering", "Contact EVE Toner for availability and quotation"]
+  },
+  {
+    id: "eve-pantum-tl8000h-toner-cartridge",
+    slug: "pantum-tl8000h-compatible-toner-cartridge",
+    name: "Compatible Pantum TL8000H Black Toner Cartridge with Chip",
+    category: "Toner Cartridge",
+    brand: "Pantum",
+    price: "Contact for quote",
+    moq: "Contact sales",
+    sold180: 0,
+    image: "/images/product-ricoh-toner-cartridge.jpg",
+    gallery: ["/images/product-ricoh-toner-cartridge.jpg"],
+    unit: "piece",
+    summary: "Compatible Pantum TL8000H black toner cartridge with chip, approximately 15,000-page yield. Confirm exact printer compatibility and regional version with our team before ordering.",
+    features: ["Model: TL8000H", "Black (BK), chip included", "Approximate yield: 15,000 pages", "Confirm exact printer model and regional version before ordering", "Contact EVE Toner for availability and quotation"]
+  },
+  {
+    id: "eve-pantum-tl8000x-toner-cartridge",
+    slug: "pantum-tl8000x-compatible-toner-cartridge",
+    name: "Compatible Pantum TL8000X Black Toner Cartridge with Chip",
+    category: "Toner Cartridge",
+    brand: "Pantum",
+    price: "Contact for quote",
+    moq: "Contact sales",
+    sold180: 0,
+    image: "/images/product-ricoh-toner-cartridge.jpg",
+    gallery: ["/images/product-ricoh-toner-cartridge.jpg"],
+    unit: "piece",
+    summary: "Compatible Pantum TL8000X black toner cartridge with chip, approximately 55,000-page yield. Source sheet lists BP8000DN; confirm the exact printer version before ordering.",
+    features: ["Model: TL8000X", "Black (BK), chip included", "Approximate yield: 55,000 pages", "Source-listed printer model: BP8000DN; confirm compatibility before ordering", "Contact EVE Toner for availability and quotation"]
+  },
+  {
     "id": "eve-hp-730-plotter-ink-cartridge-300ml",
     "slug": "hp-730-compatible-plotter-ink-cartridge-300ml",
     "name": "HP 730 Compatible Plotter Ink Cartridge 300ML for DesignJet Printers",

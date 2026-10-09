@@ -317,6 +317,9 @@ function buildProductJsonLd(product: Product, productUrl: string) {
 
 function buildProductOffer(product: Product, productUrl: string) {
   const priceRange = getPriceRange(product.price);
+  if (!priceRange) {
+    return undefined;
+  }
   const baseOffer = {
     priceCurrency: "USD",
     itemCondition:
@@ -331,18 +334,11 @@ function buildProductOffer(product: Product, productUrl: string) {
     }
   };
 
-  if (priceRange) {
-    return {
-      "@type": "AggregateOffer",
-      ...baseOffer,
-      lowPrice: priceRange.lowPrice,
-      highPrice: priceRange.highPrice,
-      offerCount: 1
-    };
-  }
-
   return {
-    "@type": "Offer",
-    ...baseOffer
+    "@type": "AggregateOffer",
+    ...baseOffer,
+    lowPrice: priceRange.lowPrice,
+    highPrice: priceRange.highPrice,
+    offerCount: 1
   };
 }
