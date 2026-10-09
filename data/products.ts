@@ -16,6 +16,50 @@ export type Product = {
 
 export const products = [
   {
+    "id": "eve-ricoh-im2510-toner-cartridge",
+    "slug": "ricoh-im2510-toner-cartridge-supplier",
+    "name": "Compatible Ricoh IM2510 Black Toner Cartridge with Chip, 30.1K Yield",
+    "category": "Toner Cartridge",
+    "brand": "Ricoh",
+    "price": "Contact for quote",
+    "moq": "1 piece",
+    "sold180": 0,
+    "image": "/images/products/ricoh-im2510-im4510-toner-placeholder.jpg",
+    "gallery": ["/images/products/ricoh-im2510-im4510-toner-placeholder.jpg"],
+    "unit": "piece",
+    "summary": "Compatible Ricoh IM2510 black toner cartridge with chip and a stated yield of 30,100 pages. Minimum order: 1 piece. Request a quote for 25-piece carton packing and destination-specific shipping.",
+    "features": [
+      "Compatible with Ricoh IM2510, IM3010, IM3510, IM4510, IM5510 and IM6010 series (confirm exact machine version before ordering)",
+      "Black toner cartridge with chip",
+      "Stated page yield: 30,100 pages; actual yield varies with coverage and operating conditions",
+      "Minimum order quantity: 1 piece; 25 pieces per carton",
+      "Small box: 59.5 × 7.5 × 7.5 cm; master carton: 63 × 41 × 40 cm",
+      "Ask our team for actual product and packaging photos, compatibility confirmation and export quotation"
+    ]
+  },
+  {
+    "id": "eve-ricoh-im4510-toner-cartridge",
+    "slug": "ricoh-im4510-toner-cartridge-supplier",
+    "name": "Compatible Ricoh IM4510 Black Toner Cartridge with Chip, 42.9K Yield",
+    "category": "Toner Cartridge",
+    "brand": "Ricoh",
+    "price": "Contact for quote",
+    "moq": "1 piece",
+    "sold180": 0,
+    "image": "/images/products/ricoh-im2510-im4510-toner-placeholder.jpg",
+    "gallery": ["/images/products/ricoh-im2510-im4510-toner-placeholder.jpg"],
+    "unit": "piece",
+    "summary": "Compatible Ricoh IM4510 black toner cartridge with chip and a stated yield of 42,900 pages. Minimum order: 1 piece. Request a quote for 25-piece carton packing and destination-specific shipping.",
+    "features": [
+      "Compatible with Ricoh IM2510, IM3010, IM3510, IM4510, IM5510 and IM6010 series (confirm exact machine version before ordering)",
+      "Black toner cartridge with chip",
+      "Stated page yield: 42,900 pages; actual yield varies with coverage and operating conditions",
+      "Minimum order quantity: 1 piece; 25 pieces per carton",
+      "Small box: 59.5 × 7.5 × 7.5 cm; master carton: 63 × 41 × 40 cm",
+      "Ask our team for actual product and packaging photos, compatibility confirmation and export quotation"
+    ]
+  },
+  {
     "id": "eve-hp-730-plotter-ink-cartridge-300ml",
     "slug": "hp-730-compatible-plotter-ink-cartridge-300ml",
     "name": "HP 730 Compatible Plotter Ink Cartridge 300ML for DesignJet Printers",

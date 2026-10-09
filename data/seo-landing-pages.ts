@@ -1296,6 +1296,54 @@ export const seoLandingPages: SeoLandingPage[] = [
     ]
   },
   {
+    slug: "ricoh-im2510-toner-cartridge-supplier",
+    keyword: "Ricoh IM2510 toner cartridge supplier",
+    title: "Ricoh IM2510 Toner Cartridge with Chip, 30.1K Yield | EVE Toner",
+    description: "Compatible black Ricoh IM2510 toner cartridge with chip, 30.1K stated page yield, MOQ 1 piece and 25-piece carton packing. Request a B2B quote.",
+    h1: "Ricoh IM2510 Compatible Toner Cartridge with Chip",
+    eyebrow: "Ricoh IM2510 black toner · 30.1K yield",
+    intro: "EVE Toner supplies a compatible Ricoh IM2510 black toner cartridge with chip for dealers, service teams and importers. Order from 1 piece and request model confirmation, actual product photos and export packing details.",
+    brand: "Ricoh",
+    category: "Toner Cartridge",
+    relatedBrands: ["Ricoh", "IM series"],
+    buyerTypes: ["Copier dealers", "Office equipment resellers", "Importers", "Repair shops"],
+    modelExamples: ["Ricoh IM2510", "IM3010", "IM3510", "IM4510", "IM5510", "IM6010"],
+    sections: [
+      { title: "Product specifications", text: "Black toner cartridge with chip; stated yield 30,100 pages. One piece minimum order. Packing: 25 pieces per carton; small box 59.5 × 7.5 × 7.5 cm; master carton 63 × 41 × 40 cm. Actual yield depends on coverage and operating conditions." },
+      { title: "Confirm exact machine version", text: "The supplied compatibility list covers Ricoh IM2510, IM3010, IM3510, IM4510, IM5510 and IM6010. Please send a photo of the machine label or existing cartridge label so our team can confirm the version before ordering." },
+      { title: "B2B quotation and packing", text: "Contact EVE Toner for a quotation based on quantity and destination. Actual product and box photos can be requested before order confirmation; the current listing does not use unrelated product photography." }
+    ],
+    faqs: [
+      { question: "What is the minimum order for the Ricoh IM2510 toner?", answer: "The minimum order is 1 piece. The standard carton quantity is 25 pieces." },
+      { question: "Which machines are listed as compatible?", answer: "Ricoh IM2510, IM3010, IM3510, IM4510, IM5510 and IM6010 are listed. Please confirm the machine and cartridge version with our team before ordering." },
+      { question: "Is the cartridge supplied with a chip?", answer: "Yes, the product specification provided for this listing states that it includes a chip." }
+    ]
+  },
+  {
+    slug: "ricoh-im4510-toner-cartridge-supplier",
+    keyword: "Ricoh IM4510 toner cartridge supplier",
+    title: "Ricoh IM4510 Toner Cartridge with Chip, 42.9K Yield | EVE Toner",
+    description: "Compatible black Ricoh IM4510 toner cartridge with chip, 42.9K stated page yield, MOQ 1 piece and 25-piece carton packing. Request a B2B quote.",
+    h1: "Ricoh IM4510 Compatible Toner Cartridge with Chip",
+    eyebrow: "Ricoh IM4510 black toner · 42.9K yield",
+    intro: "EVE Toner supplies a compatible Ricoh IM4510 black toner cartridge with chip for dealers, service teams and importers. Order from 1 piece and request model confirmation, actual product photos and export packing details.",
+    brand: "Ricoh",
+    category: "Toner Cartridge",
+    relatedBrands: ["Ricoh", "IM series"],
+    buyerTypes: ["Copier dealers", "Office equipment resellers", "Importers", "Repair shops"],
+    modelExamples: ["Ricoh IM2510", "IM3010", "IM3510", "IM4510", "IM5510", "IM6010"],
+    sections: [
+      { title: "Product specifications", text: "Black toner cartridge with chip; stated yield 42,900 pages. One piece minimum order. Packing: 25 pieces per carton; small box 59.5 × 7.5 × 7.5 cm; master carton 63 × 41 × 40 cm. Actual yield depends on coverage and operating conditions." },
+      { title: "Confirm exact machine version", text: "The supplied compatibility list covers Ricoh IM2510, IM3010, IM3510, IM4510, IM5510 and IM6010. Please send a photo of the machine label or existing cartridge label so our team can confirm the version before ordering." },
+      { title: "B2B quotation and packing", text: "Contact EVE Toner for a quotation based on quantity and destination. Actual product and box photos can be requested before order confirmation; the current listing does not use unrelated product photography." }
+    ],
+    faqs: [
+      { question: "What is the minimum order for the Ricoh IM4510 toner?", answer: "The minimum order is 1 piece. The standard carton quantity is 25 pieces." },
+      { question: "Which machines are listed as compatible?", answer: "Ricoh IM2510, IM3010, IM3510, IM4510, IM5510 and IM6010 are listed. Please confirm the machine and cartridge version with our team before ordering." },
+      { question: "Is the cartridge supplied with a chip?", answer: "Yes, the product specification provided for this listing states that it includes a chip." }
+    ]
+  },
+  {
     slug: "ricoh-mp-c3003-toner-supplier",
     keyword: "Ricoh MP C3003 toner supplier",
     title: "Ricoh MP C3003 Toner Supplier | EVE Toner",

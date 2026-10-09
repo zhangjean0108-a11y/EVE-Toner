@@ -42,6 +42,8 @@ const PRIORITY_LANDING_PAGE_SLUGS = new Set([
   "ricoh-im-c2500-toner-cartridge-supplier",
   "ricoh-im-c3000-toner-supplier",
   "ricoh-mp-c3003-toner-supplier",
+  "ricoh-im2510-toner-cartridge-supplier",
+  "ricoh-im4510-toner-cartridge-supplier",
   "kyocera-taskalfa-toner-cartridge-supplier",
   "kyocera-tk-8525-tk-8335-toner-supplier",
   "sharp-mx-61gt-mx-60gt-toner-supplier",
