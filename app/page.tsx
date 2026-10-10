@@ -246,6 +246,41 @@ export default function Home() {
                   text: "Compatible HP Indigo ElectroInk for Brazil digital print shops, distributors and importers.",
                   href: "/products/hp-indigo-ink-supplier-brazil"
                 },
+                {
+                  query: "Copier toner supplier UAE",
+                  text: "Model-checked copier toner, parts and export packing support for UAE B2B buyers.",
+                  href: "/products/copier-toner-supplier-uae"
+                },
+                {
+                  query: "Copier toner supplier Saudi Arabia",
+                  text: "Compatible toner and copier parts for Saudi Arabia dealers and importers.",
+                  href: "/products/copier-toner-supplier-saudi-arabia"
+                },
+                {
+                  query: "Copier toner supplier Turkey",
+                  text: "Copier consumables sourcing for Turkey dealers, service shops and importers.",
+                  href: "/products/copier-toner-supplier-turkey"
+                },
+                {
+                  query: "Copier toner supplier Germany",
+                  text: "B2B toner and service-parts supply for German office equipment channels.",
+                  href: "/products/copier-toner-supplier-germany"
+                },
+                {
+                  query: "Copier toner supplier UK",
+                  text: "Compatible copier consumables for UK dealers, service firms and importers.",
+                  href: "/products/copier-toner-supplier-united-kingdom"
+                },
+                {
+                  query: "Copier toner supplier France",
+                  text: "Model-based toner and spare-parts quotations for French B2B buyers.",
+                  href: "/products/copier-toner-supplier-france"
+                },
+                {
+                  query: "Copier toner supplier Italy",
+                  text: "Compatible toner and parts sourcing for Italian copier and print businesses.",
+                  href: "/products/copier-toner-supplier-italy"
+                },
                 {"query": "HP Indigo ink & spare parts for Ireland", "text": "Order from 1 unit with press-specific matching and professional technical support.", "href": "/products/hp-indigo-ink-supplier-ireland"},
                 {"query": "HP Indigo ink & spare parts for México", "text": "Order from 1 unit with press-specific matching and professional technical support.", "href": "/products/hp-indigo-ink-supplier-mexico"},
                 {"query": "HP Indigo ink & spare parts for Chile", "text": "Order from 1 unit with press-specific matching and professional technical support.", "href": "/products/hp-indigo-ink-supplier-chile"},

@@ -234,6 +234,73 @@ const modelSeoLandingPages: SeoLandingPage[] = [
   })
 ];
 
+const countryMarketPages: SeoLandingPage[] = [
+  {
+    country: "United Arab Emirates", slug: "copier-toner-supplier-uae", keywordCountry: "UAE",
+    buyerTypes: ["UAE importers", "Copier dealers", "Office equipment resellers", "Service companies"],
+    packing: "Discuss carton marks and Arabic or English label needs before shipment.",
+    note: "UAE buyers can share the destination emirate or city so receiving, packing and shipping requirements can be reviewed with the product list."
+  },
+  {
+    country: "Saudi Arabia", slug: "copier-toner-supplier-saudi-arabia", keywordCountry: "Saudi Arabia",
+    buyerTypes: ["Saudi Arabia importers", "Copier dealers", "Office equipment distributors", "Repair and service companies"],
+    packing: "Discuss carton marks, Arabic or English labels and moisture protection before shipment.",
+    note: "Share the destination city, machine model and consumable code so availability, packing and shipping arrangements can be checked for the inquiry."
+  },
+  {
+    country: "Turkey", slug: "copier-toner-supplier-turkey", keywordCountry: "Turkey",
+    buyerTypes: ["Turkey importers", "Copier dealers", "Service shops", "Office equipment resellers"],
+    packing: "Confirm carton marks, model labels, item counts and protective packing for mixed orders.",
+    note: "Provide the exact machine version and product code; photos of labels can help distinguish similar consumable variants before quotation."
+  },
+  {
+    country: "Germany", slug: "copier-toner-supplier-germany", keywordCountry: "Germany",
+    buyerTypes: ["German importers", "Copier dealers", "Print service companies", "Office equipment distributors"],
+    packing: "Discuss product identification, shipment documents and export carton protection for the receiving requirements.",
+    note: "German print and office equipment buyers can send complete model references and part codes to review compatible options and mixed B2B orders."
+  },
+  {
+    country: "United Kingdom", slug: "copier-toner-supplier-united-kingdom", keywordCountry: "UK",
+    buyerTypes: ["UK importers", "Copier dealers", "Managed print and service firms", "Office equipment resellers"],
+    packing: "Share destination and receiving details, carton-label preferences and shipment document needs.",
+    note: "Service firms and dealers can include toner, drum units, fuser units and related maintenance parts in one model-checked inquiry."
+  },
+  {
+    country: "France", slug: "copier-toner-supplier-france", keywordCountry: "France",
+    buyerTypes: ["French importers", "Copier dealers", "Print service providers", "Office equipment resellers"],
+    packing: "Discuss French or English carton labels, item identification and protective export packing.",
+    note: "Send the complete copier model, consumable code and regional version; photos of current labels can help resolve similar references."
+  },
+  {
+    country: "Italy", slug: "copier-toner-supplier-italy", keywordCountry: "Italy",
+    buyerTypes: ["Italian importers", "Copier dealers", "Print service businesses", "Office equipment resellers"],
+    packing: "Confirm carton marks, model labels, item quantities and protective packing for mixed orders.",
+    note: "Dealers can group toner and service parts around installed machine fleets and repeated customer requirements for availability review."
+  }
+].map(({ country, slug, keywordCountry, buyerTypes, packing, note }) => ({
+  slug,
+  keyword: `copier toner supplier ${keywordCountry}`,
+  title: `Copier Toner Supplier in ${country} | EVE Toner`,
+  description: `Compatible copier toner, drum units and spare parts for ${country} dealers and importers. Confirm machine models, product codes and export packing for a B2B quotation.`,
+  h1: `Copier Toner Supplier for ${country} Buyers`,
+  eyebrow: `${country} copier consumables supply`,
+  intro: `EVE Toner supports ${country} office equipment dealers, service companies and importers sourcing compatible toner cartridges and selected copier parts by exact machine model and product code.`,
+  category: "Toner Cartridge",
+  relatedBrands: ["Ricoh", "Canon", "Xerox", "Konica Minolta", "Kyocera", "Toshiba"],
+  buyerTypes,
+  modelExamples: ["Ricoh IM series", "Canon imageRUNNER", "Xerox VersaLink / AltaLink", "Konica Minolta bizhub", "Kyocera TASKalfa"],
+  sections: [
+    { title: "Confirm the exact machine and consumable", text: `Send the full copier model, toner or part code, color and quantity. Confirm the regional version before ordering to reduce the chance of a model mismatch for ${country} deliveries.` },
+    { title: "Plan toner and service parts together", text: "Toner cartridges, drum units, fuser units and selected maintenance parts can be included in one model list for availability, MOQ and mixed-order review." },
+    { title: "Prepare export packing for the destination", text: `${packing} ${note}` }
+  ],
+  faqs: [
+    { question: `Can EVE Toner quote copier toner for ${country}?`, answer: `Yes. Send machine model, consumable code, color, quantity, destination and packing requirements for a compatibility review and B2B quotation.` },
+    { question: "Can I combine toner and copier spare parts in one inquiry?", answer: "Yes. Mixed toner, drum, fuser and selected spare-parts lists can be reviewed according to compatibility, availability and MOQ." },
+    { question: "What should I confirm before placing an order?", answer: "Confirm the exact machine model and regional version, consumable code, color, quantity, destination and packing request." }
+  ]
+}));
+
 export const seoLandingPages: SeoLandingPage[] = [
   {
     slug: "ricoh-compatible-toner-supplier",
@@ -833,6 +900,7 @@ export const seoLandingPages: SeoLandingPage[] = [
       }
     ]
   },
+  ...countryMarketPages,
   {
     slug: "copier-drum-unit-supplier",
     keyword: "copier drum unit supplier",

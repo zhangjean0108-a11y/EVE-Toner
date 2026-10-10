@@ -49,6 +49,48 @@ export const prioritySeoPages: InternalSeoLink[] = [
     tags: ["middle east", "dealer", "toner cartridge", "copier spare parts", "import guide"]
   },
   {
+    label: "Copier Toner Supplier in UAE",
+    href: "/products/copier-toner-supplier-uae",
+    description: "Compatible toner and copier parts sourcing for UAE dealers, importers and service companies.",
+    tags: ["uae", "united arab emirates", "middle east", "toner cartridge", "copier parts"]
+  },
+  {
+    label: "Copier Toner Supplier in Saudi Arabia",
+    href: "/products/copier-toner-supplier-saudi-arabia",
+    description: "Model-based toner and spare-parts sourcing for Saudi Arabia B2B buyers.",
+    tags: ["saudi arabia", "middle east", "toner cartridge", "copier parts"]
+  },
+  {
+    label: "Copier Toner Supplier in Turkey",
+    href: "/products/copier-toner-supplier-turkey",
+    description: "Compatible copier consumables sourcing for Turkey dealers and importers.",
+    tags: ["turkey", "europe", "toner cartridge", "copier parts"]
+  },
+  {
+    label: "Copier Toner Supplier in Germany",
+    href: "/products/copier-toner-supplier-germany",
+    description: "B2B toner and spare-parts sourcing for German office equipment and print channels.",
+    tags: ["germany", "europe", "toner cartridge", "copier parts", "print service"]
+  },
+  {
+    label: "Copier Toner Supplier in the UK",
+    href: "/products/copier-toner-supplier-united-kingdom",
+    description: "Compatible toner sourcing for UK dealers, service firms and importers.",
+    tags: ["uk", "united kingdom", "europe", "toner cartridge", "copier parts"]
+  },
+  {
+    label: "Copier Toner Supplier in France",
+    href: "/products/copier-toner-supplier-france",
+    description: "Model-checked compatible toner and copier parts sourcing for French B2B buyers.",
+    tags: ["france", "europe", "toner cartridge", "copier parts"]
+  },
+  {
+    label: "Copier Toner Supplier in Italy",
+    href: "/products/copier-toner-supplier-italy",
+    description: "Compatible toner and service-parts sourcing for Italian dealers and print businesses.",
+    tags: ["italy", "europe", "toner cartridge", "copier parts", "print service"]
+  },
+  {
     label: "Drum Unit Supplier for Copier Dealers",
     href: "/products/drum-unit-supplier-for-copier-dealers",
     description: "Commercial page for copier dealers buying drum units and imaging parts.",

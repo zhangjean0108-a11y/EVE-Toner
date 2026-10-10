@@ -24,6 +24,13 @@ const PRIORITY_LANDING_PAGE_SLUGS = new Set([
 
   "copier-spare-parts-supplier-africa-dealers",
   "copier-toner-supplier-middle-east-dealers",
+  "copier-toner-supplier-uae",
+  "copier-toner-supplier-saudi-arabia",
+  "copier-toner-supplier-turkey",
+  "copier-toner-supplier-germany",
+  "copier-toner-supplier-united-kingdom",
+  "copier-toner-supplier-france",
+  "copier-toner-supplier-italy",
   "copier-drum-unit-supplier",
   "copier-fuser-unit-supplier",
   "wholesale-copier-toner-cartridge",
