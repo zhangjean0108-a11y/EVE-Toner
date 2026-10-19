@@ -293,6 +293,41 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           </div>
         </section>
 
+        {product.id === "1601829082310" && (
+          <section className="border-y border-slate-200 bg-white py-12 md:py-16" aria-labelledby="hp-indigo-video-heading">
+            <div className="container-page grid items-center gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+              <div>
+                <p className="text-xs font-black uppercase tracking-[0.22em] text-[var(--brand-cyan)]">
+                  On-camera product demonstration
+                </p>
+                <h2 id="hp-indigo-video-heading" className="mt-3 text-3xl font-black leading-tight text-slate-950 md:text-4xl">
+                  Watch our HP Indigo 7900 ink demonstration
+                </h2>
+                <p className="mt-4 text-sm font-semibold leading-7 text-slate-600">
+                  In this on-camera walkthrough, our presenter shows an HP Indigo 7900 press, compatible Indigo ink containers and a printed sample. For a model check and quotation, send your press series, ink code, color and required quantity.
+                </p>
+                <Link
+                  href={`/inquiry?product=${encodeURIComponent(product.name)}`}
+                  className="mt-6 inline-flex h-12 items-center justify-center gap-2 rounded-md bg-[var(--brand-cyan)] px-5 text-sm font-black text-white transition hover:bg-[var(--brand-cyan-dark)]"
+                >
+                  Ask about HP Indigo ink <ArrowRight size={16} />
+                </Link>
+              </div>
+              <video
+                className="mx-auto w-full max-w-[420px] rounded-xl bg-slate-950 shadow-xl shadow-cyan-950/15"
+                controls
+                playsInline
+                preload="metadata"
+                poster="/images/hp-indigo-7900-compatible-ink-demo-poster.jpg"
+                aria-label="EVE Toner on-camera demonstration of compatible HP Indigo ink at an HP Indigo 7900 press"
+              >
+                <source src="/videos/hp-indigo-7900-compatible-ink-demo.mp4" type="video/mp4" />
+                Your browser does not support HTML video.
+              </video>
+            </div>
+          </section>
+        )}
+
         <section className="border-y border-slate-200 bg-white py-12 md:py-16">
           <div className="container-page grid gap-6 lg:grid-cols-[0.72fr_1.28fr]">
             <div>
