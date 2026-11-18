@@ -281,6 +281,8 @@ export default function Home() {
                   text: "Compatible toner and parts sourcing for Italian copier and print businesses.",
                   href: "/products/copier-toner-supplier-italy"
                 },
+                {"query": "HP Indigo ink & spare parts for Germany", "text": "Compatible ink and parts from 1 sales unit, with press-specific matching and technical support.", "href": "/products/hp-indigo-ink-supplier-germany"},
+                {"query": "HP Indigo ink & spare parts for Thailand", "text": "Compatible ink and parts from 1 sales unit, with press-specific matching and technical support.", "href": "/products/hp-indigo-ink-supplier-thailand"},
                 {"query": "HP Indigo ink & spare parts for Ireland", "text": "Order from 1 unit with press-specific matching and professional technical support.", "href": "/products/hp-indigo-ink-supplier-ireland"},
                 {"query": "HP Indigo ink & spare parts for México", "text": "Order from 1 unit with press-specific matching and professional technical support.", "href": "/products/hp-indigo-ink-supplier-mexico"},
                 {"query": "HP Indigo ink & spare parts for Chile", "text": "Order from 1 unit with press-specific matching and professional technical support.", "href": "/products/hp-indigo-ink-supplier-chile"},

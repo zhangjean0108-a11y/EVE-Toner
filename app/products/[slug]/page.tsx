@@ -664,10 +664,10 @@ function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href={`/inquiry?product=${encodeURIComponent(page.keyword)}`}
+                  href="#market-inquiry"
                   className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-[var(--brand-cyan)] px-6 text-sm font-black text-white transition hover:bg-[var(--brand-cyan-dark)]"
                 >
-                  Request {page.keyword} Quote <ArrowRight size={16} />
+                  {page.quoteLabel || `Request ${page.keyword} Quote`} <ArrowRight size={16} />
                 </a>
                 <a
                   href={whatsappHref}
@@ -700,7 +700,7 @@ function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
                 How EVE Toner Helps Buyers Source This Category
               </h2>
               <p className="mt-4 text-sm font-semibold leading-7 text-slate-600">
-                This landing page is written for Google searches with commercial intent. It gives importers and dealers a clear path from product matching to quotation.
+                Send your model and product code to discuss compatibility, packing and a quotation for your destination.
               </p>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
@@ -747,7 +747,7 @@ function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
                 Products Related to {page.keyword}
               </h2>
               <p className="mt-4 text-sm font-semibold leading-7 text-slate-600">
-                These product links build topical relevance between the sourcing page and detailed model pages.
+                Compare product codes, press series and listed sales packs before requesting a quotation.
               </p>
             </div>
             <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -788,7 +788,7 @@ function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
         <InternalLinkSection
           eyebrow="Related buying guides"
           title="Guides That Support This Buyer Search"
-          intro="These articles answer common procurement questions and strengthen topical relevance around this product category."
+          intro="Read practical guidance on product selection and technical support."
           groups={[{ title: "Procurement guides", links: guideLinks }]}
         />
 
@@ -817,7 +817,7 @@ function SeoLandingPageView({ page }: { page: SeoLandingPage }) {
                 Tell us the model number, quantity, destination country and packing request. EVE Toner will reply with quotation details.
               </p>
               <div className="mt-5">
-                <InquiryForm initialProduct={page.keyword} />
+                <div id="market-inquiry" className="scroll-mt-24"><InquiryForm initialProduct={page.keyword} initialCountry={page.country} /></div>
               </div>
             </div>
           </div>

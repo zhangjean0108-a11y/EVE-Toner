@@ -6,6 +6,10 @@ export type InternalSeoLink = {
 };
 
 export const prioritySeoPages: InternalSeoLink[] = [
+  {"label": "HP Indigo ink & spare parts for Chile", "href": "/products/hp-indigo-ink-supplier-chile", "description": "Compatible ink and parts from 1 sales unit with technical support.", "tags": ["hp indigo", "electroink", "digital press ink", "chile"]},
+  {"label": "HP Indigo ink & spare parts for Germany", "href": "/products/hp-indigo-ink-supplier-germany", "description": "Compatible ink and parts from 1 sales unit with technical support.", "tags": ["hp indigo", "electroink", "digital press ink", "germany"]},
+  {"label": "HP Indigo ink & spare parts for Thailand", "href": "/products/hp-indigo-ink-supplier-thailand", "description": "Compatible ink and parts from 1 sales unit with technical support.", "tags": ["hp indigo", "electroink", "digital press ink", "thailand"]},
+
   {
     label: "Compatible Xerox C2265 Toner Cartridge Supplier",
     href: "/products/compatible-xerox-c2265-toner-cartridge-supplier",

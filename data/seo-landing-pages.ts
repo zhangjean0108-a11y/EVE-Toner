@@ -3,6 +3,8 @@ import { hpIndigoMarketPages } from "./hp-indigo-markets";
 export type SeoLandingPage = {
   slug: string;
   language?: string;
+  country?: string;
+  quoteLabel?: string;
   keyword: string;
   title: string;
   description: string;
@@ -745,78 +747,54 @@ export const seoLandingPages: SeoLandingPage[] = [
     ]
   },
   {
-    slug: "hp-indigo-ink-supplier-brazil",
-    keyword: "HP Indigo ink supplier Brazil",
-    title: "HP Indigo Ink & Spare Parts for Brazil | MOQ 1 | EVE Toner",
-    description:
-      "Compatible HP Indigo ink and spare parts for Brazil buyers. Order from 1 unit with professional technical support and press-specific compatibility checks.",
-    h1: "HP Indigo Ink & Spare Parts for Brazil Buyers",
-    eyebrow: "Brazil HP Indigo ElectroInk supply",
-    intro:
-      "EVE Toner supplies compatible HP Indigo ink and spare parts for Brazil print shops, distributors and importers. Start from 1 unit, combine ink and parts in one inquiry, and work with our professional technical team on product matching and setup guidance.",
-    brand: "HP Indigo",
-    category: "Digital Press Ink",
-    relatedBrands: ["HP Indigo", "ElectroInk", "Digital Press", "Q4132D"],
-    buyerTypes: ["Brazil digital print shops", "Printing consumables distributors", "Importers", "Trade buyers"],
-    modelExamples: ["Q4132D", "HP Indigo 3000", "HP Indigo 5900", "HP Indigo 6000", "HP Indigo 7900", "HP Indigo 8000"],
-    sections: [
-      {
-        language: "pt-BR",
-        title: "Prepare sua lista de tinta HP Indigo e peças",
-        text: "Para reposição, informe separadamente o modelo da prensa, código da tinta, cores e quantidade por cor. Para peças, inclua o código e fotos da etiqueta e do componente. Confirme a compatibilidade com a equipe técnica e avalie o produto na sua aplicação antes de planejar compras recorrentes. Inclua cidade e CEP para revisar as opções de envio."
-      },
-      {
-            "title": "Start with 1 unit",
-            "text": "The minimum order quantity is 1 unit. Ink is ordered in its listed sales pack, such as 1 box. Start with a small order to evaluate the selected compatible product on your press before planning repeat purchases."
-      },
-      {
-            "title": "Compatible ink with professional technical support",
-            "text": "EVE Toner supplies compatible alternatives for selected HP Indigo press applications. Our professional technical team helps review press model, ink code, color and machine configuration, and provides guidance on setup and product use. Confirm the required preparation with our team before installation."
-      },
-      {
-            "title": "Order HP Indigo ink and spare parts together",
-            "text": "HP Indigo spare parts can be quoted alongside ink. Send the part number, machine model and clear photos of the existing part so our team can check the matching item and availability. Combine your ink and parts requirements in one inquiry."
-      },
-      {
-            "title": "Evaluate print quality against your current original ink",
-            "text": "Our focus is print quality comparable to original ink for the matched application. Begin with a 1-unit order and compare output on your own press, substrate and production job. Share the results and any operating issues with our technical team for support."
-      },
-      {
-            "title": "What to send for a precise quotation",
-            "text": "Send your press model, ink code and color, quantity, any spare-part numbers or photos, destination city and postal code. Include relevant machine configuration details or error messages if you need technical assistance. We will confirm product matching, packing and delivery arrangements with you."
-      },
-      {
-            "title": "Para compradores no Brasil: tinta e peças HP Indigo",
-            "text": "Fornecemos tinta compatível e peças para HP Indigo, com pedido mínimo de 1 unidade na embalagem de venda indicada. Nossa equipe técnica oferece orientação sobre compatibilidade, configuração e uso. Envie o modelo da máquina, código da tinta, cor, quantidade, códigos ou fotos das peças e CEP de destino para solicitar uma cotação."
-      }
-],
-    faqs: [
-      {
-            "question": "What is the minimum order for compatible HP Indigo ink?",
-            "answer": "The minimum order is 1 unit in the product's listed sales pack, for example 1 box of ink. You can begin with a small order before repeat purchasing."
-      },
-      {
-            "question": "Can I use the ink directly on my HP Indigo press?",
-            "answer": "The product is intended for use on the matched press. Send your press model, ink code and machine configuration first; our technical team will confirm compatibility and whether setup or other preparation is required before use."
-      },
-      {
-            "question": "Can I buy HP Indigo spare parts with the ink?",
-            "answer": "Yes. EVE Toner supplies HP Indigo ink and spare parts together. Send part numbers and photos so we can confirm suitable items and availability."
-      },
-      {
-            "question": "Do you provide technical support?",
-            "answer": "Yes. Our professional technical team supports product matching, setup guidance and troubleshooting for the supplied products. Share your machine details and the issue you need help with."
-      },
-      {
-            "question": "Are these original HP products?",
-            "answer": "These ink products are compatible alternatives supplied by EVE Toner, not original HP ink. Compatibility must be confirmed for the specific press and product. HP and HP Indigo are trademarks of their respective owner."
-      },
-      {
-            "question": "Posso comprar apenas 1 unidade e incluir peças?",
-            "answer": "Sim. O pedido mínimo é de 1 unidade na embalagem de venda do produto. Você pode solicitar tinta e peças na mesma cotação. Informe o modelo da máquina e os códigos necessários para confirmar a compatibilidade e a disponibilidade."
-      }
-]
-  },
+  "slug": "hp-indigo-ink-supplier-brazil",
+  "language": "pt-BR",
+  "country": "Brazil",
+  "quoteLabel": "Solicitar cotação",
+  "keyword": "HP Indigo ink supplier Brazil",
+  "title": "Tinta compatível HP Indigo e peças para o Brasil | EVE Toner",
+  "description": "Tinta compatível HP Indigo e peças para gráficas e distribuidores no Brasil. A partir de 1 unidade, com revisão de compatibilidade e suporte técnico.",
+  "h1": "Tinta compatível HP Indigo e peças para o Brasil",
+  "eyebrow": "A partir de 1 unidade · Suporte técnico",
+  "intro": "A EVE Toner fornece tinta compatível para HP Indigo e peças para gráficas, distribuidores e importadores no Brasil. Solicite tinta e peças na mesma cotação, a partir de 1 unidade na embalagem de venda indicada.",
+  "brand": "HP Indigo",
+  "category": "Digital Press Ink",
+  "relatedBrands": [
+    "HP Indigo"
+  ],
+  "buyerTypes": [
+    "Gráficas do Brasil",
+    "Distribuidores",
+    "Importadores"
+  ],
+  "modelExamples": [
+    "Q4132D — confirmar modelo da prensa e código da tinta"
+  ],
+  "sections": [
+    {
+      "title": "Compatibilidade e orientação técnica",
+      "text": "Envie o modelo da prensa, código da tinta, cores e configuração. Nossa equipe técnica confirma a compatibilidade e qualquer preparação necessária antes do uso."
+    },
+    {
+      "title": "Comece com um pedido de avaliação",
+      "text": "Avalie a tinta na sua prensa, no seu substrato e no seu trabalho de impressão antes de programar compras recorrentes. O pedido mínimo é de 1 unidade na embalagem indicada."
+    },
+    {
+      "title": "Cotação de tinta e peças para o Brasil",
+      "text": "Informe quantidades por cor, códigos ou fotos das peças, cidade e CEP de destino. Confirmaremos disponibilidade, embalagem, prazo, documentos e opções de envio da China para cada pedido."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "A tinta é original HP?",
+      "answer": "Fornecemos alternativas compatíveis da EVE Toner. A compatibilidade deve ser confirmada para o modelo da prensa e o código da tinta."
+    },
+    {
+      "question": "Posso comprar tinta e peças juntas?",
+      "answer": "Sim. Envie códigos da tinta, cores, quantidades e números ou fotos das peças para uma cotação conjunta."
+    }
+  ]
+},
   {
     slug: "copier-spare-parts-supplier-africa-dealers",
     keyword: "copier spare parts supplier for Africa dealers",

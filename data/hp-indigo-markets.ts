@@ -176,7 +176,9 @@ export const hpIndigoMarketPages: SeoLandingPage[] = [
         "question": "¿Ofrecen soporte técnico?",
         "answer": "Sí. Contamos con un equipo técnico profesional para orientar la selección, configuración y solución de problemas relacionados con los productos suministrados. Envíe los detalles de su máquina y del problema."
       }
-    ]
+    ],
+    "country": "Chile",
+    "quoteLabel": "Solicitar cotización"
   },
   {
     "slug": "hp-indigo-ink-supplier-ecuador",
@@ -236,5 +238,103 @@ export const hpIndigoMarketPages: SeoLandingPage[] = [
         "answer": "Sí. Contamos con un equipo técnico profesional para orientar la selección, configuración y solución de problemas relacionados con los productos suministrados. Envíe los detalles de su máquina y del problema."
       }
     ]
+  },
+  {
+    "slug": "hp-indigo-ink-supplier-germany",
+    "language": "de-DE",
+    "keyword": "HP Indigo ink supplier Germany",
+    "title": "Kompatible HP Indigo Tinte und Ersatzteile für Deutschland | EVE Toner",
+    "description": "EVE Toner liefert kompatible Tinte für HP Indigo und Ersatzteile an Druckereien, Händler und Importeure in Deutschland. Bestellung ab einer Verkaufseinheit mit Kompatibilitätsprüfung und technischer Unterstützung.",
+    "h1": "Kompatible HP Indigo Tinte und Ersatzteile für Deutschland",
+    "eyebrow": "Ab 1 Verkaufseinheit · Technische Unterstützung",
+    "intro": "EVE Toner liefert kompatible Tinte für HP Indigo und Ersatzteile an Druckereien, Händler und Importeure in Deutschland. Bestellung ab einer Verkaufseinheit mit Kompatibilitätsprüfung und technischer Unterstützung.",
+    "brand": "HP Indigo",
+    "category": "Digital Press Ink",
+    "relatedBrands": [
+      "HP Indigo"
+    ],
+    "buyerTypes": [
+      "Germany print shops",
+      "Distributors",
+      "Importers"
+    ],
+    "modelExamples": [
+      "Q4132D — confirm press and ink code"
+    ],
+    "sections": [
+      {
+        "title": "Kompatibilität vor der Bestellung prüfen",
+        "text": "Senden Sie Druckmaschinenmodell, Tintencode, Farbe und Konfiguration. Unser Technikteam prüft das passende Produkt und die erforderliche Vorbereitung vor der Verwendung."
+      },
+      {
+        "title": "Tinte und Ersatzteile zusammen anfragen",
+        "text": "Nennen Sie Farben, Mengen und Teilenummern oder senden Sie Fotos der benötigten Teile. Beginnen Sie mit einer Verkaufseinheit und prüfen Sie die Druckqualität auf Ihrem Bedruckstoff."
+      },
+      {
+        "title": "Versand nach Deutschland",
+        "text": "Geben Sie Lieferort und Postleitzahl an. Verfügbarkeit, Versand aus China, Kosten, Lieferzeit und benötigte Unterlagen werden für jede Bestellung bestätigt."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Handelt es sich um Originaltinte von HP?",
+        "answer": "Die angebotenen Tinten sind kompatible Alternativen von EVE Toner. Die Eignung muss für die konkrete Druckmaschine und den Tintencode bestätigt werden."
+      },
+      {
+        "question": "Welche Angaben werden für ein Angebot benötigt?",
+        "answer": "Druckmaschinenmodell, Tintencode, Farben, Mengen, Teilenummern sowie Lieferort und Postleitzahl."
+      }
+    ],
+    "country": "Germany",
+    "quoteLabel": "Angebot anfordern"
+  },
+  {
+    "slug": "hp-indigo-ink-supplier-thailand",
+    "language": "th-TH",
+    "keyword": "HP Indigo ink supplier Thailand",
+    "title": "หมึกและอะไหล่ที่ใช้ร่วมกับ HP Indigo สำหรับประเทศไทย | EVE Toner",
+    "description": "EVE Toner จัดหาหมึกที่ใช้ร่วมกับ HP Indigo และอะไหล่สำหรับโรงพิมพ์ ผู้จัดจำหน่าย และผู้นำเข้าในประเทศไทย เริ่มสั่งซื้อได้ตั้งแต่ 1 หน่วยตามบรรจุภัณฑ์ที่ระบุ พร้อมคำแนะนำจากทีมเทคนิค",
+    "h1": "หมึกและอะไหล่ที่ใช้ร่วมกับ HP Indigo สำหรับประเทศไทย",
+    "eyebrow": "เริ่มต้น 1 หน่วย · คำแนะนำจากทีมเทคนิค",
+    "intro": "EVE Toner จัดหาหมึกที่ใช้ร่วมกับ HP Indigo และอะไหล่สำหรับโรงพิมพ์ ผู้จัดจำหน่าย และผู้นำเข้าในประเทศไทย เริ่มสั่งซื้อได้ตั้งแต่ 1 หน่วยตามบรรจุภัณฑ์ที่ระบุ พร้อมคำแนะนำจากทีมเทคนิค",
+    "brand": "HP Indigo",
+    "category": "Digital Press Ink",
+    "relatedBrands": [
+      "HP Indigo"
+    ],
+    "buyerTypes": [
+      "Thailand print shops",
+      "Distributors",
+      "Importers"
+    ],
+    "modelExamples": [
+      "Q4132D — confirm press and ink code"
+    ],
+    "sections": [
+      {
+        "title": "ตรวจสอบความเข้ากันได้ก่อนสั่งซื้อ",
+        "text": "แจ้งรุ่นเครื่องพิมพ์ รหัสหมึก สี และการตั้งค่าเครื่อง ทีมเทคนิคจะตรวจสอบผลิตภัณฑ์ที่เหมาะสมและขั้นตอนเตรียมเครื่องก่อนใช้งาน"
+      },
+      {
+        "title": "สั่งหมึกและอะไหล่ในใบเสนอราคาเดียว",
+        "text": "แจ้งจำนวนแยกตามสี พร้อมรหัสหรือรูปอะไหล่ เริ่มทดลองได้ตั้งแต่ 1 หน่วยตามบรรจุภัณฑ์ที่ระบุ และประเมินผลกับวัสดุพิมพ์ของคุณก่อนสั่งซื้อซ้ำ"
+      },
+      {
+        "title": "ขอใบเสนอราคาสำหรับประเทศไทย",
+        "text": "แจ้งเมืองและรหัสไปรษณีย์ปลายทาง ทีมงานจะยืนยันสินค้าที่มี ค่าใช้จ่าย ระยะเวลา เอกสาร และทางเลือกการจัดส่งจากจีนสำหรับแต่ละคำสั่งซื้อ"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "เป็นหมึกแท้ HP หรือไม่",
+        "answer": "เป็นหมึกทางเลือกที่ใช้ร่วมกับ HP Indigo โดยต้องให้ทีมเทคนิคยืนยันรุ่นเครื่องและรหัสหมึกก่อนใช้งาน"
+      },
+      {
+        "question": "ต้องแจ้งข้อมูลอะไรเพื่อขอราคา",
+        "answer": "รุ่นเครื่อง รหัสหมึก สี จำนวน รหัสหรือรูปอะไหล่ เมืองและรหัสไปรษณีย์ปลายทาง"
+      }
+    ],
+    "country": "Thailand",
+    "quoteLabel": "ขอใบเสนอราคา"
   }
 ];
