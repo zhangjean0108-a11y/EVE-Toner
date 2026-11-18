@@ -227,8 +227,8 @@ export default function Home() {
                   href: "/products/hp-indigo-ink-supplier"
                 },
                 {
-                  query: "Copier toner supplier for Kenya dealers",
-                  text: "Compatible toner, drum units and spare parts for Kenya dealer and importer stock planning.",
+                  query: "Copier toner supplier for Kenya dealers in Nairobi",
+                  text: "Compatible toner, drum units and spare parts for Kenya buyers, with planned Nairobi warehousing, KES payment and door-to-door freight options.",
                   href: "/products/copier-toner-supplier-kenya"
                 },
                 {

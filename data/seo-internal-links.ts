@@ -21,8 +21,8 @@ export const prioritySeoPages: InternalSeoLink[] = [
   {
     label: "Copier Toner Supplier for Kenya Dealers",
     href: "/products/copier-toner-supplier-kenya",
-    description: "B2B toner, drum unit and spare-parts sourcing page for Kenya copier dealers and importers.",
-    tags: ["kenya", "africa", "toner cartridge", "copier spare parts", "dealer", "import guide"]
+    description: "Kenya copier sourcing with Nairobi warehouse planning, Kenyan shilling (KES) payment and door-to-door freight details.",
+    tags: ["kenya", "nairobi", "africa", "toner cartridge", "copier spare parts", "dealer", "import guide", "KES payment", "door-to-door freight"]
   },
   {
     label: "Copier Toner Supplier for Brazil Dealers",

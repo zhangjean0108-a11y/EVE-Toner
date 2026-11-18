@@ -635,11 +635,11 @@ export const seoLandingPages: SeoLandingPage[] = [
     keyword: "copier toner supplier Kenya",
     title: "Copier Toner Supplier for Kenya Dealers | EVE Toner",
     description:
-      "Source compatible copier toner, drum units and spare parts for Kenya dealers. Confirm models, export packing and mixed-order quotations with EVE Toner.",
+      "Source compatible copier toner, drum units and spare parts for Kenya dealers. Ask about planned Nairobi warehousing, Kenyan shilling (KES) payment and door-to-door freight.",
     h1: "Copier Toner Supplier for Kenya Dealers",
     eyebrow: "Kenya copier consumables supply",
     intro:
-      "EVE Toner helps Kenya copier dealers, office equipment resellers and importers source compatible toner cartridges, drum units, fuser units and selected spare parts for repeat B2B purchasing.",
+      "EVE Toner helps Kenya copier dealers, office equipment resellers and importers source compatible toner cartridges, drum units, fuser units and selected spare parts. We are planning a Nairobi warehouse, accept Kenyan shilling (KES) payment, and can arrange door-to-door freight; confirm service availability, route and terms for your order.",
     category: "Toner Cartridge",
     relatedBrands: ["Xerox", "Ricoh", "Canon", "Konica Minolta", "Kyocera", "Sharp"],
     buyerTypes: ["Kenya importers", "Copier dealers", "Office equipment resellers", "Repair shops"],
@@ -651,14 +651,14 @@ export const seoLandingPages: SeoLandingPage[] = [
           "For Kenya dealer supply, start with machine models that customers and service technicians already request regularly. A focused toner list, then drum units and maintenance parts for the same installed base, is more practical than a broad slow-moving assortment."
       },
       {
-        title: "Prepare a clear mixed-order quotation",
+        title: "Pay in Kenyan shillings (KES)",
         text:
-          "Send the copier model, toner or part code, color, quantity and destination details. EVE Toner can help organize a mixed toner cartridge, drum unit, fuser unit and spare-parts quotation for procurement review."
+          "Kenya buyers can pay in Kenyan shillings, so they do not need to make a direct USD payment. Confirm the exchange basis, payment instructions and order total with our team when requesting a quotation."
       },
       {
-        title: "Confirm packing before export shipment",
+        title: "Plan for Nairobi warehousing and door-to-door freight",
         text:
-          "Carton labels, item counts, product photos and packing requirements should be confirmed before shipment so Kenya importers can receive and identify stock more efficiently. OEM or private-label packing can be discussed for suitable B2B quantities."
+          "EVE Toner plans to establish a warehouse in Nairobi. We can also arrange door-to-door freight for Kenya orders; share the destination, product list and quantities so the team can confirm route, timing, freight charges and service availability. For mixed toner, drum and spare-parts orders, confirm carton labels and item counts before dispatch."
       }
     ],
     faqs: [
@@ -669,6 +669,18 @@ export const seoLandingPages: SeoLandingPage[] = [
       {
         question: "Can Kenya buyers combine toner cartridges and copier spare parts?",
         answer: "Yes. Mixed orders can be checked for available toner cartridges, drum units, fuser units and selected copier spare parts."
+      },
+      {
+        question: "Can I pay for a Kenya order in Kenyan shillings?",
+        answer: "Yes. Kenyan shilling (KES) payment is available, so a direct USD payment is not required. Confirm the exchange basis, payment instructions and final order total with our team."
+      },
+      {
+        question: "Is the Nairobi warehouse already operating?",
+        answer: "The Nairobi warehouse is planned. Contact EVE Toner to confirm its opening status and local stock availability before placing an order."
+      },
+      {
+        question: "Can you arrange door-to-door freight in Kenya?",
+        answer: "Door-to-door freight can be arranged. Share the delivery address and order details so the route, timing, charges and service availability can be confirmed."
       },
       {
         question: "What should a Kenya copier importer confirm before ordering?",
